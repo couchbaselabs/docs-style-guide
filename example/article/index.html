@@ -24,27 +24,28 @@
     <h3>H3</h3>
     <h4>H4</h4>
     
-    <div class="choose-edition">
-      <ul class="toggle-group" property="architecture">
-        <li class="toggle-item">
-          <a href="#" class="toggle-link" data-edition-id="tab1">Tab 1</a>
-        </li>
-        <li class="toggle-item">
-          <a href="#" class="toggle-link" data-edition-id="tab2">Tab 2</a>
-        </li>
-      </ul>
+    <div class="product" data-os-detection="false">
+      <div class="choose-edition">
+        <ul class="toggle-group" property="architecture">
+          <li class="toggle-item">
+            <a href="#" class="toggle-link selected" data-edition-id="tab1">Tab 1</a>
+          </li>
+          <li class="toggle-item">
+            <a href="#" class="toggle-link" data-edition-id="tab2">Tab 2</a>
+          </li>
+        </ul>
+      </div>
       <div class="instance-content" id="tab1">
         <div class="instance-settings">
           Text for tab 1
         </div>
       </div>
-      <div class="instance-content" id="tab2">
+      <div class="instance-content" id="tab2" style="display: none;">
         <div class="instance-settings">
           Text for tab 2
         </div>
       </div>
     </div>
-    
     
   </div>
 
