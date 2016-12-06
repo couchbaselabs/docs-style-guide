@@ -25,17 +25,33 @@ To deploy the server docs to staging:
 
 `param1` is always build. `param2` can be server or mobile. `param3` can be Server or Mobile. `param4` can be IngestStage or IngestQA.
 
-### Docs Style Guide Example
+### Examples
 
 Make sure to have the following environment variables set:
 
 - **JENKINS_USERNAME** (your username to access the Jenkins server)
 - **JENKINS_PASSWORD** (your password to access the Jenkins server)
 
-Generate docs style guide.
+#### Article
+
+This example is a simple page to see what the uploaded HTML must adhere to. To publish it to the dev portal, follow the steps below.
 
 ```bash
-./example.sh
+./example.sh article
 ```
 
-The docs style guide is deployed to [http://developer-qa.cbauthx.com/documentation/mobile/1.3/article/index.html](http://developer-qa.cbauthx.com/documentation/mobile/1.3/article/index.html) by default.
+The article is published at [http://developer-qa.cbauthx.com/documentation/mobile/1.3/article/index.html](http://developer-qa.cbauthx.com/documentation/mobile/1.3/article/index.html).
+
+### REST API
+
+In this example, REST APIs are documented using [Swagger](http://swagger.io/). Given a Swagger spec we can publish it on the dev portal using Swagger UI. To publish it to the dev portal, follow the steps below.
+
+```bash
+./example.sh rest-api
+```
+
+It uploads the content of the **rest-api** folder in this repository. As part of the uploaded content, there are `script` and `link` tags to pull the **SwaggerUI** resources as shown on the diagram below.
+
+![](https://cl.ly/123P2G1R310M/swagger-ui-flow.png)
+
+The REST API is published at [http://developer-qa.cbauthx.com/documentation/mobile/1.4/swagger-ui.html](http://developer-qa.cbauthx.com/documentation/mobile/1.4/swagger-ui.html).

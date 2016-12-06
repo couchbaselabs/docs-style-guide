@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cp -r example tmp
+cp -r ${1} tmp
 
 ditto -c -k --sequesterRsrc --keepParent "tmp" "tmp.zip"
 
