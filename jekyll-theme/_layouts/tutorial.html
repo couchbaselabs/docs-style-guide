@@ -1,0 +1,84 @@
+<!doctype html>
+<html style="height: 100%;">
+
+  {% include head.html %}
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+<body style="height: 100%;">
+
+  {% include header.html %}
+
+  <div style="display: inline-block;height: 100%;">
+  
+    {% include sidebar.html collection=page.collection %}
+    
+    <div class="body">
+      <div class="main">
+        <div class="inner">
+          {% for lesson in site[page.collection] %}
+          {% capture prefix %}/{{ page.collection }}/{% endcapture %}
+          <div class="lesson" id="{{ lesson.id | remove_first : prefix }}">
+
+            {{ lesson.content | markdownify }}
+
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  {% include footer.html %}
+
+</body>
+  <script>
+    function getParameterByName(name, url) {
+      if (!url) {
+        url = window.location.href;
+      }
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    function updateQueryStringParameter(uri, key, value) {
+      var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+      var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+      if (uri.match(re)) {
+        return uri.replace(re, '$1' + key + "=" + value + '$2');
+      }
+      else {
+        return uri + separator + key + "=" + value;
+      }
+    }
+    function load(anchor, isFirstLoad) {
+      var lessons = document.getElementsByClassName('lesson');
+      for (index in lessons) {
+        lessons.item(index).style.display = 'none';
+      }
+      var id = anchor.split('/')[2];
+      var el = document.getElementById(id);
+      el.style.display = 'block';
+      if (!isFirstLoad) {
+        window.history.pushState({path: updateQueryStringParameter(window.location.href, 'lesson', id)}, '', updateQueryStringParameter(window.location.href, 'lesson', id));
+      }
+      
+        $('img').prop('height', function () {
+          if ($(this).height() > $(this).width()) {
+            $(this).width(300);
+          } else {
+          }
+        });
+    }
+    var lesson = getParameterByName('lesson');
+    if (lesson) {
+      load('/{{ page.collection }}/' + lesson)
+    } else {
+      setTimeout(function () {load('{{ site[page.collection][0].id }}', true)}, 300);
+    }
+  </script>
+</html>

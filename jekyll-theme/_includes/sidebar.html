@@ -1,0 +1,22 @@
+{% assign base = '' %}
+{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% if    depth <= 1 %}{% assign base = '.' %}
+{% elsif depth == 2 %}{% assign base = '..' %}
+{% elsif depth == 3 %}{% assign base = '../..' %}
+{% elsif depth == 4 %}{% assign base = '../../..' %}
+{% elsif depth == 5 %}{% assign base = '../../../..' %}
+{% elsif depth == 6 %}{% assign base = '../../../../..' %}
+{% elsif depth == 7 %}{% assign base = '../../../../../..' %}{% endif %}
+
+<div class="drawer">
+  <div class="left-nav">
+    {% for item in site[include.collection] %}
+    <a class="toc-item" href="javascript:;" onclick="load('{{ item.id }}')">
+      <i class="">
+        {{ forloop.index }}
+      </i>
+      <span>{{ item.title }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>

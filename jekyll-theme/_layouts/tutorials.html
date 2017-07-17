@@ -1,0 +1,72 @@
+<!doctype html>
+<html style="height: 100%;">
+
+{% include head.html %}
+
+<body style="height: 100%;">
+
+{% include header.html %}
+
+<div style="display: block;height: 100%;">
+
+  <div class="body">
+
+    <section class="alt-section">
+      <div id="getting-started-accordion" class="accordion">
+        <div class="accordion-link">
+        </div>
+        <div class="accordion-content closed show" style="display: block;">
+          <p>&nbsp;</p>
+
+          <div class="cardset apps"><!-- Card filters -->
+            <div class="hide filter-wrapper">
+              <div class="ui-group">
+                <h3 class="ui-group--title">Use Cases</h3>
+
+                <div class="filter-button-group button-group">&nbsp;</div>
+              </div>
+            </div>
+            <!-- Cards -->
+
+            <ul class="cards" style="position: relative; height: 647.814px;"><!--li class="card profile-mgmt" style="position: absolute; left: 798px; top: 221px;"-->
+              {% for item in site.data.tutorials %}
+                <li class="card content-mgmt" style="position: absolute; left: 798px; top: 431px;">
+                  <div>
+                    <div class="hide image"><span> </span></div>
+  
+                    <h3 class="title">{{ item.title }}</h3>
+  
+                    <div class="card--attr-1">{{ item.topic }}</div>
+  
+                    <div class="card--attr-2">{{ item.language }}</div>
+  
+                    <div class="card--attr-2">&nbsp;</div>
+  
+                    <div class="card--actions">
+                      <a class="action download" href="{{ item.link }}">Try it out!</a>
+                      {% if item.github %}
+                        <a class="action" href="{{ item.github }}" target="_blank">GitHub</a>
+                      {% endif %}
+                      {% if item.blog %}
+                        <a class="action" href="{{ item.blog }}" target="_blank">Blog</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+
+            <div class="no-filtered-results">No results found.</div>
+          </div>
+          <!-- .cardset --></div>
+      </div>
+    </section>
+    
+  </div>
+
+</div>
+
+{% include footer.html %}
+
+</body>
+</html>
