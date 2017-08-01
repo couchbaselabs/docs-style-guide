@@ -1,0 +1,7 @@
+collections:
+  components:
+    output    : false
+
+theme: couchbase-theme
+
+highlighter: none
