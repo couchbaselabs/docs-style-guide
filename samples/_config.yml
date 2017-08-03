@@ -1,0 +1,7 @@
+collections:
+  'tutorials':
+    output: false
+
+highlighter: none
+
+theme: couchbase-theme
