@@ -10,15 +10,15 @@
   {% include header.html %}
 
   <div style="display: inline-block;height: 100%;">
-  
-    {% include sidebar.html collection=page.collection %}
     
+    {% assign lessonsByType = site.tutorials | where:"type","mobile-travel-sample" %}
+    {% include tutorial-sidebar.html collection=page.type %}
+
     <div class="body">
       <div class="main">
         <div class="inner">
-          {% for lesson in site[page.collection] %}
-          {% capture prefix %}/{{ page.collection }}/{% endcapture %}
-          <div class="lesson" id="{{ lesson.id | remove_first : prefix }}">
+          {% for lesson in lessonsByType %}
+          <div class="lesson" id="{{ lesson.slug }}">
 
             {{ lesson.content | markdownify }}
 
@@ -60,11 +60,10 @@
       for (index in lessons) {
         lessons.item(index).style.display = 'none';
       }
-      var id = anchor.split('/')[2];
-      var el = document.getElementById(id);
+      var el = document.getElementById(anchor);
       el.style.display = 'block';
       if (!isFirstLoad) {
-        window.history.pushState({path: updateQueryStringParameter(window.location.href, 'lesson', id)}, '', updateQueryStringParameter(window.location.href, 'lesson', id));
+        window.history.pushState({path: updateQueryStringParameter(window.location.href, 'lesson', anchor)}, '', updateQueryStringParameter(window.location.href, 'lesson', anchor));
       }
       
         $('img').prop('height', function () {
@@ -76,9 +75,9 @@
     }
     var lesson = getParameterByName('lesson');
     if (lesson) {
-      load('/{{ page.collection }}/' + lesson)
+      load(lesson)
     } else {
-      setTimeout(function () {load('{{ site[page.collection][0].id }}', true)}, 300);
+      setTimeout(function () {load('{{ lessonsByType[0].slug }}', true)}, 300);
     }
   </script>
 </html>

@@ -10,8 +10,9 @@
 
 <div class="drawer">
   <div class="left-nav">
-    {% for item in site[include.collection] %}
-    <a class="toc-item" href="javascript:;" onclick="load('{{ item.id }}')">
+    {% assign lessonsByType = site.tutorials | where:"type","mobile-travel-sample" %}
+    {% for item in lessonsByType %}
+    <a class="toc-item" href="javascript:;" onclick="load('{{ item.slug }}')">
       <i class="">
         {{ forloop.index }}
       </i>
