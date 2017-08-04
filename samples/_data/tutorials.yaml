@@ -15,3 +15,7 @@
   topic: Read, Write, Query
   language: iOS, Android, .NET
   link: mobile-todo.html
+- title: .NET Core SDK on non-Windows platforms
+  topic: Installation
+  language: Mac, Ubuntu
+  link: dotnet-without-windows.html
