@@ -10,7 +10,7 @@
 
 <div class="drawer">
   <div class="left-nav">
-    {% assign lessonsByType = site.tutorials | where:"type","mobile-travel-sample" %}
+    {% assign lessonsByType = site.tutorials | where:"type",include.type %}
     {% for item in lessonsByType %}
     <a class="toc-item" href="javascript:;" onclick="load('{{ item.slug }}')">
       <i class="">

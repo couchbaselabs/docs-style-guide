@@ -11,8 +11,8 @@
 
   <div style="display: inline-block;height: 100%;">
     
-    {% assign lessonsByType = site.tutorials | where:"type","mobile-travel-sample" %}
-    {% include tutorial-sidebar.html collection=page.type %}
+    {% assign lessonsByType = site.tutorials | where:"type",page.type %}
+    {% include tutorial-sidebar.html type=page.type %}
 
     <div class="body">
       <div class="main">
