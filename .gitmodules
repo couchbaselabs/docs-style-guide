@@ -1,3 +1,6 @@
 [submodule "samples/_tutorials/couchbase_mobile_blogs"]
 	path = samples/_tutorials/couchbase_mobile_blogs
 	url = git@github.com:couchbaselabs/couchbase_mobile_blogs.git
+[submodule "samples/_tutorials/CouchbaseWithVsCode"]
+	path = samples/_tutorials/CouchbaseWithVsCode
+	url = git@github.com:couchbaselabs/CouchbaseWithVsCode.git
