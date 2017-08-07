@@ -5,3 +5,6 @@ collections:
 highlighter: none
 
 theme: couchbase-theme
+
+plugins:
+  - jekyll-asciidoc
