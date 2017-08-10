@@ -4,6 +4,7 @@
   {% include head.html %}
 
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://couchbase-docs.s3.amazonaws.com/mobile/assets/styles.css">
 
 <body style="height: 100%;">
 
@@ -20,15 +21,21 @@
           {% for lesson in lessonsByType %}
           <div class="lesson" id="{{ lesson.slug }}">
 
-            {{ lesson.content | markdownify }}
+            {% if lesson.tabs %}
+              {% include tabs.html %}
+            {% endif %}
 
+            {{ lesson.content | markdownify }}
+            
           </div>
           {% endfor %}
         </div>
       </div>
     </div>
-    
+
   </div>
+
+  {% include tabs-footer.html %}
 
   {% include footer.html %}
 
