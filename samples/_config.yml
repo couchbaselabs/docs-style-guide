@@ -14,3 +14,10 @@ redcarpet:
 
 plugins:
 - jekyll-asciidoc
+
+exclude:
+  - "_tutorials/"
+include:
+  - "*.md"
+  - "*.adoc"
+  - "*.dita"
