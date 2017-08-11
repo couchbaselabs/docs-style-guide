@@ -1,11 +1,3 @@
-- title: CB Travel (Java)
-  topic: Read, Write, Query
-  language: AngularJS, Spring Boot
-  link: https://developer.couchbase.com/documentation/server/4.6/sdk/java/start-using-sdk.html
-- title: CB Travel (Python)
-  topic: Read, Write, Query
-  language: AngularJS
-  link: https://developer.couchbase.com/documentation/server/4.6/sdk/python/start-using-sdk.html
 - title: CBTravel Mobile
   topic: Read, Write, Query
   language: Swift
@@ -51,3 +43,7 @@
   topic: Read, Write, Query
   language: iOS, Android, .NET
   link: mobile-training-todo.html
+- title: Travel Sample
+  topic: Read, Write, Query
+  language: Java, .NET, Node.js, C, PHP, Go, Python
+  link: travel-sample-server.html

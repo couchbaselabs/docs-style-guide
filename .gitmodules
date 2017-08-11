@@ -28,3 +28,6 @@
 [submodule "samples/_tutorials/java-android"]
 	path = samples/_tutorials/java-android
 	url = git@github.com:couchbase-guides/java-android.git
+[submodule "samples/_tutorials/docs-cb4"]
+	path = samples/_tutorials/docs-cb4
+	url = git@github.com:couchbase/docs-cb4.git
