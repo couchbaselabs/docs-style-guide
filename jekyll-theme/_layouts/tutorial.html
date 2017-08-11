@@ -13,16 +13,25 @@
   <div style="display: inline-block;height: 100%;">
     
     {% assign lessonsByType = site.tutorials | where:"type",page.type %}
-    {% include tutorial-sidebar.html type=page.type %}
+    {% if page.hidesidebar %}
+    
+    {% else %}
+      {% include tutorial-sidebar.html type=page.type %}
+    {% endif %}
+    
 
     <div class="body">
       <div class="main">
         <div class="inner">
+          {% if page.tabs %}
+            {% include tabs.html languages=page.languages %}
+          {% endif %}
+          
           {% for lesson in lessonsByType %}
           <div class="lesson" id="{{ lesson.slug }}">
-
-            {% if lesson.tabs %}
-              {% include tabs.html %}
+            
+            {% if lesson.language %}
+              <block class="{{ lesson.language }}" />
             {% endif %}
 
             {{ lesson.content | markdownify }}
@@ -35,7 +44,7 @@
 
   </div>
 
-  {% include tabs-footer.html %}
+  {% include tabs-footer.html first=page.first %}
 
   {% include footer.html %}
 

@@ -55,7 +55,13 @@
   .display-os-windows .toggler .button-windows,
   .display-platform-ios .toggler .button-ios,
   .display-platform-android .toggler .button-android,
-  .display-platform-net .toggler .button-net {
+  .display-platform-net .toggler .button-net,
+  .display-platform-java .toggler .button-java,
+  .display-platform-go .toggler .button-go,
+  .display-platform-php .toggler .button-php,
+  .display-platform-nodejs .toggler .button-nodejs,
+  .display-platform-c .toggler .button-c,
+  .display-platform-python .toggler .button-python {
     background-color: #05A5D1;
     color: white;
   }
@@ -70,7 +76,12 @@
   .display-platform-all .all,
   .display-platform-swift .swift,
   .display-platform-objc .objc,
-  .display-platform-java .java {
+  .display-platform-java .java,
+  .display-platform-go .go,
+  .display-platform-php .php,
+  .display-platform-nodejs .nodejs,
+  .display-platform-c .c,
+  .display-platform-python .python {
     display: block;
   }
 </style>
@@ -104,5 +115,5 @@
     container.className += ' display-platform-all';
     event && event.preventDefault();
   }
-  displayTab('platform', 'ios');
+  displayTab('platform', '{{ include.first }}');
 </script>
