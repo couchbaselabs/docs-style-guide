@@ -13,8 +13,8 @@
   <div style="display: inline-block;height: 100%;">
     
     {% assign lessonsByType = site.tutorials | where:"type",page.type %}
-    {% if page.hidesidebar %}
-    
+    {% if page.tutorialh2sidebar %}
+      {% include tutorial-h2-sidebar.html %}
     {% else %}
       {% include tutorial-sidebar.html type=page.type %}
     {% endif %}

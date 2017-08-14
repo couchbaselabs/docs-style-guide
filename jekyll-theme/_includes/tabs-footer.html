@@ -114,6 +114,7 @@
       container.className.replace(RegExp('display-' + type + '-[a-z]+ ?'), '');
     container.className += ' display-platform-all';
     event && event.preventDefault();
+    buildTOC(value);
   }
   displayTab('platform', '{{ include.first }}');
 </script>

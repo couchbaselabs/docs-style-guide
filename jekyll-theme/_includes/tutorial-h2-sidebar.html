@@ -1,0 +1,23 @@
+    <div class="drawer">
+      <div class="left-nav">
+        
+      </div>
+    </div>
+    <script>
+		function buildTOC(platform) {
+	      $(document).ready(function() {
+	      	$('.left-nav').empty();
+	        $('.' + platform + ' h2').each(function(index) {
+	          $('.left-nav')
+	            .append('<a class="toc-item" href="javascript:;">' +
+	              '<i class="">' +
+	              (index + 1) +
+	              '</i>' +
+	              '<span>' +
+	                $(this).text() +
+	              '</span>' +
+	              '</a>');
+	        });
+	      });
+		};
+    </script>
