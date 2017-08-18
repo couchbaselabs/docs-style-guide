@@ -1,0 +1,32 @@
+<div class="experimental-label">
+  <span>Experimental</span>
+  <br>
+  <em>Experimental features may have bugs since they are not certified by Couchbase QE. Couchbase may drop the feature all together or create a brand new component with equivalent functionality in new releases.</em>
+</div>
+
+<style>
+  @media screen and (min-width: 800px) {
+    .experimental-label {
+      position: absolute;
+      left: -150px;
+      width: 170px;
+    }
+    .experimental-label span {
+      color: #d43900;
+      border-color: #d43900;
+      font-size: 12px;
+      padding: 1px 10px;
+      border: 1px solid #e85d00;
+      border-radius: 3px;
+    }
+    .experimental-label em {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .experimental-label {
+      display: none;
+    }
+  }
+</style>
