@@ -10,9 +10,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "3.5.0"
 
-# By default, this project installs the theme from the master branch of the git repository. Uncomment the following line to install it from the local filesystem (useful during development)
-gem "couchbase-theme", :git => "git://github.com/couchbaselabs/docs-style-guide.git"
-# gem 'couchbase-theme', path: './../jekyll-theme'
+# This is the default theme for new Jekyll sites. You may change this to anything you like.
+gem "couchbase-theme", path: "./../jekyll-theme"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
