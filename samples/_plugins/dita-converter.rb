@@ -15,7 +15,7 @@ module Jekyll
       File.open('input.dita', 'w') { |f|
         f.write(content)
       }
-      output = `~/Developer/dita-ot-2.1.1/bin/dita -f html5 -i input.dita  -o .`
+      output = `dita -f html5 -i input.dita  -o .`
       html = File.read('input.html')
       html
     end
