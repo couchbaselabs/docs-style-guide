@@ -32,7 +32,14 @@ export default class StandaloneLayout extends React.Component {
   }
 
   render() {
+    
+    let markdownString = '```json\n ' + JSON.stringify(this.state.specs, null, 2) + '\n```';
     let renderer = new marked.Renderer();
+    renderer.code = function(code, lang, escaped) {
+      
+    };
+    
+    console.log(marked(markdownString));
     
     return (
       <div className="docs-ui">
@@ -41,6 +48,7 @@ export default class StandaloneLayout extends React.Component {
             return <option key={index} value={spec.version}>{spec.version}</option>
           })}
         </select>
+        <div dangerouslySetInnerHTML={{__html: marked(markdownString)}} />
       </div>
     )
   }
