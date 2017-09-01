@@ -64,36 +64,32 @@
 </svg>
 <div id="swagger-ui"></div>
 
-<script src="./swagger-ui-bundle.js"> </script>
+<script src="./config-ui-bundle.js"> </script>
 <script src="./swagger-ui-standalone-preset.js"> </script>
 <script>
   window.onload = function() {
-    window["SwaggerUIBundle"] = window["swagger-ui-bundle"]
+    window["ConfigUIBundle"] = window["config-ui-bundle"]
     window["SwaggerUIStandalonePreset"] = window["swagger-ui-standalone-preset"]
     // Build a system
-    const ui = SwaggerUIBundle({
-      url: "http://petstore.swagger.io/v2/swagger.json",
+    const ui = ConfigUIBundle({
       dom_id: '#swagger-ui',
-      presets: [
-        SwaggerUIBundle.presets.apis,
-        SwaggerUIStandalonePreset
-      ],
-      plugins: [
-        SwaggerUIBundle.plugins.DownloadUrl
-      ],
-      layout: "StandaloneLayout"
-    })
+      specs: [
+        {
+          "version": "1.3",
+          "url": "http://couchbase-docs.s3.amazonaws.com/mobile/1.3/configs/sg.1503063094515.json"
+        },
+        {
+          "version": "1.4",
+          "url": "http://couchbase-docs.s3.amazonaws.com/mobile/1.4/configs/sg.1504253352890.json"
+        },
+        {
+          "version": "1.5",
+          "url": "http://couchbase-docs.s3.amazonaws.com/mobile/1.5/configs/sg.1504253352899.json"
+        }
+      ]
+    });
 
     window.ui = ui
-
-    ui.initOAuth({
-      clientId: "your-client-id",
-      clientSecret: "your-client-secret-if-required",
-      realm: "your-realms",
-      appName: "your-app-name",
-      scopeSeparator: " ",
-      additionalQueryStringParams: {}
-    })
   }
 </script>
 </body>
