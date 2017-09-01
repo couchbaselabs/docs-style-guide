@@ -45,6 +45,7 @@
     "immutable": "^3.x.x",
     "js-yaml": "^3.5.5",
     "lodash": "4.17.2",
+    "marked": "^0.3.6",
     "matcher": "^0.1.2",
     "memoizee": "0.4.1",
     "promise-worker": "^1.1.1",
@@ -74,7 +75,7 @@
     "shallowequal": "0.2.2",
     "swagger-client": "3.0.20",
     "url-parse": "^1.1.8",
-    "whatwg-fetch": "0.11.1",
+    "whatwg-fetch": "^0.11.1",
     "worker-loader": "^0.7.1",
     "xml": "1.0.1",
     "yaml-js": "0.2.0"
