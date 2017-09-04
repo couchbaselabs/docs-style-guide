@@ -18,17 +18,6 @@ export default class StandaloneLayout extends React.Component {
   }
   
   componentWillMount() {
-    this.props.specs.map(function(spec) {
-      fetch(spec.url)
-        .then(res => res.json())
-        .then(function(json) {
-          let specs = this.state.specs.slice();
-          specs.push({version: spec.version, json: json});
-          this.setState({
-            specs: specs
-          });
-        }.bind(this));
-    }.bind(this));
   }
 
   render() {
@@ -43,12 +32,21 @@ export default class StandaloneLayout extends React.Component {
     
     return (
       <div className="docs-ui">
-        <select name="" id="">
-          {this.state.specs.map((spec, index) => {
-            return <option key={index} value={spec.version}>{spec.version}</option>
-          })}
-        </select>
-        <div dangerouslySetInnerHTML={{__html: marked(markdownString)}} />
+        <div className="drawer">
+          <div className="left-nav">
+            <a className="toc-item" href="javascript:;">
+              <i>1</i>
+              <span>Query</span>
+            </a>
+          </div>
+        </div>
+        <div className="opblock-tag no-desc">
+          <div className="opblock">
+            <div className="opblock-summary">
+              <span className="opblock-summary-method">POST</span>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

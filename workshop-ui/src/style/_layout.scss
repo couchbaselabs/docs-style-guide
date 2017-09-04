@@ -1,0 +1,66 @@
+.wrapper
+{
+  width: 100%;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.opblock-tag-section
+{
+  display: flex;
+  flex-direction: column;
+  
+  &.is-open
+  {
+    
+  }
+}
+
+.opblock
+{
+  margin: 0 0 15px 0;
+  
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(#000, .19);
+  
+  .tab-header
+  {
+    display: flex;
+    
+    flex: 1;
+    
+    .tab-item
+    {
+      
+    }
+  }
+
+  .opblock-summary
+  {
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+
+    cursor: pointer;
+  }
+
+  .opblock-summary-method
+  {
+    font-size: 14px;
+    font-weight: bold;
+
+    min-width: 80px;
+    padding: 6px 15px;
+
+    text-align: center;
+
+    border-radius: 3px;
+    background: #000;
+    text-shadow: 0 1px 0 rgba(#000,.1);
+
+    @include text_headline(#fff);
+  }
+}
