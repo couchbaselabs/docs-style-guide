@@ -73,20 +73,7 @@
     // Build a system
     const ui = ConfigUIBundle({
       dom_id: '#swagger-ui',
-      specs: [
-        {
-          "version": "1.3",
-          "url": "http://couchbase-docs.s3.amazonaws.com/mobile/1.3/configs/sg.1503063094515.json"
-        },
-        {
-          "version": "1.4",
-          "url": "http://couchbase-docs.s3.amazonaws.com/mobile/1.4/configs/sg.1504253352890.json"
-        },
-        {
-          "version": "1.5",
-          "url": "http://couchbase-docs.s3.amazonaws.com/mobile/1.5/configs/sg.1504253352899.json"
-        }
-      ]
+      url: 'http://localhost:3000/spec.yaml'
     });
 
     window.ui = ui
