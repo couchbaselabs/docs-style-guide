@@ -64,7 +64,7 @@ export default class StandaloneLayout extends React.Component {
                       key={index}
                       className="toc-item"
                       href="javascript:;"
-                      onClick={(e) => {this.setState({selectedLesson: index})}}>
+                      onClick={(e) => {this.setState({selectedLesson: index, currentMilestone: 0})}}>
                       <i>{index + 1}</i>
                       <span>{name}</span>
                     </a>
@@ -79,21 +79,24 @@ export default class StandaloneLayout extends React.Component {
                     {this.getMilestoneNames(this.state.selectedLesson).map((name, index) => {
                       return (
                         <li key={index}>
-                          {name.title}
+                          <a
+                            href="javascript:;"
+                            onClick={(e) => {this.setState({currentMilestone: index})}}>
+                            {name.title}
+                          </a>
                         </li>
                       )
                     })}
                   </ol>
                 </nav>
                 <div className="inner">
-                  {this.state.spec.lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description}  
-                </div>
-              </div>
-            </div>
-            <div className="opblock-tag no-desc">
-              <div className="opblock">
-                <div className="opblock-summary">
-                  <span className="opblock-summary-method">POST</span>
+                  <ul>
+                    {this.state.spec.lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description}
+                    <h3>Try it out</h3>
+                    {this.state.spec.lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout.map((item, index) => {
+                      return <li key={index}>{item}</li>
+                    })}
+                  </ul>
                 </div>
               </div>
             </div>
