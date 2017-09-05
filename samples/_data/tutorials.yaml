@@ -47,3 +47,7 @@
   topic: Read, Write, Query
   language: Java, .NET, Node.js, C, PHP, Go, Python
   link: travel-sample-server.html
+- title: Mobile Workshop
+  topic: Read, Write, Query
+  language: iOS, Android
+  link: mobile-workshop.html

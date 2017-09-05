@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div id="swagger-ui"></div>
+
+<link href='assets/swagger-ui.css' media='screen' rel='stylesheet' type='text/css'/>
+<script src='assets/config-ui-bundle.js' type='text/javascript'></script>
+<script>
+  window.onload = function() {
+    // Build a system
+    const ui = ConfigUIBundle({
+      dom_id: '#swagger-ui',
+      url: './assets/spec.yaml'
+    });
+
+    window.ui = ui    
+  }
+</script>
