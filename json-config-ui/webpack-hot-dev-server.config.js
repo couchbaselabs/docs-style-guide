@@ -50,11 +50,11 @@ module.exports = require("./make-webpack-config")(rules, {
   },
 	devtool: "eval",
   entry: {
-    "config-ui-bundle": [
+    "json-config-ui-bundle": [
       "./src/polyfills",
       "./src/core/index.js"
     ],
-    "swagger-ui-standalone-preset": [
+    "json-config-ui-standalone-preset": [
       "./src/style/main.scss",
       "./src/polyfills",
       "./src/standalone/index.js",
