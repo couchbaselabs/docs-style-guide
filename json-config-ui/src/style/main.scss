@@ -1,4 +1,22 @@
 .docs-ui
 {
   color: black;
+  
+  pre {
+    font-size: 12px;
+    margin: 0;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    border-radius: 4px;
+    background: #41444e;
+    overflow-wrap: break-word;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    color: #fff;
+  }
 }
