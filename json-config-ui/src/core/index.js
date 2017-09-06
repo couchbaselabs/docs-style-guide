@@ -2,6 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import marked from "marked"
 import "whatwg-fetch"
+import TableView from './TableView';
 
 module.exports = function ConfigUI(opts) {
   ReactDOM.render(<StandaloneLayout specs={opts.specs} />, document.getElementById('swagger-ui'));
@@ -136,6 +137,67 @@ export default class StandaloneLayout extends React.Component {
     }
   }
 
+  mapPropsToTableView(props, initial) {
+    Object.keys(props).map((key, index) => {
+        const type = props[key].type;
+        switch (type) {
+          case 'object':
+            let keys = Object.keys(props[key].properties);
+            if (keys.length == 1 && props[key].properties[keys[0]].type == 'object') {
+
+            } else {
+              initial.push(
+                <div>
+                  <h4>
+                    {key.replace('_', ' ')} configuration
+                    <a className="hash-link instructions" id={key.replace(' ', '-')} href={'#' + key.replace(' ', '-')}>
+                      <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1"
+                           viewBox="0 -3 20 20" width="20">
+                        <path
+                          d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                      </svg>
+                    </a>
+                  </h4>
+                  <TableView config={props[key].properties}/>
+                </div>
+              );
+            }
+            this.mapPropsToTableView(props[key].properties, initial);
+            return;
+          case 'array':
+            let item_type = props[key].items.type;
+            if (item_type == 'object') {
+              initial.push(
+                <div>
+                  <h4>
+                    {key.replace('_', ' ') + '[]'} configuration
+                    <a class="hash-link instructions" href="#sync-gateway-accelerator">
+                      <svg aria-hidden="true" class="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
+                           width="20">
+                        <path
+                          d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                      </svg>
+                    </a>
+                  </h4>
+                  <TableView config={props[key].items.properties}/>
+                </div>
+              );
+            }
+            return;
+        }
+      }
+    );
+    return initial;
+  }
+
+  renderTableView() {
+    if (!this.state.selected) {
+      return '';
+    } else {
+      return this.state.specs[this.state.selected].json.properties;
+    }
+  }
+  
   render() {
     return (
       <div className="docs-ui">
@@ -147,6 +209,22 @@ export default class StandaloneLayout extends React.Component {
         
         <pre id="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
         </pre>
+        <h3>Reference</h3>
+        {this.mapPropsToTableView(this.renderTableView(), [
+          <div>
+            <h4>
+              server configuration
+              <a className="hash-link instructions" id="server" href={'#server'}>
+                <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
+                     width="20">
+                  <path
+                    d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                </svg>
+              </a>
+            </h4>
+            <TableView config={this.renderTableView()}/>
+          </div>
+        ])}
       </div>
     )
   }
