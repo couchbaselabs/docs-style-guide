@@ -2,7 +2,7 @@
 {
   color: black;
 
-  pre#code {
+  pre, pre#code {
     font-size: 12px;
     margin: 0;
     padding: 10px;
@@ -13,10 +13,16 @@
     -ms-hyphens: auto;
     hyphens: auto;
     border-radius: 4px;
-    background: #41444e;
+    background: #41444e !important;
     overflow-wrap: break-word;
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
     color: #fff;
+  }
+  
+  a {
+    color: #1D78C1;
+    border-bottom: 1px dotted #1D78C1;
+    text-decoration: none;
   }
 }
