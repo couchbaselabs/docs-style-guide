@@ -44,25 +44,25 @@ export default class StandaloneLayout extends React.Component {
       const type = props[key].type;
       switch (type) {
         case 'string':
-          output.push({name: key, path: context ? context + '-' + key : key});
+          output.push({name: key, path: context ? context + '-' + key : key, type: type, description: props[key].description, default: props[key].default ? props[key].default : null});
           break;
         case 'integer':
-          output.push({name: key, path: context ? context + '-' + key : key});
+          output.push({name: key, path: context ? context + '-' + key : key, type: type, description: props[key].description, default: props[key].default ? props[key].default : null});
           break;
         case 'boolean':
-          output.push({name: key, path: context ? context + '-' + key : key});
+          output.push({name: key, path: context ? context + '-' + key : key, type: type, description: props[key].description, default: props[key].default ? props[key].default : null});
           break;
         case 'array':
           let item_type = props[key].items.type;
           if (item_type == 'object') {
-            output.push({name: key, path: context ? context + '-' + key : key});
+            output.push({name: key, path: context ? context + '-' + key : key, type: type, description: props[key].description, default: props[key].default ? props[key].default : null});
             this.mapKeysToPaths(props[key].items.properties, context ? context + '-' + key : key, output);
           } else {
-            output.push({name: key, path: context ? context + '-' + key : key});
+            output.push({name: key, path: context ? context + '-' + key : key, type: type, description: props[key].description, default: props[key].default ? props[key].default : null});
           }
           break;
         case 'object':
-          output.push({name: key, path: context ? context + '-' + key : key});
+          output.push({name: key, path: context ? context + '-' + key : key, type: type, description: props[key].description, default: props[key].default ? props[key].default : null});
           this.mapKeysToPaths(props[key].properties, context ? context + '-' + key : key, output);
           break;
         default:
@@ -209,30 +209,39 @@ export default class StandaloneLayout extends React.Component {
               return <option key={index} value={index}>{spec.version}</option>
             })}
           </select>
-            {this.mapKeysToPaths(this.state.specs[this.state.selected].json.properties, null, []).map(row => {
-              return (
-                  <h2>
-                    <a href={'#' + row.path} id={row.path}></a>
-                    <span className="text">
+          <pre id="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
+          </pre>
+          {this.mapKeysToPaths(this.state.specs[this.state.selected].json.properties, null, []).map(row => {
+            return (
+              <div>
+                <h2>
+                  <a href={'#' + row.path} id={row.path}></a>
+                  <span className="text">
                     <code>{row.path.split('-').join('.')}</code>
                     </span>
-                    <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
-                         width="20">
-                      <path
-                        d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-                    </svg>
-                  </h2>
-                )
-            })}
-          <p>
-            <code>string</code>
-            <div>(Default: <strong>500</strong>)</div>
-          </p>
-          <p>
-            This is a description... The markdown content
-          </p>
-          <pre id="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
-        </pre>
+                  <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
+                       width="20">
+                    <path
+                      d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                  </svg>
+                </h2>
+                <p>
+                  <code>{row.type}</code>
+                  {
+
+                  }
+                  <div>(Default: <strong>500</strong>)</div>
+                </p>
+                {(() => {
+                  if (row.description) {
+                    return <p dangerouslySetInnerHTML={{__html: marked(row.description)}}></p>
+                  }
+                })()
+
+                }
+              </div>
+            )
+          })}
           <h3><a href="#ref" id="ref">Ref</a></h3>
           {this.mapPropsToTableView(this.renderTableView(), [
             <div>
