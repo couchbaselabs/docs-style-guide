@@ -1,0 +1,163 @@
+{% assign url = page.url | remove_first: '/' %}
+
+{% if site.version == '1.1.0' %}
+  {% assign nav_docs = site.data.11 %}
+{% elsif site.version == '1.2' %}
+  {% assign nav_docs = site.data.12 %}
+{% elsif site.version == '1.3' %}
+  {% assign nav_docs = site.data.13 %}
+{% elsif site.version == '1.4' %}
+  {% assign nav_docs = site.data.14 %}
+{% elsif site.version == '1.5' %}
+  {% assign nav_docs = site.data.15 %}
+{% elsif site.version == '2.0' %}
+  {% assign nav_docs = site.data.20 %}
+{% endif %}
+
+<!-- Used in the left nav to find the relative URL -->
+{% assign base = '' %}
+{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% if    depth <= 1 %}{% assign base = '.' %}
+{% elsif depth == 2 %}{% assign base = '..' %}
+{% elsif depth == 3 %}{% assign base = '../..' %}
+{% elsif depth == 4 %}{% assign base = '../../..' %}
+{% elsif depth == 5 %}{% assign base = '../../../..' %}
+{% elsif depth == 6 %}{% assign base = '../../../../..' %}
+{% elsif depth == 7 %}{% assign base = '../../../../../..' %}{% endif %}
+
+<nav style="width: 100%;" role="navigation" aria-label="Secondary" class="toc collapsible">
+  <ul class="main collapsed">
+    {% for item0 in nav_docs %}
+      <li class="{% if item0.open == true %}isexpanded open{% endif %}">
+      {% if item0.path %}
+        {% if item0.path == url %}
+          <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item0.path }}">{{ item0.title }}</a>
+        {% else %}
+          <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item0.path }}">{{ item0.title }}</a>
+        {% endif %}
+      {% else %}
+        <a href="#" class="static">{{ item0.title }}</a>
+      {% endif %}
+      {% if item0.items %}
+        <ul>
+          {% for item1 in item0.items %}
+          <li class="{% if item1.open == true %}isexpanded open{% endif %}">
+            {% if item1.path %}
+              {% if item1.path == url %}
+                <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item1.path }}">{{ item1.title }}</a>
+              {% else %}
+                <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item1.path }}">{{ item1.title }}</a>
+              {% endif %}
+            {% else %}
+              <a href="#" class="static">{{ item1.title }}</a>
+            {% endif %}
+            {% if item1.items %}
+            <ul>
+              {% for item2 in item1.items %}
+              <li class="{% if item2.open == true %}isexpanded open{% endif %}">
+                {% if item2.path %}
+                  {% if item2.path == url %}
+                    <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item2.path }}">{{ item2.title }}</a>
+                  {% else %}
+                    <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item2.path }}">{{ item2.title }}</a>
+                  {% endif %}
+                {% else %}
+                  <a href="#" class="static">{{ item2.title }}</a>
+                {% endif %}
+                {% if item2.items %}
+                <ul>
+                  {% for item3 in item2.items %}
+                  <li>
+                    {% if item3.path %}
+                      {% if item3.path == url %}
+                      <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item3.path }}">{{ item3.title}}</a>
+                      {% else %}
+                      <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item3.path }}">{{ item3.title }}</a>
+                      {% endif %}
+                    {% else %}
+                      <a href="#" class="static">{{ item3.title }}</a>
+                    {% endif %}
+                    {% if item3.items %}
+                    <ul>
+                      {% for item4 in item3.items %}
+                      <li>
+                        {% if item4.path %}
+                          {% if item4.path == url %}
+                          <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item4.path }}">{{ item4.title }}</a>
+                          {% else %}
+                          <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item4.path }}">{{ item4.title }}</a>
+                          {% endif %}
+                        {% else %}
+                          <a href="#" class="static">{{ item4.title }}</a>
+                        {% endif %}
+                        {% if item4.items %}
+                        <ul>
+                          {% for item5 in item4.items %}
+                          <li>
+                            {% if item5.path %}
+                              {% if item5.path == url %}
+                              <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item5.path }}">{{ item5.title }}</a>
+                              {% else %}
+                              <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item5.path }}">{{ item5.title }}</a>
+                              {% endif %}
+                            {% else %}
+                              <a href="#" class="static">{{ item5.title }}</a>
+                            {% endif %}
+                            {% if item5.items %}
+                            <ul>
+                              {% for item6 in item5.items %}
+                              <li>
+                                {% if item6.path %}
+                                  {% if item6.path == url %}
+                                  <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item6.path }}">{{ item6.title }}</a>
+                                  {% else %}
+                                  <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item6.path }}">{{ item6.title }}</a>
+                                  {% endif %}
+                                {% else %}
+                                  <a href="#" class="static">{{ item6.title }}</a>
+                                {% endif %}
+                                {% if item6.items %}
+                                <ul>
+                                  {% for item7 in item6.items %}
+                                  <li>
+                                    {% if item7.path %}
+                                      {% if item7.path == url %}
+                                      <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item7.path }}">{{ item7.title }}</a>
+                                      {% else %}
+                                      <a href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item7.path }}">{{ item7.title }}</a>
+                                      {% endif %}
+                                    {% else %}
+                                      <a href="#" class="static">{{ item7.title }}</a>
+                                    {% endif %}
+                                  </li>
+                                  {% endfor %}
+                                </ul>
+                                {% endif %}
+                              </li>
+                              {% endfor %}
+                            </ul>
+                            {% endif %}
+                          </li>
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                      </li>
+                      {% endfor %}
+                    </ul>
+                    {% endif %}
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,422 @@
+---
+layout: default
+---
+
+<main id="global-content" class="global-content" role="main">
+
+  <div id="page-template-attributes" data-template-id="" data-template-class="learn-support-sec article-tpl"></div>
+
+  <!-- LEFTNAV and ARTICLE -->
+  <section class="tpl-body">
+    <div class="wrapper">
+      <div class="cols">
+        <aside class="col one-fifth section-nav left-rail">
+          <nav role="navigation" aria-label="Secondary" style="width: 100%;">
+            <div class="toc collapsible" style="display: block;">
+              {% include docs-sidebar.html %}
+            </div>
+          </nav>
+        </aside>
+        <div class="col four-fifths article">
+          <div class="story">
+            <div class="body">
+              {% if page.canonical_url %}
+              <script>
+                window.location.href = 'https://developer.couchbase.com/documentation/mobile/current/{{ page.redirect_to }}';
+              </script>
+              {% endif %}
+              {% if site.version == '1.4' %}
+              {% include developer-preview.html %}
+              {% endif %}
+              <!-- Do not import the overridden styles on swagger ui pages -->
+              {% if page.swagger != true %}
+              <link rel="stylesheet" type="text/css" href="https://couchbase-docs.s3.amazonaws.com/mobile/assets/styles.css">
+              {% endif %}
+              <link rel="stylesheet" type="text/css" href="http://couchbase-docs.s3.amazonaws.com/assets/json-config-ui/json-config-ui.css">
+              {% if page.swagger == true %}
+              <a class="edit-page-link" href="https://github.com/couchbaselabs/couchbase-mobile-portal/tree/master/swagger" target="_blank">Edit on GitHub</a>
+              {% elsif page.noedit != true %}
+              <a class="edit-page-link" href="https://github.com/couchbaselabs/couchbase-mobile-portal/tree/master/md-docs/{{ page.path }}" target="_blank">Edit on GitHub</a>
+              {% endif %}
+
+              <div class="inner-content">
+                <!-- Platform tabs -->
+                <!-- TODO: Make visible when ready to show multi-platform training -->
+                <div class="toggler">
+                  <style>
+                    .toggler a {
+                      display: inline-block;
+                      padding: 3px 20px;
+                      margin: 2px;
+                      border: 1px solid #00739c;
+                      border-radius: 3px;
+                      text-decoration: none !important;
+                    }
+                    .display-platform-ios .toggler .button-ios,
+                    .display-platform-android .toggler .button-android,
+                    .display-platform-rn .toggler .button-rn,
+                    .display-platform-wpf .toggler .button-wpf,
+                    .display-platform-csharp .toggler .button-csharp,
+                    .display-platform-xam .toggler .button-xam,
+                    .display-platform-swift .toggler .button-swift,
+                    .display-platform-objc .toggler .button-objc,
+                    .display-platform-java .toggler .button-java {
+                      background-color: #00739c;
+                      color: white;
+                    }
+
+                    block { display: none; }
+
+                    .display-platform-ios .ios,
+                    .display-platform-android .android,
+                    .display-platform-rn .rn,
+                    .display-platform-net .net,
+                    .display-platform-csharp .csharp,
+                    .display-platform-wpf .wpf,
+                    .display-platform-xam .xam,
+                    .display-platform-all .all,
+                    .display-platform-swift .swift,
+                    .display-platform-objc .objc,
+                    .display-platform-java .java {
+                      display: block;
+                    }
+                    .inner-content .inline:not(.tab-nav) {
+                      display: none;
+                    }
+                    /* Must change the display mode for striped method names.
+                       This works with the StripingTag Jekyll plugin. */
+                    .display-platform-ios .ios.inline,
+                    .display-platform-android .android.inline,
+                    .display-platform-net .net.inline,
+                    .display-platform-csharp .csharp.inline,
+                    .display-platform-swift .swift.inline,
+                    .display-platform-objc .objc.inline,
+                    .display-platform-java .java.inline {
+                      display: inline;
+                    }
+                  </style>
+                  <div id="platform-tabs" class="hide">
+                    <span>Platform:</span>
+                    {% if site.version == '2.0' %}
+                    <a href="javascript:void(0);" class="button-swift" onclick="display('platform', 'swift')">Swift</a>
+                    <a href="javascript:void(0);" class="button-objc" onclick="display('platform', 'objc')">Objective-C</a>
+                    <a href="javascript:void(0);" class="button-csharp" onclick="display('platform', 'csharp')">.NET</a>
+                    <a href="javascript:void(0);" class="button-java" onclick="display('platform', 'java')">Java</a>
+                    {% elsif site.version == '1.4' %}
+                    <a href="javascript:void(0);" class="button-ios" onclick="display('platform', 'ios')">iOS</a>
+                    <a href="javascript:void(0);" class="button-android" onclick="display('platform', 'android')">Android</a>
+                    <a href="javascript:void(0);" class="button-wpf" onclick="display('platform', 'wpf')">WPF</a>
+                    {% endif %}
+                  </div>
+                </div>
+                <!-- SDK buttons -->
+                <div id="swagger-libs" style="display: none;">
+                  <span>Sync Gateway Public REST API:</span>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('java', 'public')">Java</a>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('csharp', 'public')">C#</a>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('go', 'public')">Go</a>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('python', 'public')">Python</a>
+                  <br>
+                  <span>Sync Gateway Admin REST API:</span>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('go', 'admin')">Go</a>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('python', 'admin')">Python</a>
+                  <br>
+                  <span>Couchbase Lite REST API:</span>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('java', 'lite')">Java</a>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('csharp', 'lite')">C#</a>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('swift', 'lite')">Swift</a>
+                  <a href="javascript:void(0);" class="button" onclick="getSDK('python', 'lite')">Python</a>
+                </div>
+                <!-- Markdown content -->
+                {{ content }}
+                <!-- Logic to make all links open in a new tab -->
+                <script>
+                  var links = document.links;
+
+                  for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+                    if (['button-swift', 'button-objc', 'button-csharp', 'button-java', 'button-ios', 'button-android', 'button-wpf'].indexOf(links[i].className) == -1) {
+                      if (links[i].hostname != window.location.hostname) {
+                        links[i].target = '_blank';
+                      }
+                    }
+                  }
+                </script>
+                <!-- Logic for platform tabs -->
+                <script>
+                  // Only show on Develop pages
+                  var blocksv1 = document.getElementsByClassName('ios');
+                  var blocksv2 = document.getElementsByClassName('swift');
+                  if ((blocksv1.length > 0 && blocksv1[0].tagName == 'BLOCK') || (blocksv2.length > 0 && blocksv2[0].tagName == 'BLOCK')) {
+                    var platformTabs = document.getElementById('platform-tabs');
+                    platformTabs.className = "show";
+                  }
+                  // Convert <div>...<span><block /></span>...</div>
+                  // Into <div>...<block />...</div>
+                  var blocks = document.getElementsByTagName('block');
+                  for (var i = 0; i < blocks.length; ++i) {
+                    // Ignore blocks that have the inline class name.
+                    if (blocks[i].className.indexOf('inline') == -1) {
+                      var block = blocks[i];
+                      var span = blocks[i].parentNode;
+                      var container = span.parentNode;
+                      container.insertBefore(block, span);
+                      container.removeChild(span);
+                    }
+                  }
+                  // Convert <div>...<block />content<block />...</div>
+                  // Into <div>...<block>content</block><block />...</div>
+                  blocks = document.getElementsByTagName('block');
+                  for (var i = 0; i < blocks.length; ++i) {
+                    // Ignore blocks that have the inline class name.
+                    if (blocks[i].className.indexOf('inline') == -1) {
+                      var block = blocks[i];
+                      while (block.nextSibling && block.nextSibling.tagName !== 'BLOCK') {
+                        block.appendChild(block.nextSibling);
+                      }
+                    }
+                  }
+                  function display(type, value, isFirstPageLoad) {
+                    deleteCookie('mobile-lang');
+                    setCookie('mobile-lang', value, 365);
+                    if (!isFirstPageLoad) {
+                      var newurl = UpdateQueryString('language', value);
+                      window.history.pushState({path: newurl}, '', newurl);
+                    }
+                    // Place the display-platform-* class on div.inner-content
+                    var container = document.getElementsByClassName('inner-content')[0];
+                    container.className = 'inner-content display-' + type + '-' + value;
+                    if (value == 'wpf' || value == 'csharp' || value == 'xam') {
+                      container.className += ' display-platform-net';
+                    }
+                    container.className += ' display-platform-all';
+                    return false;
+                  }
+
+                  // If we are coming to the page with a hash in it (i.e. from a search, for example), try to get
+                  // us as close as possible to the correct platform and dev os using the hashtag and block walk up.
+                  var foundHash = false;
+                  var language = getParameterByName('language');
+                  if (['ios', 'android', 'csharp', 'swift', 'objc', 'wpf', 'java'].indexOf(language) > -1) {
+                    foundHash = true;
+                    display('platform', language, true);
+                  }
+
+                  if (!foundHash) {
+                    var cookie_lang = getCookie('mobile-lang');
+                    if (document.getElementsByClassName(cookie_lang).length > 0) {
+                      display('platform', cookie_lang, true);
+                    } else {
+                      if (document.getElementsByClassName('swift').length > 0) {
+                        display('platform', 'swift', true);
+                      } else if (document.getElementsByClassName('ios').length > 0) {
+                        display('platform', 'ios', true);
+                      }
+                    }
+                  }
+
+                  function getParameterByName(name, url) {
+                    if (!url) {
+                      url = window.location.href;
+                    }
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                      results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+                  }
+                  function setCookie(cname, cvalue, exdays) {
+                    var d = new Date();
+                    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                    var expires = "expires="+d.toUTCString();
+                    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                  }
+                  function deleteCookie(cname) {
+                    document.cookie = cname + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                  }
+                  function getCookie(cname) {
+                    var name = cname + "=";
+                    var decodedCookie = decodeURIComponent(document.cookie);
+                    var ca = decodedCookie.split(';');
+                    for(var i = 0; i <ca.length; i++) {
+                      var c = ca[i];
+                      while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                      }
+                      if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                      }
+                    }
+                    return "";
+                  }
+                  function UpdateQueryString(key, value, url) {
+                    if (!url) url = window.location.href;
+                    var re = new RegExp("([?&])" + key + "=.*?(&|#|$)(.*)", "gi"),
+                      hash;
+
+                    if (re.test(url)) {
+                      if (typeof value !== 'undefined' && value !== null)
+                        return url.replace(re, '$1' + key + "=" + value + '$2$3');
+                      else {
+                        hash = url.split('#');
+                        url = hash[0].replace(re, '$1$3').replace(/(&|\?)$/, '');
+                        if (typeof hash[1] !== 'undefined' && hash[1] !== null)
+                          url += '#' + hash[1];
+                        return url;
+                      }
+                    }
+                    else {
+                      if (typeof value !== 'undefined' && value !== null) {
+                        var separator = url.indexOf('?') !== -1 ? '&' : '?';
+                        hash = url.split('#');
+                        url = hash[0] + separator + key + '=' + value;
+                        if (typeof hash[1] !== 'undefined' && hash[1] !== null)
+                          url += '#' + hash[1];
+                        return url;
+                      }
+                      else
+                        return url;
+                    }
+                  }
+                </script>
+                <!-- Segment.io analytics -->
+                <script type="text/javascript">
+                  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+                    analytics.load("8mPwsJfsKAal6r62qS9ubBQqjWwYly4M");
+                    analytics.page()
+                  }}();
+                </script>
+                <script>
+                  var starterProject = document.getElementById('project');
+                  analytics.trackLink(starterProject, 'Download project', {
+                    category: 'Training',
+                    label: 'Swift'
+                  });
+                </script>
+                <!-- SDK buttons (shown only if show_true=true in the SDK) -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+                <script>
+
+                  if (getParameterByName("show_swagger_libs") || getParameterByName("swagger")) {
+                    var swagger_libs_el = document.getElementById('swagger-libs');
+                    swagger_libs_el.style.display = 'block';
+                  }
+
+                  function getSDK(lang, spec) {
+                    var url = null;
+                    switch(spec) {
+                      case 'public':
+                        url = 'http://developer.couchbase.com/mobile/swagger/sync-gateway-public/spec.json';
+                        break;
+                      case 'admin':
+                        url = 'http://developer.couchbase.com/mobile/swagger/sync-gateway-admin/spec.json';
+                        break;
+                      case 'lite':
+                        url = 'http://developer.couchbase.com/mobile/swagger/couchbase-lite/spec.json';
+                        break;
+                    }
+                    fetch(url)
+                      .then(function (res) {
+                        return res.json();
+                      })
+                      .then(function (res) {
+                        var options = {
+                          method: 'POST',
+                          headers: {
+                            'Content-Type': 'application/json'
+                          },
+                          body: JSON.stringify({spec: res})
+                        };
+                        return fetch('http://generator.swagger.io/api/gen/clients/' + lang, options)
+                      })
+                      .then(function (res) {
+                        return res.json();
+                      })
+                      .then(function (res) {
+                        window.location = res.link;
+                      });
+                  }
+
+                  function getParameterByName(name, url) {
+                    if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                      results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+                  }
+                </script>
+              </div>
+
+              <script>
+                /**
+                 * HACK: To keep the code tabs while using markdown. Insert <div class="tab"></div> in the markdown and this script
+                 * finds and replaces all instances with a tab bar.
+                 */
+                var tab_bar_html = "</div><a href='javascript:setLanguage(\"swift\")' class=\"tab stripe-active swift\">Swift</a> <a href='javascript:setLanguage(\"objective-c\")' class=\"tab stripe-active objective-c selected\">Objective-C</a> <a href='javascript:setLanguage(\"android\")' class=\"tab stripe-active android\">Android</a> <a href='javascript:setLanguage(\"java\")' class=\"tab stripe-active java\">Java</a> <a href='javascript:setLanguage(\"c\")' class=\"tab stripe-active c\">C#</a>"
+                var tab_bars = document.getElementsByClassName('tabs');
+                var i = tab_bars.length - 1;
+                while (i >= 0) {
+                  var parent = tab_bars.item(i).parentNode;
+                  var element = document.createElement('div');
+                  element.className = 'tab-bar';
+                  element.innerHTML = tab_bar_html;
+                  parent.replaceChild(element, tab_bars.item(i));
+                  i--;
+                }
+
+                /**
+                 * HACK: To keep the markdown tables styles after ingestion we need to wrap the ouput in <div class="table"></div>
+                 */
+                var tables = document.getElementsByTagName("table");
+                var j = tables.length - 1;
+                while (j >= 0) {
+                  var parent = tables.item(j).parentNode;
+                  var table = tables.item(j);
+                  var wrapper = document.createElement('div');
+                  wrapper.className = 'table';
+                  wrapper.style.padding = 0;
+                  parent.insertBefore(wrapper, table);
+                  wrapper.appendChild(table);
+                  j--;
+                }
+              </script>
+              <script>
+                /**
+                 * Hack to not open some list titles
+                 */
+                (function() {
+                  var els = document.getElementsByClassName('static');
+                  for (var i = 0; i < els.length; i++) {
+                    (function() {
+                      var el = els[i];
+                      el.onclick = function () {
+                        var icon = el.previousSibling;
+                        var iconClasses = icon.className;
+                        if (iconClasses == 'icon') {
+                          icon.className = 'icon close';
+                        } else {
+                          icon.className = 'icon';
+                        }
+                        var list = el.nextSibling;
+                        var displayProp = list.style.display;
+                        if (displayProp == 'block') {
+                          list.style.display = 'none';
+                        } else {
+                          list.style.display = 'block';
+                        }
+                      }
+                    })()
+                  }
+                })()
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
+</main>
