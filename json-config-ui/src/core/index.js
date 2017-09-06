@@ -145,7 +145,7 @@ export default class StandaloneLayout extends React.Component {
           })}
         </select>
         
-        <pre className="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
+        <pre id="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
         </pre>
       </div>
     )
