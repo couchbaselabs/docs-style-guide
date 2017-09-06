@@ -24,55 +24,53 @@ export default class StandaloneLayout extends React.Component {
       let rendered = codeTemplate.call(this, code, lang, escaped);
       let output = replaceStringsWithAnchors(rendered, that.state.specs[that.state.selected]);
       output.map((element) => {
-        console.log(element)
-        rendered = rendered.replace(element.name, "<a href=\"\">" + element.name + "</a>");
+        rendered = rendered.replace("&quot;" + element.name + "&quot;", "<a href=\"#" + element.path + "\">" + element.name + "</a>");
       });
       return rendered;
     };
 
     function replaceStringsWithAnchors(string, spec) {
-      return mapKeysToPaths(spec.json.properties, null, []);
+      return that.mapKeysToPaths(spec.json.properties, null, []);
       // console.log(string)
       // Object.keys(string).map((key, index) => {
       //   console.log(key)
       // });
     };
 
-    let mapKeysToPaths = function mapKeysToPaths(props, context, output) {
-      Object.keys(props).map((key, index) => {
-        const type = props[key].type;
-        switch (type) {
-          case 'string':
-            output.push({name: key, path: context + '-' + key});
-            break;
-          case 'integer':
-            output.push({name: key, path: context + '-' + key});
-            break;
-          case 'boolean':
-            output.push({name: key, path: context + '-' + key});
-            break;
-          case 'array':
-            let item_type = props[key].items.type;
-            if (item_type == 'object') {
-              output.push({name: key, path: context + '-' + key});
-              mapKeysToPaths(props[key].items.properties, context + '-' + key, output);
-            } else {
-              output.push({name: key, path: context + '-' + key});
-            }
-            break;
-          case 'object':
-            output.push({name: key, path: context + '-' + key});
-            mapKeysToPaths(props[key].properties, context + '-' + key, output);
-            break;
-          default:
-            break;
-        }
-      });
-      return output;
-    }
   }
   
-  
+  mapKeysToPaths(props, context, output) {
+    Object.keys(props).map((key, index) => {
+      const type = props[key].type;
+      switch (type) {
+        case 'string':
+          output.push({name: key, path: context ? context + '-' + key : key});
+          break;
+        case 'integer':
+          output.push({name: key, path: context ? context + '-' + key : key});
+          break;
+        case 'boolean':
+          output.push({name: key, path: context ? context + '-' + key : key});
+          break;
+        case 'array':
+          let item_type = props[key].items.type;
+          if (item_type == 'object') {
+            output.push({name: key, path: context ? context + '-' + key : key});
+            this.mapKeysToPaths(props[key].items.properties, context ? context + '-' + key : key, output);
+          } else {
+            output.push({name: key, path: context ? context + '-' + key : key});
+          }
+          break;
+        case 'object':
+          output.push({name: key, path: context ? context + '-' + key : key});
+          this.mapKeysToPaths(props[key].properties, context ? context + '-' + key : key, output);
+          break;
+        default:
+          break;
+      }
+    });
+    return output;    
+  }
   
   componentDidMount() {
     this.props.specs.map(function(spec) {
@@ -199,51 +197,61 @@ export default class StandaloneLayout extends React.Component {
   }
   
   render() {
-    return (
-      <div className="docs-ui">
-        <select name="" id="" onChange={this.selectedVersionChange.bind(this)}>
-          {this.state.specs.map((spec, index) => {
-            return <option key={index} value={index}>{spec.version}</option>
-          })}
-        </select>
-        <h2>
-          <a href="sslkey" id="sslkey"></a>
-          <span class="text">
-            <code>sslkey</code>
-          </span>
-          <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
-               width="20">
-            <path
-              d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-          </svg>
-        </h2>
-        <p>
-          <code>string</code>
-          <div>(Default: <strong>500</strong>)</div>
-        </p>
-        <p>
-          This is a description... The markdown content
-        </p>
-        <pre id="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
+    if (!this.state.selected) {
+      return (
+        <div></div>
+      )
+    } else {
+      return (
+        <div className="docs-ui">
+          <select name="" id="" onChange={this.selectedVersionChange.bind(this)}>
+            {this.state.specs.map((spec, index) => {
+              return <option key={index} value={index}>{spec.version}</option>
+            })}
+          </select>
+            {this.mapKeysToPaths(this.state.specs[this.state.selected].json.properties, null, []).map(row => {
+              return (
+                  <h2>
+                    <a href={'#' + row.path} id={row.path}></a>
+                    <span className="text">
+                    <code>{row.path.split('-').join('.')}</code>
+                    </span>
+                    <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
+                         width="20">
+                      <path
+                        d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                    </svg>
+                  </h2>
+                )
+            })}
+          <p>
+            <code>string</code>
+            <div>(Default: <strong>500</strong>)</div>
+          </p>
+          <p>
+            This is a description... The markdown content
+          </p>
+          <pre id="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
         </pre>
-        <h3><a href="#ref" id="ref">Ref</a></h3>
-        {this.mapPropsToTableView(this.renderTableView(), [
-          <div>
-            <h4>
-              server configuration
-              <a className="hash-link instructions" id="server" href={'#server'}>
-                <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
-                     width="20">
-                  <path
-                    d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-                </svg>
-              </a>
-            </h4>
-            <TableView config={this.renderTableView()}/>
-          </div>
-        ])}
-      </div>
-    )
+          <h3><a href="#ref" id="ref">Ref</a></h3>
+          {this.mapPropsToTableView(this.renderTableView(), [
+            <div>
+              <h4>
+                server configuration
+                <a className="hash-link instructions" id="server" href={'#server'}>
+                  <svg ariaHidden="true" className="octicon octicon-link" height="20" version="1.1" viewBox="0 -3 20 20"
+                       width="20">
+                    <path
+                      d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                  </svg>
+                </a>
+              </h4>
+              <TableView config={this.renderTableView()}/>
+            </div>
+          ])}
+        </div>
+      )
+    }
   }
 
 }
