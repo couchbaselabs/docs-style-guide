@@ -67,6 +67,11 @@ export default class StandaloneLayout extends React.Component {
     });
     return output;    
   }
+
+  jumpToAnchor(h) {
+    let top = document.getElementById(h).offsetTop;
+    window.scrollTo(0, top)
+  }
   
   componentDidMount() {
     this.props.specs.map(function(spec) {
@@ -85,6 +90,10 @@ export default class StandaloneLayout extends React.Component {
       this.state.specs.map((spec, index) => {
         if (spec.version == this.props.current) {
           this.selectedVersionChange({target: {value: index + 1}});
+          if (window.location.hash) {
+            let hash = window.location.hash;
+            this.jumpToAnchor(hash.replace('#',''));
+          }
         }
       });
     }.bind(this), 1000);
