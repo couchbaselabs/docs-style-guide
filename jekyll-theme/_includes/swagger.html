@@ -48,7 +48,7 @@
                 window.SwaggerTranslator.translate();
               }
               window.swaggerUi = new SwaggerUi({
-                url: 'https://couchbase-docs.s3.amazonaws.com/mobile/{{site.version}}/rest-apis/{{site.swagger_last_commit}}/{{include.name}}.json',
+                url: 'https://couchbase-docs.s3.amazonaws.com/mobile/{{site.version}}/rest-apis/{{include.name}}.{{site.swagger_timestamp}}.json',
                 dom_id: "swagger-ui-container",
                 supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
                 onComplete: function (swaggerApi, swaggerUi) {
