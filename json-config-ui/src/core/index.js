@@ -142,7 +142,7 @@ export default class StandaloneLayout extends React.Component {
   }
   
   renderSpec() {
-    if (!this.state.selected) {
+    if (this.state.selected === false) {
       return '';
     } else {
       let markdownString = '```json\n ' + JSON.stringify(this.mapPropsToJSON(this.state.specs[this.state.selected].json.properties, {}), null, 2) + '\n```';
@@ -203,16 +203,8 @@ export default class StandaloneLayout extends React.Component {
     return initial;
   }
 
-  renderTableView() {
-    if (!this.state.selected) {
-      return '';
-    } else {
-      return this.state.specs[this.state.selected].json.properties;
-    }
-  }
-  
   render() {
-    if (!this.state.selected) {
+    if (this.state.selected === false) {
       return (
         <div></div>
       )
