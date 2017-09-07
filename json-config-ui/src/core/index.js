@@ -5,7 +5,7 @@ import "whatwg-fetch"
 import TableView from './TableView';
 
 module.exports = function ConfigUI(opts) {
-  ReactDOM.render(<StandaloneLayout specs={opts.specs} />, document.getElementById('swagger-ui'));
+  ReactDOM.render(<StandaloneLayout specs={opts.specs} current={opts.current} />, document.getElementById('swagger-ui'));
 };
 
 export default class StandaloneLayout extends React.Component {
@@ -82,7 +82,11 @@ export default class StandaloneLayout extends React.Component {
     }.bind(this));
     
     setTimeout(function() {
-      this.selectedVersionChange({target: {value: 1}})
+      this.state.specs.map((spec, index) => {
+        if (spec.version == this.props.current) {
+          this.selectedVersionChange({target: {value: index + 1}});
+        }
+      });
     }.bind(this), 1000);
   }
 
@@ -202,7 +206,14 @@ export default class StandaloneLayout extends React.Component {
         <div className="docs-ui">
           <select name="" id="" onChange={this.selectedVersionChange.bind(this)}>
             {this.state.specs.map((spec, index) => {
-              return <option key={index} value={index}>{spec.version}</option>
+              return (
+                <option
+                  key={index}
+                  value={index}
+                  selected={(() => spec.version == this.props.current ? "selected" : "")()}>
+                  {spec.version}
+                </option>
+              )
             })}
           </select>
           <pre id="code" dangerouslySetInnerHTML={{__html: this.renderSpec()}}>
