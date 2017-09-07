@@ -85,7 +85,7 @@ export default class StandaloneLayout extends React.Component {
           });
         }.bind(this));
     }.bind(this));
-    
+
     setTimeout(function() {
       this.state.specs.map((spec, index) => {
         if (spec.version == this.props.current) {
@@ -230,10 +230,11 @@ export default class StandaloneLayout extends React.Component {
             return (
               <div>
                 <h2>
-                  <a href={'#' + row.path} id={row.path}></a>
-                  <span className="text">
-                    <code>{row.path.split('-').join('.')}</code>
-                  </span>
+                  <a href={'#' + row.path} id={row.path}>
+                    <span className="text">
+                      <code>{row.path.split('-').join('.')}</code>
+                    </span>
+                  </a>
                 </h2>
                 <p>
                   <code>{row.type}</code>
