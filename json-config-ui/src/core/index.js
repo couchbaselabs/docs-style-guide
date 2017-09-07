@@ -74,29 +74,35 @@ export default class StandaloneLayout extends React.Component {
   }
   
   componentDidMount() {
+    let promises = [];
+    let specs = this.state.specs.slice();
     this.props.specs.map(function(spec) {
-      fetch(spec.url)
-        .then(res => res.json())
-        .then(function(json) {
-          let specs = this.state.specs.slice();
-          specs.push({version: spec.version, json: json});
-          this.setState({
-            specs: specs
-          });
-        }.bind(this));
+      promises.push(fetch(spec.url));
+      specs.push({version: spec.version})
     }.bind(this));
-
-    setTimeout(function() {
-      this.state.specs.map((spec, index) => {
-        if (spec.version == this.props.current) {
-          this.selectedVersionChange({target: {value: index}});
-          if (window.location.hash) {
-            let hash = window.location.hash;
-            this.jumpToAnchor(hash.replace('#',''));
+    this.setState({specs: specs});
+    
+    Promise.all(promises)
+      .then((results) => {
+        return results.map((res) => {return res.json();})
+      })
+      .then(function(results) {
+        return Promise.all(results);
+      })
+      .then(function(results) {
+        let specs = this.state.specs.slice();
+        let currentIndex = 0;
+        specs = specs.map((res, index) => {
+          if (res.version == this.props.current) {
+            currentIndex = index;
           }
-        }
-      });
-    }.bind(this), 1000);
+          return {version: res.version, json: results[index]}
+        });
+        this.setState({
+          specs: specs
+        });
+        this.selectedVersionChange({target: {value: currentIndex}});
+      }.bind(this));
   }
 
   mapPropsToJSON(props, initial) {
