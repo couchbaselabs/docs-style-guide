@@ -89,7 +89,7 @@ export default class StandaloneLayout extends React.Component {
     setTimeout(function() {
       this.state.specs.map((spec, index) => {
         if (spec.version == this.props.current) {
-          this.selectedVersionChange({target: {value: index + 1}});
+          this.selectedVersionChange({target: {value: index}});
           if (window.location.hash) {
             let hash = window.location.hash;
             this.jumpToAnchor(hash.replace('#',''));
@@ -213,13 +213,12 @@ export default class StandaloneLayout extends React.Component {
     } else {
       return (
         <div className="docs-ui">
-          <select name="" id="" onChange={this.selectedVersionChange.bind(this)}>
+          <select name="" id="" value={this.state.selected} onChange={this.selectedVersionChange.bind(this)}>
             {this.state.specs.map((spec, index) => {
               return (
                 <option
                   key={index}
-                  value={index}
-                  selected={(() => spec.version == this.props.current ? "selected" : "")()}>
+                  value={index}>
                   {spec.version}
                 </option>
               )
