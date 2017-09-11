@@ -16,7 +16,8 @@ export default class StandaloneLayout extends React.Component {
     this.state = {
       spec: null,
       selectedState: null,
-      currentMilestone: null
+      currentMilestone: null,
+      selectedChapter: null,
     };
   }
   
@@ -27,19 +28,23 @@ export default class StandaloneLayout extends React.Component {
       })
       .then(function(res) {
         let spec = jsyaml.load(res);
-        this.setState({spec: spec, selectedLesson: 0, currentMilestone: 0});
+        this.setState({spec: spec, selectedLesson: 0, currentMilestone: 0, selectedChapter: 0});
       }.bind(this));
   }
   
-  getLessonNames() {
-    return this.state.spec.lessons.map(lesson => {
+  getChapters() {
+    return this.state.spec.chapters;
+  }
+  
+  getLessonNames(chapter) {
+    return chapter.lessons.map(lesson => {
       return lesson.title;
     });
   }
   
   getMilestoneNames(selectedLesson) {
-    console.log(this.state.spec.lessons[selectedLesson]);
-    return this.state.spec.lessons[selectedLesson].milestones;
+    console.log(this.state.spec.chapters[this.state.selectedChapter].lessons[selectedLesson]);
+    return this.state.spec.chapters[this.state.selectedChapter].lessons[selectedLesson].milestones;
   }
   
   
@@ -57,20 +62,24 @@ export default class StandaloneLayout extends React.Component {
         return (
           <div className="docs-ui">
             <div className="drawer">
-              <div className="left-nav">
-                {this.getLessonNames().map((name, index) => {
-                  return (
-                    <a
-                      key={index}
-                      className="toc-item"
-                      href="javascript:;"
-                      onClick={(e) => {this.setState({selectedLesson: index, currentMilestone: 0})}}>
-                      <i>{index + 1}</i>
-                      <span>{name}</span>
-                    </a>
-                  )
-                })}
-              </div>
+              {this.getChapters().map((chapter, index) => {
+                return (
+                  <div key={index} className="left-nav">
+                    {this.getLessonNames(chapter).map((name, lessonIndex) => {
+                      return (
+                        <a
+                          key={lessonIndex}
+                          className="toc-item"
+                          href="javascript:;"
+                          onClick={(e) => {this.setState({selectedChapter: index, selectedLesson: lessonIndex, currentMilestone: 0})}}>
+                          <i>{lessonIndex + 1}</i>
+                          <span>{name}</span>
+                        </a>
+                      )
+                    })}
+                  </div>
+                )
+              })}
             </div>
             <div className="body">
               <div className="main">
@@ -91,9 +100,9 @@ export default class StandaloneLayout extends React.Component {
                 </nav>
                 <div className="inner">
                   <ul>
-                    {this.state.spec.lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description}
+                    {this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description}
                     <h3>Try it out</h3>
-                    {this.state.spec.lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout.map((item, index) => {
+                    {this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout.map((item, index) => {
                       return <li key={index}>{item}</li>
                     })}
                   </ul>
