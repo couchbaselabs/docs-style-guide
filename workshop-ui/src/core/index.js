@@ -65,6 +65,7 @@ export default class StandaloneLayout extends React.Component {
               {this.getChapters().map((chapter, index) => {
                 return (
                   <div key={index} className="left-nav">
+                    <em>{chapter.title}</em>
                     {this.getLessonNames(chapter).map((name, lessonIndex) => {
                       return (
                         <a
