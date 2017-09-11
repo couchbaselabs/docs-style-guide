@@ -101,10 +101,10 @@ export default class StandaloneLayout extends React.Component {
                 </nav>
                 <div className="inner">
                   <ul>
-                    {this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description}
+                    <div dangerouslySetInnerHTML={{__html: marked(this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description)}}/>
                     <h3>Try it out</h3>
                     {this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout.map((item, index) => {
-                      return <li key={index}>{item}</li>
+                      return <li key={index} dangerouslySetInnerHTML={{__html: marked(item)}}></li>
                     })}
                   </ul>
                 </div>
