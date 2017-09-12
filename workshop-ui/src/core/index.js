@@ -29,7 +29,11 @@ export default class StandaloneLayout extends React.Component {
       .then(function(res) {
         let spec = jsyaml.load(res);
         let parts = window.location.hash.split('/');
-        this.setState({spec: spec, selectedLesson: parts[2], currentMilestone: parts[3], selectedChapter: parts[1]});
+        if (parts.length === 4) {
+          this.setState({spec: spec, selectedLesson: parts[2], currentMilestone: parts[3], selectedChapter: parts[1]});
+        } else {
+          this.setState({spec: spec, selectedLesson: 0, currentMilestone: 0, selectedChapter: 0});
+        }
       }.bind(this));
   }
   
@@ -44,11 +48,8 @@ export default class StandaloneLayout extends React.Component {
   }
   
   getMilestoneNames(selectedLesson) {
-    console.log(this.state.spec.chapters[this.state.selectedChapter].lessons[selectedLesson]);
     return this.state.spec.chapters[this.state.selectedChapter].lessons[selectedLesson].milestones;
   }
-  
-  
 
   render() {
     let markdownString = '```json\n ' + JSON.stringify(this.state.specs, null, 2) + '\n```';
