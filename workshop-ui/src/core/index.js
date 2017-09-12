@@ -28,7 +28,8 @@ export default class StandaloneLayout extends React.Component {
       })
       .then(function(res) {
         let spec = jsyaml.load(res);
-        this.setState({spec: spec, selectedLesson: 0, currentMilestone: 0, selectedChapter: 0});
+        let parts = window.location.hash.split('/');
+        this.setState({spec: spec, selectedLesson: parts[2], currentMilestone: parts[3], selectedChapter: parts[1]});
       }.bind(this));
   }
   
@@ -71,7 +72,7 @@ export default class StandaloneLayout extends React.Component {
                         <a
                           key={lessonIndex}
                           className="toc-item"
-                          href="javascript:;"
+                          href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
                           onClick={(e) => {this.setState({selectedChapter: index, selectedLesson: lessonIndex, currentMilestone: 0})}}>
                           <i>{lessonIndex + 1}</i>
                           <span>{name}</span>
@@ -86,13 +87,13 @@ export default class StandaloneLayout extends React.Component {
               <div className="main">
                 <nav className="milestones">
                   <ol>
-                    {this.getMilestoneNames(this.state.selectedLesson).map((name, index) => {
+                    {this.getMilestoneNames(this.state.selectedLesson).map((milestone, index) => {
                       return (
                         <li key={index}>
                           <a
-                            href="javascript:;"
+                            href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
                             onClick={(e) => {this.setState({currentMilestone: index})}}>
-                            {name.title}
+                            {milestone.title}
                           </a>
                         </li>
                       )
