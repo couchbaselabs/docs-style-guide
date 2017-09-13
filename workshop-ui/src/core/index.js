@@ -71,6 +71,7 @@ export default class StandaloneLayout extends React.Component {
                     {this.getLessonNames(chapter).map((name, lessonIndex) => {
                       return (
                         <a
+                          style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {backgroundColor: '#e0e0e0'} : {}}
                           key={lessonIndex}
                           className="toc-item instructions"
                           href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
