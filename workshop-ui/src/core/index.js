@@ -108,7 +108,14 @@ export default class StandaloneLayout extends React.Component {
                     <div dangerouslySetInnerHTML={{__html: marked(this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description)}}/>
                     <h3>Try it out</h3>
                     {this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout.map((item, index) => {
-                      return <li key={index} dangerouslySetInnerHTML={{__html: marked(item)}}></li>
+                      return (
+                        <div>
+                          <li key={index} style={{listStyleType: 'none'}}>
+                            <input type="checkbox" className="radio" />
+                            <p style={{display: 'inline-block'}} dangerouslySetInnerHTML={{__html: marked(item)}}></p>
+                          </li>
+                        </div>
+                      )
                     })}
                   </ul>
                 </div>
