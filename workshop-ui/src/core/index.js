@@ -72,9 +72,9 @@ export default class StandaloneLayout extends React.Component {
                       return (
                         <a
                           key={lessonIndex}
-                          className="toc-item"
+                          className="toc-item instructions"
                           href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
-                          onClick={(e) => {e.preventDefault();this.setState({selectedChapter: index, selectedLesson: lessonIndex, currentMilestone: 0})}}>
+                          onClick={(e) => {this.setState({selectedChapter: index, selectedLesson: lessonIndex, currentMilestone: 0})}}>
                           <i>{lessonIndex + 1}</i>
                           <span>{name}</span>
                         </a>
@@ -92,8 +92,9 @@ export default class StandaloneLayout extends React.Component {
                       return (
                         <li key={index}>
                           <a
+                            className="instructions"
                             href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
-                            onClick={(e) => {e.preventDefault();this.setState({currentMilestone: index})}}>
+                            onClick={(e) => {this.setState({currentMilestone: index})}}>
                             {milestone.title}
                           </a>
                         </li>
