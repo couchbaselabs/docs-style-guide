@@ -1,0 +1,51 @@
+.toggler a {
+  display: inline-block;
+  padding: 3px 20px;
+  margin: 2px;
+  border: 1px solid #00739c;
+  border-radius: 3px;
+  text-decoration: none !important;
+}
+.display-platform-ios .toggler .button-ios,
+.display-platform-android .toggler .button-android,
+.display-platform-rn .toggler .button-rn,
+.display-platform-wpf .toggler .button-wpf,
+.display-platform-csharp .toggler .button-csharp,
+.display-platform-xam .toggler .button-xam,
+.display-platform-swift .toggler .button-swift,
+.display-platform-objc .toggler .button-objc,
+.display-platform-java .toggler .button-java {
+  background-color: #00739c;
+  color: white;
+}
+
+block, .platform { display: none; }
+
+.display-platform-ios .ios,
+.display-platform-android .android,
+.display-platform-rn .rn,
+.display-platform-net .net,
+.display-platform-csharp .csharp,
+.display-platform-wpf .wpf,
+.display-platform-xam .xam,
+.display-platform-all .all,
+.display-platform-swift .swift,
+.display-platform-objc .objc,
+.display-platform-java .java {
+  display: block;
+}
+
+.inner-content .inline:not(.tab-nav) {
+  display: none;
+}
+/* Must change the display mode for striped method names.
+   This works with the StripingTag Jekyll plugin. */
+.display-platform-ios .ios.inline,
+.display-platform-android .android.inline,
+.display-platform-net .net.inline,
+.display-platform-csharp .csharp.inline,
+.display-platform-swift .swift.inline,
+.display-platform-objc .objc.inline,
+.display-platform-java .java.inline {
+  display: inline;
+}
