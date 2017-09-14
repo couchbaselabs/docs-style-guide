@@ -159,7 +159,7 @@ export default class StandaloneLayout extends React.Component {
                         <span>Platform:</span>
                         {this.state.platforms.map((name, index) => {
                           return (
-                            <Link to={`/${name}`}>
+                            <Link to={`${name}`}>
                             {name}
                             </Link>
                           )
