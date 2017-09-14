@@ -5,8 +5,43 @@ import "whatwg-fetch"
 import jsyaml from "js-yaml"
 
 module.exports = function ConfigUI(opts) {
-  console.log(opts.specs);
   ReactDOM.render(<StandaloneLayout url={opts.url} />, document.getElementById('swagger-ui'));
+};
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function deleteCookie(cname) {
+  document.cookie = cname + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+let renderer = new marked.Renderer();
+let codeTemplate = renderer.code;
+renderer.code = function(code, lang) {
+  if (lang.indexOf('text-') != -1) {
+    return "<p class=\"platform " + lang.replace('text-', '') + "\">" + code + "</p>";
+  } else {
+    let rendered = codeTemplate.call(this, code, lang);
+    return "<div class=\"platform " + lang + "\">" + rendered + "</div>";
+  }
 };
 
 export default class StandaloneLayout extends React.Component {
@@ -18,7 +53,10 @@ export default class StandaloneLayout extends React.Component {
       selectedState: null,
       currentMilestone: null,
       selectedChapter: null,
+      platforms: [],
     };
+
+    
   }
   
   componentWillMount() {
@@ -34,6 +72,7 @@ export default class StandaloneLayout extends React.Component {
         } else {
           this.setState({spec: spec, selectedLesson: 0, currentMilestone: 0, selectedChapter: 0});
         }
+        this.setState({platforms: spec.platforms})
       }.bind(this));
   }
   
@@ -51,13 +90,20 @@ export default class StandaloneLayout extends React.Component {
     return this.state.spec.chapters[this.state.selectedChapter].lessons[selectedLesson].milestones;
   }
 
+  display(type, value, isFirstPageLoad) {
+    deleteCookie('mobile-lang');
+    setCookie('mobile-lang', value, 365);
+    // Place the display-platform-* class on div.inner-content
+    var container = document.getElementsByClassName('inner-content')[0];
+    container.className = 'inner-content display-' + type + '-' + value;
+    if (value == 'wpf' || value == 'csharp' || value == 'xam') {
+      container.className += ' display-platform-net';
+    }
+    container.className += ' display-platform-all';
+    return false;
+  }
+
   render() {
-    let markdownString = '```json\n ' + JSON.stringify(this.state.specs, null, 2) + '\n```';
-    let renderer = new marked.Renderer();
-    renderer.code = function(code, lang, escaped) {
-      
-    };
-    
       if (!this.state.spec) {
         return <div></div>
       } else {
@@ -87,6 +133,16 @@ export default class StandaloneLayout extends React.Component {
             </div>
             <div className="body">
               <div className="main">
+                <div className="toggler">
+                  <div id="platform-tabs" class="hide">
+                    <span>Platform:</span>
+                    {this.state.platforms.map((name, index) => {
+                      return (
+                        <a href="javascript:void(0);" className={`button-${name}`} onClick={() => {this.display('platform', name)}}>{name}</a>
+                      )
+                    })}
+                  </div>
+                </div>
                 <nav className="milestones">
                   <ol>
                     {this.getMilestoneNames(this.state.selectedLesson).map((milestone, index) => {
@@ -103,9 +159,9 @@ export default class StandaloneLayout extends React.Component {
                     })}
                   </ol>
                 </nav>
-                <div className="inner">
+                <div className="inner inner-content">
                   <ul>
-                    <div dangerouslySetInnerHTML={{__html: marked(this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description)}}/>
+                    <div dangerouslySetInnerHTML={{__html: marked(this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description, {renderer: renderer})}}/>
                     <h3>Try it out</h3>
                     {this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout.map((item, index) => {
                       return (
