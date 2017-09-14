@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom"
 import Content from "./content"
+import highlight from "highlight.js"
 
 module.exports = function ConfigUI(opts) {
   ReactDOM.render(<StandaloneLayout url={opts.url} />, document.getElementById('swagger-ui'));
@@ -39,13 +40,18 @@ function getCookie(cname) {
   return "";
 }
 
+marked.setOptions({
+  highlight: function (code) {
+    return highlight.highlightAuto(code).value;
+  }
+});
 let renderer = new marked.Renderer();
 let codeTemplate = renderer.code;
 renderer.code = function(code, lang) {
   if (lang.indexOf('md-') != -1) {
     return "<div class=\"platform " + lang.replace('md-', '') + "\">" + marked(code) + "</div>";
   } else {
-    let rendered = codeTemplate.call(this, code, lang);
+    let rendered = codeTemplate.call(this, code, lang).replace(`lang-${lang}`, 'hljs');
     return "<div class=\"platform " + lang + "\">" + rendered + "</div>";
   }
 };
