@@ -128,7 +128,7 @@ export default class StandaloneLayout extends React.Component {
         };
         return (
           <div className="docs-ui">
-            <Router>
+            <Router basename="/workshop/mobile-workshop.html">
               <div>
                 <div className="drawer">
                   {this.getChapters().map((chapter, index) => {
