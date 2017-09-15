@@ -66,6 +66,7 @@ export default class StandaloneLayout extends React.Component {
       currentMilestone: null,
       selectedChapter: null,
       platforms: [],
+      platform: null
     };
 
     
@@ -123,6 +124,8 @@ export default class StandaloneLayout extends React.Component {
           return (
             <Content
               {...props}
+              platform={this.state.platform}
+              passPlatform={(platform) => {this.setState({platform: platform})}}
               description={marked(this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description, {renderer: renderer})}/>
           )
         };
@@ -154,16 +157,18 @@ export default class StandaloneLayout extends React.Component {
                 </div>
                 <div className="body">
                   <div className="main">
-                    <div className="toggler">
-                      <div id="platform-tabs" class="hide">
-                        <span>Platform:</span>
-                        {this.state.platforms.map((name, index) => {
-                          return (
-                            <Link to={`${name}`}>
-                            {name}
-                            </Link>
-                          )
-                        })}
+                    <div className={`display-platform-${this.state.platform}`}>
+                      <div className="toggler">
+                        <div id="platform-tabs" >
+                          <span>Platform:</span>
+                          {this.state.platforms.map((name, index) => {
+                            return (
+                              <Link className={`button-${name}`} to={`${name}`}>
+                                {name}
+                              </Link>
+                            )
+                          })}
+                        </div>
                       </div>
                     </div>
                     <nav className="milestones">
