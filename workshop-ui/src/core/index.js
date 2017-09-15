@@ -124,6 +124,7 @@ export default class StandaloneLayout extends React.Component {
           return (
             <Content
               {...props}
+              tryitout={this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout}
               platform={this.state.platform}
               passPlatform={(platform) => {this.setState({platform: platform})}}
               description={marked(this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description, {renderer: renderer})}/>
