@@ -95,10 +95,10 @@ export default class StandaloneLayout extends React.Component {
         let currentIndex = 0;
         specs = specs.map((res, index) => {
           let parts = window.location.hash.split('/');
-          let version = parseInt(parts[0][1]);
-          if (!isNaN(version)) {
-            currentIndex = version;
-          } else if (res.version == this.props.current) {
+          let version = parts[0].replace('#', '');
+          if (version && version == res.version) {
+            currentIndex = index;
+          } else if (this.props.current == res.version) {
             currentIndex = index;
           }
           return {version: res.version, json: results[index]}
