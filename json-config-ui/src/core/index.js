@@ -24,7 +24,7 @@ export default class StandaloneLayout extends React.Component {
       let rendered = codeTemplate.call(this, code, lang, escaped);
       let output = replaceStringsWithAnchors(rendered, that.state.specs[that.state.selected]);
       output.map((element) => {
-        rendered = rendered.replace("&quot;" + element.name + "&quot;", "<a class=\"instructions\" href=\"#" + element.path + "\">" + element.name + "</a>");
+        rendered = rendered.replace("&quot;" + element.name + "&quot;", "<a class=\"instructions\" href=\"#" + that.state.selected + "/" + element.path + "\">" + element.name + "</a>");
       });
       return rendered;
     };
@@ -93,7 +93,11 @@ export default class StandaloneLayout extends React.Component {
         let specs = this.state.specs.slice();
         let currentIndex = 0;
         specs = specs.map((res, index) => {
-          if (res.version == this.props.current) {
+          let parts = window.location.hash.split('/');
+          let version = parseInt(parts[0][1]);
+          if (!isNaN(version)) {
+            currentIndex = version;
+          } else if (res.version == this.props.current) {
             currentIndex = index;
           }
           return {version: res.version, json: results[index]}
@@ -228,7 +232,7 @@ export default class StandaloneLayout extends React.Component {
             return (
               <div>
                 <h2>
-                  <a href={'#' + row.path} id={row.path}>
+                  <a href={`#${this.state.selected}/${row.path}`} id={`${this.state.selected}/${row.path}`}>
                     <span className="text">
                       <code>{row.path.split('-').join('.')}</code>
                     </span>
