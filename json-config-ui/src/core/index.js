@@ -107,6 +107,12 @@ export default class StandaloneLayout extends React.Component {
           specs: specs,
           selected: currentIndex
         });
+        setTimeout(function () {
+          if (window.location.hash) {
+            let id = window.location.hash.replace('#', '');
+            document.getElementById(id).scrollIntoView();
+          }
+        }, 0);
       }.bind(this));
   }
 
@@ -234,8 +240,8 @@ export default class StandaloneLayout extends React.Component {
           {this.mapKeysToPaths(this.state.specs[this.state.selected].json.properties, null, []).map(row => {
             return (
               <div>
-                <h2>
-                  <a className="instructions" href={`#${version}/${row.path}`} id={`#${version}/${row.path}`}>
+                <h2 id={`#${version}/${row.path}`}>
+                  <a className="instructions" href={`#${version}/${row.path}`} id={`${version}/${row.path}`}>
                     <span className="text">
                       <code>{row.path.split('-').join('.')}</code>
                     </span>
