@@ -21,10 +21,11 @@ export default class StandaloneLayout extends React.Component {
     let codeTemplate = this.state.renderer.code;
     var that = this;
     this.state.renderer.code = function(code, lang, escaped) {
+      let version = that.state.specs[that.state.selected].version;
       let rendered = codeTemplate.call(this, code, lang, escaped);
       let output = replaceStringsWithAnchors(rendered, that.state.specs[that.state.selected]);
       output.map((element) => {
-        rendered = rendered.replace("&quot;" + element.name + "&quot;", "<a class=\"instructions\" href=\"#" + that.state.selected + "/" + element.path + "\">" + element.name + "</a>");
+        rendered = rendered.replace("&quot;" + element.name + "&quot;", "<a class=\"instructions\" href=\"#" + version + "/" + element.path + "\">" + element.name + "</a>");
       });
       return rendered;
     };
@@ -103,9 +104,9 @@ export default class StandaloneLayout extends React.Component {
           return {version: res.version, json: results[index]}
         });
         this.setState({
-          specs: specs
+          specs: specs,
+          selected: currentIndex
         });
-        this.selectedVersionChange({target: {value: currentIndex}});
         setTimeout(function () {
           if (window.location.hash) {
             let id = window.location.hash.replace('#', '');
@@ -147,6 +148,7 @@ export default class StandaloneLayout extends React.Component {
   }
   
   selectedVersionChange(event) {
+    window.location.hash = '';
     var index = event.target.value;
     this.setState({selected: index});
   }
@@ -219,6 +221,7 @@ export default class StandaloneLayout extends React.Component {
         <div></div>
       )
     } else {
+      let version = this.state.specs[this.state.selected].version;
       return (
         <div className="docs-ui">
           <select name="" id="" value={this.state.selected} onChange={this.selectedVersionChange.bind(this)}>
@@ -238,7 +241,7 @@ export default class StandaloneLayout extends React.Component {
             return (
               <div>
                 <h2>
-                  <a href={`#${this.state.selected}/${row.path}`} id={`${this.state.selected}/${row.path}`}>
+                  <a href={`#${version}/${row.path}`} id={`${version}/${row.path}`}>
                     <span className="text">
                       <code>{row.path.split('-').join('.')}</code>
                     </span>
