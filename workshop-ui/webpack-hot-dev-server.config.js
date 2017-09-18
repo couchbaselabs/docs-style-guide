@@ -76,5 +76,6 @@ module.exports = require("./make-webpack-config")(rules, {
     stats: {
       colors: true
     },
+    historyApiFallback: true
   },
 })
