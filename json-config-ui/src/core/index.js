@@ -249,18 +249,18 @@ export default class StandaloneLayout extends React.Component {
                 </h2>
                 <p>
                   <code>{row.type}</code>
+                  {
+                    (() => {
+                      if (row.default) {
+                        return <div><br/>(Default: <strong>{row.default}</strong>)</div>
+                      }
+                    })()
+                  }
                 </p>
                 {
                   (() => {
                     if (row.description) {
                       return <p dangerouslySetInnerHTML={{__html: marked(row.description)}}></p>
-                    }
-                  })()
-                }
-                {
-                  (() => {
-                    if (row.default) {
-                      return <div>(Default: <strong>{row.default}</strong>)</div>
                     }
                   })()
                 }
