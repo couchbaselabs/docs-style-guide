@@ -241,7 +241,7 @@ export default class StandaloneLayout extends React.Component {
             return (
               <div>
                 <h2>
-                  <a href={`#${version}/${row.path}`} id={`${version}/${row.path}`}>
+                  <a className="instructions" href={`#${version}/${row.path}`} id={`${version}/${row.path}`}>
                     <span className="text">
                       <code>{row.path.split('-').join('.')}</code>
                     </span>
