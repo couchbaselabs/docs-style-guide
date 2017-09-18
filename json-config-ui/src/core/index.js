@@ -24,7 +24,7 @@ export default class StandaloneLayout extends React.Component {
       let rendered = codeTemplate.call(this, code, lang, escaped);
       let output = replaceStringsWithAnchors(rendered, that.state.specs[that.state.selected]);
       output.map((element) => {
-        rendered = rendered.replace("&quot;" + element.name + "&quot;", "<a href=\"#" + element.path + "\">" + element.name + "</a>");
+        rendered = rendered.replace("&quot;" + element.name + "&quot;", "<a class=\"instructions\" href=\"#" + element.path + "\">" + element.name + "</a>");
       });
       return rendered;
     };
