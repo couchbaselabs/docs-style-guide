@@ -106,6 +106,12 @@ export default class StandaloneLayout extends React.Component {
           specs: specs
         });
         this.selectedVersionChange({target: {value: currentIndex}});
+        setTimeout(function () {
+          if (window.location.hash) {
+            let id = window.location.hash.replace('#', '');
+            document.getElementById(id).scrollIntoView();
+          }
+        }, 0);
       }.bind(this));
   }
 
