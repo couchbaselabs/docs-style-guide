@@ -1,3 +1,9 @@
+<div>
+  {% for version in include.versions %}
+  <button class="swagger-ui-version-button" style="color: black;background: white;border-radius: 4px;border: none;display: inline-block;" onclick="loadUI('{{version}}')">v {{version}}</button>
+  {% endfor %}
+</div>
+
 <link href="https://couchbase-docs.s3.amazonaws.com/assets/swagger-ui-3/swagger-ui.css" media="screen" rel="stylesheet" type="text/css"/>
 
 <div id="swagger-ui"></div>
@@ -5,9 +11,30 @@
 <script src="https://couchbase-docs.s3.amazonaws.com/assets/swagger-ui-3/swagger-ui-standalone-preset.js"> </script>
 
 <script>
-  $(window).load(function() {
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  function loadUI(version) {
+    var buttons = document.getElementsByClassName("swagger-ui-version-button");
+    for (var i = 0; i < buttons.length; i++) {
+      var button = buttons[i];
+      if (button.innerText == 'v ' + version) {
+        button.style.background = '#ec1e2cc7';
+        button.style.color = 'white';
+      } else {
+        button.style.background = 'white';
+        button.style.color = 'black';
+      }
+    }
+    
     const ui = SwaggerUIBundle({
-      url: "https://couchbase-docs.s3.amazonaws.com/mobile/{{site.version}}/rest-apis/{{include.name}}.json",
+      url: "https://couchbase-docs.s3.amazonaws.com/mobile/" + version + "/rest-apis/couchbase-lite.json",
       dom_id: '#swagger-ui',
       deepLinking: true,
       presets: [
@@ -23,5 +50,13 @@
       docExpansion: "none"
     })
     window.ui = ui
+  }
+
+  $(window).load(function() {
+    if (getParameterByName('v')) {
+      loadUI(getParameterByName('v'));
+    } else {
+      loadUI("{{ site.version }}");
+    }
   });
 </script>
