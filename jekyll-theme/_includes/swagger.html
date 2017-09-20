@@ -1,6 +1,6 @@
 <div>
   {% for version in include.versions %}
-  <button class="swagger-ui-version-button" style="color: black;background: white;border-radius: 4px;border: none;display: inline-block;" onclick="loadUI('{{version}}')">v {{version}}</button>
+  <button class="swagger-ui-version-button" style="color: black;background: white;border-radius: 4px;border: none;display: inline-block;" onclick="onClick('{{version}}')">v {{version}}</button>
   {% endfor %}
 </div>
 
@@ -19,6 +19,13 @@
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  function onClick(version) {
+    if (history.pushState) {
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?v=' + version;
+      window.history.pushState({path:newurl},'',newurl);
+    }
+    loadUI(version)
   }
   function loadUI(version) {
     var buttons = document.getElementsByClassName("swagger-ui-version-button");
