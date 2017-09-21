@@ -73,12 +73,10 @@ export default class StandaloneLayout extends React.Component {
       <Router>
         <div>
           <div>
-            <Link to="/develop/swift">
-              Develop
-            </Link>
-            <Link to="/deploy/centos">
-              Deploy
-            </Link>
+            <Link to="/develop/swift">Swift</Link><br/><br/>
+            <Link to="/develop/java">Java</Link><br/><br/>
+            <Link to="/deploy/centos">CentOS</Link><br/><br/>
+            <Link to="/deploy/docker">Docker</Link><br/><br/>
           </div>
           <div>
             <Route exact={true} path="/develop/:platform" render={({ match }) => (
