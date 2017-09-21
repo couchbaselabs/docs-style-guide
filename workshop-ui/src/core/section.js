@@ -13,12 +13,8 @@ marked.setOptions({
 let renderer = new marked.Renderer();
 let codeTemplate = renderer.code;
 renderer.code = function(code, lang) {
-  if (lang.indexOf('md-') != -1) {
-    return "<div class=\"platform " + lang.replace('md-', '') + "\">" + marked(code) + "</div>";
-  } else {
     let rendered = codeTemplate.call(this, code, lang).replace(`lang-${lang}`, 'hljs');
-    return "<div class=\"platform " + lang + "\">" + rendered + "</div>";
-  }
+    return rendered;
 };
 
 export default class Tutorial extends React.Component {
