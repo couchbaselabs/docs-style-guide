@@ -14,7 +14,34 @@ layout: default
     // Build a system
     const ui = ConfigUIBundle({
       dom_id: '#swagger-ui',
-      url: 'http://couchbase-docs.s3.amazonaws.com/mobile/workshop/spec.yaml?v=1'
+      tree: [
+        {
+          "title": "Develop",
+          "platforms": [
+            {
+              "title": "swift",
+              "url": "http://couchbase-docs.s3.amazonaws.com/mobile/workshop/develop/swift.yaml?v=1"
+            },
+            {
+              "title": "java",
+              "url": "http://couchbase-docs.s3.amazonaws.com/mobile/workshop/develop/java.yaml?v=1"
+            }
+          ]
+        },
+        {
+          "title": "Deploy",
+          "platforms": [
+            {
+              "title": "centos",
+              "url": "http://couchbase-docs.s3.amazonaws.com/mobile/workshop/deploy/centos.yaml?v=1"
+            },
+            {
+              "title": "docker",
+              "url": "http://couchbase-docs.s3.amazonaws.com/mobile/workshop/deploy/docker.yaml?v=1"
+            }
+          ]
+        }
+      ]
     });
     
     window.ui = ui;
