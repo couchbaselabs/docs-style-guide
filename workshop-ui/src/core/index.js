@@ -1,18 +1,14 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import marked from "marked"
-import "whatwg-fetch"
-import jsyaml from "js-yaml"
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from "react-router-dom"
-import Content from "./content"
-import highlight from "highlight.js"
+import Tutorial from "./section"
 
 module.exports = function ConfigUI(opts) {
-  ReactDOM.render(<StandaloneLayout url={opts.url} />, document.getElementById('swagger-ui'));
+  ReactDOM.render(<StandaloneLayout url={opts.url} tree={opts.tree} />, document.getElementById('swagger-ui'));
 };
 
 function setCookie(cname, cvalue, exdays) {
@@ -40,22 +36,6 @@ function getCookie(cname) {
   return "";
 }
 
-marked.setOptions({
-  highlight: function (code) {
-    return highlight.highlightAuto(code).value;
-  }
-});
-let renderer = new marked.Renderer();
-let codeTemplate = renderer.code;
-renderer.code = function(code, lang) {
-  if (lang.indexOf('md-') != -1) {
-    return "<div class=\"platform " + lang.replace('md-', '') + "\">" + marked(code) + "</div>";
-  } else {
-    let rendered = codeTemplate.call(this, code, lang).replace(`lang-${lang}`, 'hljs');
-    return "<div class=\"platform " + lang + "\">" + rendered + "</div>";
-  }
-};
-
 export default class StandaloneLayout extends React.Component {
   
   constructor() {
@@ -66,41 +46,13 @@ export default class StandaloneLayout extends React.Component {
       currentMilestone: null,
       selectedChapter: null,
       platforms: [],
-      platform: null
+      platform: null,
+      tree: null
     };
-
-    
   }
   
   componentWillMount() {
-    fetch(this.props.url)
-      .then(res => {
-        return res.text()
-      })
-      .then(function(res) {
-        let spec = jsyaml.load(res);
-        let parts = window.location.hash.split('/');
-        if (parts.length === 4) {
-          this.setState({spec: spec, selectedLesson: parts[2], currentMilestone: parts[3], selectedChapter: parts[1]});
-        } else {
-          this.setState({spec: spec, selectedLesson: 0, currentMilestone: 0, selectedChapter: 0});
-        }
-        this.setState({platforms: spec.platforms})
-      }.bind(this));
-  }
-  
-  getChapters() {
-    return this.state.spec.chapters;
-  }
-  
-  getLessonNames(chapter) {
-    return chapter.lessons.map(lesson => {
-      return lesson.title;
-    });
-  }
-  
-  getMilestoneNames(selectedLesson) {
-    return this.state.spec.chapters[this.state.selectedChapter].lessons[selectedLesson].milestones;
+    this.setState({tree: this.props.tree});
   }
 
   display(type, value, isFirstPageLoad) {
@@ -117,91 +69,28 @@ export default class StandaloneLayout extends React.Component {
   }
 
   render() {
-      if (!this.state.spec) {
-        return <div></div>
-      } else {
-        const SelectedContent = (props) => {
-          return (
-            <Content
-              {...props}
-              tryitout={this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].tryitout}
-              platform={this.state.platform}
-              passPlatform={(platform) => {this.setState({platform: platform})}}
-              description={marked(this.state.spec.chapters[this.state.selectedChapter].lessons[this.state.selectedLesson].milestones[this.state.currentMilestone].description, {renderer: renderer})}/>
-          )
-        };
-        return (
-          <div className="docs-ui">
-            <Router basename="/workshop/mobile-workshop.html">
-              <div>
-                <div className="drawer">
-                  {this.getChapters().map((chapter, index) => {
-                    return (
-                      <div key={index} className="left-nav">
-                        <em>{chapter.title}</em>
-                        {this.getLessonNames(chapter).map((name, lessonIndex) => {
-                          return (
-                            <a
-                              style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {backgroundColor: '#e0e0e0'} : {}}
-                              key={lessonIndex}
-                              className="toc-item instructions"
-                              href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
-                              onClick={(e) => {this.setState({selectedChapter: index, selectedLesson: lessonIndex, currentMilestone: 0})}}>
-                              <i>{lessonIndex + 1}</i>
-                              <span>{name}</span>
-                            </a>
-                          )
-                        })}
-                      </div>
-                    )
-                  })}
-                </div>
-                <div className="body">
-                  <div className="main">
-                    <div className={`display-platform-${this.state.platform}`}>
-                      <div className="toggler">
-                        <div id="platform-tabs" >
-                          <span>Platform:</span>
-                          {this.state.platforms.map((name, index) => {
-                            return (
-                              <Link className={`button-${name}`} to={`${name}`}>
-                                {name}
-                              </Link>
-                            )
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                    <nav className="milestones">
-                      <ol>
-                        {this.getMilestoneNames(this.state.selectedLesson).map((milestone, index) => {
-                          return (
-                            <li key={index}>
-                              <a
-                                className="instructions"
-                                href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
-                                onClick={(e) => {this.setState({currentMilestone: index})}}>
-                                {milestone.title}
-                              </a>
-                            </li>
-                          )
-                        })}
-                      </ol>
-                    </nav>
-                    <div className="inner">
-                      <div>
-                        <div>
-                          <Route path="/:platform" render={SelectedContent} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </Router>
-      </div>
-        )
-      }
+    return (
+      <Router>
+        <div>
+          <div>
+            <Link to="/develop">
+              Develop
+            </Link>
+            <Link to="/deploy">
+              Deploy
+            </Link>
+          </div>
+          <div>
+            <Route exact={true} path="/develop/:platform" render={({ match }) => (
+              <Tutorial content={this.state.tree[0].platforms.find(platform => platform.title === match.params.platform)}/>
+            )}/>
+            <Route exact={true} path="/deploy/:platform" render={({ match }) => (
+              <Tutorial content={this.state.tree[1].platforms.find(platform => platform.title === match.params.platform)} />
+            )}/>
+          </div>
+        </div>
+      </Router>
+    )
   }
 
 }

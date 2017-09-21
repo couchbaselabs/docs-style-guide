@@ -68,8 +68,8 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
-<script src="./config-ui-bundle.js"> </script>
-<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="/config-ui-bundle.js"> </script>
+<script src="/swagger-ui-standalone-preset.js"> </script>
 <script>
   window.onload = function() {
     window["ConfigUIBundle"] = window["config-ui-bundle"]
@@ -77,8 +77,34 @@
     // Build a system
     const ui = ConfigUIBundle({
       dom_id: '#swagger-ui',
-//      url: 'http://localhost:8000/spec.yaml?v=1'
-      url: 'http://couchbase-docs.s3.amazonaws.com/mobile/workshop/spec.yaml?v=1'
+      tree: [
+        {
+          "title": "Develop",
+          "platforms": [
+            {
+              "title": "swift",
+              "url": "http://localhost:8000/develop/swift.yaml?v=1"
+            },
+            {
+              "title": "java",
+              "url": "http://localhost:8000/develop/java.yaml?v=1"
+            }
+          ]
+        },
+        {
+          "title": "Deploy",
+          "platforms": [
+            {
+              "title": "centos",
+              "url": "http://localhost:8000/deploy/centos.yaml?v=1"
+            },
+            {
+              "title": "docker",
+              "url": "http://localhost:8000/deploy/docker.yaml?v=1"
+            }
+          ]
+        }
+      ]
     });
 
     window.ui = ui
