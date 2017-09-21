@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom"
 import Tutorial from "./section"
+import Welcome from "./welcome"
 
 module.exports = function ConfigUI(opts) {
   ReactDOM.render(<StandaloneLayout url={opts.url} tree={opts.tree} />, document.getElementById('swagger-ui'));
@@ -73,12 +74,7 @@ export default class StandaloneLayout extends React.Component {
       <Router>
         <div>
           <div>
-            <Link to="/develop/swift">Swift</Link><br/><br/>
-            <Link to="/develop/java">Java</Link><br/><br/>
-            <Link to="/deploy/centos">CentOS</Link><br/><br/>
-            <Link to="/deploy/docker">Docker</Link><br/><br/>
-          </div>
-          <div>
+            <Route exact={true} path="/" component={Welcome} />
             <Route exact={true} path="/develop/:platform" render={({ match }) => (
               <Tutorial content={this.state.tree[0].platforms.find(platform => platform.title === match.params.platform)}/>
             )}/>
