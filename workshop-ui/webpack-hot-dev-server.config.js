@@ -54,7 +54,7 @@ module.exports = require("./make-webpack-config")(rules, {
       "./src/polyfills",
       "./src/core/index.js"
     ],
-    "swagger-ui-standalone-preset": [
+    "config-ui-standalone-preset": [
       "./src/style/main.scss",
       "./src/polyfills",
       "./src/standalone/index.js",

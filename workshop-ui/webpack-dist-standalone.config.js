@@ -24,7 +24,7 @@ module.exports = require("./make-webpack-config.js")(rules, {
   },
 
   entry: {
-    "swagger-ui-standalone-preset": [
+    "config-ui-standalone-preset": [
       "./src/polyfills",
       "./src/standalone/index.js"
     ]
@@ -33,7 +33,7 @@ module.exports = require("./make-webpack-config.js")(rules, {
   output:  {
     path: path.join(__dirname, "dist"),
     publicPath: "/dist",
-    library: "SwaggerUIStandalonePreset",
+    library: "ConfigUIStandalonePreset",
     libraryTarget: "umd",
     filename: "[name].js",
     chunkFilename: "js/[name].js",
