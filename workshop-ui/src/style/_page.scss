@@ -11,7 +11,7 @@
 
 
 /* HACK: To override the AuthX styles (navs, lists) */
-.body ul {
+.body ul, .body li {
   list-style-type: disc !important;
 }
 
@@ -20,7 +20,7 @@
 }
 
 /* Override AuthX styles */
-.body ul ul {
+.body ul ul, .body ul ul li {
   list-style-type: circle !important;
   margin: 0 !important;
 }
