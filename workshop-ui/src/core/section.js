@@ -4,6 +4,11 @@ import jsyaml from "js-yaml"
 import marked from "marked"
 import Content from "./content"
 import highlight from "highlight.js"
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom"
 
 marked.setOptions({
   highlight: function (code) {
@@ -68,6 +73,9 @@ export default class Tutorial extends React.Component {
         <div className="docs-ui">
             <div>
               <div className="drawer">
+                <div className="left-nav">
+                  <Link to="/" className=" hyperlink-effect">← Back</Link>
+                </div>
                 {this.getChapters().map((chapter, index) => {
                   return (
                     <div key={index} className="left-nav">
