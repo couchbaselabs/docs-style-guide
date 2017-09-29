@@ -13,6 +13,7 @@
 /* HACK: To override the AuthX styles (navs, lists) */
 .body ul, .body li {
   list-style-type: disc !important;
+  line-height: 1.5;
 }
 
 .body ul, .inner-content ul {
