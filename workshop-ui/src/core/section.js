@@ -74,7 +74,7 @@ export default class Tutorial extends React.Component {
             <div>
               <div className="drawer">
                 <div className="left-nav">
-                  <Link to="/" className=" hyperlink-effect">← Back</Link>
+                  <Link to="/" className=" hyperlink-effect">← Home</Link>
                 </div>
                 {this.getChapters().map((chapter, index) => {
                   return (
