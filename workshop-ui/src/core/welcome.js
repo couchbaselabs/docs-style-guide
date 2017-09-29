@@ -25,7 +25,8 @@ export default class Welcome extends React.Component {
               </div>
               <div className="col-two move-left" style={{animationDuration: '1.2s',animationDelay: '0.3s',animationName: 'fadeInLeft',height: '338px'}}>
                 <div className="col-img">
-                  <img src="https://www.couchbase.com/binaries/content/gallery/website/images-new/svgs/cloud-first-strategy-2.svg" alt="Cloud-first strategy"/>
+                  <br/><br/><br/><br/><br/><br/>
+                  <img src="https://cl.ly/1m3l3K1Z2s0C/featured.png" alt="Cloud-first strategy"/>
                 </div>
               </div>
             </div>
