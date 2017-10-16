@@ -5,6 +5,23 @@
 </div>
 
 <link href="https://couchbase-docs.s3.amazonaws.com/assets/swagger-ui-3/swagger-ui.css" media="screen" rel="stylesheet" type="text/css"/>
+<style>
+  .article .body pre, #swagger-ui .article .body-param pre {
+    text-shadow: none !important;
+  }
+  #swagger-ui a {
+    color: #3b4151 !important;
+  }
+  #swagger-ui .swagger-ui .tab li {
+    min-width: 100px;
+  }
+  #swagger-ui .information-container.wrapper {
+    display: none;
+  }
+  #swagger-ui .topbar {
+    display: none;
+  }
+</style>
 
 <div id="swagger-ui"></div>
 <script src="https://couchbase-docs.s3.amazonaws.com/assets/swagger-ui-3/swagger-ui-bundle.js"> </script>
@@ -48,13 +65,10 @@
         SwaggerUIBundle.presets.apis,
         SwaggerUIStandalonePreset
       ],
-      plugins: [
-        SwaggerUIBundle.plugins.DownloadUrl
-      ],
-      layout: "StandaloneLayout",
       tagsSorter: "alpha",
       operationsSorter: "alpha",
-      docExpansion: "none"
+      docExpansion: "none",
+      layout: "StandaloneLayout"
     })
     window.ui = ui
   }
