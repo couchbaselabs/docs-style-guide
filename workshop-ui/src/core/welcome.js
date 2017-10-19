@@ -41,9 +41,10 @@ export default class Welcome extends React.Component {
               <div className="col-two">
                 <div className="intro-content">
                   <h4>Deploy</h4>
-                  <p className="para-18">In the Develop section, you learnt how to develop an app using Couchbase Mobile in a standalone development environment. Now, we learn how to install, upgrade and scale the Couchbase Mobile back-end cluster that would be applicable in a production environment. Select one of the options below to learn how to deploy the cluster as Virtual Machines (on CentOS) or as containers in Docker Cloud.</p>
-                  <Link to="/deploy/centos">CentOS</Link><br/><br/>
-                  <Link to="/deploy/docker">Docker</Link>
+                  <p className="para-18">In the Develop section, you learnt how to develop an app using Couchbase Mobile in a standalone development environment. Now, we learn how to install, upgrade and scale the Couchbase Mobile back-end cluster that would be applicable in a production environment. Select one of the options below to learn how to deploy the cluster as local Virtual Machines (using Vagrant) or by using your own instances in AWS EC2. There is also the option to reuse the same Rightscale Environment from the Develop section.</p>
+                  <Link to="/deploy/centos">Local VMs with Vagrant</Link><br/><br/>
+                  <Link to="/deploy/aws">AWS EC2 / Bring Your Own Instances</Link><br/><br/>
+                  <Link to="/deploy/rightscale">Rightscale</Link>  
                 </div>
               </div>
             </div>
