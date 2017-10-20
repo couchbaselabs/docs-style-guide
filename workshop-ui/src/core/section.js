@@ -83,13 +83,14 @@ export default class Tutorial extends React.Component {
                       {this.getLessonNames(chapter).map((name, lessonIndex) => {
                         return (
                           <a
-                            style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {backgroundColor: '#e0e0e0'} : {}}
+                            style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {border: '2px solid #ec1e2cb0', backgroundColor: 'rgb(222, 222, 222)'} : {border: '2px solid transparent'}}
                             key={lessonIndex}
                             className="toc-item instructions"
                             href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
                             onClick={(e) => {this.setState({selectedChapter: index, selectedLesson: lessonIndex, currentMilestone: 0})}}>
-                            <i>{lessonIndex + 1}</i>
-                            <span>{name}</span>
+                            <i
+                              style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {color: '#ec1e2cb0', border: '2px solid #ec1e2cb0'} : {}}>{lessonIndex + 1}</i>
+                            <span style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {} : {}}>{name}</span>
                           </a>
                         )
                       })}
