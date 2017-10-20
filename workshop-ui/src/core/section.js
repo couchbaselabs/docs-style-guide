@@ -46,6 +46,13 @@ export default class Tutorial extends React.Component {
         } else {
           this.setState({spec: spec, selectedLesson: 0, currentMilestone: 0, selectedChapter: 0});
         }
+        var that = this;
+        window.onhashchange = function() {
+          let parts = window.location.hash.split('/');
+          if (parts.length === 4) {
+            that.setState({selectedLesson: parts[2], currentMilestone: parts[3], selectedChapter: parts[1]});
+          }
+        };
       }.bind(this));
   }
 
