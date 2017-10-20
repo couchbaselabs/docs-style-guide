@@ -114,13 +114,14 @@ export default class Tutorial extends React.Component {
                     </div>
                   </div>
                   <nav className="milestones">
-                    <ol>
+                    <ul id="tabs">
                       {this.getMilestoneNames(this.state.selectedLesson).map((milestone, index) => {
                         return (
                           <li
                             key={index}
-                            style={this.state.currentMilestone == index ? {backgroundColor: '#e0e0e0'} : {}}>
+                            style={this.state.currentMilestone == index ? {color: '#0a83f6'} : {}}>
                             <a
+                              style={this.state.currentMilestone == index ? {color: '#0a83f6', borderBottom: '2px solid #0a83f6'} : {}}
                               className="instructions"
                               href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
                               onClick={(e) => {this.setState({currentMilestone: index})}}>
@@ -129,7 +130,7 @@ export default class Tutorial extends React.Component {
                           </li>
                         )
                       })}
-                    </ol>
+                    </ul>
                   </nav>
                   <div className="inner">
                     <div>
