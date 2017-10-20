@@ -1,15 +1,3 @@
-.milestones {
-  ol {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
-    font-size: 15px;
-    color: #a5b3bb;
-    line-height: 26px;
-  }
-}
-
-
 /* HACK: To override the AuthX styles (navs, lists) */
 .body ul, .body li {
   list-style-type: disc !important;
@@ -62,5 +50,27 @@
   }
   h2 {
     margin: 20px 0;
+  }
+}
+
+.milestones {
+  ul#tabs, ul#tabs li {
+    list-style-type: none !important;
+    margin: 0 auto;
+  }
+  ul#tabs li a {
+    padding: 1.8rem 2rem .9rem;
+    font-weight: 700;
+  }
+  ul#tabs {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 15px;
+    color: #a5b3bb;
+    line-height: 26px;
+    list-style-type: none !important;
+    border-bottom: 1px solid #e2e5e9;
+    padding-bottom: .9rem;
   }
 }
