@@ -90,13 +90,13 @@ export default class Tutorial extends React.Component {
                       {this.getLessonNames(chapter).map((name, lessonIndex) => {
                         return (
                           <a
-                            style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {border: '2px solid #ec1e2cb0', backgroundColor: 'rgb(222, 222, 222)'} : {border: '2px solid transparent'}}
+                            style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {border: '2px solid rgba(236, 30, 44, 0.69)', backgroundColor: 'rgb(222, 222, 222)'} : {border: '2px solid transparent'}}
                             key={lessonIndex}
                             className="toc-item instructions"
                             href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
                             onClick={(e) => {this.setState({selectedChapter: index, selectedLesson: lessonIndex, currentMilestone: 0})}}>
                             <i
-                              style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {color: '#ec1e2cb0', border: '2px solid #ec1e2cb0'} : {}}>{lessonIndex + 1}</i>
+                              style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {color: 'rgba(236, 30, 44, 0.69)', border: '2px solid rgba(236, 30, 44, 0.69)'} : {}}>{lessonIndex + 1}</i>
                             <span style={this.state.selectedLesson == lessonIndex && this.state.selectedChapter == index ? {} : {}}>{name}</span>
                           </a>
                         )
