@@ -21,6 +21,16 @@ renderer.code = function(code, lang) {
     let rendered = codeTemplate.call(this, code, lang).replace(`lang-${lang}`, 'hljs');
     return rendered;
 };
+let linkTemplate = renderer.link;
+renderer.link = function(href, title, text) {
+  let rendered = linkTemplate.call(this, href, title, text);
+  if (href.indexOf('http') !== -1 || href.indexOf('https') !== -1) {
+    let output = `${rendered.slice(0, 2)} target="_blank" ${rendered.slice(3)}`;
+    return output;
+  } else {
+    return rendered;
+  }
+};
 
 export default class Tutorial extends React.Component {
   
