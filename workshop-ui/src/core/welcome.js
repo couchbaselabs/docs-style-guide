@@ -19,8 +19,8 @@ export default class Welcome extends React.Component {
                   <p className="para-18">We will develop a sample Travel application for mobile platforms using Couchbase Mobile 2.0. The simple app will allow users to search for and make flight reservations and will also allow searches for hotels based on specific criteria.
                     The mobile app will use the Couchbase Lite 2.0 API that includes support for a N1QL like query interface and Full Text Search (FTS) capabilities. The app will sync documents with Sync Gateway 1.5 and Couchbase Server 5.0 using the 2.0 replication protocol. Additionally, we will use a web version of the Travel Sample app to demonstrate seamless data sync between web and mobile apps.
                     Begin by choosing “Swift” for iOS and “Java” for Android version. The app will support other mobile platforms shortly.</p>
-                  <Link to="/develop/swift" className=" hyperlink-effect">Swift</Link><br/><br/>
-                  <Link to="/develop/java" className=" hyperlink-effect">Java</Link>
+                  <Link to="develop/swift" className=" hyperlink-effect">Swift</Link><br/><br/>
+                  <Link to="develop/java" className=" hyperlink-effect">Java</Link>
                 </div>
               </div>
               <div className="col-two move-left" style={{animationDuration: '1.2s',animationDelay: '0.3s',animationName: 'fadeInLeft',height: '338px'}}>
@@ -42,9 +42,9 @@ export default class Welcome extends React.Component {
                 <div className="intro-content">
                   <h4>Deploy</h4>
                   <p className="para-18">In the Develop section, you learnt how to develop an app using Couchbase Mobile in a standalone development environment. Now, we learn how to install, upgrade and scale the Couchbase Mobile back-end cluster that would be applicable in a production environment. Select one of the options below to learn how to deploy the cluster as local Virtual Machines (using Vagrant) or by using your own instances in AWS EC2. There is also the option to reuse the same Rightscale Environment from the Develop section.</p>
-                  <Link to="/deploy/centos">Local VMs with Vagrant</Link><br/><br/>
-                  <Link to="/deploy/aws">AWS EC2 / Bring Your Own Instances</Link><br/><br/>
-                  <Link to="/deploy/rightscale">Rightscale</Link>  
+                  <Link to="deploy/centos">Local VMs with Vagrant</Link><br/><br/>
+                  <Link to="deploy/aws">AWS EC2 / Bring Your Own Instances</Link><br/><br/>
+                  <Link to="deploy/rightscale">Rightscale</Link>  
                 </div>
               </div>
             </div>

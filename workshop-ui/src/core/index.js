@@ -71,15 +71,12 @@ export default class StandaloneLayout extends React.Component {
 
   render() {
     return (
-      <Router>
+      <Router basename="/tutorials/travel-sample">
         <div>
           <div>
-            <Route exact={true} path="/tutorials/travel-sample/index.html" component={Welcome} />
-            <Route exact={true} path="/tutorials/travel-sample/" component={Welcome} />
-            <Route exact={true} path="/index.html" component={Welcome} />
             <Route exact={true} path="/" component={Welcome} />
             <Route exact={true} path="/develop/:platform" render={({ match }) => (
-              <Tutorial content={this.state.tree[0].platforms.find(platform => platform.title === match.params.platform)}/>
+              <Tutorial content={this.state.tree[0].platforms.find(platform => platform.title === match.params.platform)} />
             )}/>
             <Route exact={true} path="/deploy/:platform" render={({ match }) => (
               <Tutorial content={this.state.tree[1].platforms.find(platform => platform.title === match.params.platform)} />
