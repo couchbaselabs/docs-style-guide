@@ -74,6 +74,7 @@ export default class StandaloneLayout extends React.Component {
       <Router>
         <div>
           <div>
+            <Route exact={true} path="/tutorials/travel-sample/index.html" component={Welcome} />
             <Route exact={true} path="/index.html" component={Welcome} />
             <Route exact={true} path="/" component={Welcome} />
             <Route exact={true} path="/develop/:platform" render={({ match }) => (
