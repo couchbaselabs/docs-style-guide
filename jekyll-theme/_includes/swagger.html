@@ -77,7 +77,7 @@
     if (getParameterByName('v')) {
       loadUI(getParameterByName('v'));
     } else {
-      loadUI("{{ include.current }}");
+      loadUI("{{ site.version }}");
     }
   });
 </script>
