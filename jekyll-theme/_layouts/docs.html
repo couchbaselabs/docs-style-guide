@@ -25,7 +25,8 @@ layout: default
                 window.location.href = 'https://developer.couchbase.com/documentation/mobile/current/{{ page.redirect_to }}';
               </script>
               {% endif %}
-              {% if site.version == '1.4' %}
+              {% assign version = site.version | plus: 0 %}
+              {% if version < 2.0 %}
               {% include developer-preview.html %}
               {% endif %}
               <!-- Do not import the overridden styles on swagger ui pages -->
