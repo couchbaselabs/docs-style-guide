@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+  <b>Issues pulled from :: </b>
+  <code>{{ query }}</code>
+  <table cellpadding="4" cellspacing="0" summary="" id="topic_gbk_tyh_t5__table_zgb_11j_qbb" class="table" frame="border" border="1" rules="all">
+    <colgroup>
+      <col style="width:27.47252747252747%">
+      <col style="width:72.52747252747253%">
+    </colgroup>
+    <thead class="thead" style="text-align:left;">
+    <tr class="row">
+      <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Issue</th>
+      <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Description</th>
+      <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Components</th>
+    </tr>
+    </thead>
+    <tbody class="tbody">
+      {{#issues}}
+        <tr class="row">
+          <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e120 "><a class="xref" href="https://issues.couchbase.com/browse/{{ key }}" target="_blank">{{ key }}</a></td>
+          <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 "><strong class="ph b">Summary</strong>: {{ summary }}</td>
+          <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">
+            {{#fields.components}}
+              <strong>{{ name }}</strong>
+            {{/fields.components}}
+          </td>
+        </tr>
+      {{/issues}}
+    </tbody>
+  </table>
+  </body>
+</html>
