@@ -1,6 +1,6 @@
 import requestRx from './requestRx';
 import rx from 'rx';
-import Mustache from 'Mustache';
+import Mustache from 'mustache';
 import fs from 'fs';
 
 let username = process.env.JIRA_USERNAME
