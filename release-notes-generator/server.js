@@ -21,12 +21,11 @@ requestRx.post(xdcr_body)
   .subscribe({
     onNext: data => {
       let params = Object.assign(data.body, {query: fixed_issues});
-      console.log(params.issues[0].fields)
       fs.readFile('template.html', 'utf8', function (err, data) {
         if (err) {
           return console.log(err);
         }
-        fs.writeFile("./build/5.1/release-notes.html", Mustache.render(data, params), function(err) {
+        fs.writeFile("./build/release-notes.html", Mustache.render(data, params), function(err) {
           if(err) {
             return console.log(err);
           }
