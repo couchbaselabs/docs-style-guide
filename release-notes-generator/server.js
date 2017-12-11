@@ -25,7 +25,7 @@ requestRx.post(xdcr_body)
         if (err) {
           return console.log(err);
         }
-        fs.writeFile("./build/release-notes.html", Mustache.render(data, params), function(err) {
+        fs.writeFile('./build/release-notes.html', Mustache.render(data, params), function(err) {
           if(err) {
             return console.log(err);
           }
