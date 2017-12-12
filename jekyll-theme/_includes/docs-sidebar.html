@@ -28,7 +28,7 @@
 <nav style="width: 100%;" role="navigation" aria-label="Secondary" class="toc collapsible">
   <ul class="main collapsed">
     {% for item0 in nav_docs %}
-      <li class="{% if item0.open == true %}isexpanded open{% endif %}">
+      <li class="{% if item0.open == true %}isexpanded open{% endif %} {% if item0.ishidden == true %}ishidden{% endif %}">
       {% if item0.path %}
         {% if item0.path == url %}
           <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item0.path }}">{{ item0.title }}</a>
@@ -41,7 +41,7 @@
       {% if item0.items %}
         <ul>
           {% for item1 in item0.items %}
-          <li class="{% if item1.open == true %}isexpanded open{% endif %}">
+          <li class="{% if item1.open == true %}isexpanded open{% endif %} {% if item1.ishidden == true %}ishidden{% endif %}">
             {% if item1.path %}
               {% if item1.path == url %}
                 <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item1.path }}">{{ item1.title }}</a>
@@ -54,7 +54,7 @@
             {% if item1.items %}
             <ul>
               {% for item2 in item1.items %}
-              <li class="{% if item2.open == true %}isexpanded open{% endif %}">
+              <li class="{% if item2.open == true %}isexpanded open{% endif %} {% if item2.ishidden == true %}ishidden{% endif %}">
                 {% if item2.path %}
                   {% if item2.path == url %}
                     <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item2.path }}">{{ item2.title }}</a>
@@ -67,7 +67,7 @@
                 {% if item2.items %}
                 <ul>
                   {% for item3 in item2.items %}
-                  <li>
+                  <li class="{% if item3.open == true %}isexpanded open{% endif %} {% if item3.ishidden == true %}ishidden{% endif %}">
                     {% if item3.path %}
                       {% if item3.path == url %}
                       <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item3.path }}">{{ item3.title}}</a>
@@ -80,7 +80,7 @@
                     {% if item3.items %}
                     <ul>
                       {% for item4 in item3.items %}
-                      <li>
+                      <li class="{% if item4.open == true %}isexpanded open{% endif %} {% if item4.ishidden == true %}ishidden{% endif %}">
                         {% if item4.path %}
                           {% if item4.path == url %}
                           <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item4.path }}">{{ item4.title }}</a>
@@ -93,7 +93,7 @@
                         {% if item4.items %}
                         <ul>
                           {% for item5 in item4.items %}
-                          <li>
+                          <li class="{% if item5.open == true %}isexpanded open{% endif %} {% if item5.ishidden == true %}ishidden{% endif %}">
                             {% if item5.path %}
                               {% if item5.path == url %}
                               <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item5.path }}">{{ item5.title }}</a>
@@ -106,7 +106,7 @@
                             {% if item5.items %}
                             <ul>
                               {% for item6 in item5.items %}
-                              <li>
+                              <li class="{% if item6.open == true %}isexpanded open{% endif %} {% if item6.ishidden == true %}ishidden{% endif %}">
                                 {% if item6.path %}
                                   {% if item6.path == url %}
                                   <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item6.path }}">{{ item6.title }}</a>
@@ -119,7 +119,7 @@
                                 {% if item6.items %}
                                 <ul>
                                   {% for item7 in item6.items %}
-                                  <li>
+                                  <li class="{% if item7.open == true %}isexpanded open{% endif %} {% if item7.ishidden == true %}ishidden{% endif %}">
                                     {% if item7.path %}
                                       {% if item7.path == url %}
                                       <a class="selected" href="{% if page.url != '/'%}{{base}}/{% endif %}{{ item7.path }}">{{ item7.title }}</a>
