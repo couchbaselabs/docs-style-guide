@@ -20,7 +20,7 @@ export default class Welcome extends React.Component {
                     The mobile app will use the Couchbase Lite 2.0 API that includes support for a N1QL like query interface and Full Text Search (FTS) capabilities. The app will sync documents with Sync Gateway 1.5 and Couchbase Server 5.0 using the 2.0 replication protocol. Additionally, we will use a web version of the Travel Sample app to demonstrate seamless data sync between web and mobile apps.
                     Begin by choosing “Swift” for iOS , “Java” for Android version and “C Sharp” for UWP version. The app will support other mobile platforms shortly.</p>
                   <Link to="develop/swift" className=" hyperlink-effect">Swift</Link><br/><br/>
-                  <Link to="develop/java" className=" hyperlink-effect">Java</Link>
+                  <Link to="develop/java" className=" hyperlink-effect">Java</Link><br/><br/>
                   <Link to="develop/csharp" className=" hyperlink-effect">C Sharp</Link>
                 </div>
               </div>
