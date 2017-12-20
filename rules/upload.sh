@@ -17,6 +17,8 @@ put tmp.zip
 
 sftp -b push.sh -oIdentityFile=~/.ssh/couchbase_sftp.key couchbaseinc@static.hosting.onehippo.com
 
+rm push.sh
+
 API_KEY="${HIPPO_API_KEY}"
 SITE_URL="https://developer.couchbase.com/restservices/documentation/"
 allErrors=""
