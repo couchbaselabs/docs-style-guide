@@ -52,7 +52,7 @@ In this example, REST APIs are documented using [Swagger](http://swagger.io/). G
 
 It uploads the content of the **rest-api** folder in this repository. As part of the uploaded content, there are `script` and `link` tags to pull the **SwaggerUI** resources as shown on the diagram below.
 
-![](https://cl.ly/123P2G1R310M/swagger-ui-flow.png)
+![](assets/swagger-ui-flow.png)
 
 The REST API is published at [http://developer-qa.cbauthx.com/documentation/mobile/1.4/swagger-ui.html](http://developer-qa.cbauthx.com/documentation/mobile/1.4/swagger-ui.html).
 
