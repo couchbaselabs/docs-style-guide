@@ -10,4 +10,4 @@ Upload:
 upload.sh
 ```
 
-The output is then published to https://developer.couchbase.com/documentation/mobile/test/article/index.html. Contact @jamiltz if you have any questions.
+The output is then published to https://developer.couchbase.com/documentation/mobile/test/article/index.html. Contact [@jamiltz](https://github.com/jamiltz) if you have any questions.
