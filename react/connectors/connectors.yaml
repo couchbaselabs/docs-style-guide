@@ -33,27 +33,27 @@ items:
         description: kafka/release-notes.md
   - title: Spark Connector
     description: spark-intro.md
-      items:
-        - title: Download and API Reference
-          description: spark/download-links.md
-        - title: Getting Started
-          description: spark/getting-started.md
-        - title: Development Workflow
-          description: spark/dev-workflow.md
-        - title: Working with RDDs
-          description: spark/working-with-rdds.md
-        - title: Spark SQL Integration
-          description: spark/spark-sql.md
-        - title: Spark Streaming Integration
-          description: spark/spark-streaming.md
-        - title: Structured Streaming Integration
-          description: spark/structured-streaming.md
-        - title: Java API
-          description: spark/java-api.md
-        - title: Using the Spark Shell
-          description: spark/spark-shell.md
-        - title: Release Notes
-          description: spark/release-notes.md
+    items:
+      - title: Download and API Reference
+        description: spark/download-links.md
+      - title: Getting Started
+        description: spark/getting-started.md
+      - title: Development Workflow
+        description: spark/dev-workflow.md
+      - title: Working with RDDs
+        description: spark/working-with-rdds.md
+      - title: Spark SQL Integration
+        description: spark/spark-sql.md
+      - title: Spark Streaming Integration
+        description: spark/spark-streaming.md
+      - title: Structured Streaming Integration
+        description: spark/structured-streaming.md
+      - title: Java API
+        description: spark/java-api.md
+      - title: Using the Spark Shell
+        description: spark/spark-shell.md
+      - title: Release Notes
+        description: spark/release-notes.md
   - title: Talend Connector
     description: talend.md
   - title: ODBC and JDBC Drivers
