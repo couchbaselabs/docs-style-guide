@@ -17,9 +17,9 @@ items:
       - title: Release Notes
         description: elasticsearch/release-notes.md
   - title: Hadoop Connector
-    description: hadoop.md
+    description: hadoop/hadoop.md
   - title: Kafka Connector
-    description: kafka-intro.md
+    description: kafka/kafka-intro.md
     items:
       - title: Quickstart
         description: kafka/quickstart.md
@@ -32,7 +32,7 @@ items:
       - title: Release Notes
         description: kafka/release-notes.md
   - title: Spark Connector
-    description: spark-intro.md
+    description: spark/spark-intro.md
     items:
       - title: Download and API Reference
         description: spark/download-links.md
@@ -55,6 +55,6 @@ items:
       - title: Release Notes
         description: spark/release-notes.md
   - title: Talend Connector
-    description: talend.md
+    description: talend/talend.md
   - title: ODBC and JDBC Drivers
-    description: odbc-jdbc-drivers.md
+    description: odbc-jdbc/odbc-jdbc-drivers.md
