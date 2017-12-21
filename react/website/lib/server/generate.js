@@ -5,6 +5,12 @@ function execute() {
   const jsyaml = require('js-yaml');
   const program = require('commander');
   const path = require('path');
+  const React = require('react');
+  const renderToStaticMarkup = require('react-dom/server').renderToStaticMarkup;
+  const Remarkable = require('remarkable');
+  const md = new Remarkable();
+  
+  const DocsLayout = require('../../core/DocsLayout');
   
   program.option('--input <path>', 'Specify input path')
     .parse(process.argv);
@@ -23,8 +29,16 @@ function execute() {
   /* Read every file path and output to the build dir */
   yaml.items
     .map(item => {
-      let content = fs.readFileSync(`${path.dirname(program.input)}/${item.description}`);
-      writeFileAndCreateFolder(`../build/${item.description}`, content);
+      let content = fs.readFileSync(`${path.dirname(program.input)}/${item.description}`, {encoding: 'utf8'});
+      
+      const docComp = (
+        <DocsLayout>
+          {md.render(content)}
+        </DocsLayout>
+      );
+      const str = renderToStaticMarkup(docComp);
+      
+      writeFileAndCreateFolder(`../build/${item.description.replace('.md', '.html')}`, str);
     });
   
 }
