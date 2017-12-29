@@ -3,6 +3,7 @@
   <body>
   <b>Issues pulled from :: </b>
   <code>{{ query }}</code>
+  <p>The text in the description column is extracted from JIRA comments: we search for a comment which contains the string <code>Description for release notes:</code></p>
   <table cellpadding="4" cellspacing="0" summary="" id="topic_gbk_tyh_t5__table_zgb_11j_qbb" class="table" frame="border" border="1" rules="all">
     <colgroup>
       <col style="width:27.47252747252747%">
@@ -19,11 +20,11 @@
       {{#issues}}
         <tr class="row">
           <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e120 "><a class="xref" href="https://issues.couchbase.com/browse/{{ key }}" target="_blank">{{ key }}</a></td>
-          <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 "><strong class="ph b">Summary</strong>: {{ summary }}</td>
+          <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 "><strong class="ph b">Summary</strong>: {{ comment }}</td>
           <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">
-            {{#fields.components}}
+            {{#components}}
               <strong>{{ name }}</strong>
-            {{/fields.components}}
+            {{/components}}
           </td>
         </tr>
       {{/issues}}

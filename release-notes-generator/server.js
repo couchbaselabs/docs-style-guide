@@ -8,19 +8,45 @@ let username = process.env.JIRA_USERNAME
   , url = `https://${username}:${password}@issues.couchbase.com`
   , post_body = {json: true};
 
-let fixed_issues = 'project = "Couchbase Server" AND fixVersion in (vulcan,5.1.0) AND labels = known_issue AND component in (memcached, couchbase-bucket)'
-  , xdcr_body = Object.assign({
+let known_issues = 'project = "Couchbase Server" AND fixVersion in (vulcan,5.1.0) AND labels = known_issue AND component in (memcached, couchbase-bucket, tools, fts, view-engine, installer, query)'
+  , options = Object.assign({
       body: {
-        "jql": fixed_issues,
-        "fields": ["summary", "components", "description"]
+        "jql": known_issues,
+        "fields": ["summary", "components", "comment"] /* Fields we need for release notes */
       },
       url: `${url}/rest/api/2/search`
     }, post_body);
 
-requestRx.post(xdcr_body)
+let result = {issues: []};
+requestRx.post(options)
+  .flatMap(result => {
+    return rx.Observable.fromArray(result.body.issues);
+  })
+  .map(issue => {
+    /* Find the comment we will display in release notes */
+    let comments = issue.fields.comment.comments;
+    let rn_comment = comments.filter(comment => {
+      let search = comment.body.search('Description for release notes:');
+      if (search != -1) {
+        return comment;
+      }
+    });
+    return {
+      key: issue.key, 
+      comment: rn_comment[0] ? rn_comment[0].body : '', 
+      components: issue.fields.components
+    };
+  })
   .subscribe({
     onNext: data => {
-      let params = Object.assign(data.body, {query: fixed_issues});
+      result.issues.push(data);
+    },
+    onError: error => {
+      console.log(new Error(error));
+    },
+    onCompleted: () => {
+      /* Generate the release notes in the build directory */
+      let params = Object.assign(result, {query: known_issues});
       fs.readFile('template.html', 'utf8', function (err, data) {
         if (err) {
           return console.log(err);
@@ -29,22 +55,9 @@ requestRx.post(xdcr_body)
           if(err) {
             return console.log(err);
           }
-
           console.log("The file was saved!");
         });
       });
-    },
-    onError: error => {
-      console.log(new Error(error));
-    },
-    onCompleted: () => {
       console.log('Completed')
     }
   });
-
-var view = {
-  title: "Joe",
-  calc: function () {
-    return 2 + 4;
-  }
-};
