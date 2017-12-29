@@ -1,60 +1,60 @@
 items:
   - title: Elasticsearch Plugin
-    description: elasticsearch/index.md
+    path: elasticsearch/index.md
     items:
       - title: Installation and Configuration
-        description: elasticsearch/install-and-config.md
+        path: elasticsearch/install-and-config.md
       - title: Getting Started
-        description: elasticsearch/getting-started.md
+        path: elasticsearch/getting-started.md
       - title: Working with Documents
-        description: elasticsearch/working-with-documents.md
+        path: elasticsearch/working-with-documents.md
       - title: Advanced Settings
-        description: elasticsearch/advanced-settings.md
+        path: elasticsearch/advanced-settings.md
       - title: Performance Tuning
-        description: elasticsearch/performance-tuning.md
+        path: elasticsearch/performance-tuning.md
       - title: Troubleshooting
-        description: elasticsearch/troubleshooting.md
+        path: elasticsearch/troubleshooting.md
       - title: Release Notes
-        description: elasticsearch/release-notes.md
+        path: elasticsearch/release-notes.md
   - title: Hadoop Connector
-    description: hadoop/hadoop.md
+    path: hadoop/hadoop.md
   - title: Kafka Connector
-    description: kafka/kafka-intro.md
+    path: kafka/kafka-intro.md
     items:
       - title: Quickstart
-        description: kafka/quickstart.md
+        path: kafka/quickstart.md
       - title: Source Configuration Options
-        description: kafka/source-configuration-options.md
+        path: kafka/source-configuration-options.md
       - title: Sink Configuration Options
-        description: kafka/sink-configuration-options.md
+        path: kafka/sink-configuration-options.md
       - title: Same with Kafka Streams
-        description: kafka/streams-sample.md
+        path: kafka/streams-sample.md
       - title: Release Notes
-        description: kafka/release-notes.md
+        path: kafka/release-notes.md
   - title: Spark Connector
-    description: spark/spark-intro.md
+    path: spark/spark-intro.md
     items:
       - title: Download and API Reference
-        description: spark/download-links.md
+        path: spark/download-links.md
       - title: Getting Started
-        description: spark/getting-started.md
+        path: spark/getting-started.md
       - title: Development Workflow
-        description: spark/dev-workflow.md
+        path: spark/dev-workflow.md
       - title: Working with RDDs
-        description: spark/working-with-rdds.md
+        path: spark/working-with-rdds.md
       - title: Spark SQL Integration
-        description: spark/spark-sql.md
+        path: spark/spark-sql.md
       - title: Spark Streaming Integration
-        description: spark/spark-streaming.md
+        path: spark/spark-streaming.md
       - title: Structured Streaming Integration
-        description: spark/structured-streaming.md
+        path: spark/structured-streaming.md
       - title: Java API
-        description: spark/java-api.md
+        path: spark/java-api.md
       - title: Using the Spark Shell
-        description: spark/spark-shell.md
+        path: spark/spark-shell.md
       - title: Release Notes
-        description: spark/release-notes.md
+        path: spark/release-notes.md
   - title: Talend Connector
-    description: talend/talend.md
+    path: talend/talend.md
   - title: ODBC and JDBC Drivers
-    description: odbc-jdbc/odbc-jdbc-drivers.md
+    path: odbc-jdbc/odbc-jdbc-drivers.md
