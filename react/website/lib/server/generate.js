@@ -7,8 +7,7 @@ function execute() {
   const path = require('path');
   const React = require('react');
   const renderToStaticMarkup = require('react-dom/server').renderToStaticMarkup;
-  const Remarkable = require('remarkable');
-  const md = new Remarkable();
+  
   
   const DocsLayout = require('../../core/DocsLayout');
   const Tutorial = require('../../core/Tutorial');
@@ -47,11 +46,10 @@ function execute() {
   }
   
   function buildTutorials() {
-    let content = fs.readFileSync(input_path);
-    let yaml = jsyaml.load(content);
-    
+    let content = fs.readFileSync(input_path, {encoding: 'utf8'});
     const tutorialComp = (
-      <Tutorial spec={yaml}>
+      <Tutorial
+        content={content}>
       </Tutorial>
     );
     const str = renderToStaticMarkup(tutorialComp);
