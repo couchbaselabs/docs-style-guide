@@ -30,6 +30,7 @@ class Tutorial extends React.Component {
       <head>
         <meta charset="UTF-8"/>
         <title>Title</title>
+        <link rel="stylesheet" href="/css/styles.css"/>
       </head>
       <body>
         <div
@@ -40,6 +41,7 @@ class Tutorial extends React.Component {
             style={{
             }}>
             <div
+              className="sidebar"
               style={{
                 width: 256,
                 background: '#f5f5f5',

@@ -79,7 +79,10 @@ function execute() {
           throw error;
         },
         () => {
-          console.log('completed')
+          mkdirp.sync('../build/css');
+          let content = fs.readFileSync('static/css/styles.css');
+          fs.writeFileSync('../build/css/styles.css', content);
+          console.log('completed');
         }
       );
     
