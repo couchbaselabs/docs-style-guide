@@ -1,3 +1,7 @@
+import requestRx from './../requestRx';
+import rx from 'rx';
+import base64 from 'base-64';
+
 function execute() {
   const CWD = process.cwd();
   const mkdirp = require('mkdirp');
@@ -26,7 +30,7 @@ function execute() {
   }
   
   function buildDocs() {
-    let content = fs.readFileSync(input_path);
+    let content = fs.readFileSync('../../tutorials/manifest.yaml');
     let yaml = jsyaml.load(content);
 
     /* Read every file path and output to the build dir */
@@ -46,15 +50,40 @@ function execute() {
   }
   
   function buildTutorials() {
-    let content = fs.readFileSync(input_path, {encoding: 'utf8'});
-    const tutorialComp = (
-      <Tutorial
-        content={content}>
-      </Tutorial>
-    );
-    const str = renderToStaticMarkup(tutorialComp);
+    let manifest = fs.readFileSync('../../tutorials/manifest.yaml');
+    let yaml = jsyaml.load(manifest);
     
-    writeFileAndCreateFolder('../build/swift.html', str);
+    rx.Observable.fromArray(yaml.items)
+      .flatMap(tutorial => {
+        return requestRx.get(tutorial.link, {headers: {'User-Agent': 'request'}})
+      })
+      .flatMap(data => {
+        console.log('hello');
+        let response = JSON.parse(data.body);
+        let content = base64.decode(response.content);
+        const tutorialComp = (
+          <Tutorial
+            content={content}>
+          </Tutorial>
+        );
+        const str = renderToStaticMarkup(tutorialComp);
+        let repo = response.url.split('/')[5];
+        writeFileAndCreateFolder(`../build/${repo}/${response.name.replace('.md', '.html')}`, str);
+        return response.name;
+      })
+      .subscribe(
+        data => {
+          console.log('Wrote' +  data)
+        },
+        error => {
+          throw error;
+        },
+        () => {
+          console.log('completed')
+        }
+      );
+    
+    setTimeout(() => {}, 5000);
   }
   
   switch(mode) {
