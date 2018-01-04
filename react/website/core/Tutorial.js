@@ -41,13 +41,27 @@ class Tutorial extends React.Component {
             }}>
             <div
               style={{
+                width: 256,
+                background: '#f5f5f5',
                 position: 'fixed',
+                height: '100%',
+                position: 'fixed',
+                paddingTop: 55,
+                top: 0,
               }}>
               <Sidebar
                 content={this.props.content} />
             </div>
           </div>
           <div
+            style={{
+              display: 'block',
+              position: 'absolute',
+              top: 64,
+              left: 256,
+              right: 0,
+              bottom: 0,
+            }}
             dangerouslySetInnerHTML={{
               __html: md.render(this.props.content)
             }}>
