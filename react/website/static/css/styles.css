@@ -2,13 +2,6 @@
   list-style-type: none;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -34,4 +27,23 @@
 .sidebar-content a {
   color: black;
   font-size: 18px;
+}
+
+.content-container {
+  display: block;
+  /*flex-direction: column;*/
+  /*justify-content: flex-start;*/
+  /*align-items: stretch;*/
+
+  position: absolute;
+  top: 64px;
+  left: 300px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.content {
+  display: block;
+  width: 800px;
+  margin: 0 auto;
 }

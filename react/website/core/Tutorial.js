@@ -33,18 +33,12 @@ class Tutorial extends React.Component {
                 content={this.props.content} />
             </div>
           </div>
-          <div className="content"
-            style={{
-              display: 'block',
-              position: 'absolute',
-              top: 64,
-              left: 256,
-              right: 0,
-              bottom: 0,
-            }}
-            dangerouslySetInnerHTML={{
-              __html: md.render(this.props.content)
-            }}>
+          <div className="content-container">
+            <div className="content"
+              dangerouslySetInnerHTML={{
+                __html: md.render(this.props.content)
+              }}>
+            </div>
           </div>
         </div>
     )
