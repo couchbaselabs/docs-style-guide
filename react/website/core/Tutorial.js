@@ -33,29 +33,14 @@ class Tutorial extends React.Component {
         <link rel="stylesheet" href="/css/styles.css"/>
       </head>
       <body>
-        <div
-          style={{
-            display: 'flex',
-          }}>
-          <div
-            style={{
-            }}>
-            <div
-              className="sidebar"
-              style={{
-                width: 256,
-                background: '#f5f5f5',
-                position: 'fixed',
-                height: '100%',
-                position: 'fixed',
-                paddingTop: 55,
-                top: 0,
-              }}>
+        <div>
+          <div className="sidebar">
+            <div className="sidebar-content">
               <Sidebar
                 content={this.props.content} />
             </div>
           </div>
-          <div
+          <div className="content"
             style={{
               display: 'block',
               position: 'absolute',

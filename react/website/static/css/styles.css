@@ -1,3 +1,23 @@
 .sidebar ul, .sidebar li {
   list-style-type: none;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 300px;
+  background: #f5f5f5;
+}
+
+.sidebar-content {
+  position: fixed;
+  overflow-y: auto;
+  
+}
