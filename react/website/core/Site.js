@@ -15,9 +15,6 @@ class Site extends React.Component {
         <script type="text/javascript" charset="utf-8" src="https://developer.couchbase.com/webfiles/1498186094252/js/thirdparty/vendor/isotope.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="https://developer.couchbase.com/webfiles/1498186094252/js/thirdparty/vendor/imagesloaded.min.js"></script>
         
-        
-        
-        
         <link rel="stylesheet" href="https://developer.couchbase.com/webfiles/1498186094252/css/styles.css"/>
         <link rel="stylesheet" href="https://developer.couchbase.com/binaries/content/assets/css/overrides.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -34,16 +31,13 @@ class Site extends React.Component {
           <div className="global-header__logo">
             <a href='http://www.couchbase.com'>Couchbase</a>
             <a href='index.html'>Developer</a>
-
           </div>
-
           <a data-modules="navigation,globalheadersearch"></a>
           <nav role="navigation" id="primary-navigation" className="primary-navigation">
             <button aria-controls="primary-navigation__wrapper"
                     aria-pressed="false"
                     className="primary-navigation__toggler"
                     type="button">
-
               <span>Menu</span>
             </button>
             <div id="primary-navigation__wrapper"
