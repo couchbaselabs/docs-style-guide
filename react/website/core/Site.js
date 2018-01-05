@@ -19,7 +19,7 @@ class Site extends React.Component {
         <link rel="stylesheet" href="https://developer.couchbase.com/binaries/content/assets/css/overrides.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Title</title>
-        <link rel="stylesheet" href="../../css/styles.css"/>
+        <link rel="stylesheet" href="../css/styles.css"/>
       </head>
       <body>
       <nav className="aux">
