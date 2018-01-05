@@ -26,13 +26,6 @@ class Tutorial extends React.Component {
   render() {
     md.use(anchors);
     return (
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8"/>
-        <title>Title</title>
-        <link rel="stylesheet" href="/css/styles.css"/>
-      </head>
-      <body>
         <div>
           <div className="sidebar">
             <div className="sidebar-content">
@@ -54,8 +47,6 @@ class Tutorial extends React.Component {
             }}>
           </div>
         </div>
-      </body>
-      </html>
     )
   }
 }
