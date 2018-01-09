@@ -42,7 +42,7 @@ class Sidebar extends React.Component {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.onload = function() {
+              setTimeout(function() {
                 let itemTopOffsets = ${JSON.stringify(ids)}
                   .map(id => {
                     var element = document.getElementById(id);
@@ -69,7 +69,7 @@ class Sidebar extends React.Component {
                   }
                   activeId = item.id;
                 });
-              };
+              }, 0);
             `
           }}/>
       </div>

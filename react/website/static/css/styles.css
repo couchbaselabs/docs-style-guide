@@ -62,3 +62,37 @@
   display: none;
   background-color: beige;
 }
+
+
+/* HACK: To override the AuthX styles (navs, lists) */
+.body ul, .body li {
+  list-style-type: disc !important;
+  line-height: 1.5;
+}
+
+.body ul, .inner-content ul {
+  list-style-type: disc !important;
+}
+
+/* Override AuthX styles */
+.body ul ul, .body ul ul li {
+  list-style-type: circle !important;
+  margin: 0 !important;
+}
+.body ul {
+  padding-left: 40px !important;
+  margin: 1em 0 !important;
+}
+
+/* Heading sizes */
+.body h1 {font-size: 34px;}
+.body h2 {font-size: 24px;}
+.body h3 {font-size: 20px;}
+.body h4 {font-size: 16px;}
+.body h5 {font-size: 12px;}
+.body h6 {font-size: 8px;}
+
+img {
+  display: block;
+  margin: 0 auto;
+}

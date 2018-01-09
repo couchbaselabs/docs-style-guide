@@ -60,7 +60,7 @@ class Tutorial extends React.Component {
             </div>
           </div>
           <div className="content-container">
-            <div className="content"
+            <div className="content body"
               dangerouslySetInnerHTML={{
                 __html: $.html()
               }}>
@@ -105,7 +105,7 @@ class Tutorial extends React.Component {
                 
                 window.onload = function() {
                   var id = window.location.hash;
-                  document.getElementById(id).scrollIntoView();
+                  // document.getElementById(id).scrollIntoView();
                 };
               `
             }}/>
