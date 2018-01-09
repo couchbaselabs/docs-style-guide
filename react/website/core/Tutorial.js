@@ -44,14 +44,17 @@ class Tutorial extends React.Component {
     
     let content_html = marked(this.props.content, {renderer: renderer});
     let $ = cheerio.load(content_html);
-    
-    /* Find the <div class="tabs"></div> fragment. */
+
+    /**
+     * Find the <div class="tabs"></div> fragment.
+     */
     $('.tabs')
+      /* The second parameter serves as the context */
       .each((tabs_i, tabs_div) => {
         /* Find the tab names. */
-        let tab_names = $('.tabs a')
-          .map((names_i, elem) => {
-            let name = elem.attribs.name;
+        let tab_names = $('.tabs a', $(tabs_div))
+          .map((names_i, tab_a) => {
+            let name = tab_a.attribs.name;
             /* Insert a div tag after the div.tabs fragment. */
             $(tabs_div)
               .append('<div name="' + name + '" class="tab ' + name + '">' + name + '</div>');
@@ -63,11 +66,11 @@ class Tutorial extends React.Component {
             $(tabs_div)
               .nextUntil('hr')
               .each((i, elem) => {
+                /* Remove <hr /> for the next pass */
                 if ($(elem).next().is('hr')) {
-                  $(elem).next().remove()
-                } else {
-                  $(elem).appendTo(`div.${name}`);
+                  $(elem).next().remove();
                 }
+                $(elem).appendTo($(tabs_div).children(`div.${name}`)[0]);
               });
             return name
           }).get();
@@ -94,13 +97,15 @@ class Tutorial extends React.Component {
                 window.onload = function() {
                   var anchors = document.querySelectorAll('.tabs > a');
                   for (var i=0; i < anchors.length; i++) {
+                    anchors[i].href = 'javascript:void(0);';
                     anchors[i].addEventListener('click', handler, false);
                   }
                   
                   function handler() {
                     let selected = this.getAttribute('name');
                     
-                    var links = document.querySelectorAll('.tabs > a');
+                    /* Use this.parentNode as the context */
+                    var links = this.parentNode.querySelectorAll('.tabs > a');
                     for (var j = 0; j < links.length; j++) {
                       let name = links[j].getAttribute('name');
                       if (selected === name) {
@@ -110,7 +115,8 @@ class Tutorial extends React.Component {
                       }
                     }
                     
-                    var tabs = document.querySelectorAll('.tabs > div');
+                    /* Use this.parentNode as the context. */
+                    var tabs = this.parentNode.querySelectorAll('.tabs > div');
                     for (var j = 0; j < tabs.length; j++) {
                       let name = tabs[j].getAttribute('name');
                       if (selected === name) {
