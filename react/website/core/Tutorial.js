@@ -3,6 +3,9 @@ const Sidebar = require('./Sidebar');
 const Remarkable = require('remarkable');
 const md = new Remarkable();
 const toSlug = require('./toSlug');
+const marked = require('marked');
+const renderer = new marked.Renderer();
+const cheerio = require('cheerio');
 
 /**
  * The anchors plugin adds GFM-style anchors to headings.
@@ -23,8 +26,54 @@ function anchors(md) {
 }
 
 class Tutorial extends React.Component {
+  
   render() {
     md.use(anchors);
+
+    /* Generate custom headings */
+    renderer.heading = function (text, level) {
+      var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+      return '<h' + level + '><a name="' +
+        escapedText +
+        '" class="anchor" href="#' +
+        escapedText +
+        '"><span class="header-link"></span></a>' +
+        text + '</h' + level + '>';
+    };
+    
+    let content_html = marked(this.props.content, {renderer: renderer});
+    let $ = cheerio.load(content_html);
+    
+    /* Find the <div class="tabs"></div> fragment. */
+    $('.tabs')
+      .each((tabs_i, tabs_div) => {
+        /* Find the tab names. */
+        let tab_names = $('.tabs a')
+          .map((names_i, elem) => {
+            let name = elem.attribs.name;
+            /* Insert a div tag after the div.tabs fragment. */
+            $(tabs_div)
+              .after('<div class="tab ' + name + '">' + name + '</div>');
+
+            /**
+             * Append all following siblings to <div class="tab ${name}"></div>,
+             * use <hr /> as the delimiter tag.
+             */
+            $(`.${name}`)
+              .nextUntil('hr')
+              .not('div.tab')
+              .each((i, elem) => {
+                if ($(elem).next().is('hr')) {
+                  $(elem).next().remove()
+                } else {
+                  $(elem).appendTo(`div.${name}`);
+                }
+              });
+            return name
+          }).get();
+      });
+
     return (
         <div>
           <div className="sidebar">
@@ -36,13 +85,25 @@ class Tutorial extends React.Component {
           <div className="content-container">
             <div className="content"
               dangerouslySetInnerHTML={{
-                __html: md.render(this.props.content)
+                __html: $.html()
               }}>
             </div>
           </div>
         </div>
     )
   }
+  
+  
+}
+
+function slugify(text)
+{
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
 }
 
 module.exports = Tutorial;
