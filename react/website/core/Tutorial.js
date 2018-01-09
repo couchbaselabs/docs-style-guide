@@ -69,7 +69,7 @@ class Tutorial extends React.Component {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-                window.onload = function() {
+                setTimeout(function() {
                   var anchors = document.querySelectorAll('.tabs > a');
                   for (var i=0; i < anchors.length; i++) {
                     anchors[i].href = 'javascript:void(0);';
@@ -101,7 +101,7 @@ class Tutorial extends React.Component {
                       }
                     }
                   }
-                };
+                }, 0);
                 
                 window.onload = function() {
                   var id = window.location.hash;
