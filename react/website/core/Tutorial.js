@@ -54,7 +54,7 @@ class Tutorial extends React.Component {
             let name = elem.attribs.name;
             /* Insert a div tag after the div.tabs fragment. */
             $(tabs_div)
-              .append('<div class="tab ' + name + '">' + name + '</div>');
+              .append('<div name="' + name + '" class="tab ' + name + '">' + name + '</div>');
 
             /**
              * Append all following siblings to <div class="tab ${name}"></div>,
@@ -88,6 +88,41 @@ class Tutorial extends React.Component {
               }}>
             </div>
           </div>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.onload = function() {
+                  var anchors = document.querySelectorAll('.tabs > a');
+                  for (var i=0; i < anchors.length; i++) {
+                    anchors[i].addEventListener('click', handler, false);
+                  }
+                  
+                  function handler() {
+                    let selected = this.getAttribute('name');
+                    
+                    var links = document.querySelectorAll('.tabs > a');
+                    for (var j = 0; j < links.length; j++) {
+                      let name = links[j].getAttribute('name');
+                      if (selected === name) {
+                        links[j].style.backgroundColor = 'black';
+                      } else {
+                        links[j].style.backgroundColor = 'white';
+                      }
+                    }
+                    
+                    var tabs = document.querySelectorAll('.tabs > div');
+                    for (var j = 0; j < tabs.length; j++) {
+                      let name = tabs[j].getAttribute('name');
+                      if (selected === name) {
+                        tabs[j].style.display = 'block';
+                      } else {
+                        tabs[j].style.display = 'none';
+                      }
+                    }
+                  }
+                };
+              `
+            }}/>
         </div>
     )
   }
