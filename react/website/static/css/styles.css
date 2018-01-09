@@ -47,3 +47,17 @@
   width: 800px;
   margin: 0 auto;
 }
+
+/* Tabs feature */
+.tabs a {
+  display: inline-block;
+  padding: 3px 20px;
+  margin: 2px;
+  border: 1px solid #00739c;
+  border-radius: 3px;
+  text-decoration: none !important;
+}
+
+.tab {
+  display: none;
+}

@@ -54,15 +54,14 @@ class Tutorial extends React.Component {
             let name = elem.attribs.name;
             /* Insert a div tag after the div.tabs fragment. */
             $(tabs_div)
-              .after('<div class="tab ' + name + '">' + name + '</div>');
+              .append('<div class="tab ' + name + '">' + name + '</div>');
 
             /**
              * Append all following siblings to <div class="tab ${name}"></div>,
              * use <hr /> as the delimiter tag.
              */
-            $(`.${name}`)
+            $(tabs_div)
               .nextUntil('hr')
-              .not('div.tab')
               .each((i, elem) => {
                 if ($(elem).next().is('hr')) {
                   $(elem).next().remove()
