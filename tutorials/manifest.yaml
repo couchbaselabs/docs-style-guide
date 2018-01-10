@@ -1,4 +1,5 @@
 items:
   - link: https://api.github.com/repos/couchbaselabs/mobile-training-todo/contents/content/swift.md
   - link: https://api.github.com/repos/couchbaselabs/mobile-travel-sample/contents/content/develop/swift.md?ref=markdown-content
+  - link: https://api.github.com/repos/couchbaselabs/mobile-travel-sample/contents/content/develop/java.md?ref=markdown-content
   - link: https://api.github.com/repos/couchbaselabs/elasticsearch-transport-couchbase/contents/README.md?ref=docs
