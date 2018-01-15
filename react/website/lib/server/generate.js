@@ -15,6 +15,7 @@ function execute() {
   
   const DocsLayout = require('../../core/DocsLayout');
   const Site = require('../../core/Site');
+  const SDKLayout = require('../../core/SDKLayout');
   
   program.option('--input <path>', 'Specify input path')
     .option('--mode <mode>', 'Specify a mode')
@@ -95,12 +96,43 @@ function execute() {
     fs.writeFileSync('../build/css/styles.css', content);
   }
   
+  function buildMobileDocs() {
+    let root = '/Users/jamesnocentini/Developer/couchbase-mobile-portal/md-docs/_20/guides/couchbase-lite';
+    fs.readdir(root, (err, items) => {
+      /* Find the Couchbase Lite guides */
+      let guides = items
+        .filter(item => {
+          let clause = item === 'csharp.md' || item === 'java.md' || item === 'objc.md' || item === 'swift.md';
+          if (clause) {
+            return true;
+          }
+          return false;
+        })
+        .map(item => {
+          return fs.readFileSync(`${root}/${item}`, 'utf8');
+        });
+      /* Pass 4 different files to React layout */
+      const comp = (
+        <SDKLayout
+          csharp={guides[0]}
+          java={guides[1]}
+          objc={guides[2]}
+          swift={guides[3]} />
+      );
+      const str = renderToStaticMarkup(comp);
+      writeFileAndCreateFolder('../build/guides/index.html', str);
+    });
+  }
+  
   switch(mode) {
     case 'docs':
       buildDocs();
       break;
     case 'tutorials':
       buildTutorials();
+      break;
+    case 'mobiledocs':
+      buildMobileDocs();
       break;
     default:
       
