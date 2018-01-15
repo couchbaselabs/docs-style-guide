@@ -21,11 +21,15 @@ function execute() {
     .option('--mode <mode>', 'Specify a mode')
     .option('--dev <dev>', 'Run in dev mode')
     .option('--output <output>', 'Output path')
+    .option('--root_path <root_path>', 'Root path')
+    .option('--destination <destination>', 'Destination')
     .parse(process.argv);
   const input_path = program.input;
   const mode = program.mode;
   const dev = program.dev;
   const output = program.output;
+  const root_path = program.root_path;
+  const destination = program.destination;
   
   // create the folder path for a file if it does not exist, then write the file.
   function writeFileAndCreateFolder(file, content) {
@@ -99,19 +103,23 @@ function execute() {
   }
   
   function buildMobileDocs() {
-    let root = '/Users/jamesnocentini/Developer/couchbase-mobile-portal/md-docs/_20/guides/couchbase-lite';
-    fs.readdir(root, (err, items) => {
+    /* Use the root_path flag and manifest to find files. */
+    let manifest = fs.readFileSync(`${root_path}/manifest.yaml`);
+    let yaml = jsyaml.load(manifest);
+    let items = yaml.items;
+    items.forEach(item => {
+    let files = fs.readdirSync(`${root_path}${item.path}`);
       /* Find the Couchbase Lite guides */
-      let guides = items
-        .filter(item => {
-          let clause = item === 'csharp.md' || item === 'java.md' || item === 'objc.md' || item === 'swift.md';
+      let guides = files
+        .filter(file => {
+          let clause = file === 'csharp.md' || file === 'java.md' || file === 'objc.md' || file === 'swift.md';
           if (clause) {
             return true;
           }
           return false;
         })
-        .map(item => {
-          return fs.readFileSync(`${root}/${item}`, 'utf8');
+        .map(file => {
+          return fs.readFileSync(`${root_path}${item.path}/${file}`, 'utf8');
         });
       /* Pass 4 different files to React layout */
       const comp = (
@@ -125,10 +133,9 @@ function execute() {
       if (dev) {
         writeFileAndCreateFolder('../build/guides/index.html', str);
       } else {
-        writeFileAndCreateFolder(`${output}/test.html`, str);
+        writeFileAndCreateFolder(`${destination}${item.path}/test.html`, str);
       }
-
-    });
+    })
   }
   
   switch(mode) {
