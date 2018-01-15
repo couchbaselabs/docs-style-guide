@@ -20,10 +20,12 @@ function execute() {
   program.option('--input <path>', 'Specify input path')
     .option('--mode <mode>', 'Specify a mode')
     .option('--dev <dev>', 'Run in dev mode')
+    .option('--output <output>', 'Output path')
     .parse(process.argv);
   const input_path = program.input;
   const mode = program.mode;
   const dev = program.dev;
+  const output = program.output;
   
   // create the folder path for a file if it does not exist, then write the file.
   function writeFileAndCreateFolder(file, content) {
@@ -120,7 +122,12 @@ function execute() {
           swift={guides[3]} />
       );
       const str = renderToStaticMarkup(comp);
-      writeFileAndCreateFolder('../build/guides/index.html', str);
+      if (dev) {
+        writeFileAndCreateFolder('../build/guides/index.html', str);
+      } else {
+        writeFileAndCreateFolder(`${output}/test.html`, str);
+      }
+
     });
   }
   
