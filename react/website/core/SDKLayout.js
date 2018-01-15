@@ -13,10 +13,10 @@ class SDKLayout extends React.Component {
       <body>
       <div className="body">
         <div className="tabs">
-          <a name="swift">Swift</a>
-          <a name="android">Android</a>
-          <a name="csharp">C#</a>
-          <a name="objc">Objective-C</a>
+          <a name="swift" style={styles.anchor}>Swift</a>
+          <a name="android" style={styles.anchor}>Android</a>
+          <a name="csharp" style={styles.anchor}>C#</a>
+          <a name="objc" style={styles.anchor}>Objective-C</a>
           <div name="swift" className="tab swift">
             <div
                  dangerouslySetInnerHTML={{
@@ -46,10 +46,9 @@ class SDKLayout extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                 setTimeout(function() {
                   var anchors = document.querySelectorAll('.tabs > a');
                   for (var i=0; i < anchors.length; i++) {
@@ -89,11 +88,24 @@ class SDKLayout extends React.Component {
                   // document.getElementById(id).scrollIntoView();
                 };
               `
-        }}/>
+          }}/>
+      </div>
       </body>
       </html>
     )
   }
 }
+
+const styles = {
+  anchor: {
+    display: 'inlineBlock',
+    padding: '3px 20px',
+    margin: '2px',
+    border: '1px solid #00739c',
+    boarderRadius: '3px',
+    textDecoration: 'none !important',
+  },
+  
+};
 
 module.exports = SDKLayout;
