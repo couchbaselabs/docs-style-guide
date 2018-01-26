@@ -1,0 +1,56 @@
+<!-- Usage: this partial can be used to display an announcement banner at the top of the page.
+              {% assign depth = page.url | split: '/' | size | minus: 1 %}
+              {% if depth == 2 %}
+                {% if site.version == 'xxx' %}
+                  {% include developer-preview.html %}
+                {% endif %}
+              {% endif %}
+-->
+<style>
+  @media screen and (min-width: 1100px) {
+    #preview-text.banner {
+      text-align: center;
+      background-color: #CDEDF6;
+      padding: 2px;
+      opacity: 0;
+      color: black;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+    #preview-text.show {
+      opacity: 1;
+      -webkit-transition: opacity 1s;
+      -moz-transition: opacity 1s;
+      -ms-transition: opacity 1s;
+      -o-transition: opacity 1s;
+      transition: opacity 1s;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    #preview-text {
+      display: none;
+    }
+  }
+</style>
+<script>
+  function moveDPMessage() {
+    var parent = document.getElementsByClassName('learn-support-sec article-tpl')[1];
+    var message = document.getElementById('preview-text');
+    parent.insertBefore(message, parent.firstChild);
+    setTimeout(function () {
+      var result = document.getElementById('preview-text');
+      result.classList.toggle('show');
+    }, 10);
+  }
+  setTimeout(moveDPMessage, 500);
+</script>
+<div id="preview-text" class="banner" style="font-style: oblique;">
+  The 2.0 Developer Build {{ site.dev_build_number }} is out!
+  <a href="/documentation/mobile/2.0/whatsnew.html">
+    Learn more
+  </a>
+</div>
