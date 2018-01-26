@@ -26,7 +26,7 @@ layout: default
               </script>
               {% endif %}
               {% assign version = site.version | plus: 0 %}
-              {% if version < 2.0 %}
+              {% if site.developer_preview_banner == true %}
               {% include developer-preview.html %}
               {% endif %}
               <!-- Do not import the overridden styles on swagger ui pages -->
