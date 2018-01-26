@@ -37,7 +37,7 @@ layout: default
               {% if page.swagger == true %}
               <a class="edit-page-link" href="https://github.com/couchbaselabs/couchbase-mobile-portal/tree/master/swagger" target="_blank">Edit on GitHub</a>
               {% elsif page.noedit != true %}
-              <a class="edit-page-link" href="https://github.com/couchbaselabs/couchbase-mobile-portal/tree/master/md-docs/{{ page.path }}" target="_blank">Edit on GitHub</a>
+              <a class="edit-page-link" href="{{ site.gh_link }}{{ page.path }}" target="_blank">Edit on GitHub</a>
               {% endif %}
 
               <div class="inner-content">
