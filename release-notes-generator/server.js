@@ -14,7 +14,7 @@ let known_issues = 'project = "Couchbase Server" AND fixVersion in (vulcan,5.1.0
         "jql": known_issues,
         "fields": ["summary", "components", "comment"] /* Fields we need for release notes */
       },
-      url: `${url}/rest/api/2/search`
+      url: `${url}/rest/api/2/search?expand=renderedBody`
     }, post_body);
 
 let result = {issues: []};
@@ -22,9 +22,17 @@ requestRx.post(options)
   .flatMap(result => {
     return rx.Observable.fromArray(result.body.issues);
   })
-  .map(issue => {
+  .flatMap(issue => {
+    return rx.Observable.zip(
+      rx.Observable.fromArray([issue]),
+      requestRx.get(`${url}/rest/api/2/issue/${issue.key}/comment?expand=renderedBody`)
+    )
+  })
+
+  .map(params => {
+    let issue = params[0];
+    let comments = JSON.parse(params[1].body).comments;
     /* Find the comment we will display in release notes */
-    let comments = issue.fields.comment.comments;
     let rn_comment = comments.filter(comment => {
       let search = comment.body.search('Description for release notes:');
       if (search != -1) {
@@ -32,8 +40,8 @@ requestRx.post(options)
       }
     });
     return {
-      key: issue.key, 
-      comment: rn_comment[0] ? rn_comment[0].body : '', 
+      key: issue.key,
+      comment: rn_comment[0] ? rn_comment[0].renderedBody : '',
       components: issue.fields.components
     };
   })
