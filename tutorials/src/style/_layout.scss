@@ -64,3 +64,21 @@
     @include text_headline(#fff);
   }
 }
+
+.lesson-options {
+  display: block;
+  margin: 0 auto;
+  width: 440px;
+
+  p {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  select {
+    height: 40px;
+    width: 150px;
+  }
+  p, select {
+    display: inline;
+  }
+}

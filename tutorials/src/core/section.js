@@ -3,6 +3,7 @@ import "whatwg-fetch"
 import jsyaml from "js-yaml"
 import marked from "marked"
 import Content from "./content"
+import Milestones from "./milestones"
 import highlight from "highlight.js"
 import {
   BrowserRouter as Router,
@@ -118,23 +119,13 @@ export default class Tutorial extends React.Component {
               <div className="body">
                 <div className="main">
                   <nav className="milestones">
-                    <ul id="tabs">
-                      {this.getMilestoneNames(this.state.selectedLesson).map((milestone, index) => {
-                        return (
-                          <li
-                            key={index}
-                            style={this.state.currentMilestone == index ? {color: '#0a83f6'} : {}}>
-                            <a
-                              style={this.state.currentMilestone == index ? {color: '#0a83f6', borderBottom: '2px solid #0a83f6'} : {}}
-                              className="instructions"
-                              href={`#/${this.state.selectedChapter}/${this.state.selectedLesson}/${this.state.currentMilestone}`}
-                              onClick={(e) => {this.setState({currentMilestone: index})}}>
-                              {milestone.title}
-                            </a>
-                          </li>
-                        )
-                      })}
-                    </ul>
+                    <Milestones
+                      optional={((this.state.selectedChapter == 0) && (this.state.selectedLesson == 2) || (this.state.selectedLesson == 3) || (this.state.selectedLesson == 4)) ? true : false}
+                      milestones={this.getMilestoneNames(this.state.selectedLesson)}
+                      currentMilestone={this.state.currentMilestone}
+                      selectedChapter={this.state.selectedChapter}
+                      selectedLesson={this.state.selectedLesson}
+                      onClick={(param) => {this.setState({currentMilestone: param.currentMilestone})}} />
                   </nav>
                   <div className="inner">
                     <div>
