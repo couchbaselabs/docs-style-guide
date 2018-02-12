@@ -117,20 +117,6 @@ export default class Tutorial extends React.Component {
               </div>
               <div className="body">
                 <div className="main">
-                  <div className={`display-platform-${this.state.platform}`}>
-                    <div className="toggler">
-                      <div id="platform-tabs" >
-                        {/*<span>Platform:</span>*/}
-                        {/*{this.state.platforms.map((name, index) => {*/}
-                        {/*return (*/}
-                        {/*<Link className={`button-${name}`} to={`${name}`}>*/}
-                        {/*{name}*/}
-                        {/*</Link>*/}
-                        {/*)*/}
-                        {/*})}*/}
-                      </div>
-                    </div>
-                  </div>
                   <nav className="milestones">
                     <ul id="tabs">
                       {this.getMilestoneNames(this.state.selectedLesson).map((milestone, index) => {
