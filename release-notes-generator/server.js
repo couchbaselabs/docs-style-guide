@@ -8,7 +8,7 @@ let username = process.env.JIRA_USERNAME
   , url = `https://${username}:${password}@issues.couchbase.com`
   , post_body = {json: true};
 
-let known_issues = 'project = "Couchbase Server" AND fixVersion in (vulcan,5.1.0) AND labels = known_issue AND component in (memcached, couchbase-bucket, tools, fts, view-engine, installer, query)'
+let known_issues = 'project = "Couchbase Server" AND fixVersion = 5.1.0 AND labels = releasenote'
   , options = Object.assign({
       body: {
         "jql": known_issues,
