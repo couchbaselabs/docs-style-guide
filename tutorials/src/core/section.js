@@ -120,7 +120,7 @@ export default class Tutorial extends React.Component {
                 <div className="main">
                   <nav className="milestones">
                     <Milestones
-                      optional={((this.state.selectedChapter == 0) && (this.state.selectedLesson == 2) || (this.state.selectedLesson == 3) || (this.state.selectedLesson == 4)) ? true : false}
+                      optional={(this.state.selectedChapter == 0) && ((this.state.selectedLesson == 2) || (this.state.selectedLesson == 3) || (this.state.selectedLesson == 4)) ? true : false}
                       milestones={this.getMilestoneNames(this.state.selectedLesson)}
                       currentMilestone={this.state.currentMilestone}
                       selectedChapter={this.state.selectedChapter}
