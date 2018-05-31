@@ -8,7 +8,7 @@ let username = process.env.JIRA_USERNAME
   , url = `https://${username}:${password}@issues.couchbase.com`
   , post_body = {json: true};
 
-let known_issues = 'project = "Couchbase Server" AND fixVersion = vulcan AND labels = releasenote AND (level is EMPTY OR level not in (Private,Playdom,Zynga) )'
+let known_issues = 'project = "project = "Couchbase Server" AND fixVersion in (Vulcan, Alice, Mad-Hatter) AND labels = releasenote AND (level is EMPTY OR level not in (Private,Playdom,Zynga) )'
   , options = Object.assign({
       body: {
         "jql": known_issues,
