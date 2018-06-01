@@ -1,0 +1,33 @@
+:idprefix:
+:idseparator: -
+:toc: left
+:toclevels: 3
+
+toc::[]
+
+== Getting Started
+
+This tool can be used to generate release notes from JIRA projects.
+
+. Install dependencies.
++
+```bash
+$ npm install
+```
+
+. JIRA credentials must be set as environment variables.
++
+```bash
+$ export JIRA_USERNAME='username'
+$ export JIRA_PASSWORD='password'
+```
+
+. Generate release notes.
++
+```bash
+$ npm run build
+```
+
+== Resources
+
+- https://developer.atlassian.com/cloud/jira/platform/rest/[JIRA REST API docs]

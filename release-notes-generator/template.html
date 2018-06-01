@@ -242,10 +242,14 @@
 
 
   <div class="body" style="width: 70%;margin: 0 auto;">
-    <br><br>
-    <b>Issues pulled with the following filter :: </b>
-    <br><br>
-    <code>{{ query }}</code>
+    <p>Issues pulled with the following filter :: <b>{{ filter }}</b></p>
+    <details>
+      <summary>Setting permission filters</summary>
+      <div>
+        <img src="img/edit-permission.png" alt=""/>
+        <img src="img/save-permission.png" alt=""/>
+      </div>
+    </details>
     <p>The text in the description column is extracted from JIRA comments: we search for a comment which contains the string <code>Description for release notes:</code></p>
     <table cellpadding="4" cellspacing="0" summary="" id="topic_gbk_tyh_t5__table_zgb_11j_qbb" class="table" frame="border" border="1" rules="all">
       <colgroup>
