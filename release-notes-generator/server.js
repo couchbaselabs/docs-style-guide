@@ -8,7 +8,7 @@ let username = process.env.JIRA_USERNAME
   , url = `https://${username}:${password}@issues.couchbase.com`
   , post_body = {json: true};
 
-let filter_ids = [16001, 15973,16088];
+let filter_ids = [16001, 15973, 16088];
 
 filter_ids.forEach(filter_id => buildReleaseNotes(filter_id));
 
