@@ -6,6 +6,6 @@ This tool can be used to check the validity of links. Before running the tool, c
 $ virtualenv linkchecker
 $ cd linkchecker
 $ source bin/activate
-$ pip install
+$ pip install -r requirements.txt
 $ linkchecker
 ```
