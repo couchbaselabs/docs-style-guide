@@ -250,7 +250,6 @@
         <img src="img/save-permission.png" alt=""/>
       </div>
     </details>
-    <p>The text in the description column is extracted from JIRA comments: we search for a comment which contains the string <code>Description for release notes:</code></p>
     <table cellpadding="4" cellspacing="0" summary="" id="topic_gbk_tyh_t5__table_zgb_11j_qbb" class="table" frame="border" border="1" rules="all">
       <colgroup>
         <col style="width:27.47252747252747%">
@@ -259,20 +258,28 @@
       <thead class="thead" style="text-align:left;">
       <tr class="row">
         <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Issue</th>
-        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Description</th>
-        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Components</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Summary</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">CVE-ID</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">CVSS/Severity</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Project</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Versions</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Published Date</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Fixed in</th>
+        <th class="entry cellrowborder" style="text-align:left;vertical-align:top;">Recognition in</th>
       </tr>
       </thead>
       <tbody class="tbody">
       {{#issues}}
       <tr class="row">
         <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e120 "><a class="xref" href="https://issues.couchbase.com/browse/{{ key }}" target="_blank">{{ key }}</a></td>
-        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">{{{ comment }}}</td>
-        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">
-          {{#components}}
-          <strong>{{ name }}</strong>
-          {{/components}}
-        </td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e120 ">{{ fields.summary }}</td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e120 ">{{ fields.customfield_12580 }}</td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">{{{ fields.cvss_severity }}}</td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">{{{ fields.project.name }}}</td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">{{{ fields.versions }}}</td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">{{{ fields.published_date }}}</td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">{{{ fields.fixVersions }}}</td>
+        <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d213300e123 ">{{{ fields.recognition }}}</td>
       </tr>
       {{/issues}}
       </tbody>

@@ -8,7 +8,7 @@ let username = process.env.JIRA_USERNAME
   , url = `https://${username}:${password}@issues.couchbase.com`
   , post_body = {json: true};
 
-let filter_ids = [15973, 16516, 17181];
+let filter_ids = [17320];
 
 filter_ids.forEach(filter_id => buildReleaseNotes(filter_id));
 
@@ -22,7 +22,7 @@ function buildReleaseNotes(filter_id) {
       let options = Object.assign({
         body: {
           "jql": filter.jql,
-          "fields": ["summary", "components", "comment"] /* Fields we need for release notes */
+          "fields": ["summary", "components", "comment", "customfield_12580", "versions", "fixVersions", "description", "project"] /* Fields we need for release notes */
         },
         url: `${url}/rest/api/2/search?expand=renderedBody`
       }, post_body);
@@ -31,28 +31,26 @@ function buildReleaseNotes(filter_id) {
     .flatMap(result => {
       return rx.Observable.fromArray(result.body.issues);
     })
-    /* Query each issue */
-    .flatMap(issue => {
-      return rx.Observable.zip(
-        rx.Observable.fromArray([issue]),
-        requestRx.get(`${url}/rest/api/2/issue/${issue.key}/comment?expand=renderedBody`)
-      )
-    })
-    .map(params => {
-      let issue = params[0];
-      let comments = JSON.parse(params[1].body).comments;
-      /* Find the comment we will display in release notes */
-      let rn_comment = comments.filter(comment => {
-        let search = comment.body.search('Description for release notes:');
-        if (search != -1) {
-          return comment;
-        }
-      });
-      return {
-        key: issue.key,
-        comment: rn_comment[0] ? rn_comment[0].renderedBody : '',
-        components: issue.fields.components
-      };
+    .map(issue => {
+      console.log(issue);
+      let cvss_severity_match = issue.fields.description.match(/(?<=CVSS\/Severity\*\*:\*)(.*\n?)(?=\r\n)/);
+      issue.fields.cvss_severity = cvss_severity_match ? cvss_severity_match[0] : '';
+
+      issue.fields.versions = issue.fields.versions
+        .map(version => version.name)
+        .join(', ');
+
+      let published_date_match = issue.fields.description.match(/(?<=Publish date\*:)(.*\n?)(?=\r\n)/);
+      issue.fields.published_date = published_date_match ? published_date_match[0] : '';
+
+      issue.fields.fixVersions = issue.fields.fixVersions
+        .map(version => version.name)
+        .join(', ');
+
+      let recognition_match = issue.fields.description.match(/(?<=Recognition:\*)(.*\n?)(?=\r\n)/);
+      issue.fields.recognition = recognition_match ? recognition_match[0] : '';
+
+      return issue;
     })
     .subscribe({
       onNext: data => {
