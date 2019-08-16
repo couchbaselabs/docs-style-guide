@@ -1,0 +1,10 @@
+<h2> Filter: {{{ name }}} ({{{ filter }}}) </h2>
+
+<pre>
+<code>
+{{#issues}}
+- https://issues.couchbase.com/browse/{{{ key }}}[*{{{ key }}}*] {{{ fields.summary }}}
+{{/issues}}
+</code>
+</pre>
+

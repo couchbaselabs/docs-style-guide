@@ -1,0 +1,9 @@
+<h2> Filter: {{{ name }}} (<a href="https://issues.couchbase.com/issues/?filter={{{ filter }}}" target="_blank">{{{ filter }}}</a>) </h2>
+
+<pre>
+<ul>
+{{#issues}}
+<li><a href="https://issues.couchbase.com/browse/{{{ key }}}" target="_blank">{{{ key }}}</a> {{{ fields.summary }}}</li>
+{{/issues}}
+</ul>
+</pre>

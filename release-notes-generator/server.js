@@ -8,9 +8,42 @@ let username = process.env.JIRA_USERNAME
   , url = `https://${username}:${password}@issues.couchbase.com`
   , post_body = {json: true};
 
-let filter_ids = [15973, 16516, 17181];
+// Specify the filter IDs to fetch
+let filter_ids = [
+  17584, // cobalt-cbl-bugs-swift
+  17585, // cobalt-cbl-bugs-objc
+  17586, // cobalt-cbl-bugs-java-android
+  17587, // cobalt-cbl-bugs-dotnet
+  17580, // cobalt-sg-known-issues
+  17525,  // cobalt-sg-bugs
+  17589,
+  17590,
+  17591,
+  17588
+];
 
 filter_ids.forEach(filter_id => buildReleaseNotes(filter_id));
+
+/**
+ * - Create output files
+ */
+fs.writeFile('./build/raw.html',
+  fs.readFileSync('template.html'),
+  function(err) {
+    if(err) {
+      return console.log(err);
+    }
+    console.log('Output file created.');
+  });
+
+fs.writeFile('./build/rendered.html',
+  fs.readFileSync('template.html'),
+  function(err) {
+    if(err) {
+      return console.log(err);
+    }
+    console.log('Output file created.');
+  });
 
 function buildReleaseNotes(filter_id) {
   let result = {issues: []};
@@ -19,6 +52,7 @@ function buildReleaseNotes(filter_id) {
     /* Query the filter */
     .flatMap(data => {
       let filter = JSON.parse(data.body);
+      result.name = filter.name;
       let options = Object.assign({
         body: {
           "jql": filter.jql,
@@ -28,31 +62,12 @@ function buildReleaseNotes(filter_id) {
       }, post_body);
       return requestRx.post(options);
     })
-    .flatMap(result => {
-      return rx.Observable.fromArray(result.body.issues);
+    .flatMap(response => {
+      console.log(response.body);
+      return rx.Observable.fromArray(response.body.issues);
     })
-    /* Query each issue */
-    .flatMap(issue => {
-      return rx.Observable.zip(
-        rx.Observable.fromArray([issue]),
-        requestRx.get(`${url}/rest/api/2/issue/${issue.key}/comment?expand=renderedBody`)
-      )
-    })
-    .map(params => {
-      let issue = params[0];
-      let comments = JSON.parse(params[1].body).comments;
-      /* Find the comment we will display in release notes */
-      let rn_comment = comments.filter(comment => {
-        let search = comment.body.search('Description for release notes:');
-        if (search != -1) {
-          return comment;
-        }
-      });
-      return {
-        key: issue.key,
-        comment: rn_comment[0] ? rn_comment[0].renderedBody : '',
-        components: issue.fields.components
-      };
+    .map(issue => {
+      return issue;
     })
     .subscribe({
       onNext: data => {
@@ -62,23 +77,47 @@ function buildReleaseNotes(filter_id) {
         console.log(new Error(error));
       },
       onCompleted: (data) => {
+        /**
+         * Method 1:
+         * - Get release-notes-template.adoc
+         * - Run issues through the template
+         * - Append output string to preview.html
+         */
         /* Generate the release notes in the build directory */
         let params = Object.assign(result, {filter: filter_id});
-        fs.copy('./img/', './build/img/', err => {
-          if (err) return console.error(err);
-        });
-        fs.readFile('template.html', 'utf8', function (err, data) {
+        fs.readFile('template-raw.adoc', 'utf8', function (err, data) {
           if (err) {
             return console.log(err);
           }
-          fs.writeFile(`./build/release-notes-${filter_id}.html`, Mustache.render(data, params), function(err) {
+          let output = Mustache.render(data, params);
+          fs.appendFile('./build/raw.html', output, function (err, data) {
             if(err) {
               return console.log(err);
             }
-            console.log("The file was saved!");
           });
         });
-        console.log('Completed')
+        fs.readFile('template-rendered.html', 'utf8', function (err, data) {
+          if (err) {
+            return console.log(err);
+          }
+          let output = Mustache.render(data, params);
+          fs.appendFile('./build/rendered.html', output, function (err, data) {
+            if(err) {
+              return console.log(err);
+            }
+          });
+        });
+        console.log('Completed');
+        /**
+         * Method 2:
+         * - For each filter:
+         *   - Get release-notes-template.adoc
+         *   - Run issues through the template
+         *   - Store output string in a variable
+         * - Get preview-template.html
+         * - Run filters through the template
+         * - Create preview-{filter-name}.adoc
+         */
       }
     });
 }
