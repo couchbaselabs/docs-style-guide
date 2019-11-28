@@ -9,20 +9,26 @@ let username = process.env.JIRA_USERNAME
   , post_body = {json: true};
 
 // Specify the filter IDs to fetch
-let filter_ids = [
-  17584, // cobalt-cbl-bugs-swift
-  17585, // cobalt-cbl-bugs-objc
-  17586, // cobalt-cbl-bugs-java-android
-  17587, // cobalt-cbl-bugs-dotnet
-  17580, // cobalt-sg-known-issues
-  17525,  // cobalt-sg-bugs
-  17589,
-  17590,
-  17591,
-  17588
+// let filter_ids = [
+//   17584, // cobalt-cbl-bugs-swift
+//   17585, // cobalt-cbl-bugs-objc
+//   17586, // cobalt-cbl-bugs-java-android
+//   17587, // cobalt-cbl-bugs-dotnet
+//   17580, // cobalt-sg-known-issues
+//   17525,  // cobalt-sg-bugs
+//   17589,
+//   17590,
+//   17591,
+//   17588
+// ];
+
+// Specify the filter IDs to fetch
+let jql_queries = [
+  'project = "Couchbase Lite" AND status in (Resolved, Closed) AND fixVersion in (Mercury) AND type = Bug AND level = "Public" AND component in (LiteCore, iOS)', // cobalt-cbl-bugs-swift
+  'project = "Couchbase Lite" AND status in (Resolved, Closed) AND fixVersion in (Mercury) AND type = Bug AND level = "Public" AND component in (LiteCore, Java)', // cobalt-cbl-bugs-swift
 ];
 
-filter_ids.forEach(filter_id => buildReleaseNotes(filter_id));
+jql_queries.forEach(jql_query => buildReleaseNotes(jql_query));
 
 /**
  * - Create output files
@@ -45,25 +51,21 @@ fs.writeFile('./build/rendered.html',
     console.log('Output file created.');
   });
 
-function buildReleaseNotes(filter_id) {
+function buildReleaseNotes(jql_query) {
   let result = {issues: []};
-  /* Get the filter metadata */
-  requestRx.get(`${url}/rest/api/2/filter/${filter_id}`)
-    /* Query the filter */
-    .flatMap(data => {
-      let filter = JSON.parse(data.body);
-      result.name = filter.name;
-      let options = Object.assign({
-        body: {
-          "jql": filter.jql,
-          "fields": ["summary", "components", "comment"] /* Fields we need for release notes */
-        },
-        url: `${url}/rest/api/2/search?expand=renderedBody`
-      }, post_body);
-      return requestRx.post(options);
-    })
+  /* Query the filter */
+  console.log(jql_query);
+  result.name = jql_query;
+  let options = Object.assign({
+    body: {
+      "jql": jql_query,
+      "fields": ["summary", "components", "comment"] /* Fields we need for release notes */
+    },
+    url: `${url}/rest/api/2/search?expand=renderedBody`
+  }, post_body);
+  requestRx.post(options)
     .flatMap(response => {
-      console.log(response.body);
+      console.log(response);
       return rx.Observable.fromArray(response.body.issues);
     })
     .map(issue => {
@@ -84,7 +86,7 @@ function buildReleaseNotes(filter_id) {
          * - Append output string to preview.html
          */
         /* Generate the release notes in the build directory */
-        let params = Object.assign(result, {filter: filter_id});
+        let params = Object.assign(result, {filter: jql_query});
         fs.readFile('template-raw.adoc', 'utf8', function (err, data) {
           if (err) {
             return console.log(err);
