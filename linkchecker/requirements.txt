@@ -3,4 +3,4 @@ chardet==3.0.4
 idna==2.6
 LinkChecker==9.3
 requests==2.9.2
-urllib3==1.22
+urllib3==1.26.17
