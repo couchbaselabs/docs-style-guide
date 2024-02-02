@@ -1,0 +1,129 @@
+= General Principles of Couchbase Style
+
+The following are some general principles of writing in the Couchbase Style: 
+
+* <<Write in American English>>
+* <<Write in the Present Tense>>
+* <<Write in Second Person>>
+* <<Use Active Voice>>
+* <<Use Plain Language and Contractions>>
+* <<Use Simple Sentences and Short Paragraphs>>
+
+== Write in American English
+
+Use American English spelling, not British or Canadian English. The Vale automated spellcheck uses an American English dictionary. 
+
+If you need to check the spelling of a word, refer to the https://www.merriam-webster.com/[Merriam-Webster's Collegiate Dictionary, Eleventh Edition^]. 
+
+If Vale flags a product name or other technical industry term as incorrect: 
+
+* If it's a phrase or single word that must have specific capitalization, add it to the `Vocab\Couchbase\accept.txt` file.
+* If it's a phrase that needs a specific arrangement of hyphens or spaces and the capitalization doesn't matter, add it to the `Couchbase\Terminology.yml` Vale Style.
+
+== Write in the Present Tense 
+
+Do not write in past tense or future tense. 
+
+|===
+| Acceptable | Not Acceptable
+
+| Select *Deploy*. Couchbase Capella deploys your cluster. 
+a| 
+Select *Deploy*. Couchbase Capella will deploy your cluster.
+
+After you selected *Deploy*, Couchbase Capella deployed the cluster.
+|===
+
+For more information, see https://developers.google.com/style/tense[Present tense^] in the Google Developer Style Guide.
+
+== Write in Second Person 
+
+You can address the user as "you." 
+
+Do not use the first person.
+Vale flags the use of any first person plurals (we, our, us, let's) in your text. 
+Do not use any third person gendered pronouns.
+
+For more information, see https://developers.google.com/style/person[Second person^] in the Google Developer Style Guide.
+
+|===
+| Acceptable | Not Acceptable
+
+| You can change the *Description* for your cluster from the *Settings* page.
+a|
+
+We can change the *Description* for a cluster from the *Settings* page.
+
+Let's change our cluster's description.
+
+| A *Project Owner* can create, modify, and delete buckets. You can create a maximum of 30 buckets.
+a |
+
+A *Project Owner* can create, modify, and delete buckets.
+He can create a maximum of 30 buckets.
+
+A *Project Owner* can create, modify, and delete buckets. 
+He/she can create a maximum of 30 buckets.
+
+|===
+
+== Use Active Voice 
+
+Passive voice weakens your writing and can make it harder to parse meaning. 
+Stick to the active voice as much as you can. 
+
+Start sentences with verbs, or directly address the user to avoid passive voice.
+
+Make sure to also use *strong* verbs. Avoid: 
+
+* Forms of `be`, such as `is`, `are`, `am`, `was`, `were`, etc. 
+* `Occur`
+* `Happen` 
+
+|===
+| Acceptable | Not Acceptable
+
+| Couchbase Server uses scopes and collections to categorize and organize documents.
+| Documents are categorized and organized by scopes and collections.
+
+| Before you can store any data, you must create a Bucket. 
+| Buckets must be created before you can store any data.
+
+|===
+
+=== Tips for Active Voice
+
+Here are some tips to help you with active voice: 
+
+* Think about what's actually _doing_ the action you're describing. Emphasize the actor. 
+* Find or push back for more information if you cannot identify the actor. Ask the developer what's actually doing what in a scenario. 
+* If the sentence doesn't make sense in active voice or you lose the correct emphasis, you can use the passive voice.
+
+For more information about active voice, see https://developers.google.com/style/voice[Active voice^] in the Google Developer Style Guide.
+
+== Use Plain Language and Contractions
+
+Plain language means avoiding jargon or overly technical phrases when a simpler word works best. 
+
+Use contractions, except for negative constructions.
+For more information, see xref:contractions.adoc[].
+
+|===
+| Acceptable | Not Acceptable
+
+| You can set a Bucket name.
+| You can configure a Bucket name.
+
+| Before you can use your Capella cluster from your VPC, run the following commands.
+| Before you can access your Capella cluster from your VPC, run the following commands. 
+
+| Search Service indexes are not the same as Index Service indexes. If you deploy the Index Service, Query Service, and Search Service on the same cluster, you can use the Search Service through the N1QL query language. For more information, see Search Functions.
+| The indexes that the Search Service creates and uses are entirely separate from and different to those of the Index Service. However, if the Index Service and Query Service are also deployed on the cluster, the facilities of the Search Service can be called on by means of the N1QL language — which provides the principal interface to the Query and Index Services. This is principally done through the use of Search Functions.
+
+|===
+
+== Use Simple Sentences and Short Paragraphs
+
+Do not write a wall of text. Break things up with separate paragraphs, headings, and lists. Try to make your text easy to scan and read. 
+
+Keep sentences under 25 words. Vale flags longer sentences and sentences that have more than two commas.

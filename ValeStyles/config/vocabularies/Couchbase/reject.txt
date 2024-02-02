@@ -1,0 +1,18 @@
+and\/or
+back end
+(C\+\+)
+checkbox
+checkboxes
+Couchbase managed cloud
+mapreduce views
+map reduce views
+note that
+one can
+passlist
+Spark Apache
+Kafka Apache
+Storm Apache
+weblog
+whilst
+wip
+work in progress

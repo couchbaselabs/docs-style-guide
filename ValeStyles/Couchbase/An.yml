@@ -1,0 +1,20 @@
+extends: existence
+message: Use "an," not "a."
+link: https://sarahlwelton.github.io/styleguide/articles.html
+level: error 
+
+tokens:
+  - '[Aa] \b[aAeEiIoOuU].+\b'
+  - '[Aa] \b[Hh][Tt][Mm][Ll]\b'
+
+exceptions: 
+  - '[Aa] [Uu]nion'
+  - '[Aa] URL'
+  - '[Aa] UUID'
+  - '[Aa] [Uu]ser'
+  - '[Aa] [Uu]sername'
+  - '[Aa] UI'
+  - '[Aa] <<[BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz].+>>'
+  - '[Aa] [Oo]ne'
+  - '[Aa] [Oo]nce'
+  - '[Aa] [Uu]nit\s'

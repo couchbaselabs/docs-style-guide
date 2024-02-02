@@ -1,0 +1,23 @@
+= Dialogs 
+
+A dialog is any distinct floating window that displays inside the main application. 
+
+A dialog might grey out or dim the rest of the application when it appears.
+
+You can dismiss a dialog or complete its associated action to close it. 
+You can't do anything else in the application until you close the dialog. 
+
+For example, for the *Create a new project* dialog, you must dismiss the dialog or enter a project name and select *[Create Project]*:
+
+image::dialog-example.png[,,align=center]
+
+When you need to describe a dialog in the UI: 
+
+* Refer to the dialog by its name, followed by the word "dialog."
++
+For example, the *Create a new project* dialog.
+
+* Use the title of the dialog as it appears in the UI, where possible. This includes matching capitalization.
+
+* Bold the dialog name. Don't bold the word "dialog." 
+

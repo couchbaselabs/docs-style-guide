@@ -1,0 +1,5 @@
+= Slashes
+
+Avoid the use of forward and backward slashes outside of inline code, code blocks or file paths. 
+
+Don't write `and/or`. Choose whether the options are mutually exclusive (or) or interchangeable (and).

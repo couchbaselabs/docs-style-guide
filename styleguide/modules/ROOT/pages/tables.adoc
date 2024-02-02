@@ -1,0 +1,36 @@
+= Tables
+
+Use a table to show the relationships between information. 
+
+For example, use a table to list out properties or options and describe them: 
+
+|====
+|Option |Description
+
+|Type Identifier a|
+
+Set a type identifier to change how an index sets a document's type.
+
+For more information about how to set a type identifier, see Set a Type Identifier.
+
+|====
+
+To add a table: 
+
+* Introduce the table with a phrase that describes its contents and ends in a colon. For example, "the following default options are available:"
+* Add a vertical bar (|) followed by 4 equals signs (=) to mark the start and end of your table. 
+* After the first `|====`, on a new line, add another vertical bar (|) and your first column name. 
+* Make column names short but descriptive. 
+* Group rows by entering all content on the same line, separated by vertical bars (|), or by entering the content for a row in a block separated by whitespace. For example: 
++
+----
+|====
+|Header Row, Column 1 |Header Row, Column 2
+
+|First Row, Column 1 |First Row, Column 2
+
+|Second Row, Column 1
+|Second Row, Column 2
+|====
+----
+* If your table has more than 2 columns, you must set the proportional width of each column with the `[cols=""]` attribute before the opening `|====` for your table. For example, if a table with 4 columns had `[cols="1,1,1,2"]`, the last column would be 2× the width of all the other columns. 

@@ -1,0 +1,36 @@
+Use the following guidelines for Badge Styling and Behavior.
+
+|====
+| Setting | Description
+
+| Styling > Badge Icon 
+a| Use the image:preferred-badge-icon.png["A black circle with a white question mark inside."] badge icon. 
+
+If the badge needs to display on a button that's the same color as the badge, use the image:alt-badge-icon.png["A white circle with a black question mark inside."] icon. 
+
+| Styling > Position
+| For accessibility, always set Position to *Inline Right*.
+
+| Styling > Offset
+| Set the Offset to achieve the best visual result.
+Keep the badge close to the specific element, but leave some breathing room. 
+
+| Styling > Color 
+| Set the color to Capella's primary color: #0266C2. 
+
+| Styling > Z-Index 
+| You should not need to change the badge's Z-Index. 
+
+| Styling > ARIA Label - Accessible Name
+| Set to `<Element Name> tooltip badge`.
+
+| Behavior > Guide Behavior
+| Set to *Show only on badge click*. 
+
+| Behavior > Badge Behavior
+| Set to *Always show badge*. 
+
+| Behavior > Frequency 
+| Set to *Show every time*.
+
+|====

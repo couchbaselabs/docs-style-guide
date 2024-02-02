@@ -1,0 +1,60 @@
+= Error Messages 
+
+Error messages can fall into one of two types: 
+
+. *Field validation errors*: information in a form field is not formatted correctly or is missing. 
+. *System errors*: the application is having a problem. 
+
+Both types of error message should follow the same general guidance. 
+
+== Say What Happened 
+
+Clearly and concisely tell the user exactly what happened. 
+
+For example: 
+
+.The system failed to delete a user 
+----
+The system couldn't create the user <USER_NAME>.
+----
+
+.An error occurred when attempting to save an item 
+----
+An error occurred when attempting to save <ITEM_NAME>.
+----
+
+== Say How to Fix It 
+
+Tell the user exactly what they can do to fix what happened, or otherwise move on from the error. 
+
+For example: 
+
+.The system failed to delete a user 
+----
+Please try to create the user again, or contact support if the issue continues.
+----
+
+.An error occurred when attempting to save an item 
+----
+Please try again.
+----
+
+Use "please" if you're asking the user to do something that inconveniences them.
+Try to reword the error message to avoid "please."
+
+For example, `An unexpected error has occurred. Please reupload your file and try again.` or `An unexpected error has occurred. Reupload your file and try again.`
+
+For very generic error messages, where we are not 100% sure what the user should do to resolve, `Please try again` is fine.
+
+Don't use "thanks" or "thank you."
+
+Avoid using "sorry". 
+
+== Be Diplomatic and Avoid Blame 
+
+State the facts diplomatically and avoid any bias. 
+
+Do not call out the user or place any blame on their actions for an error. 
+Do not use *you* or *your*.
+
+Avoid causing any worry or panic for the user, and do not make jokes to put them at ease.

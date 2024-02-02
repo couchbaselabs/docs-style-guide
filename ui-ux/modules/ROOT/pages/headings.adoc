@@ -1,0 +1,94 @@
+= Headings 
+
+Headings are text components that mark off areas of xref:instruction-text.adoc[] or other interactive components in the UI. 
+
+They can appear at the top of pages, dialogs, or break up sections of related components. 
+
+To write headings in UI copy, use the following guidelines: 
+
+|====
+| Guideline | Acceptable | Not Acceptable
+
+3+| *Content*
+
+a| Page, dialog, and section headings should either: 
+
+* Be a simple noun-phrase that explains what the user can find on that page. 
+* Start with a verb that accurately describes the action the user can take on that page. 
+a| Configure services 
+
+Database services
+
+Nodes
+
+Buckets 
+
+Copy connection string 
+a| Services 
+
+Your Services 
+
+| xref:decision-dialogs.adoc[] should always have a heading written as a question, asking the user to confirm an action.  
+a| Delete this database?
+
+Turn on this database? 
+
+Create a bucket with these settings?
+a| Delete this database
+
+Database turn on 
+
+Bucket creation 
+
+3+| *Capitalization*
+
+| Write all xref:decision-dialogs.adoc[] headings in sentence case.
+
+Write main headings that appear as part of pages in title case. 
+
+Capitalize proper nouns or other terms that are capitalized elsewhere in the UI. 
+a| Completed Maintenance Jobs
+
+Configure Database Access Credentials 
+
+Replication
+a| Delete This Database?
+
+self-managed targets
+
+3+| *Punctuation*
+
+a| Try to avoid adding commas (,), unless you need to list multiple items. 
+
+Make sure to use the Oxford comma.
+| Configure a Bucket, Scope, and Collection
+a| Configure a bucket scope and collection 
+
+Configure a bucket, scope and collection
+
+a| Use question marks (?) if a heading is a question. 
+
+Always write the heading as a question on xref:decision-dialogs.adoc[].
+a| Delete this database?
+
+Turn on this database? 
+
+Create a bucket with these settings?
+a| Delete this database
+
+Database turn on 
+
+Bucket creation 
+
+| Never add a period (.) or exclamation mark (!) to the end of a heading. 
+a| Schedule On/Off
+
+Set Schedule 
+
+a| Set your schedule! 
+
+Schedule database on/off. 
+|====
+
+
+

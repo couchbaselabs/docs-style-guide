@@ -1,0 +1,19 @@
+extends: existence
+message: "Do not use complex contractions like '%s'."
+level: error
+ignorecase: true
+tokens: 
+  - could've
+  - might've
+  - must've
+  - should've
+  - what'll
+  - what're
+  - what've
+  - we've
+  - who'd
+  - who'll
+  - who've
+  - would've
+  - you'd
+  - you've

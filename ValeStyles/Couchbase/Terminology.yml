@@ -1,0 +1,106 @@
+extends: substitution
+message: Use '%s', not '%s'
+level: warning
+ignorecase: true
+
+swap: 
+  dotnet: .NET
+  '(?:access list|access-list|accesslist|allowlist|allow-list|allow list|white list|white-list|whitelist)': Allowlist
+  adaptor: adapter 
+  ad-hoc: adhoc|ad hoc
+  afterward: afterwards
+  (?:automatic-schema discovery|automatic-schema-discovery)': automatic schema discovery
+  '(?:auto sharding|autosharding)': auto-sharding
+  availability-zone: Availability Zone
+  '(?:blacklist|blocklist|deny-list)': Denylist
+  cheatsheet: cheat sheet
+  check point: checkpoint
+  '(?:code base|code-base)': codebase
+  '(?:compare-and-swap|compare-and swap|compare and-swap)': Compare and Swap
+  '(?:cross-datacenter replication|cross data center replication|cross-datacenter-replication)': cross datacenter replication
+  '(?:data center|data-center)': datacenter
+  '(?:data center replication|data-center replication)': datacenter replication
+  '(?:data centric|datacentric)': data-centric
+  '(?:data driven|datadriven)': data-driven
+  data modelling : data modeling
+  data set: dataset
+  data sheet: datasheet
+  '(?:datastore|data-store)': data store
+  datastructure: data structure
+  decryptor: decrypter
+  '(?:de-select|unselect|un-select)': clear
+  '(?:de-selected|unselected|un-selected)': cleared
+  '(?:different to|different than)': different from
+  '(?:eg|e\.g)': for example
+  encryptor: encrypter
+  end user experience: end-user experience
+  ensure: make sure|verify
+  '(?:e-payment)': ePayment
+  etc: and so on
+  file name: filename
+  file system: filesystem
+  '(?:fine grained|finegrained)': fine-grained
+  '(?:freeform|free form)': free-form
+  '(?:fulltext|full text)': full-text
+  '(?:geodistributed|geo distributed)': geo-distributed
+  git hub : GitHub
+  '(?:hard coded|hardcoded)': hard-coded
+  '(?:hard wired|hardwired)': hard-wired
+  '(?:helpdesk|help-desk)': help desk
+  '(?:host-name|host name|host-names|host names)': hostname
+  hybrid-cloud: hybrid cloud
+  indices: indexes
+  '(?:index scan|index-scan)': IndexScan
+  industry-standard: Industry standard
+  information on: information about
+  in memory : in-memory
+  in order to : to
+  '(?:intracluster replication|intra cluster replication)': intra-cluster replication
+  '(?:key space|key-space)': keyspace
+  '(?:keyvalue|key value)': key-value
+  '(?:live-stream|live stream)': livestream
+  '(?:live-streaming|live streaming)': livestreaming
+  low-write latency: low write latency
+  master: primary
+  massively-parallel processing : massively parallel processing
+  memory optimized indexes : memory-optimized indexes
+  '(?:meta data|meta-data)': metadata
+  '(?:micro-services|micro services)': microservices
+  '(?:multi channel|multi-channel)': multichannel
+  '(?:multi datacenter|multidatacenter)': multi-datacenter
+  '(?:multi dimensional|multidimensional)': multi-dimensional
+  '(?:multi lingual|multi-lingual)': multilingual
+  '(?:multi-master|multimaster)': primary
+  '(?:multi model|multimodel)': multi-model
+  '(?:multi region|multiregion)': multi-region
+  '(?:multi threaded|multithreaded)': multi-threaded
+  '(?:name-servers|name servers)': nameservers
+  '(?:non-persistent|non persistent)': nonpersistent
+  Objective C : Objective-C
+  omni-channel : Omnichannel
+  '(?:onsite|on site)': on-site
+  '(?:offsite|off site)': off-site
+  # open-source : open source
+  opt out : opt-out
+  '(?:plugin|plug in)': plug-in
+  '(?:pre-load|pre load)': preload
+  quick-links : quick links
+  read your own writes : read-your-own-writes
+  '(?:re-indexing|re indexing)': reindexing
+  retriable : retryable
+  '(?:role based access control|role-based-access control|role-based-access-control)': Role-Based Access Control
+  '(?:schemaless|schema less)': schema-less
+  '(?:screen-shot|screen shot)': screenshot
+  # see : refer to
+  slave: secondary
+  '(?:sub clause|subclause)': sub-clause
+  '(?:sub document|subdocument)': Sub-Document
+  '(?:sub millisecond|submillisecond)': sub-millisecond
+  '(?:sub queries|sub-queries)': subqueries
+  time-to-live: time to live
+  '(?:touch-point|touch point)': touchpoint
+  toward : towards
+  '(?:utilize|utilizing)': use|using
+  wish: want
+  '(?:white paper|white-paper)': whitepaper
+  yellow: amber

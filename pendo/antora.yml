@@ -1,0 +1,5 @@
+name: pendo
+title: Pendo Style Guide
+version: ~
+nav:
+  - modules/ROOT/nav.adoc

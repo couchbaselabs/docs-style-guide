@@ -1,0 +1,33 @@
+= Lists and Menus
+
+Lists can be: 
+
+* Radio buttons 
+* Navigation menus 
+* Lists of checkboxes 
+* Dropdowns 
+
+== Use Parallelism and Consistency 
+
+Make entries in a list parallel, as much as possible.
+Parallel list entries follow the same structure, such as being all nouns or starting with a verb. 
+
+Use consistent capitalization and other patterns. 
+
+For example, the settings options for an organization could include *General* settings, *API Key* settings, *MFA* settings, *Session* settings, and an *Activity Log*. 
+
+Don't sacrifice comprehension or understandability for parallelism. 
+
+== Make Entries Mutually Exclusive 
+
+Every option in a list should be mutually exclusive. 
+There should be a clear difference between one list item and the next. 
+
+== Use Good Instruction Text 
+
+A user *enters* instead of *types*. 
+
+A user *chooses* rather than *selects*. 
+
+Do not tell the user to choose "from this dropdown list" in the instruction text. 
+Just tell them what they need to choose. 

@@ -1,0 +1,7 @@
+extends: existence
+message: Don't use italics. Find another way to add emphasis.
+level: error
+link: https://labs.couchbase.com/docs-tooling/styleguide/italic.html
+
+tokens:
+  - _.+_

@@ -1,0 +1,18 @@
+= Introduction to Couchbase Style
+:page-aliases: home:contribute:style-and-voice.adoc
+
+This guide outlines how to write in Couchbase style for all technical documentation of Couchbase products. 
+
+== How to Use This Guide 
+
+Use this guide as a reference for Couchbase style when you need to make style decisions in your writing. 
+
+As a supplement, Couchbase uses the https://developers.google.com/style[Google Developer Style Guide^]. 
+
+Use the following rules to determine which style to follow: 
+
+. Always try to use the Couchbase Style Guide. 
+. If you can't find the answer in the Couchbase Style Guide, use the https://developers.google.com/style[Google Developer Style Guide^].
+. If the Google Developer Style Guide contradicts the Couchbase Style Guide, the Couchbase Style Guide wins.
+
+NOTE: If you don't agree with an element of the Couchbase Style Guide, raise a pull request against this repository or bring it up to the Couchbase Documentation team for discussion. This guide contains guidelines that can change to suit our needs, not unbreakable laws.  

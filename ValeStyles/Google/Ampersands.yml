@@ -1,0 +1,6 @@
+extends: existence
+message: Don't use an & (ampersand) in a heading. 
+level: error 
+tokens: 
+  - =.+&\s
+  - =.+&.+\s

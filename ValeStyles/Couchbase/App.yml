@@ -1,0 +1,7 @@
+extends: existence
+message: Use application, not app, unless you're working on Mobile documentation.
+level: warning 
+ignorecase: true 
+
+tokens:
+  - 'app (?!services|endpoint|service)'

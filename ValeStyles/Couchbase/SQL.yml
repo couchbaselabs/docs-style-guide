@@ -1,0 +1,6 @@
+extends: existence
+message: Use "a SQL++," not "an SQL++"
+level: error 
+
+tokens: 
+  - '\b[Aa]n\b \bSQL\+\+\b'

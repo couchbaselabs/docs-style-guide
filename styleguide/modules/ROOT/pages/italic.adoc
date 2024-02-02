@@ -1,0 +1,3 @@
+= Italics
+
+Don't use italics to format text in the Couchbase documentation. Don't surround any text with underscores (_) to add emphasis.

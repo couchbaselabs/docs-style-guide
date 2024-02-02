@@ -1,0 +1,20 @@
+extends: substitution 
+message: "Use '%s' instead of '%s'."
+level: error 
+ignorecase: true
+action:
+  name: replace
+swap:
+  aren't: are not
+  can't: cannot
+  couldn't: could not
+  didn't: did not
+  doesn't: does not
+  don't: do not
+  hasn't: has not
+  haven't: have not
+  isn't: is not
+  shouldn't: should not 
+  wasn't: was not
+  weren't: were not
+  won't: will not

@@ -1,0 +1,18 @@
+extends: substitution 
+message: "Use '%s' instead of '%s'."
+level: error 
+ignorecase: true
+action:
+  name: replace
+swap:
+  it is: it's 
+  how is: how's
+  that is: that's
+  they are: they're
+  we are: we're
+  what is: what's
+  where is: where's
+  who is: who's
+  you are: you're
+  you had: you'd
+  you will: you'll

@@ -1,0 +1,569 @@
+= A-Z Word List
+:page-aliases: home:contribute:word-list.adoc
+
+Use the following list to determine how to spell, capitalize, and use specific words and terms in Couchbase Documentation. 
+
+For terms not covered here, see the https://developers.google.com/style/word-list[Google Developer Style Guide's Word List].
+
+[#num]
+== Numbers & Symbols
+
+[cols="31,51"]
+|===
+|.NET | Add a period at the start of the acronym. Follow the official capitalization as set by Microsoft. For more information, see xref:capitalization.adoc[].
+| 1; 1,000; 1,000,000 | Write all numbers as numerals, regardless of size. Use commas to separate every group of three digits in a large number. For more information about how to format numbers, see the https://developers.google.com/style/numbers#commas-and-decimal-points-in-numbers[Google Developer Style Guide].
+| `\->` | If you want a `\->`, this will be fine inside a code block. Outside of a code block, Antora/AsciiDoc will convert it to `→` or `\&#8594;`. To avoid this, escape the hyphen: `\\->`
+| % (UI Only) | Never write out "percent" or "percentage" in the UI. Use the % symbol, and put it in brackets next to the name of the measurement. For example, *Index Fragmentation (%)*.
+|===
+
+[#a]
+== A
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| a / an | See xref:articles.adoc[].
+| [[about]]about | When introducing a xref:links.adoc[], use information *about*, not information *on*.
+| Access List | Use <<allowlist, allowlist>>.
+| ACID Transactions | See <<transactions,Transactions>>.
+| adapter | Always use *adapter*, not *adaptor*.
+| ad hoc | Never add a hyphen to *ad hoc*. Use `adhoc` for the SQL++ parameter. Don't use xref:italic.adoc[].
+| admin | Don't use. Write out administrator. 
+| afterwards | Use *afterwards*, not *afterward*.
+| [[allowlist]]allowlist / denylist | Write out allowlist and <<denylist,denylist>> as one word. Don't add a hyphen.
+| Amazon Cloud | Follow the official capitalization as set by Amazon. For more information, see xref:capitalization.adoc[].
+| [[amber]]amber | If you need to refer to traffic lights or a health warning color, use amber, not <<yellow,yellow>>.
+| Analytics Service | When referring to Couchbase Services, use title case. 
+| APAC | Write as a proper acronym. For more information, see xref:capitalization.adoc[].
+| API | Application Programming Interface. Don't write out for first use on a page. 
+| app / application | Use app for mobile applications. Use application for client software, such as Couchbase Server.
+| as of | Use only when referring to dates or time. If talking about a software version, use a phrase such as _beginning with Couchbase Server n.n_
+| AsciiDoc | Follow the official capitalization as set by Eclipse Foundation. For more information, see xref:capitalization.adoc[].
+| autocomplete | Write as one word. Don't add a hyphen.
+| auto-failover | Add the hyphen, unless using as part of a command name. Use automatically fails over or fails over automatically as the verb. 
+| automatic schema discovery | Don't add a hyphen. Don't capitalize. 
+| auto-sharding | Add the hyphen.
+| Availability Zone | Capitalize Availability and Zone. 
+|===
+
+[#b]
+== B
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| backend | Use backend as the noun. Use back-end as the adjective.
+| backup | Use backup as the noun and the adjective. Use back up as the verb.
+| [Couchbase] Backup Manager | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| backward-compatible | Add the hyphen. 
+| beta release | Use beta release before the product name. Use only Beta after the product name (Couchbase Server 5.0 Beta) 
+| BI | 
+| bidirectional | Write as one word. Don't add a hyphen. 
+| big data | Write as two words. Don't add a hyphen. Don't capitalize.
+| Blacklist | Don't use. See <<denylist,denylist>>.
+| Blocklist | Don't use. See <<denylist,denylist>>.
+| blog | Don't use weblog.
+| bootstrap | Write as one word. Don't add a hyphen. 
+| buckets | 
+| bytes | kB / MB / GB / TB / PB for decimal bytes. Use KiB / MiB / GiB for 1024, 1 048 576, 1 073 741 824, and so on. 
+|===
+
+[#c]
+== C
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| {cpp} | Antora will sometimes interpret ++ as markup instructions, and leave only *C* on the page. Follow https://asciidoctor.org/docs/user-manual/#charref-attributes[asciidoctor recommendations] and use \{cpp}.
+| Compare and Swap (CAS) | Write out for the first use on a page. Capitalize as a proper product name.
+| `cbbackupmgr` | Follow the capitalization and spelling set in the code. 
+| `cbcollect` | Follow the capitalization and spelling set in the code. 
+| `cbc` | Follow the capitalization and spelling set in the code. Couchbase CLI tools that come with libcouchbase (LCB). Variety of binaries installed as /usr/bin/cbc*, for example, `cbc-pillowfight`, `cbc-version`
+| `cbq` | Follow the capitalization and spelling set in the code. Official product name for the query shell. 
+| `cbtransfer` | Follow the capitalization and spelling set in the code. 
+| CentOS | Follow the official capitalization as set by Red Hat. For more information, see xref:capitalization.adoc[].
+| cheat sheet | Write as two words. Don't add a hyphen.
+| checkbox | Write as one word. Don't add a hyphen. Pluralize as checkboxes.
+| checkpoint | Write as one word. Don't add a hyphen.
+| cloud | Write in lowercase unless as part of a product name. 
+| cloud native | Use cloud native as the noun. Use cloud-native as the adjective.
+| [[cluster]]cluster | Don't capitalize, unless referring to a specific product. Try to use <<database,database>>, instead.
+| Cluster Manager | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| codebase | Write as one word. Don't add a hyphen.
+| command line | Use command line as the noun. Use command-line as the adjective.
+| config(s) | Don't use. Use configuration as the noun. Use configure as the verb.
+| `ConfigProviderBase` | Follow the capitalization and spelling set in the code. 
+| Couchbase | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Autonomous Operator (CAO) | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Capella (Provisioned/Serverless) | "Couchbase Cloud" or "Couchbase Managed Cloud" in legacy documentation. Add Provisioned or Serverless if you need to specify which type of Capella instance. Write as *Couchbase Capella* + *Provisioned* or *Serverless* for the first use on a page. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Cluster Connection Protocol (CCCP) | Write out for the first use on a page. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| (the) Couchbase Data Platform | Write as data platform if not preceded by *Couchbase*. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Eventing Service | When referring to Couchbase Services, use title case. 
+| Couchbase Functions | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Managed Cloud | Legacy term for Couchbase Capella. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Monitoring and Observability Stack (CMOS) | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Server n.n | Write as *Couchbase Server n.n* for the first use on a page. Use *Server n.n* afterwards. Don't refer to as *the Couchbase Server*. 
+| Couchbase Server Enterprise Edition | Write as *Couchbase Server Enterprise Edition*.
+| Couchstore | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| cross datacenter replication (XDCR) | Write out for the first use on a page. Don't capitalize. Don't add a hyphen. 
+| curl | Write in all lowercase, including on the command line. 
+|===
+
+[#d]
+== D
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| [[database]]database | Preferred term. Don't use <<cluster,cluster>> unless necessary.
+| Database Change Protocol (DCP) | Write out for the first use on a page. 
+| data center | Write as two words. Don't add a hyphen.
+| datacenter replication | Write as two words. Don't add a hyphen.
+| data-centric | Add the hyphen.
+| data-driven | Add the hyphen. 
+| data definition language (DDL) | Don't write out for the first use on a page.
+| data manipulation language (DML) | Don't write out for the first use on a page.
+| data modeling | Write as two words. Don't add a hyphen.
+| DataOps | Capitalize the D and O.
+| dataset | Write as one word. Don't add a hyphen.
+| datasheet | Write as one word. Don't add a hyphen. 
+| [[data]]Data Service | When referring to Couchbase Services, use title case. 
+| data store | Write as two words. Don't add a hyphen.
+| data structure | Write as two words. Don't add a hyphen.
+| decrypter | Use the American English spelling rule and use an "e."
+| deduplicate | Don't add a hyphen.
+| [[denylist]]denylist | Write out <<allowlist,allowlist>> and denylist as one word. Don't add a hyphen.
+| Deprecated | Use to indicate that a feature will be removed in a future release. Don't use it to mean "removed" and specify that the feature will be removed. 
+| design document | Don't capitalize. Don't add a hyphen.
+| DevOps | Capitalize the D and O. 
+| different from | Use different from, not different to.
+| digitization | Use the American English spelling rule and use a "z."
+| Distributed Transactions | See <<transactions,transactions>>.
+|===
+
+[#e]
+== E
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| earlier/later | Use earlier/later to describe software versions. Don't use older/newer or lower/higher.
+| e-commerce | Write as E-commerce if at the beginning of a sentence. Add the hyphen.
+| e.g. | Don't use Latin abbreviations. Use *for example*, instead.
+| elastic-scale | Add the hyphen to use as an adjective.
+| Elasticsearch | Follow the official capitalization as set by Elastic. For more information, see xref:capitalization.adoc[].
+| em dash (&#8212;) | See xref:dashes.adoc[].
+| email | Don't add a hyphen.
+| EMEA | Write as a proper acronym. For more information, see xref:capitalization.adoc[].
+| encrypter | Use the American English spelling rule and use an "e."
+| end user | Use end user as the noun. Use end-user as the adjective.
+| Engagement Database | Capitalize as a proper product name. 
+| ensure | Don't use. Use make sure, instead.
+| e-payment | Add the hyphen. Don't capitalize. 
+| error-free | Add the hyphen.
+| etc. | Don't use Latin abbreviations. Use *and so on*, instead.
+| Event-Condition-Action model | Add the hyphens. Capitalize Event, Condition, and Action.
+| Eventing Service | When referring to Couchbase Services, use title case. 
+| eviction, ejection, expiration 
+a| 
+* Use *eviction* to refer to removing a record entirely from any system or cache. Items are evicted from ephemeral buckets when RAM is full. 
+* Use *ejection* to refer to removing a record from one layer, but still keeping it in a system. Items are ejected from Couchstore or Magma buckets when they are removed from RAM, but still stored on disk. 
+* Use *expiration* to refer to a record being deleted after a specific time period. Items are expired when their time to live (TTL) is greater than 0, and that time has passed. 
+| extract, transform, load (ETL) operations | Write out for the first use on a page. 
+|===
+
+[#f]
+== F
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| failover | Write as one word for the noun. Write as two words for the verb. 
+| FAQ | Write as a proper acronym. For more information, see xref:capitalization.adoc[].
+| [[fewer]]fewer | Use for countable nouns or to describe a noun that's plural. For example, fewer databases. Otherwise, use <<less,less>>.
+| filename | Write as one word. Don't add a hyphen. 
+| file system | Write as two words. Don't add a hyphen. 
+| fine-grained | Add the hyphen. 
+| five nines | Add a hyphen to use as an adjective.
+| Function-as-a-Service (FaaS) | Write out for the first use on a page.
+| focused | Write with one "s."
+| ForestDB | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| FQDN | Fully-Qualified Domain Name. Write out for the first use on a page.
+| free-form | Add the hyphen.
+| full-stack | Add the hyphen to use as an adjective. 
+| full-text indexes | Add the hyphen.
+| Full-Text Search (FTS) | Use Search Service. When referring to Couchbase Services, use title case. 
+|===
+
+[#g]
+== G
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| geo-distributed | Add the hyphen. 
+| geofencing | Don't add a hyphen. Write as one word.
+| GitHub | Follow the official capitalization as set by GitHub. For more information, see xref:capitalization.adoc[].
+| Global Secondary Indexes (GSI) | Write out for the first use on a page. Capitalize as a proper product name.
+| Google Cloud Platform | Follow the official capitalization as set by Google. For more information, see xref:capitalization.adoc[].
+| GUID | Globally Unique Identifier. Write in all caps as an acronym. For more information, see xref:capitalization.adoc[].
+| gzip | Follow the https://developers.google.com/style/filenames#file-type-names[Google Developer Style Guide]'s guidance on how to refer to file type names. 
+|===
+
+[#h]
+== H
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| hard-coded | Add the hyphen.
+| hard-wired | Add the hyphen. 
+| hash key | Don't add a hyphen. Don't write as one word. 
+| help desk | Don't add a hyphen.
+| hostname | Write as one word. 
+| HTML | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+| hybrid cloud | Don't add a hyphen. 
+| hybrid transaction/analytical processing (HTAP) | Write out for the first use on a page. 
+| hybrid operational and analytic processing (HOAP) | Write out for the first use on a page. 
+|===
+
+[#i]
+== I
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| infrastructure as a service (IaaS) | Write out for the first use on a page. 
+| i.e. | Don't use Latin abbreviations. Use *that is*, instead.
+| indexes | Don't use indices. 
+| IndexScan | Write as one word. Capitalize Index and Scan.
+| industry standard | Don't add a hyphen.
+| information about / information on | See <<about,about>>.
+| `initargs` | Write out in all lowercase as in the code. 
+| in-memory | Add the hyphen. 
+| install | Use install for the verb. Use installation for the noun.
+| intra-cluster replication | Add the hyphen. 
+| Internet | Capitalize as a proper noun. 
+| Internet of Things (IoT) | Write out for the first use on a page. Make sure to use a lowercase "o."
+|===
+
+[#j]
+== J
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| JAR | Follow the https://developers.google.com/style/filenames#file-type-names[Google Developer Style Guide]'s guidance on how to refer to file type names. 
+| Java | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+| JavaScript | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+| JIRA | Follow the official capitalization as set by Atlassian. For more information, see xref:capitalization.adoc[].
+| joins | Don't capitalize. 
+| JSON | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+|===
+
+[#k]
+== K
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| Kafka | Follow the official capitalization as set by Apache. For more information, see xref:capitalization.adoc[].
+| keyspace | Don't add a hyphen. Write as one word. 
+| key-value | Add the hyphen. 
+| KV Service | Use <<data,Data Service>>. When referring to Couchbase Services, use title case. 
+|===
+
+[#l]
+== L
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| Last Write Wins (LWW) | Write out for the first use on a page. 
+| [[less]]less | Use less for items that are measured, can't be easily quantified or counted, or mass singular nouns. For example, less trouble, less time, less effort. For nouns that can be counted, use <<fewer,fewer>>.
+| libcouchbase (LCB) | Write out for first use on a page.
+| LDAP | Lightweight Directory Access Protocol. Don't write out for the first use on a page. 
+| livestream | Don't add a hyphen or space. 
+| log in | Use log in for the verb. Use log-in for the adjective. Use login for the noun.
+| low latency | Don't add a hyphen.
+| low write latency | Don't add a hyphen.
+|===
+
+[#m]
+== M
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| MapReduce | Don't add a hyphen. Write as one word. Capitalize Map and Reduce. 
+| MapReduce views | Use <<views,Views Service>>. When referring to Couchbase Services, use title case.
+| massively parallel processing (MPP) | Don't add a hyphen. Write out for the first use on a page. 
+| [[master]]master/slave | Don't use. See <<primary,primary/secondary>>.
+| Memcached bucket | Only capitalize Memcached. Try to only use in legacy documentation. 
+| memcached | Don't capitalize if not referring to a Memcached bucket. Used to describe the distributed memory object caching system from Memcached in legacy documentation.
+| memory-optimized indexes (MOI) | Don't capitalize. Add the hyphen between memory and optimized. Write out for the first use on a page. 
+| metadata | Don't add a hyphen.
+| microservices  | Don't add a hyphen. 
+| microservices architecture | Don't add a hyphen. Don't capitalize.
+| microservices applications | Don't add a hyphen. Don't capitalize.
+| millisecond (ms) | Write the number of milliseconds with a space, as in *50 ms*.
+| mission critical | Use mission critical as the noun. Use mission-critical as the adjective. 
+| MongoDB™ | Follow the official capitalization as set by MongoDB. Add the trademark symbol, ™. For more information, see xref:capitalization.adoc[]. 
+| multichannel | Don't add a hyphen. 
+| multi-datacenter | Add the hyphen.
+| Multi-Dimensional Scaling (MDS) | Capitalize as a proper product name. Write out for the first use on a page. When used to refer to the capability, use multi-dimensional scaling. 
+| multilingual | Don't add a hyphen. 
+| Multi-master | Don't use. See <<primary,primary/secondary>>.
+| multi-model | Add the hyphen.
+| multi-region | Add the hyphen.
+| multi-threaded | Add the hyphen.
+|===
+
+[#n]
+== N
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| [[n1ql]]N1QL | The old term for <<sqlpp,SQL++>>. Don't use, except in legacy documentation. 
+| nameservers | Don't add a hyphen.
+| nginx | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+| Node.js | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+| nonpersistent | Don't add a hyphen. 
+| note that | Don't use.
+| not-recently-used (NRU) | Write out for the first use on a page. Add the hyphen between each word.
+| npm | Node Package Manager. Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+| numReplicas | Use camelcase as set in the code. 
+| nxdomain | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+|===
+
+[#o]
+== O
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| Objective-C | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+| offline | Don't add a hyphen.
+| omnichannel | Don't add a hyphen.
+| on demand | Use on demand as the noun. Use on-demand as the adjective.
+| one can | Don't use. Address the user directly with "you."
+| online | Don't add a hyphen.
+| on-premises | Use on premises as the noun. Use on-premises as the adjective.
+| on-site/off-site | Add a hyphen.
+| open source | Don't add a hyphen.
+| opt-out | Add the hyphen. 
+| Oxford comma | See xref:commas.adoc[].
+| `optimisticReplicationThreshold` | Use camelcase as set in the code. 
+|===
+
+[#p]
+== P
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| page | Use to refer to what a user moves to or accesses from a xref:menus.adoc[menu] or xref:tabs.adoc[tab] in the UI.
+For more information, see xref:pages.adoc[].
+| parameterized | Use the American English spelling rule and use a "z."
+| passlist | Don't use. See <<allowlist,allow list>>.
+| peer to peer | Use peer to peer as the noun. Use peer-to-peer as the adjective.
+| PDF | Follow the https://developers.google.com/style/filenames#file-type-names[Google Developer Style Guide]'s guidance on how to refer to file type names.
+| Pluggable Authentication Modules (PAM) | Write out for the first use on a page. 
+| plug in | Use plugin as the noun. Use plug-in as the adjective. Use plug in as the verb. 
+| preload | Don't add a hyphen. 
+| [[primary]]primary/secondary | Use instead of <<master,master/slave>>. 
+|===
+
+[#q]
+== Q
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| Query Editor | Capitalize as a proper product name. 
+| query executor | Don't capitalize.
+| Query History | Capitalize as a proper product name. 
+| Query Monitor | Capitalize as a proper product name. To refer to the act of monitoring a query, use query monitoring.
+| query plan | Don't capitalize. 
+| query plan visualizer | Don't capitalize. 
+| Query Service | When referring to Couchbase Services, use title case. 
+| query shell | Use the product name, CBQ.
+| Query Workbench | Capitalize as a proper product name. 
+| quick links | Write as two separate words.
+| [[quotes]]quotation marks  | Don't use quotation marks outside of code. Don't use "fancy quotes" (“” ‘’) characters.
+|===
+
+[#r]
+== R
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| Rack Awareness (RA) | Write out for the first use on a page. Don't write as Rack/Zone Awareness.
+| Read Committed | When referring to the isolation level for transactions, don't add a hyphen. Capitalize Read and Committed.
+| Read-Your-Own-Writes (RYOW) | Write out for the first use on a page. Add hyphens between each word.
+| real time | Write as two separate words when used as a noun. Add the hyphen when used as an adjective. 
+| rebalance | Write as all one word. Don't add a hyphen. 
+| [[refer]]refer to | Use <<see,see>>, instead.
+| reindexing | Write as all one word. Don't add a hyphen. 
+| repo | Don't use. Write out the full word, repository.
+| retryable | Don't write as retriable.
+| risk-free | Add the hyphen. 
+| Role-Based Access Control (RBAC) | Write out for the first use on a page. Capitalize the first letter of each word as a proper product name.
+| RxJava | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
+|===
+
+[#s]
+== S
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| schema-less | Add the hyphen. Don't capitalize. You can also use *flexible schema*. 
+| screenshot | Don't add a hyphen. 
+| SDK | Software Development Kit. Don't write out for the first use on a page. 
+| SDKs | Treat acronyms as regular words when making them plural. For more information, see the https://developers.google.com/style/abbreviations#making-abbreviations-plural[Google Developer Style Guide^].
+| Search Service | When referring to Couchbase Services, use title case. 
+| [[see]]see | Use instead of <<refer,refer to>> for introducing links.
+| Service Group | When referring to Service Groups, capitalize Service and Groups. 
+| setup | Use setup as the noun. Use set-up as the adjective. Use set up as the verb.
+| sgcollect | Write as all one word in lowercase, as per the code for the sgcollect utility.
+| sign up | Use sign up as the verb. Use sign-up as the adjective.
+| single node | Use single node as the noun. Use single-node as the adjective.
+| Spark | Don't specify as Apache Spark. Capitalize Spark and Datasets. 
+Follow the official capitalization as set by Apache. For more information, see xref:capitalization.adoc[].
+| [[sqlpp]]SQL++ a| 
+
+The Couchbase query language. Pronounced as *sequel plus plus*. 
+
+Write in documentation as *a SQL++*. For more information, see xref:articles.adoc[].
+| startup | Use startup as the noun. 
+| Structured Streaming | Write out as Structured Streaming API for the first use on a page. 
+| Storm | Don't specify as Apache Storm. Follow the official capitalization as set by Apache. For more information, see xref:capitalization.adoc[].
+| sub-clause | Add the hyphen. Don't capitalize.
+| Sub-Document | Add the hyphen and capitalize Sub and Document. 
+| sub-millisecond | Add the hyphen. 
+| subqueries | Don't add a hyphen. 
+| sudo | Write in all lowercase as per the Linux command. 
+| swappiness |
+|===
+
+[#t]
+== T
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| TAP |
+| tar | Follow the https://developers.google.com/style/filenames#file-type-names[Google Developer Style Guide]'s guidance on how to refer to file type names. 
+| targetNozzlePerNode | Use camelcase, as per the code. 
+| tcpdump | The command-line packet analyzer. Follow the official capitalization as set by Tcpdump Team. For more information, see xref:capitalization.adoc[].
+| THP | 
+| time series | Write as two words, in sentence case. Don't capitalize, don't add a hyphen. 
+| time to live (TTL) | Don't capitalize time to live. Spell out the acronym the first time you use it on a page. 
+| touchpoint(s) | Write as one word. Don't add a hyphen.
+| topology aware | Add the hyphen when used as an adjective.
+| towards | Use *towards*, not *toward*.
+| [[transactions]]Transactions | Use *Distributed ACID Transactions* for the first use on a page. You can use *Distributed Transactions* or *Transactions* later on the page.
+|===
+
+[#u]
+== U
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| Ubuntu | Follow the official capitalization as set by Canonical. For more information, see xref:capitalization.adoc[]. 
+Use the correct article: an, not a. For more information, see xref:articles.adoc[].
+| [[under]]under construction | Use as a banner on incomplete or in process pages. Don't use *wip* or *work in progress*.
+| uninstall | Write as all one word. Don't add a hyphen. 
+| UNNEST | Capitalize SQL and SQL++ clauses. For more information, see xref:capitalization.adoc[].
+|===
+
+[#v]
+== V
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| vBucket / vBuckets | Don't capitalize the *v*. Capitalize Bucket.
+| vBucketMap | Don't capitalize the *v*. Capitalize Bucket and Map.
+| vBucketServerMap | Don't capitalize the *v*. Capitalize Bucket, Server, and Map.
+| [[views]]Views Service | When referring to Couchbase Services, use title case. 
+| virtualization | Use the American English spelling rule and use a "z."
+| vmstat | The virtual memory statistics reporter, which is built into Linux. Write in all lowercase. 
+| VMware | Follow the official capitalization as set by VMware. For more information, see xref:capitalization.adoc[].
+|===
+
+[#w]
+== W
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| warmup | Write as one word. Don't add a hyphen.
+| web | Don't use all capitals. 
+| web page | Don't use. Use <<page,page>>, instead. If you have to specify web page, don't write as one word or add a hyphen.
+| Whitelist | See <<allowlist,allowlist>>.
+| whitepaper | Write as all one word. Don't add a hyphen. 
+| Wi-Fi | Use the proper capitalization and add a hyphen. Don't use *wifi* or *WiFi*. 
+| wip | Don't use. See <<under,under construction>>.
+| work in progress | Don't use work in progress as a banner on incomplete or in process pages. Use <<under,under construction>>.
+|===
+
+[#x]
+== X
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| X.509 | Capitalize the X, and don't forget the period when referring to X.509 certificates.
+| XDCR | Cross Data Center Replication (XDCR). Spell out for the first use on a page. 
+| XML | Use the formal name of the file type, as an XML file. Follow the https://developers.google.com/style/filenames#file-type-names[Google Developer Style Guide]'s guidance on how to refer to file type names.
+|===
+
+[#y]
+== Y
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| [[yellow]]yellow | See <<amber,amber>>.
+|===
+
+[#z]
+== Z
+
+[cols="31,51"]
+|===
+| Term | Notes
+
+| Zendesk | Follow the official capitalization as set by Zendesk. For more information, see xref:capitalization.adoc[].
+| zip | Follow the https://developers.google.com/style/filenames#file-type-names[Google Developer Style Guide]'s guidance on how to refer to file type names.
+|===

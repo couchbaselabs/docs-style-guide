@@ -1,0 +1,73 @@
+= Reference Title - Noun Phrase 
+:page-topic-type: reference
+:description: Enter a quick description of the reference content on this page. Try to keep it to 1-2 sentences. 
+
+[abstract]
+{description}
+// Use the description you provided as a quick introduction to the page.
+
+// Then, if necessary, describe what information is provided in the following table.
+
+// Try to keep tables to Property + Description, but add columns and change column names as necessary. 
+
+// To add a Kroki diagram: 
+
+// The title for the diagram
+// .Covering index
+
+// Specifies the diagram language, an optional anchor,
+// the name for the generated file, and the file type
+//[plantuml#optional_anchor,file-name,svg]
+
+// Indicates the start of the diagram
+//....
+//@startuml
+
+// The content of the diagram goes here
+// See https://plantuml.com/ for syntax help.
+
+// Indicates the end of the diagram
+//@enduml
+//....
+
+// To include a diagram as a partial, use the above syntax and save the file as .puml
+
+
+// To add another image: 
+
+// image::filename.png["Enter some alt text that visually describes the content of the image", width, height, align=]
+
+// Omit the second colon to display an image inline. 
+
+|====
+| Property | Description
+
+| Property Name 
+a| Long description 
+
+That spans multiple lines and includes block content 
+
+|====
+
+== See Also 
+
+// Use the See Also section to add links to related procedures, concepts, or reference information. 
+
+// Use an unordered list to organize the xrefs. 
+
+// The structure of this xref is: 
+// * Component name (server:)
+// * Module name (learn:)
+// * Family name (services-and-indexes/)
+// * Subfolder name (indexes/)
+// * File name (indexes.adoc)
+
+* xref:server:learn:services-and-indexes/indexes/indexes.adoc[]
+
+// The structure of this xref is: 
+// * Component name (cloud:)
+// * Module name (organizations:)
+// * Family name (ui-auth/)
+// * File name (add-sso-auth.adoc)
+
+* xref:cloud:organizations:ui-auth/add-sso-auth.adoc[]

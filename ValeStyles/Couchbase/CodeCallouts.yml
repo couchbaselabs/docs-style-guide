@@ -1,0 +1,7 @@
+extends: existence
+message: Don't use code callouts. Break up your code samples or use code comments, instead.
+level: error 
+link: https://sarahlwelton.github.io/styleguide/examples.html#_explaining_code_examples
+
+tokens: 
+  - \<\d+\>

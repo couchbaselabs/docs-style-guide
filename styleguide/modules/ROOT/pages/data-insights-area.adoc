@@ -1,0 +1,14 @@
+= Data Insights Area
+
+The Data Insights area appears to the left of the controls for the different *Data Tools* in the Couchbase Capella UI. 
+
+It has buttons to add a bucket and import data: 
+
+image::data-insights-area.png[,,align=center]
+
+When you need to describe the Data Insights area in the UI: 
+
+* Capitalize Data Insights, but don't add bold. 
+Don't bold or capitalize the word "area."
+
+* Top-level items are *buckets*, followed by *collections*, then *scopes*, then *schemas*. 

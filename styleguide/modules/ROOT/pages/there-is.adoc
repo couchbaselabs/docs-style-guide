@@ -1,0 +1,38 @@
+= There + To Be
+
+Don't start a sentence with "there" and a form of the verb "to be":
+
+* There is 
+* There are 
+* There were 
+* There was 
+
+These constructions hide the true subject and verb of the sentence, resulting in weaker writing. 
+
+== How To Avoid There Is
+
+To avoid the "there is" construction, try: 
+
+* To remove "there is."
+* To move the true subject and verb from the end of the sentence.
+* To create a subject for the sentence. 
+
+For example: 
+
+----
+There are multiple variables that store the result.
+----
+
+To remove the "there are," you could do any of the following, depending on the context of your sentence: 
+
+----
+Multiple variables store the result. 
+
+The `x` and `y` variables store the result.
+
+You can store the result in multiple variables.
+
+Store the result in multiple variables.
+----
+
+For more examples, see the https://developers.google.com/tech-writing/one/clear-sentences#reduce_there_is_there_are[Google Tech Writing course].

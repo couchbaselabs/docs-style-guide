@@ -1,0 +1,8 @@
+extends: existence
+message: Don't bold or capitalize the word "dialog".
+link: https://sarahlwelton.github.io/styleguide/dialogs.html
+level: error 
+
+tokens: 
+  - \*.+ [Dd]ialog\*
+  - \*.+\* Dialog

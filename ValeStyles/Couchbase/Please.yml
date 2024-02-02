@@ -1,0 +1,6 @@
+extends: existence
+message: Avoid using "Please" as much as possible. Only use it when asking for something that inconveniences the user.
+level: error
+
+tokens:
+  - '[Pp]lease'

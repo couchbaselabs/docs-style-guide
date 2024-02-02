@@ -1,0 +1,45 @@
+= Guide Types 
+
+A Guide in Pendo can fall under one of the following main Guide types. 
+
+Each Guide Type has its own content plan template, based on its specific content requirements. 
+
+Guides also have specific guidelines for settings and Guide behavior inside Pendo. 
+
+|====
+|Guide Type |Description 
+
+| xref:polls.adoc[]
+a| Polls ask a user a specific question to obtain a measure of user sentiment towards a feature or product area. 
+
+A Poll can ask for either:
+
+* open-ended feedback. 
+* feedback based on a specific numeric scale (a rating) of 1-5. 
+
+| xref:tooltips.adoc[]
+a| A Tooltip can be either an Additional Information Tooltip or a Prerequisite Tooltip. 
+
+Additional Information Tooltips can: 
+
+* Provide a brief explanation of a concept in the UI, to ease a friction point. 
+* Point out to documentation for more information about a complex topic.
+
+Prerequisite Tooltips can: 
+
+* Direct a user to another area of the UI to complete a prerequisite task. 
+* Launch other guides (walkthroughs). 
+
+| xref:ui-tour.adoc[]
+a| UI Tours use a step-by-step structure to show users around the UI in a particular part of the interface.
+
+UI Tours focus on showing the UI and features, rather than tasks or specific workflows. 
+
+| xref:walkthroughs.adoc[]
+a| Walkthrough guides help users accomplish a specific task from the UI. 
+
+Walkthroughs use a step-by-step structure to guide users through a workflow.
+
+|====
+
+

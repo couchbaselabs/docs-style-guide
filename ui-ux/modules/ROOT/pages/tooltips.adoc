@@ -1,0 +1,22 @@
+= Tooltips 
+
+A tooltip appears when a user points to something in the UI, but doesn't click. 
+
+A tooltip can come in two styles: 
+
+. They can provide information about an unlabelled icon. 
+. They can provide additional information or instruction: 
+.. Text that was too long to fit in the UI. 
+.. A link to documentation for further reading or instructions. 
+
+== Do Not Overuse Tooltips 
+
+Tooltip overuse can cause a user to ignore tooltips in the UI. 
+
+Do not use a tooltip just to keep xref:instruction-text.adoc[instruction text] off of the screen. 
+
+== Keep to Critical Information 
+
+Keep tooltips as short as possible and only include the most critical information. 
+
+If you need to, include a link for the user so they can read and xref:documentation-links.adoc[learn more]. 

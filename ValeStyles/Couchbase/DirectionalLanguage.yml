@@ -1,0 +1,15 @@
+extends: existence
+message: Avoid directional language like '%s'.
+level: warning 
+
+tokens: 
+  - left
+  - right
+  - '(?<!(sign|set)\s)up(?!\sto)'
+  - down
+  - below
+  - above
+# exceptions:
+#   - '(?<=set\s)up'
+#   - 'up(?=\sto)'
+#   - '(?<=sign\s)up'

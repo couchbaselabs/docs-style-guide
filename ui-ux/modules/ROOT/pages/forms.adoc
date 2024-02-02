@@ -1,0 +1,36 @@
+= Forms 
+
+A form contains multiple input fields or options to collect information from a user. 
+
+== Group Fields Logically 
+
+Use the kind of grouping that a user would expect to see from form fields on other applications. 
+
+For example, with address information, a user would expect to input:
+
+. Their street address
+. Their unit number 
+. Their city
+. Their state or province
+. Their country
+. Their postal or zip code 
+
+Do not violate the user's expectations with the form order. 
+
+== Use Section Titles to Shorten Field Names 
+
+Add section titles to shorten the length of your field names. 
+
+For example, if asking for a billing address, you could title the section *Billing Address* to avoid repeating *Billing* for the rest of the fields. 
+
+== Use Labels, Hint Text, and Tooltips 
+
+Aim to remove uncertainty about what information you're requesting and how the user needs to provide it. 
+
+This includes giving the user valid examples for the information and its formatting.
+
+Do not use the same text for the label on the field and the hint text. 
+
+Put the hint text outside of the field itself, so it can be accessed by a screen reader. 
+
+For more information about formatting fields, see xref:text-input-fields.adoc[].

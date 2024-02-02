@@ -1,0 +1,50 @@
+= Voice and Tone
+
+The Couchbase Voice aims to be: 
+
+Confident :: We know what we're talking about, and how to communicate it to our users. We have the answers and we know it. 
+Reassuring and Empathetic :: We know where the user is coming from and what they want to do. We know that databases can be complicated, but we're right there with them and will lead them to what they're looking for. We are the user's friend, not their adversary. 
+Approachable :: We don't talk down to the user. We're the user's coach, and we're always open to questions. 
+Opinionated and Visionary :: We have a strong opinion about our product and what it can do to solve a user's problems. We know it requires a bold approach to make progress and we have a grand vision of the future of databases that we want to share.
+
+
+To achieve these goals, there are certain things that the Couchbase Voice avoids.
+
+|===
+| | Explanation | Example 
+
+| *Avoid humor* 
+| Humor distracts from the information we need to provide and doesn't translate well. Keep to factual statements. It can also cause frustration if a user just wants an answer to their problem.
+| _It's not CRUDDY to use CRUD operations!_
+
+| *Avoid personal opinions*
+| Keep to accurate statements about the product and its capabilities. We can guide users towards the best way to use a product, but it needs to stay objective and accurate. Don't make a generalization on behalf of the company. 
+a | 
+    _Couchbase Server 7.1 is the best version of Couchbase Server. You shouldn't use any other version._ 
+
+    _Couchbase believes that Docker is the best way to get set up and get started with Couchbase Server._
+
+| *Avoid colloquial language and topical expressions*
+| Colloquialisms are difficult to translate and usually culture-specific. Topical content can become outdated and its meaning can quickly change. Keep to writing that suits a global audience and is timeless. This also applies to xref:examples.adoc[code samples].
+a | 
+    _It's lit!_
+
+    _It's daft to set your database memory allotments too low._
+
+| *Avoid aspirational statements* 
+| Write about what the product does, not about what it can or may do in the future. Stick to what's in the product. 
+| _Someday, Couchbase may support this feature._
+
+| *Avoid marketing or selling the product*
+| Write about how a user can use a feature to accomplish a task that might be important to them. You don't need to sell the product to the user. We're aiming to show the user how to use and best use the features, not market to them. Avoid using inappropriate adjectives or adverbs. 
+a| 
+_Couchbase's Storage Auto-Expansion is designed to handle your ever-growing data needs._
+
+_Couchbase Capella can do this extremely quickly._
+
+| *Avoid only describing features* 
+| Write about what the user can do and how they can accomplish their goals - don't just describe features of the product and how they work. 
+| _A Full Text Search Response Object is itself composed of multiple child-objects, each of which provides important information._
+|===
+
+Aim to keep a neutral tone in the documentation. Think about what drove the user to the documentation and try to be as helpful and to-the-point as possible. Give them what they need to be successful.

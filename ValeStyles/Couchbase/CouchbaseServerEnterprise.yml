@@ -1,0 +1,7 @@
+extends: conditional
+message: Use the full product name (Couchbase Server Enterprise Edition) first.
+level: error
+scope: text
+ignorecase: false
+first: \b(Enterprise Edition)\b
+second: (Couchbase Server |Couchbase Server \d\.\d )(Enterprise Edition)

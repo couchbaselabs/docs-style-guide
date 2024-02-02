@@ -1,0 +1,5 @@
+extends: existence
+message: Use ventilated prose. Start every sentence on a new line. 
+level: warning
+tokens: 
+  - '\w\.\s[A-Z]\w'

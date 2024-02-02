@@ -1,0 +1,69 @@
+= Concept Title - A Noun or Noun Phrase
+:page-topic-type: concept
+:description: Enter a quick description of the content of the page. Try to keep it to 1-2 sentences. 
+
+[abstract]
+{description}
+// Use the description you provided as a quick introduction to the page. 
+
+== Secondary Heading 
+
+// Use headings to break up content and make it easier to scan for users. Add a heading when you're making a significant deviation in what you're explaining to the user. 
+
+// In general, use your own discretion and be smart about when to add a heading.
+
+// Don't go beyond an H4-level heading. 
+
+// Use title case, and keep headings as short and to the point as you can.
+
+// Use paragraphs and unordered lists under headings to keep content easy to read and scan. Small tables are also acceptable.
+
+
+// To add a Kroki diagram: 
+
+// The title for the diagram
+// .Covering index
+
+// Specifies the diagram language, an optional anchor,
+// the name for the generated file, and the file type
+//[plantuml#optional_anchor,file-name,svg]
+
+// Indicates the start of the diagram
+//....
+//@startuml
+
+// The content of the diagram goes here
+// See https://plantuml.com/ for syntax help.
+
+// Indicates the end of the diagram
+//@enduml
+//....
+
+// To include a diagram as a partial, use the above syntax and save the file as .puml
+
+
+// To add another image: 
+
+// image::filename.png["Enter some alt text that visually describes the content of the image", width, height, align=]
+
+// Omit the second colon to display an image inline. 
+
+== See Also 
+
+// Use the See Also section to add links to related procedures, concepts, or reference information. 
+
+// Use an unordered list to organize the xrefs. 
+
+// The structure of this xref is: 
+// * Component name (server:)
+// * Module name (learn:)
+// * Family name (services-and-indexes/)
+// * Subfolder name (indexes/)
+// * File name (indexes.adoc)
+* xref:server:learn:services-and-indexes/indexes/indexes.adoc[]
+// The structure of this xref is: 
+// * Component name (cloud:)
+// * Module name (organizations:)
+// * Family name (ui-auth/)
+// * File name (add-sso-auth.adoc)
+* xref:cloud:organizations:ui-auth/add-sso-auth.adoc[]

@@ -1,0 +1,11 @@
+= More Options Menu
+
+A *More Options* menu is represented by three vertical ellipses in the UI (&vellip;).
+
+When you need to describe a *More Options* menu in the UI: 
+
+* Refer to the menu as the *More Options* (&vellip;) menu. 
+
+* Use the HTML entity, `\&vellip;` for the vertical ellipses.
+
+* Use the xref:menu-ui-macro.adoc[] to describe any navigation inside a *More Options* menu. For example, go to *More Options* (&vellip;) > *Delete*. 

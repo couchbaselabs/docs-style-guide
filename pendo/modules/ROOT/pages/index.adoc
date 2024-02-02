@@ -1,0 +1,11 @@
+= Welcome to the Couchbase Pendo Style Guide
+
+This guide outlines how to write in Couchbase style for all https://support.pendo.io/hc/en-us/categories/360001404191-Guidance[Pendo Guides] for Couchbase Capella.
+
+== How to Use This Guide
+
+Use this guide as a reference for Couchbase style when you need to write a new Pendo Guide. 
+
+This guide contains guidelines and boilerplate options for Guide content. 
+
+NOTE: If you don't agree with an element of the Pendo Style guide, raise a pull request against this repository or bring it up to the Couchbase Documentation team for discussion. This guide contains guidelines that can change to suit our needs, not unbreakable laws. 

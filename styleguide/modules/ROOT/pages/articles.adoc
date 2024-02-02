@@ -1,0 +1,31 @@
+= Articles (a, an, the)
+
+Use articles like *a*, *an*, and *the* in your writing. 
+
+As stated in the https://developers.google.com/style/articles[Google Developer's Style Guide^]: 
+
+====
+*A* and *an* are indefinite articles and are used before a singular noun. 
+They refer to any member of a group.
+
+*The* is a definite article. 
+It is used before singular and plural nouns and refers to one or more particular members of a group.
+
+Whether to use a or an depends on the pronunciation of the word that follows it. 
+Use a before any consonant sound; use an before any vowel sound, as in the following examples:
+
+* An hour
+* An HTML file
+* A hand
+* A hotel
+* An umbrella
+* A union
+
+To complicate matters further, some abbreviations can be both acronyms and initialisms, requiring a in one instance and an in the other. 
+For example, FAQ, which some pronounce "fak" and others spell out, requires an when spelled out and a when pronounced as a word. 
+In some cases, it can be best to use the article that aligns with how the abbreviation is pronounced. 
+The following list provides our recommendations for which article to use:
+
+* A SQL (database)
+* An FAQ
+====

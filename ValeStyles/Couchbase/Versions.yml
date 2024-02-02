@@ -1,0 +1,8 @@
+extends: substitution
+message: Use '%s', not '%s', when talking about versions.
+level: warning
+ignorecase: true
+
+swap: 
+  '(?:newer|higher)': later
+  '(?:older|lower)': earlier

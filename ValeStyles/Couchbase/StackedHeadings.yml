@@ -1,0 +1,7 @@
+extends: existence
+message: You can't have two headings with no content in between.
+level: error 
+tokens: 
+- =.+\n=.+\n
+- =.+\n=.+\n=.+
+- =.+\n\n=.+\n

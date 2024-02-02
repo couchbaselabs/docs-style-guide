@@ -1,0 +1,7 @@
+extends: existence 
+message: Don't use "textbox", use "field". If the user can make a selection in the field, use "box".
+level: error 
+
+tokens: 
+  - textbox
+  - text box

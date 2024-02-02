@@ -1,0 +1,11 @@
+= Unordered Lists
+
+Use an unordered or bulleted list when you have a collection of three or more things and the order of the items doesn't matter. These items could be nouns, phrases, or topics. 
+
+If you only have two items in your list, it's okay to just write it out in a sentence. 
+
+Use an unordered list when writing prerequisites or a See Also section in your documentation. Use an unordered list for prerequisites and the See Also section even if it contains only a single item. 
+
+Use an asterix (*) to render an item as an unordered list item. The number of asterixes sets the depth of the list item. 
+
+For more information on how to format an unordered list in Antora, see https://docs.couchbase.com/home/contribute/basics.html#unordered-lists[Unordered Lists] in the Contributing to the Documentation guide.

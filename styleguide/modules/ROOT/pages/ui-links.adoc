@@ -1,0 +1,9 @@
+= Links
+
+When you need to describe the UI, don't refer to anything as a "link."
+
+A link is any clickable text that appears as part of plain text in the UI. 
+
+For example, the following is a link: 
+
+image::link-example.png[,,align=center]

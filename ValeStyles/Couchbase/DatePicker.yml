@@ -1,0 +1,9 @@
+extends: existence
+message: Don't bold or capitalize "date picker."
+level: error
+link: https://sarahlwelton.github.io/styleguide/date-picker.html
+
+tokens:
+  - \*.+ [Dd]ate [Pp]icker\*
+  - \*.+\* Date [Pp]icker
+  - \*.+\* date Picker

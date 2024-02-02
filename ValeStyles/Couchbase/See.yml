@@ -1,0 +1,11 @@
+extends: existence
+message: Use "see" for links.
+level: warning
+link: https://developers.google.com/style/link-text
+ignorecase: true
+
+tokens: 
+  - refer to (http://|https://)
+  - refer to xref:.+.adoc\[.+\]
+  - refer to {.+}\[.+\]
+  - refer to <<.+>>

@@ -1,0 +1,7 @@
+extends: conditional
+message: Use the full product name (Couchbase Autonomous Operator) first.
+level: error
+scope: text
+ignorecase: false
+first: \b(Operator)\b
+second: (Couchbase Autonomous )(Operator)

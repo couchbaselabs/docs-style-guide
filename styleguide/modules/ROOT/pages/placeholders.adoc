@@ -1,0 +1,9 @@
+= Code Placeholders
+
+When you need to add a placeholder value to a xref:examples.adoc[code example]: 
+
+* Write the placeholder name in capital letters. 
+* Use a `$` before the placeholder name. 
+* Use underscores to separate words. 
+
+For example, `$DATABASE_NAME`. 

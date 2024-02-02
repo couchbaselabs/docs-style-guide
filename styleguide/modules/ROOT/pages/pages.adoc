@@ -1,0 +1,25 @@
+= Page 
+
+A page is what a user moves to or accesses from a xref:menus.adoc[menu] or xref:tabs.adoc[tab] in the UI. 
+
+Pages are the whole of what is displayed in the UI to the user. They contain xref:buttons.adoc[], xref:tabs.adoc[], and other UI elements.
+
+For example, the following are pages in the Capella UI: 
+
+image::pages-example.png[,,align=center]
+
+image::pages-example-2.png[,,align=center]
+
+When you need to describe a page in the UI: 
+
+* Refer to the page by its name, followed by the word page. 
++
+For example, the *Quick Start* page.
+
+* Bold the page name. 
+
+* If you are describing a page for the purposes of navigation, refer to xref:tabs.adoc[] and xref:menus.adoc[]. 
++
+For example, you would select the *Data Tools* tab to open the *Data Tools* page. 
++
+Use the xref:menu-ui-macro.adoc[] where appropriate.

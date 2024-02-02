@@ -1,0 +1,6 @@
+extends: existence
+message: Don't use 'note that.' Convert to an actual NOTE, or don't use it at all.
+ignorecase: true
+level: error
+tokens:
+  - note that

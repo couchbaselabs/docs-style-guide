@@ -1,0 +1,12 @@
+extends: existence
+message: Don't use quotation marks to add emphasis. 
+link: https://labs.couchbase.com/docs-tooling/styleguide/quotation-marks.html
+level: error 
+
+tokens: 
+  - \s".+"\s
+
+exceptions: 
+  - \x60.+".+".+\x60
+  - \x60.+".+"\x60
+  - \x60".+"\x60

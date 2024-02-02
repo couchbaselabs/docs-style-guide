@@ -1,0 +1,27 @@
+= Button Macro
+
+Use the Antora `btn:` Macro for buttons and named items that the user clicks in the UI. The button can be inside the step for a procedure, but the text doesn't need to be in a procedure to use the macro. 
+
+For example, `btn:[Submit]` renders a Submit button.
+
+The following UI elements are considered buttons: 
+
+* Any clickable element that opens a dialog or pane. 
+* Any clickable element that causes an action to happen. 
+* Any clickable element that contains an icon. 
+
+image::buttons-examples.png[]
+
+NOTE: A button might or might not have a defined border and color.
+
+When you need to describe a button in the UI: 
+
+* Refer to the button by its name only. Don't add "button."
++
+For example, *Submit*.
+
+* Use the `btn:[]` macro to format the button. 
+
+If a clickable element changes the screen or navigates the user away from their current location in the UI, use the xref:menu-ui-macro.adoc[Menu UI Macro], instead.
+
+For more information about how to use the Button Macro to format your documentation, see https://docs.couchbase.com/home/contribute/basics.html#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.

@@ -1,0 +1,28 @@
+= Menus
+
+A menu is a sequence of named clickable UI elements. 
+Menus display vertically in the UI. 
+
+Menus never appear horizontally - those are xref:tabs.adoc[].
+
+Like a tab, a menu changes the information that's displayed the UI. This could be for the whole application, or for a specific section. 
+
+The UI highlights the currently selected menu item for the user. 
+
+For example, the following is the *Data Tools* menu, as it appears when the user selects the *Data Tools* tab: 
+
+image::menu-example.png[]
+
+When you need to describe a menu in the UI: 
+
+* Refer to the menu by its name, followed by the word "menu."
++
+For example, the *Data Tools* menu.
+
+* Refer to the menu item by its name only. Don't add "menu item."
++
+For example, *Query*.
+
+* Bold the menu name or menu item. 
+
+* If you need to tell the user to select a menu item after they select a xref:tabs.adoc[tab], use the xref:menu-ui-macro.adoc[], instead.

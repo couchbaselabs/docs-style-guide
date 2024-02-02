@@ -1,0 +1,7 @@
+= Commas 
+
+Use the Oxford comma for inline lists. 
+
+If an inline list has more than three items, consider using an xref:ordered-list[ordered] or xref:unordered-list.adoc[unordered] list, instead. 
+
+Vale flags sentences that use more than two commas as potential run-on sentences. 

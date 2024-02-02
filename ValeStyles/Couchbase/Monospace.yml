@@ -1,0 +1,7 @@
+extends: existence
+message: Did you follow the guidelines for monospace font?
+link: https://sarahlwelton.github.io/styleguide/monospace-highlight.html 
+level: suggestion
+
+tokens: 
+  - \x60.+\x60

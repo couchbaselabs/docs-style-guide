@@ -1,0 +1,36 @@
+= Action Buttons 
+
+An action button is anything the user clicks that causes something to happen in the UI. 
+
+Never surprise the user with what happens after they click a button. 
+The result should be obvious from the button's text.
+
+image::CreateProjectButton.png["A blue button that says + Create Project",align="center"]
+
+== Start with an Action Verb 
+
+Start button text with an action verb that clearly describes what happens after the user clicks the button. 
+
+For example, the button to create a project could say *Create Project*. 
+
+NOTE: This is unnecessary if the action button is a navigation button. Name the page that the user navigates to, instead.
+
+== Align the Button Text to the Surrounding Text
+
+Make sure that the text you use on the button aligns to the surrounding text. 
+
+For example, if the preceding text tells the user that they can delete their organization, the button should say *Delete Organization*, not *Remove Organization*. 
+
+If the user is making a change that they need to save or cancel, the confirmation button should be *Save*, not *Apply* or *Update*.
+But, try to make the action match the surrounding text.
+
+== Keep It Between 3-5 Words
+
+Do not add a lot of words to a single button, or it might not be obvious that it's a button to the user. 
+
+Try to stick to 3-5 words. 
+
+== Write Buttons in Title Case
+
+Use title case for all button text. 
+Capitalize nouns and verbs, but not prepositions and conjunctions. 

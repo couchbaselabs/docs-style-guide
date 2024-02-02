@@ -1,0 +1,52 @@
+= Images and Diagrams
+
+In general, try to limit the number of images you add to the documentation. 
+
+For guidance on image file naming conventions, see xref:filenames.adoc[].
+
+NOTE: All images included in Couchbase Documentation must have alt text.
+For more information, see xref:alt-text.adoc[].
+
+== Screenshots 
+
+Use the PNG file format for screenshots, when possible. 
+
+Use the following guidance for when to add screenshots to each topic type: 
+
+Concept:: Avoid screenshots in concept topics. Use Kroki diagrams to explain concepts. Use your best judgment as far as if a screenshot provides the best user experience.
++
+If the concept topic is a basic, introductory guide to the UI, then consider adding one screenshot to show the UI. 
+
+How-tos and Tutorials:: Don't add a screenshot for every step in a task. You don't need to add a screenshot to show the result of an action, unless it's unexpected, unusual, or hard to explain through text. 
+
+Reference:: Avoid images in reference topics. 
+
+In all cases, make sure that your screenshot specifically shows what you need to show to the user. Frame the image well and don't show unnecessary or distracting parts of the UI. Avoid showing any information that could be subject to change or would be difficult to keep consistent over time. 
+
+If you need to show more of the UI and highlight a specific area, use an annotation. 
+
+=== Screenshot Annotations 
+
+Try to avoid annotations where possible. Make sure that your screenshot is useful and highlights what you're trying to show to the user without too much extra information.
+
+If you need to add annotations to a screenshot, use a transparent rectangle with a solid border.
+
+The rectangle's border should have a 5px width with no rounded corners. The inside of the rectangle should be transparent. 
+
+Use Couchbase Red for the rectangle's border: 
+
+*Hex*: #EA2328
+*CMYK*: 1 99 100 0
+*RGB*: 234 35 40 
+
+Make sure the rectangle surrounds the part of the screenshot you want to highlight: 
+
+image::annotation-example.png[,,align=center]
+
+For more information about how to specify the format and add an image in Antora, see https://docs.couchbase.com/home/contribute/basics.html#images[Images] in the Contributing to the Documentation guide.
+
+== Diagrams 
+
+Use https://kroki.io/[Kroki^] to generate all diagrams. Save diagrams in SVG format. 
+
+Use the https://github.com/plantuml/plantuml[PlantUML^] language to generate your diagrams.

@@ -1,0 +1,26 @@
+= Information Dialogs 
+
+An information dialog is a window that appears that a user needs to dismiss to get back to the UI. 
+
+They can provide information about a complication or recommended course of action, but do not perform or confirm an action. 
+See xref:decision-dialogs.adoc[], instead.
+
+An information dialog can contain an xref:error-messages.adoc[error message].
+
+== Add a Title That's a Statement 
+
+The title of an information dialog is a statement.
+It should tell the user what the system did or what happened. 
+
+Do not add punctuation. 
+
+== Leave Context and Explanations to the Documentation
+
+Keep the body text of an information dialog short and direct. 
+Tell the user what happened and what they need to do next, if anything. 
+
+Make sure to write in full sentences. 
+
+Any lengthy explanations or context should stay in the larger UI or the documentation. 
+
+For more information about how to write an effective error message, see xref:error-messages.adoc[].

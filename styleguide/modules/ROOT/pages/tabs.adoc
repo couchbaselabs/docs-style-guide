@@ -1,0 +1,32 @@
+= Tabs
+
+A tab is a named clickable element in the UI.
+It appears in a horizontal sequence of other tabs. 
+
+Tabs never appear vertically. 
+
+A tab changes the information that's displayed the UI. This could be for the whole application, or for a specific section. 
+
+The UI highlights the currently selected tab for the user. 
+
+For example, the following are both tabs: 
+
+====
+image::tab-example.png[,,align=center]
+====
+
+====
+image::tab-example-2.png[,,align=center]
+====
+
+When you need to describe a tab in the UI: 
+
+* Refer to the tab by its name, followed by the word tab. 
++
+For example, the *Data Tools* tab.
+
+* Bold the tab name. 
+
+* If you need to tell the user to select a xref:menus.adoc[Menu item] after they select a tab, use the xref:menu-ui-macro.adoc[], instead.
+
+NOTE: A user selects a tab to open a page in the UI. For more information, see xref:pages.adoc[].

@@ -1,0 +1,39 @@
+= Filenames
+
+When naming a new file, use dashes to separate words. 
+
+Use lowercase letters for all characters in a filename. 
+Make sure that at least the first character in a filename is in lowercase. 
+
+Only use capital letters where it makes sense to do so, such as specifying an acronym in a filename. 
+
+Try to make filenames descriptive without being too long: 4-5 words should be enough to convey the content. 
+
+== Topic Files
+
+All topic files should use the `.adoc` file extension.
+
+For example: 
+
+* `indexes.adoc`
+* `creating-buckets.adoc`
+* `run-N1QL-queries.adoc`
+
+CAUTION: Don't retroactively change filenames for published topics. This causes tooling issues and means that we have to create and maintain more redirects.
+
+== Image Files
+
+All image files should use the `.png` file extension, as mentioned in xref:images-diagrams.adoc[].
+
+For image files, try to include the following:
+
+. Start with the product name.
+. Add a brief description of what the image shows - a concept? A screenshot? A specific feature?
+.. If the image is a screenshot, try to include the name of the page in the UI. 
+. Add the Server version. 
+
+For example: 
+
+* `server-cluster-manager-architecture-7.1.png`
+* `capella-billing-usage-summary-7.0.png`
+* `couchbaselite-replicator-states-3.0.png`

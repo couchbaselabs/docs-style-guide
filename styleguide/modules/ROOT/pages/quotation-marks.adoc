@@ -1,0 +1,5 @@
+= Quotation Marks
+
+Don't use quotation marks outside of inline code or code blocks. 
+
+Use other emphasis options, such as xref:bold.adoc[] or xref:monospace-highlight.adoc[].

@@ -1,0 +1,7 @@
+= Ordered Lists 
+
+Use an ordered list when you have a procedure, task, or collection of items where the order matters. 
+
+Use a period (.) to render an item as an ordered list item. The number of periods sets the depth of the list item. 
+
+For more information on how to format an ordered list in Antora, see https://docs.couchbase.com/home/contribute/basics.html#ordered-lists[Ordered Lists] in the Contributing to the Documentation guide.

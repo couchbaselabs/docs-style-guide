@@ -1,0 +1,6 @@
+extends: existence
+level: warning 
+message: Did you mean less or should this be fewer?
+link: https://sarahlwelton.github.io/cb-vale-style-guide/styleguide/less-fewer.html
+tokens:
+  - '[Ll]ess \b[a-zA-Z]+s\b'

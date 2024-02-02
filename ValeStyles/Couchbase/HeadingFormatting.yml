@@ -1,0 +1,8 @@
+extends: existence
+message: Don't add formatting to headings. 
+level: error 
+tokens: 
+  - (=+\s\*\w.+\*)
+  - (=+\*\w.+\*)
+  - (=+\s_\w.+_)
+  - (=+_\w.+_)

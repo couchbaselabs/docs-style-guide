@@ -1,0 +1,35 @@
+extends: existence
+message: Use plain language. '%s' is too wordy.
+level: error
+ignorecase: true 
+tokens:
+  - \badvanc(e|ing)\b
+  - \bcollaborat(e|ing)\b
+  - \bcombat(|ing|ting)\b
+  - \bcommit(|ing|ting)\b
+  - \bpledg(e|ing)\b
+  - \bcounter(|ing)\b
+  - \bdriv(e|ing)\b
+  - \bempower(|ing)\b
+  - \bfacilitat(e|ing)\b
+  - \bfocus(|ing)\b
+  - \bfoster(|ing)\b
+  - going forward
+  - \billustrat(e|ing)\b
+  - \bimpact(|ing)\b
+  - in doing so
+  - \binitiat(e|ing)\b
+  - innovative
+  - \bleverag(e|ing)\b
+  - overarching
+  - \bprogress(|ing)\b
+  - \bpromot(e|ing)\b
+  - robust
+  - \bsimpl(e|y)\b
+  - streamline
+  - \bstrengthen(|ing)\b
+  - \btackl(e|ing)\b
+  - thought leader
+  - thus
+  - \btransform(|ing)\b
+  - transitive

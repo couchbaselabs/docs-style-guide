@@ -1,0 +1,24 @@
+= Dashes
+
+You can use two types of dashes in Couchbase documentation: an en dash or an em dash. 
+
+== Em Dashes 
+
+Use an em dash (—) to set off an aside or comment in your text. 
+Don't use parentheses. 
+Don't use an en dash or hyphen.
+
+For example, `an em dash is a great piece of punctuation — but it can be easily overused`.
+
+== En Dashes 
+
+Use an en dash (–) to represent a range of numbers, dates, or time. 
+
+For example, `choose a number in the range of 1–4`.
+
+== Hyphens 
+
+Use hyphens (-) to join words together, such as compound adjectives. 
+A compound adjective is two or more words that collectively modify a noun. 
+
+For example, `full-text search`.

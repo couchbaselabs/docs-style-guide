@@ -1,0 +1,170 @@
+\.NET
+Amazon cloud
+Analytics Service
+APAC
+API
+App Services
+ASCII
+automatic schema discovery
+auto-sharding
+Availability Zone
+BI
+bootstrap
+CAS
+[Cc]allout
+[Cc]allouts
+cbbackupmgr
+cbcollect
+cbtransfer
+Capella
+Compare and Swap
+CentOS
+Cluster Manager
+ConfigProviderBase
+cloud\.couchbase
+Couchbase Autonomous Operator
+Couchbase Backup Manager
+Couchbase Cluster Connection Protocol
+Couchbase Data Platform
+Couchbase Eventing Service
+Couchbase Functions
+Couchbase Monitoring and Observability Stack
+Couchbase Server
+Couchbase
+Couchstore
+curl
+Database Change Protocol
+DataOps
+DCP
+DDL
+[Dd]eduplicate
+DevOps
+[Dd]igitization
+DML
+Docker
+Dockerfiles
+Dockerfile
+Elasticsearch
+EMEA
+Engagement Database
+ETL
+Event-Condition-Action model
+FAQ
+FaaS
+Forestdb
+FQDN
+Full-Text Search
+FTS
+Geofencing
+GitHub
+Global Secondary Indexes
+Google Cloud Platform
+guid
+gzip
+HTML
+HTAP
+HOAP
+IaaS
+IndexScan
+initargs
+Internet
+Internet of Things
+IoT
+JAR
+Java
+JavaScript
+JIRA
+JSON
+Kafka
+[Kk]eyspace
+Kroki
+KV Service
+Last Write Wins
+LWW
+LCB
+LDAP
+MapReduce
+massively parallel processing
+MPP
+Memcached bucket
+Memcached
+[Nn]amespace
+Node\.js
+npm
+nvm
+MongoDB™
+Multi-Dimensional Scaling
+MDS
+nginx
+NRU
+numReplicas
+nxdomain
+Objective-C
+Omnichannel
+optimisticReplicationThreshold
+PDF
+Pluggable Authentication Modules
+PAM
+query editor
+query executor
+query monitoring
+query planner
+query plan visualizer
+Query Service
+query shell
+Query Workbench
+rack awareness
+RA
+RBAC
+Read Committed
+[Rr]ebase
+[Rr]epositories
+[Rr]etryable
+Role-Based Access Control
+RYOW
+RxJava
+SDK
+SDKs
+Search index
+Search indexes
+Search quer[y|ies]
+Search Service
+Service Group
+Service Groups
+SGCollect
+Spark Datasets
+[Ss]tartup
+Structured Streaming
+Sub-Document
+sudo
+[Ss]wappiness
+TAP
+tar
+targetNozzlePerNode
+tcpdump
+THP
+[Tt]ime series
+time to live
+[Tt]okenizer
+[Tt]okenizers
+[Tt]oolchain
+TTL
+Ubuntu
+[Uu]psert
+UNNEST
+vBucket
+vBucketMap
+vBuckets
+VBucketServerMap
+Views Service
+[Vv]irtualization
+vmstat
+VMware
+Vue
+X\.509
+XDCR
+XML
+yaml
+YAML
+Zendesk
+zip

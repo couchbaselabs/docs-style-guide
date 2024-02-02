@@ -1,0 +1,11 @@
+= Parentheses 
+
+Use parentheses sparingly. 
+
+Don't use parentheses to set off an aside or comment in text. Use an xref:dashes.adoc[em dash], instead. 
+
+You must use parentheses when you mention an unfamiliar acronym for the first time in your documentation. For example, `the Alphabet Biscuit Club (ABC)`.
+
+Parentheses are always acceptable when used inside code blocks. 
+
+Don't add parentheses to xref:headings.adoc[].

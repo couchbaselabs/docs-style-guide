@@ -1,0 +1,13 @@
+= Buttons 
+
+A button is: 
+
+* Any clickable element that opens a dialog or pane. 
+* Any clickable element that causes an action to happen. 
+* Any clickable element that contains an icon. 
+
+image::buttons-examples.png[]
+
+A button might or might not have a defined border and color.
+
+For information about how to write about buttons in the UI, see xref:button-macro.adoc[].
