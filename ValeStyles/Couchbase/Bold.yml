@@ -1,6 +1,8 @@
 extends: existence
 message: Did you follow the guidelines for bold font?
 link: https://sarahlwelton.github.io/styleguide/bold.html 
+scope: raw
+nonword: true
 level: suggestion
 
 tokens: 

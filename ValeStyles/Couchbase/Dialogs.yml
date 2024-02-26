@@ -2,7 +2,9 @@ extends: existence
 message: Don't bold or capitalize the word "dialog".
 link: https://sarahlwelton.github.io/styleguide/dialogs.html
 level: error 
+nonword: true
+scope: raw
 
 tokens: 
-  - \*.+ [Dd]ialog\*
-  - \*.+\* Dialog
+  - '\*.+[Dd]ialog\*'
+  - '\*.+\*\sDialog'

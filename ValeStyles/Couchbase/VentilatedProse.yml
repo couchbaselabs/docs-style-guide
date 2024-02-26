@@ -1,5 +1,7 @@
 extends: existence
 message: Use ventilated prose. Start every sentence on a new line. 
 level: warning
+scope: raw
+nonword: true
 tokens: 
-  - '\w\.\s[A-Z]\w'
+  - '\w\b\.\s\b\w'

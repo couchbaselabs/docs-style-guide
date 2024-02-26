@@ -2,6 +2,8 @@ extends: existence
 message: Try to avoid using a semi-colon. Follow the style guide guidance. 
 link: https://sarahlwelton.github.io/styleguide/colons.html
 level: warning
+nonword: true
+scope: raw
 
 tokens: 
   - \;

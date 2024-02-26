@@ -1,0 +1,18 @@
+extends: existence
+message: Do not use '%s'. Replace with regular quotes/apostrophes.
+level: error
+nonword: true
+scope: raw
+
+tokens:
+  - '‛'
+  - '‘'
+  - '’'
+  - '”'
+  - '‟'
+  - '“'
+  - '″'
+  - '‶'
+  - '🙶'
+  - '🙷'
+  - '„'

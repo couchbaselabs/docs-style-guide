@@ -1,5 +1,6 @@
 extends: substitution 
 message: "Use '%s' instead of '%s'."
+link: https://sarahlwelton.github.io/styleguide/contractions.html
 level: error 
 ignorecase: true
 action:

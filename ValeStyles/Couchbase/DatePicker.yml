@@ -2,8 +2,12 @@ extends: existence
 message: Don't bold or capitalize "date picker."
 level: error
 link: https://sarahlwelton.github.io/styleguide/date-picker.html
-
+nonword: true
+scope: raw
 tokens:
-  - \*.+ [Dd]ate [Pp]icker\*
-  - \*.+\* Date [Pp]icker
-  - \*.+\* date Picker
+  - '\*[Dd]ate\s[Pp]icker\*'
+  - '\*.+[Dd]ate\s[Pp]icker\*'
+  - '\*.+[Dd]ate\*\s[Pp]icker'
+  - 'Date picker'
+  - 'date Picker'
+  - 'Date Picker'

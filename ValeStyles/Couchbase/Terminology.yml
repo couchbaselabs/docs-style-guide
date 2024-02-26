@@ -1,6 +1,7 @@
 extends: substitution
 message: Use '%s', not '%s'
 level: warning
+link: https://sarahlwelton.github.io/styleguide/word-list.html 
 ignorecase: true
 
 swap: 

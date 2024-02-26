@@ -2,10 +2,11 @@ extends: existence
 message: Use "see" for links.
 level: warning
 link: https://developers.google.com/style/link-text
-ignorecase: true
 
+nonword: true
 tokens: 
-  - refer to (http://|https://)
-  - refer to xref:.+.adoc\[.+\]
-  - refer to {.+}\[.+\]
-  - refer to <<.+>>
+  - '[Rr]efer to http://'
+  - '[Rr]efer to https://'
+  - '[Rr]efer to xref:.+.adoc\[.+\]'
+  - '[Rr]efer to {.+}\[.+\]'
+  - '[Rr]efer to <<.+>>'

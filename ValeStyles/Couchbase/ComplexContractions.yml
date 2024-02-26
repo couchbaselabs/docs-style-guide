@@ -1,6 +1,7 @@
 extends: existence
 message: "Do not use complex contractions like '%s'."
 level: error
+link: https://sarahlwelton.github.io/styleguide/contractions.html
 ignorecase: true
 tokens: 
   - could've

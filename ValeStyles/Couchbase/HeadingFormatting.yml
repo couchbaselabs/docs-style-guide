@@ -1,8 +1,10 @@
 extends: existence
 message: Don't add formatting to headings. 
-level: error 
+level: error
+nonword: true
+scope: raw
 tokens: 
-  - (=+\s\*\w.+\*)
-  - (=+\*\w.+\*)
-  - (=+\s_\w.+_)
-  - (=+_\w.+_)
+- '\=+\s\w.+\*'
+- '\=+\s\*\w.+'
+- '\=+\s\w.+_'
+- '\=+\s_\w.+'

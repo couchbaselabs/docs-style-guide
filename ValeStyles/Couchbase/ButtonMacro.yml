@@ -1,6 +1,7 @@
 extends: existence
 message: Did you follow the guidelines for the button macro?
-link: https://sarahlwelton.github.io/styleguide/button-macro.html 
+link: https://sarahlwelton.github.io/styleguide/button-macro.html
+nonword: true
 level: suggestion
 
 tokens: 

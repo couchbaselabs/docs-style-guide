@@ -1,8 +1,9 @@
 extends: existence
 message: Don't use sidebars.
-link: https://labs.couchbase.com/docs-tooling/styleguide/sidebars.html
+link: https://sarahlwelton.github.io/styleguide/sidebars.html
 level: error
-
+scope: raw
+nonword: true
 tokens:
   - \*\*\*\*
   - \[sidebar\]

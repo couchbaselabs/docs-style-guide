@@ -10,75 +10,161 @@ second: '(?:\b[A-Z][a-z]+ )+\(([A-Z]{3,5})\)'
 # ... with the exception of these:
 exceptions:
   - NET
+  - ALL
+  - AND
   - API
   - ASCII
   - ASP
+  - ANY
+  - CALL
+  - CASE
+  - CAST
   - CBQ
   - CLI
+  - COPY
+  - COVER
   - CPU
   - CSS
   - CSV
   - cURL
   - DEBUG
+  - DESC
   - DITA
   - DOC
   - DOM
+  - DROP
   - DPI
+  - EACH
+  - ELSE
+  - END
+  - EVERY
+  - FALSE
   - FAQ
+  - FETCH
+  - FIRST
+  - FLUSH
+  - FOR
+  - FORCE
+  - FROM
   - GCC
   - GDB
   - GET
   - GIF
   - GNU
   - GPU
+  - GRANT
+  - GROUP
   - GTK
   - GUI
+  - HASH
   - HTML
   - HTTP
   - HTTPS
   - IDE
+  - IF
+  - ILIKE
+  - INDEX
+  - INFER
+  - INNER
+  - INTO
   - IP
   - JAR
   - JIRA
+  - JOIN
   - JPEG
   - JPG
   - JSON
   - JSX
+  - KEY
+  - KEYS
+  - KNOWN
+  - LAST
   - LDAP
+  - LEFT
+  - LET
   - LESS
+  - LEVEL
+  - LIKE
+  - LIMIT
   - LLDB
+  - MAP
+  - MERGE
+  - MINUS
   - NET
+  - NEST
+  - NOT 
   - NOTE
+  - NULL 
+  - NULLS
   - NVDA
+  - ORDER
   - OSS
+  - OUTER
+  - OVER
+  - PARSE
   - PATH
   - PDF
   - PHP
   - PNG
+  - POOL
   - POST
+  - PROBE
   - RAM
+  - RANGE
+  - RAW
+  - REALM
   - REPL
   - REST
+  - RIGHT
+  - ROLE
   - ROOT
+  - ROW
+  - ROWS
   - RSA
   - SCM
+  - SCOPE
   - SCSS
   - SDK
+  - SELECT
+  - SELF
+  - SEMI
+  - SET
+  - SHOW
+  - SOME
   - SQL
   - SSH
+  - START
   - SSL
   - SVG
   - TBD
+  - THEN
+  - TIES
   - TIP
   - TCP
   - TLS
   - TODO
+  - TRAN
+  - TRUE
   - UUID
+  - UNDER
+  - UNION
+  - UNSET
   - URI
   - URL
   - USB
+  - USE
+  - USER
   - UTF
+  - VALUE
+  - VIA
+  - VIEW
+  - WHEN
+  - WHERE
+  - WHILE
+  - WITH
+  - WORK
   - XML
+  - XOR
   - XSS
   - YAML
   - ZIP
