@@ -19,7 +19,7 @@ For an overview of voice and tone, see xref:voice.adoc[].
 [#american]
 == Write in American English
 
-Use American English spelling, not British or Canadian English. The Vale automated spellcheck uses an American English dictionary. 
+Use American English spelling, not British or Canadian English.
 
 If you need to check the spelling of a word, refer to the https://www.merriam-webster.com/[Merriam-Webster's Collegiate Dictionary, Eleventh Edition^].
 
@@ -97,8 +97,9 @@ Start sentences with verbs, or directly address the user to avoid passive voice.
 Here are some tips to help you with active voice: 
 
 * Think about what's actually _doing_ the action you're describing. Emphasize the actor. 
-* Find or push back for more information if you can't identify the actor. Ask the developer what's actually doing what in a scenario. 
-* If the sentence doesn't make sense in active voice or you lose the correct emphasis, you can use the passive voice.
+* Find or push back for more information if you cannot identify the actor. 
+Ask the developer what's actually doing what in a scenario. 
+* If the sentence does not make sense in active voice or you lose the correct emphasis, you can use the passive voice.
 
 For more information about active voice, see https://developers.google.com/style/voice[Active voice^] in the Google Developer Style Guide.
 
@@ -111,7 +112,10 @@ Always write in full and complete sentences outside of headings.
 
 Keep text short and to the point. 
 
-Use contractions, with some exceptions. For more information, see xref:contractions.adoc[].
+Choose short words - try to stick to 3 syllables or fewer.
+
+Use contractions, with some exceptions.
+For more information, see xref:contractions.adoc[].
 
 |===
 | Acceptable | Not Acceptable
@@ -125,6 +129,33 @@ Use contractions, with some exceptions. For more information, see xref:contracti
 | You cannot connect a hosted zone through the AWS CLI command in Capella. 
 | You can't associate the hosted zone via the AWS CLI command in Capella.
 
+| Activate your Capella cluster.
+| Start your Capella database.
+
+| Add additional nodes.
+| Add more nodes. 
+
+| Adhere to the following character restrictions.
+| Follow these character limits.
+
+| Advise your administrator of the problem.
+| Tell your administrator about the problem.
+
+| We appreciate your patience. 
+| We value your patience. 
+
+| Associate your credit card with your account. 
+| Connect your credit card to your account. 
+
+| Set the effective date for your schedule. 
+| Set your schedule start date. 
+
+| Eliminate any unnecessary nodes. 
+| Remove any unnecessary nodes. 
+
+| Enable the client to access your database.
+| Allow the client to use your database. 
+
 |===
 
 [#lowest]
@@ -132,7 +163,7 @@ Use contractions, with some exceptions. For more information, see xref:contracti
 
 The golden rule for when to add UI copy or text is simple:
 
-If a lower-level user would struggle or the required action isn't obvious, add the text.
+If a lower-level user would struggle or the required action is not obvious, add the text.
 
 We want our UI to be accessible to all users and should always aim to add text to reduce friction. 
 
@@ -156,12 +187,13 @@ Focus on what the user can do in their current situation, unless there's no othe
 
 Keep the terminology that you use consistent across the UI. 
 
-What's called a cluster in one part of the UI shouldn't be called a database elsewhere. 
+What's called a cluster in one part of the UI should not be called a database elsewhere. 
 
 [#numbers]
 == Do Not Write Out Numbers 
 
-Unlike technical documentation, UI copy should always use numerals for ease of recognition. Use 3 over three. 
+Unlike technical documentation, UI copy should always use numerals for ease of recognition.
+Use 3 over three. 
 
 Also aim to add units of measurement for numbers, where applicable. 
 

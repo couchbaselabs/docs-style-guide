@@ -32,3 +32,7 @@ Unlike technical documentation, UI copy should always use numerals for ease of r
 When you need to tell a user to choose between options in the UI, use *choose*, not *select*. 
 
 For example, `Choose your source`.
+
+== Write in Sentence Case
+
+Write instruction text using sentence case, capitalizing only important nouns or words. 

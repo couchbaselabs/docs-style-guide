@@ -16,7 +16,7 @@ Use consistent capitalization and other patterns.
 
 For example, the settings options for an organization could include *General* settings, *API Key* settings, *MFA* settings, *Session* settings, and an *Activity Log*. 
 
-Don't sacrifice comprehension or understandability for parallelism. 
+Do not sacrifice comprehension or understandability for parallelism. 
 
 == Make Entries Mutually Exclusive 
 
