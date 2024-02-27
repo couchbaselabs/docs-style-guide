@@ -39,7 +39,7 @@ Make a couple changes to make sure your Vale installation pulls your styles from
 2. Open the `.vale.ini` file in a text editor. 
 
 3. Set the `StylesPath` to the location of the `ValeStyles` folder in this repository. 
-    For example, `C:\Users\<yourusername>\GitHub\cb-vale-style-guide\ValeStyles`
+    For example, `C:\Users\<yourusername>\GitHub\docs-style-guide\ValeStyles`
 
 <!-- I'm commenting this out as recent changes to the Spelling rules in Vale have made this redundant! -SW
 

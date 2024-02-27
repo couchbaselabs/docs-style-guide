@@ -118,12 +118,16 @@ For more information, see xref:contractions.adoc[].
 | Before you can access your Capella cluster from your VPC, run the following commands. 
 
 | Search Service indexes are not the same as Index Service indexes. If you deploy the Index Service, Query Service, and Search Service on the same cluster, you can use the Search Service through the N1QL query language. For more information, see Search Functions.
-| The indexes that the Search Service creates and uses are entirely separate from and different to those of the Index Service. However, if the Index Service and Query Service are also deployed on the cluster, the facilities of the Search Service can be called on by means of the N1QL language — which provides the principal interface to the Query and Index Services. This is principally done through the use of Search Functions.
+| The indexes that the Search Service creates and uses are entirely separate from and different to those of the Index Service. However, if the Index Service and Query Service are also deployed on the cluster, the facilities of the Search Service can be called on by means of the N1QL language — which provides the principal interface to the Query and Index Services.
+This is principally done through the use of Search Functions.
 
 |===
 
 == Use Simple Sentences and Short Paragraphs
 
-Do not write a wall of text. Break things up with separate paragraphs, headings, and lists. Try to make your text easy to scan and read. 
+Do not write a wall of text. 
+Break things up with separate paragraphs, headings, and lists.
+Try to make your text easy to scan and read. 
 
-Keep sentences under 25 words. Vale flags longer sentences and sentences that have more than two commas.
+Keep sentences under 25 words.
+Vale flags longer sentences and sentences that have more than two commas.

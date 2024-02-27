@@ -5,3 +5,5 @@ scope: raw
 nonword: true
 tokens: 
   - '\w\b\.\s\b\w'
+exceptions:
+  - '\w\b\.\n'
