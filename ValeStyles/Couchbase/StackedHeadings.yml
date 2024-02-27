@@ -4,5 +4,5 @@ level: error
 scope: raw
 nonword: true
 tokens: 
-  - =.+\n=.+
-  - =.+\n\n=.+
+  - =+\s.+\n\n=.+
+  - =+\s.+\n=.+
