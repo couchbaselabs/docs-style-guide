@@ -5,6 +5,7 @@
 ** xref:please-thanks-sorry.adoc[]
 ** xref:prepositions.adoc[]
 ** xref:voice.adoc[]
+* xref:good-content.adoc[]
 * xref:action-buttons.adoc[]
 ** xref:create-buttons.adoc[]
 * xref:decision-dialogs.adoc[]
