@@ -43,7 +43,7 @@ Make sure the rectangle surrounds the part of the screenshot you want to highlig
 
 image::annotation-example.png[,,align=center]
 
-For more information about how to specify the format and add an image in Antora, see https://docs.couchbase.com/home/contribute/basics.html#images[Images] in the Contributing to the Documentation guide.
+For more information about how to specify the format and add an image in Antora, see xref:home:contribute:basics.adoc#images[Images] in the Contributing to the Documentation guide.
 
 == Diagrams 
 

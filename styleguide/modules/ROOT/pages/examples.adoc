@@ -93,9 +93,10 @@ For more information about how to include specific lines of content, see https:/
 
 == Explaining Code Examples
 
-Avoid the https://docs.couchbase.com/home/contribute/code-blocks.html#callouts[built-in code callouts] in Antora, where possible. 
+Avoid the xref:home:contribute:code-blocks.adoc#callouts[built-in code callouts] in Antora, where possible. 
 
-Use small code examples with the explanation in regular text around the example. Add one-line code comments directly to the code where appropriate to explain the assumptions made in a code example. 
+Use small code examples with the explanation in regular text around the example. 
+Add one-line code comments directly to the code where appropriate to explain the assumptions made in a code example. 
 
 Let the user know they should remove the comments to use the code in a production environment.
 

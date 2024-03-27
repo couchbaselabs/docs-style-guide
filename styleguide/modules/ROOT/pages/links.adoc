@@ -9,19 +9,23 @@ Keep the following formatting and conventions in mind for <<internal>> and <<ext
 [#internal]
 == Internal Links 
 
-Use the `xref` syntax for all links to content within the documentation repositories. For more information about the `xref` syntax in Antora, see https://docs.couchbase.com/home/contribute/cross-references.html[Cross References^] in the Contributing to the Documentation guide.
+Use the `xref` syntax for all links to content within the documentation repositories. 
+For more information about the `xref` syntax in Antora, see xref:home:contribute:cross-references.adoc[Cross References] in the Contributing to the Documentation guide.
 
 You can leave the link text for an `xref` blank to get Antora to use the <h1> heading of the linked page as the link.
 
 === SDK References and API References
 
-Where possible, when linking to an SDK or API reference, use an evergreen link. Evergreen links help cut down on maintenance when tooling for references and other resources change. For a list of evergreen links, see the https://github.com/couchbase/docs-site/blob/master/etc/nginx/snippets/rewrites.conf[rewrites.conf file^]. 
+Where possible, when linking to an SDK or API reference, use an evergreen link. 
+Evergreen links help cut down on maintenance when tooling for references and other resources change. For a list of evergreen links, see the https://github.com/couchbase/docs-site/blob/master/etc/nginx/snippets/rewrites.conf[rewrites.conf file^]. 
 
-Format evergreen links as external links. For an example of using an evergreen link, see the https://raw.githubusercontent.com/couchbase/docs-sdk-java/release/3.3/modules/ROOT/nav.adoc[entries in the References section in the nav.adoc file^] for the Java SDK documentation.
+Format evergreen links as external links. 
+For an example of using an evergreen link, see the https://raw.githubusercontent.com/couchbase/docs-sdk-java/release/3.3/modules/ROOT/nav.adoc[entries in the References section in the nav.adoc file^] for the Java SDK documentation.
 
 [#external]
 == External Links
 
-For links to third-party websites, follow the guidance in https://developers.google.com/style/links-external[Links to other sites^] in the Google Developer Style Guide. Use their guidance for when and how to link.
+For links to third-party websites, follow the guidance in https://developers.google.com/style/links-external[Links to other sites^] in the Google Developer Style Guide. 
+Use their guidance for when and how to link.
 
-For more information about external link syntax in Antora, see https://docs.couchbase.com/home/contribute/basics.html#urls[URLs^] in the Contributing to the Documentation guide.
+For more information about external link syntax in Antora, see xref:home:contribute:basics.adoc#urls[URLs] in the Contributing to the Documentation guide.

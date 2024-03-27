@@ -12,7 +12,7 @@ Do not use more than two admonitions back-to-back on a page, and do not overuse 
 
 Remember: if everything is important, nothing is. 
 
-TIP: If you need to add block or "compound" content to an admonition block, use a compound admonition, as described in the https://docs.couchbase.com/home/contribute/basics.html#admonitions[Contributing to the Documentation Guide].
+TIP: If you need to add block or "compound" content to an admonition block, use a compound admonition, as described in the xref:home:contribute:basics.adoc#admonitions[Admonitions].
 
 [#notes]
 == Notes

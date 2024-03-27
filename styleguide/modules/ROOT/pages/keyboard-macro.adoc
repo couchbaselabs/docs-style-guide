@@ -1,7 +1,8 @@
 = Keyboard Macro
 
-Use the Antora `kbd:` Macro for any keyboard interactions in your documentation. The key press can be inside the step for a procedure, but the text doesn't need to be in a procedure to use the macro. 
+Use the Antora `kbd:[]` Macro for any keyboard interactions in your documentation. 
+The key press can be inside the step for a procedure, but the text does not need to be in a procedure to use the macro. 
 
-For example, `kbd:[ESC]` renders an Escape key.
+For example, `\kbd:[ESC]` renders an Escape key (kbd:[ESC]).
 
-For more information on how to use the Keyboard Macro to format your documentation, see https://docs.couchbase.com/home/contribute/basics.html#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.
+For more information about how to use the Keyboard Macro to format your documentation, see xref:home:contribute:basics.adoc#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.

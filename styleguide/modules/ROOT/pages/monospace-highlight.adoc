@@ -8,4 +8,5 @@ Use the highlighted monospace font to format:
 * File paths and filenames. 
 * Any text a user needs to input. 
 
-Surround text with backticks (`) to make the text render in highlighted monospace in Antora. For more information, see https://docs.couchbase.com/home/contribute/basics.html#bold-italic-and-code-styles[Bold, Italic, and Code Styles] in the Contributing to the Documentation guide.
+Surround text with backticks (`) to make the text render in highlighted monospace in Antora. 
+For more information, see xref:home:contribute:basics.adoc#bold-italic-and-code-styles[Bold and Code Styles] in the Contributing to the Documentation guide.

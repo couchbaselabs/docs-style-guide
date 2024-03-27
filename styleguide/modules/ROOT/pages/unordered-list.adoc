@@ -11,4 +11,4 @@ Use an unordered list for prerequisites and the See Also section even if it cont
 Use an asterix (*) to render an item as an unordered list item. 
 The number of asterixes sets the depth of the list item. 
 
-For more information about how to format an unordered list in Antora, see https://docs.couchbase.com/home/contribute/basics.html#unordered-lists[Unordered Lists] in the Contributing to the Documentation guide.
+For more information about how to format an unordered list in Antora, see xref:home:contribute:basics.adoc#unordered-lists[Unordered Lists] in the Contributing to the Documentation guide.

@@ -47,4 +47,5 @@ Rebalance Reports
 
 |===
 
-Format headings using an equals sign (=). The number of equals signs corresponds to the heading depth that Antora renders. For more information, see https://docs.couchbase.com/home/contribute/pages.html[] in the Contributing to the Documentation guide.
+Format headings using an equals sign (=). The number of equals signs corresponds to the heading depth that Antora renders. 
+For more information, see xref:home:contribute:pages.adoc[] in the Contributing to the Documentation guide.

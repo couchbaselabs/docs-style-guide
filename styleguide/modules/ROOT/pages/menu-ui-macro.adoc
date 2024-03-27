@@ -2,9 +2,9 @@
 
 Use Antora's Menu UI Macro to render any menu navigation in your documentation. 
 
-For example, `menu:File[Save]` renders as *File > Save* in the Couchbase Documentation.
+For example, `\menu:File[Save]` renders as menu:File[Save] in the Couchbase Documentation.
 
-The menu navigation can be inside the step for a procedure, but the text doesn't need to be in a procedure to use the macro. 
+The menu navigation can be inside the step for a procedure, but the text does not need to be in a procedure to use the macro. 
 
 The following situations are considered menu navigation: 
 
@@ -30,4 +30,4 @@ image::menu-nav-examples-2.png[]
 image::menu-nav-examples-3.png[]
 ====
 
-For more information on how to use the Menu UI Macro to format your documentation, see https://docs.couchbase.com/home/contribute/basics.html#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.
+For more information on how to use the Menu UI Macro to format your documentation, see xref:home:contribute:basics.adoc#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.
