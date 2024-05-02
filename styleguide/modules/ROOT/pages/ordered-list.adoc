@@ -2,7 +2,26 @@
 
 Use an ordered list when you have a procedure, task, or collection of items where the order matters. 
 
-Use a period (.) to render an item as an ordered list item. 
+For example:
+
+****
+. Go to menu:Data Tools[Search].
+. Click btn:[Create Search Index].
+
+The user would not be able to click the *Create Search Index* button if they did not go to menu:Data Tools[Search], first. 
+
+The order of the steps matters. 
+****
+
+You must use an ordered list to write out the steps in a xref:writing-procedures.adoc[procedure topic].
+It's okay to have a procedure that only contains 1 step. 
+
+You can also use an ordered list in a xref:writing-concepts.adoc[concept topic] if: 
+
+* The order of things in the list matters.
+* You're describing a series of procedures or larger tasks a user must complete to accomplish a goal. 
+
+Use a period (`.`) to render an item as an ordered list item. 
 The number of periods sets the depth of the list item. 
 
 For more information about how to format an ordered list in Antora, see xref:home:contribute:basics.adoc#ordered-lists[Ordered Lists] in the Contributing to the Documentation guide.
