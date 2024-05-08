@@ -1,0 +1,83 @@
+= Feature Announcements 
+
+Use the following guidance to write text for a Feature Announcement. 
+
+A Feature Announcement tells users about a new feature added to Capella:
+
+image::feature-announcement.png["An example Feature Announcement for the Capella Spring release. Text reads: Mar 18, 2024 The Capella Spring 2024 release is now available! Use a Capella database running Couchbase Server version 7.6 and get started with Vector Search. Use a new Vector Search index to ground your LLM responses in relevant data using Retrieval Augmented Generation (RAG). Create an exceptional experience for your users with a personalized search experience in your applications. Avoid. Part of the text is cut off because of the length of the announcement compared to the window size."]
+
+[#guide-name]
+== Guide Name
+
+Start the guide name with *Announcement -*. 
+
+Include a short description of what the new feature is. 
+Try to be brief but descriptive. 
+
+|====
+| Acceptable | Not Acceptable 
+
+a| Announcement - 7.6 in Capella/Vector Search
+
+Announcement - Capella iQ
+
+Announcement - Terraform Support 
+
+a| Vector Search 
+
+New Features 2024 
+
+Region expansion announcement 
+
+|====
+
+== Guide Layout 
+
+Use the *Announcement with Publish Date* layout. 
+
+== Guide Content 
+
+Use the following guidelines for developing Guide content for Feature Announcements. 
+
+You do not need to adjust any styling for Feature Announcements. 
+
+=== Titles 
+
+Titles for Feature Announcements should all try to follow the same style and format, aiming to be brief and to-the-point:
+
+|====
+| Description | Do | Don't
+
+| Write the with the format *<feature name> is now available!* . 
+a| The Capella 2024 Spring release is now available!
+
+Capella iQ is now available!
+a| We've released a new feature
+
+Welcome to Capella, Vector Search!
+
+| Write in sentence case.
+Capitalize feature names and other proper nouns. 
+| Capella is now available in 70+ regions
+| Capella Is Now Available In 70+ Regions
+
+| Avoid punctuation, aside from an ending exclamation mark (!).
+| The Capella v4 Management API is now available! 
+a| Ready to try out a new feature?
+
+Get ready to try out a new API, complete with exciting new features!
+|====
+
+=== Body Text 
+
+As much as possible, rely on Product Marketing to provide the body copy. 
+
+Edit only for matching xref:voice.adoc[voice and tone guidelines].
+
+=== Link Text 
+
+Try to be descriptive with the text of the link at the bottom of the Feature Announcement. 
+
+Try to tell the user where exactly they will go if they click the link. 
+
+Try to avoid *Learn More*. 

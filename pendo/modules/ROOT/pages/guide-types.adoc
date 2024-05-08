@@ -9,6 +9,14 @@ Guides also have specific guidelines for settings and Guide behavior inside Pend
 |====
 |Guide Type |Description 
 
+| xref:feature-announcements.adoc[]
+a| Feature Announcements tell users about a new feature added to Capella. 
+
+Feature Announcements are written in collaboration with product marketing, but can: 
+
+* Direct a user to a specific area of the UI to try out a feature. 
+* Point out to documentation, blogs, or other materials with more information about a release. 
+
 | xref:polls.adoc[]
 a| Polls ask a user a specific question to obtain a measure of user sentiment towards a feature or product area. 
 

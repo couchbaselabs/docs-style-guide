@@ -1,6 +1,7 @@
 * xref:index.adoc[]
 * xref:voice.adoc[]
 * xref:guide-types.adoc[] 
+** xref:feature-announcements.adoc[]
 ** xref:polls.adoc[]
 ** xref:tooltips.adoc[]
 ** xref:ui-tour.adoc[]
