@@ -1,0 +1,9 @@
+extends: existence
+message: "Don't use '%s'. Just use the label from the UI. Add 'click' or 'clear' as needed."
+level: error
+
+tokens:
+  - '[Cc]heckbox'
+  - '[Cc]heckboxes'
+  - '[Cc]heck box'
+  - '[Cc]heck boxes'

@@ -88,7 +88,6 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | `cbtransfer` | Follow the capitalization and spelling set in the code. 
 | CentOS | Follow the official capitalization as set by Red Hat. For more information, see xref:capitalization.adoc[].
 | cheat sheet | Write as two words. Don't add a hyphen.
-| checkbox | Write as one word. Don't add a hyphen. Pluralize as checkboxes.
 | checkpoint | Write as one word. Don't add a hyphen.
 | cloud | Write in lowercase unless as part of a product name. 
 | cloud native | Use cloud native as the noun. Use cloud-native as the adjective.

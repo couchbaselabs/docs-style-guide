@@ -1,8 +1,6 @@
 and\/or
 back end
 (C\+\+)
-checkbox
-checkboxes
 Couchbase managed cloud
 mapreduce views
 map reduce views
