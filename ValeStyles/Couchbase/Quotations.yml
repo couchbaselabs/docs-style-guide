@@ -1,13 +1,16 @@
 extends: existence
 message: Don't use quotation marks to add emphasis. 
-link: https://sarahlwelton.github.io/styleguide/quotation-marks.html
+link: https://docs.couchbase.com/styleguide/quotation-marks.html
 level: error 
 scope: raw
 nonword: true
 tokens: 
-  - '".+"\s'
+  - '"[^"]*"'
 
 exceptions: 
   - \x60.+".+".+\x60
   - \x60.+".+"\x60
   - \x60".+"\x60
+  - '(?<=.{2,4})(?:[^"]*?"[^"]*?"[^"]*?)*(?=.{2,4})'
+  # This one somehow makes Vale ignore any quotes contained in a delimited block structure (2-4 repeated characters). 
+  # Do not ask me how or why this works, as I cannot tell you. 

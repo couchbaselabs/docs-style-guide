@@ -1,7 +1,7 @@
 extends: existence
 message: Don't describe a UI element as a "link."
 level: error
-link: https://sarahlwelton.github.io/styleguide/ui-links.html
+link: https://docs.couchbase.com/styleguide/ui-links.html
 
 tokens: 
   - '[Cc]lick the .+ link .+'

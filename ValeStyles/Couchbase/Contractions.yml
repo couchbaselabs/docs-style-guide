@@ -1,6 +1,6 @@
 extends: substitution 
 message: "Use '%s' instead of '%s'."
-link: https://sarahlwelton.github.io/styleguide/contractions.html
+link: https://docs.couchbase.com/styleguide/contractions.html
 level: error 
 ignorecase: true
 action:

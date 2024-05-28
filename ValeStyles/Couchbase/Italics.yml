@@ -1,7 +1,7 @@
 extends: existence
 message: Don't use italics. Find another way to add emphasis.
 level: error
-link: https://sarahlwelton.github.io/styleguide/italic.html
+link: https://docs.couchbase.com/styleguide/italic.html
 nonword: true
 scope: raw
 tokens:

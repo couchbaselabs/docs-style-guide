@@ -1,7 +1,6 @@
 extends: existence
 message: Don't bold or capitalize "date picker."
 level: error
-link: https://sarahlwelton.github.io/styleguide/date-picker.html
 nonword: true
 scope: raw
 tokens:

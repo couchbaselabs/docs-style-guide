@@ -18,16 +18,21 @@
 // Specifies the diagram language, an optional anchor,
 // the name for the generated file, and the file type
 //[plantuml#optional_anchor,file-name,svg]
-
-// Indicates the start of the diagram
 //....
 //@startuml
+// Indicates the start of the diagram
 
 // The content of the diagram goes here
 // See https://plantuml.com/ for syntax help.
 
-// Indicates the end of the diagram
+//If you want to include spaces or special characters in your
+//labels on any diagram objects, make sure to surround the 
+//labels in double quotes.
+
+//hexagon "My Organization"
+
 //@enduml
+// Indicates the end of the diagram
 //....
 
 // To include a diagram as a partial, use the above syntax and save the file as .puml

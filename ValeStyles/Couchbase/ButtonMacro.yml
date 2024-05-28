@@ -1,6 +1,6 @@
 extends: existence
 message: Did you follow the guidelines for the button macro?
-link: https://sarahlwelton.github.io/styleguide/button-macro.html
+link: https://docs.couchbase.com/styleguide/button-macro.html
 nonword: true
 level: suggestion
 

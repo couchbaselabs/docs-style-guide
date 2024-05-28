@@ -1,6 +1,6 @@
 extends: existence
 message: Did you follow the guidelines for monospace font?
-link: https://sarahlwelton.github.io/styleguide/monospace-highlight.html 
+link: https://docs.couchbase.com/styleguide/monospace-highlight.html
 level: suggestion
 scope: raw
 nonword: true

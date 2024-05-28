@@ -1,6 +1,6 @@
 extends: existence
 message: Use "an," not "a."
-link: https://sarahlwelton.github.io/styleguide/articles.html
+link: https://docs.couchbase.com/styleguide/articles.html
 level: error 
 
 tokens:
