@@ -75,7 +75,7 @@ BasedOnStyles = Vale, write-good, proselint, Couchbase, Google
 ```
 
 5. Set the `StylesPath` to the location of the `ValeStyles` folder in this repository. 
-    For example, `C:\Users\<yourusername>\GitHub\docs-style-guide\ValeStyles`
+    For example, `C:\Users\<yourusername>\GitHub\docs-style-guide\ValeStyles` or `/Users/<yourusername>/GitHub/docs-style-guide/ValeStyles`.
 
 ### Install AsciiDoctor
 
