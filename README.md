@@ -27,29 +27,55 @@ The package manager does all of the heavy lifting to install Vale. If you receiv
 
 ### Set Up A .vale.ini File 
 
-This repository contains a `.vale.ini` file that contains everything you need to get started. This file contains all of the necessary configuration for Vale to lint your text files.
+The `.vale.ini` file contains all of the necessary configuration for Vale to lint your text files.
 
 Make a couple changes to make sure your Vale installation pulls your styles from the correct location: 
 
-1. In your file explorer, move the `.vale.ini` from this repository to your `$HOME` directory: 
+1. In your file explorer, go to your `$HOME` directory: 
     - On Windows: `C:\Users\<yourusername>`
     - On Mac: `/Users/<yourusername>`
-    - On Linux: the location of the `$HOME` directory varies based on your specific Linux distribution. 
+    - On Linux: the location of the `$HOME` directory varies based on your specific Linux distribution.
+  
+2. Create a new plain text file called `.vale.ini`. 
 
-2. Open the `.vale.ini` file in a text editor. 
+3. Open the `.vale.ini` file in a text editor.
 
-3. Set the `StylesPath` to the location of the `ValeStyles` folder in this repository. 
+4. Copy and paste the following text into the `.vale.ini`:
+```
+StylesPath = ""
+MinAlertLevel = suggestion 
+
+Vocab = Couchbase
+
+[asciidoctor]
+description = YES
+docname = YES
+doctitle = YES
+doctype = YES
+docfile = YES
+example-caption = YES
+figure-caption = YES
+important-caption = YES
+listing-caption = YES
+note-caption = YES
+outfile = YES
+part-signifier = YES
+preface-title = YES
+table-caption = YES
+tip-caption = YES
+toc-title = YES
+warning-caption = YES
+
+experimental = YES
+
+attribute-missing = drop
+
+[*.{adoc}]
+BasedOnStyles = Vale, write-good, proselint, Couchbase, Google
+```
+
+5. Set the `StylesPath` to the location of the `ValeStyles` folder in this repository. 
     For example, `C:\Users\<yourusername>\GitHub\docs-style-guide\ValeStyles`
-
-<!-- I'm commenting this out as recent changes to the Spelling rules in Vale have made this redundant! -SW
-
-### Configure your dicpath for `Couchbase.Spelling`
-
-Unfortunately, the Spelling rule for the spellcheck searches for the path to the required dictionary relative to the directory where you're trying to lint. Not great. 
-
-Set the location of the dictionary file:
-
-1. Replace the `$REPO` in the `dicpath` attribute to the location of the `ValeStyles` folder in your local copy of this repository. --> 
 
 ### Install AsciiDoctor
 
