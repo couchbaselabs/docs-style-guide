@@ -4,8 +4,7 @@ link: https://docs.couchbase.com/styleguide/articles.html
 level: error 
 
 tokens:
-  - '[Aa] \b[aAeEiIoOuU].+\b'
-  - '[Aa] \b[Hh][Tt][Mm][Ll]\b'
+  - '\b[Aa]\s+[AEIOUaeiou]\w*\b'
 
 exceptions: 
   - '[Aa] [Uu]nion'
@@ -14,7 +13,7 @@ exceptions:
   - '[Aa] [Uu]ser'
   - '[Aa] [Uu]sername'
   - '[Aa] UI'
-  - '[Aa] <<[BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz].+>>'
+  - '\b[Aa] [^aeiouAEIOU\s][a-zA-Z]*'
   - '[Aa] [Oo]ne'
   - '[Aa] [Oo]nce'
   - '[Aa] [Uu]nit\s'
