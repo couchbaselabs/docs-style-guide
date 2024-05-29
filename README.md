@@ -2,7 +2,7 @@
 
 This repository is the home of the Couchbase Style Guide files - also translated into Vale format! 
 
-[Vale]https://vale.sh/ is an open-source text linter that Couchbase uses to help enforce style guidelines, right inside your code editor. 
+[Vale](https://vale.sh/) is an open-source text linter that Couchbase uses to help enforce style guidelines, right inside your code editor. 
 
 ## Get Started 
 
@@ -166,7 +166,7 @@ If the extension does not work as expected, you can go back into your Extension 
   
 Only make one of these changes at a time to help with troubleshooting. Make sure to restart VS Code in-betweeen any changes. 
 
-> **Note**
+> **Note**:
 The Vale VS Code extension only runs and checks for problems when the you save an open file. You can go to **File** and select **Auto Save** to have VSCode automatically save files as you are typing - giving you truly instant feedback on your writing. Be aware that this setting applies globally, and may have side-effects elsewhere.
 
 
@@ -181,7 +181,7 @@ Keep in mind that Vale extends the Go-based RegEx, and supports lookahead and lo
 
 If you have a specific term like a page or product name that must be spelled the same and appear the same way everywhere, add it to the **Vocab** files: 
 
-1. Go to `ValeStyles\Vocab\Couchbase Docs`. 
+1. Go to `ValeStyles\config\vocabularies\Couchbase`. 
 2. Do one of the following: 
     - To add a word or phrase that Vale should never flag as incorrect in any other rule, modify the `accept.txt` file. 
     - To add a word or phrase that Vale should always reject that isn't yet covered by another rule, modify the `reject.txt` file. 
