@@ -1,0 +1,489 @@
+{
+  "sample.adoc": [
+    {
+      "Action": {
+        "Params": null
+      },
+      "Span": [
+        10,
+        13
+      ],
+      "Check": "Couchbase.VentilatedProse",
+      "Description": "",
+      "Link": "",
+      "Message": "Use ventilated prose. Start every sentence on a new line.",
+      "Severity": "warning",
+      "Match": "s. T",
+      "Line": 1
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        29,
+        46
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*which* and *that*",
+      "Line": 3
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        48,
+        56
+      ],
+      "Check": "write-good.Weasel",
+      "Description": "",
+      "Link": "https://en.wikipedia.org/wiki/Weasel_word",
+      "Message": "'correctly' is a weasel word!",
+      "Severity": "warning",
+      "Match": "correctly",
+      "Line": 3
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        5,
+        11
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*which*",
+      "Line": 7
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        41,
+        47
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*which*",
+      "Line": 9
+    },
+    {
+      "Action": {
+        "Name": "replace",
+        "Params": [
+          "should not"
+        ]
+      },
+      "Span": [
+        92,
+        100
+      ],
+      "Check": "Couchbase.NegativeContractions",
+      "Description": "",
+      "Link": "",
+      "Message": "Use 'should not' instead of 'shouldn't'.",
+      "Severity": "error",
+      "Match": "shouldn't",
+      "Line": 9
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        25,
+        31
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*which*",
+      "Line": 14
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        27,
+        33
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*which*",
+      "Line": 15
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        57,
+        67
+      ],
+      "Check": "Couchbase.CouchbaseServerWebConsole",
+      "Description": "",
+      "Link": "",
+      "Message": "Use the full product name (Couchbase Server Web Console) first.",
+      "Severity": "error",
+      "Match": "Web Console",
+      "Line": 15
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        31,
+        37
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*which*",
+      "Line": 17
+    },
+    {
+      "Action": {
+        "Name": "replace",
+        "Params": [
+          "does not"
+        ]
+      },
+      "Span": [
+        39,
+        45
+      ],
+      "Check": "Couchbase.NegativeContractions",
+      "Description": "",
+      "Link": "",
+      "Message": "Use 'does not' instead of 'doesn't'.",
+      "Severity": "error",
+      "Match": "doesn't",
+      "Line": 17
+    },
+    {
+      "Action": {
+        "Name": "replace",
+        "Params": [
+          "does not"
+        ]
+      },
+      "Span": [
+        12,
+        18
+      ],
+      "Check": "Couchbase.NegativeContractions",
+      "Description": "",
+      "Link": "",
+      "Message": "Use 'does not' instead of 'doesn't'.",
+      "Severity": "error",
+      "Match": "doesn't",
+      "Line": 19
+    },
+    {
+      "Action": {
+        "Name": "replace",
+        "Params": [
+          "does not"
+        ]
+      },
+      "Span": [
+        12,
+        18
+      ],
+      "Check": "Couchbase.NegativeContractions",
+      "Description": "",
+      "Link": "",
+      "Message": "Use 'does not' instead of 'doesn't'.",
+      "Severity": "error",
+      "Match": "doesn't",
+      "Line": 21
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        65,
+        73
+      ],
+      "Check": "Google.Passive",
+      "Description": "",
+      "Link": "https://developers.google.com/style/voice",
+      "Message": "In general, use active voice instead of passive voice ('be opened').",
+      "Severity": "suggestion",
+      "Match": "be opened",
+      "Line": 21
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        84,
+        94
+      ],
+      "Check": "Couchbase.CouchbaseServerWebConsole",
+      "Description": "",
+      "Link": "",
+      "Message": "Use the full product name (Couchbase Server Web Console) first.",
+      "Severity": "error",
+      "Match": "Web Console",
+      "Line": 21
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        50,
+        56
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*which*",
+      "Line": 23
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        1,
+        3
+      ],
+      "Check": "Couchbase.SentenceLength",
+      "Description": "",
+      "Link": "",
+      "Message": "Try to keep sentences under 25 words.",
+      "Severity": "suggestion",
+      "Match": "Put",
+      "Line": 27
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        5,
+        10
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*that*",
+      "Line": 27
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        41,
+        46
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*that*",
+      "Line": 29
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        24,
+        29
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*that*",
+      "Line": 33
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        26,
+        31
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*that*",
+      "Line": 34
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        55,
+        65
+      ],
+      "Check": "Couchbase.CouchbaseServerWebConsole",
+      "Description": "",
+      "Link": "",
+      "Message": "Use the full product name (Couchbase Server Web Console) first.",
+      "Severity": "error",
+      "Match": "Web Console",
+      "Line": 34
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        31,
+        36
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*that*",
+      "Line": 36
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        38,
+        47
+      ],
+      "Check": "write-good.Weasel",
+      "Description": "",
+      "Link": "https://en.wikipedia.org/wiki/Weasel_word",
+      "Message": "'completely' is a weasel word!",
+      "Severity": "warning",
+      "Match": "completely",
+      "Line": 36
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        84,
+        94
+      ],
+      "Check": "Couchbase.CouchbaseServerWebConsole",
+      "Description": "",
+      "Link": "",
+      "Message": "Use the full product name (Couchbase Server Web Console) first.",
+      "Severity": "error",
+      "Match": "Web Console",
+      "Line": 39
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        24,
+        29
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*that*",
+      "Line": 41
+    },
+    {
+      "Action": {
+        "Name": "replace",
+        "Params": [
+          "do not"
+        ]
+      },
+      "Span": [
+        1,
+        5
+      ],
+      "Check": "Couchbase.NegativeContractions",
+      "Description": "",
+      "Link": "",
+      "Message": "Use 'do not' instead of 'Don't'.",
+      "Severity": "error",
+      "Match": "Don't",
+      "Line": 43
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        47,
+        52
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*that*",
+      "Line": 43
+    }
+  ]
+}
