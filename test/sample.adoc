@@ -1,43 +1,5 @@
-= Which vs. That
+= This is not in sentence case
 
-Make sure that you're using *which* and *that* correctly. 
+Let us use some *bold* formatting and exclamations!
 
-== Which
-
-Put *which* before any clause in a sentence that's a non-defining clause, or non-essential to the meaning of a sentence. 
-
-If you removed the content that follows *which* in a sentence, the meaning of the sentence shouldn't change.
-You'd only lose an interesting detail. 
-
-For example: 
-
-* The Capella database, *which* you deployed yesterday, is healthy. 
-* The Quick Index Editor, *which* you can open from the Web Console, uses a document to define fields in a Search index. 
-
-Removing the clause after the *which* doesn't change the meaning of the sentence.
-
-The reader doesn't need to know if there's any additional database other than the healthy one.
-
-The reader doesn't need to know that the Quick Index Editor can be opened from the Web Console. 
-
-As well, put a comma before any clauses that use *which*. 
-
-== That 
-
-Put *that* before any clause in a sentence that's a defining or essential clause, or is a key part of the meaning of a sentence. 
-
-If you removed the content that follows *that* in a sentence, the meaning of the sentence would change. 
-
-For example: 
-
-* The Capella database *that* you deployed yesterday is healthy. 
-* The Quick Index Editor *that* you can open from the Web Console uses a document to define fields in a Search index. 
-
-Removing the clause after the *that* completely changes the meaning of the sentence. 
-
-The reader needs to know that it's specifically the database that they deployed yesterday.
-Or, they need to know that it's the Quick Index Editor that they can open from the Web Console. 
-
-In both sentences, the *that* tells the reader the specific option out of a number of options that they need to use. 
-
-Don't put a comma before any clauses that use *that*. 
+What about a HTML page?
