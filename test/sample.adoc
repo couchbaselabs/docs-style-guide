@@ -1,0 +1,5 @@
+= This is not in sentence case
+
+Let us use some *bold* formatting and exclamations!
+
+What about a HTML page?

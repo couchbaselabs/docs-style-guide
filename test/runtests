@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# USAGE:
+#
+#   test/runtests
+#
+# returns either "OK" or "FAIL" with details.
+# (using https://github.com/dandavison/delta if installed, diff otherwise)
+#
+# To update the sample output to match the current behaviour:
+#
+#   test/runtests --update
+
+cd `dirname $0`
+TMP=`mktemp`
+
+vale --config test.vale.ini --output JSON sample.adoc > $TMP
+
+DELTA=`which delta`
+if [ -z "$DELTA" ]; then
+  DELTA=diff
+fi
+
+if $DELTA sample.output $TMP; then
+  echo "OK"
+  exit 0
+fi
+
+echo "FAIL"
+
+if [ "$1" == "--update" ]; then
+  cp $TMP sample.output
+fi
+exit 1
+

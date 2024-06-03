@@ -1,0 +1,89 @@
+{
+  "sample.adoc": [
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        3,
+        30
+      ],
+      "Check": "Couchbase.Headings",
+      "Description": "",
+      "Link": "",
+      "Message": "'This is not in sentence case' should use title-style capitalization.",
+      "Severity": "warning",
+      "Match": "This is not in sentence case",
+      "Line": 1
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        5,
+        6
+      ],
+      "Check": "Google.We",
+      "Description": "",
+      "Link": "https://developers.google.com/style/pronouns#personal-pronouns",
+      "Message": "Try to avoid using first-person plural like 'us'.",
+      "Severity": "warning",
+      "Match": "us",
+      "Line": 3
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        17,
+        22
+      ],
+      "Check": "Couchbase.Bold",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/bold.html",
+      "Message": "Did you follow the guidelines for bold font?",
+      "Severity": "suggestion",
+      "Match": "*bold*",
+      "Line": 3
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        50,
+        51
+      ],
+      "Check": "Google.Exclamation",
+      "Description": "",
+      "Link": "https://developers.google.com/style/exclamation-points",
+      "Message": "Don't use exclamation points in text.",
+      "Severity": "error",
+      "Match": "s!",
+      "Line": 3
+    },
+    {
+      "Action": {
+        "Name": "",
+        "Params": null
+      },
+      "Span": [
+        12,
+        17
+      ],
+      "Check": "Couchbase.An",
+      "Description": "",
+      "Link": "https://docs.couchbase.com/styleguide/articles.html",
+      "Message": "Use \"an,\" not \"a.\"",
+      "Severity": "error",
+      "Match": "a html",
+      "Line": 5
+    }
+  ]
+}
