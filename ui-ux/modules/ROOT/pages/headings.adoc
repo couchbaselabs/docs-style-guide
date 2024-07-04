@@ -42,11 +42,14 @@ Bucket creation
 
 3+| *Capitalization*
 
-| Write all xref:decision-dialogs.adoc[] headings in sentence case.
+a| Write all xref:decision-dialogs.adoc[] headings in sentence case.
 
 Write main headings that appear as part of pages in title case. 
 
 Capitalize proper nouns or other terms that are capitalized elsewhere in the UI. 
+
+NOTE: There might be instances where it's more appropriate to write other main headings in sentence case.
+Use your best judgment - are you writing more of a sentence, or just a single noun?
 a| Completed Maintenance Jobs
 
 Configure Database Access Credentials 

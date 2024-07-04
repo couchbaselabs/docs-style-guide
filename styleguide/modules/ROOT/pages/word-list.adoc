@@ -91,7 +91,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | checkpoint | Write as one word. Don't add a hyphen.
 | cloud | Write in lowercase unless as part of a product name. 
 | cloud native | Use cloud native as the noun. Use cloud-native as the adjective.
-| [[cluster]]cluster | Don't capitalize, unless referring to a specific product. Try to use <<database,database>>, instead.
+| [[cluster]]cluster | If referring to Couchbase Server or Couchbase Capella operational databases, use <<database,database>>, instead. Use cluster whenever you're referring to Couchbase Columnar instances. 
 | Cluster Manager | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | codebase | Write as one word. Don't add a hyphen.
 | command line | Use command line as the noun. Use command-line as the adjective.
@@ -99,8 +99,9 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | `ConfigProviderBase` | Follow the capitalization and spelling set in the code. 
 | Couchbase | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | Couchbase Autonomous Operator (CAO) | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
-| Couchbase Capella (Provisioned/Serverless) | "Couchbase Cloud" or "Couchbase Managed Cloud" in legacy documentation. Add Provisioned or Serverless if you need to specify which type of Capella instance. Write as *Couchbase Capella* + *Provisioned* or *Serverless* for the first use on a page. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Capella | "Couchbase Cloud" or "Couchbase Managed Cloud" in legacy documentation. Use "operational database" if you need to specify which type of Capella instance, as opposed to Columnar. Write as *Couchbase Capella* + *operational database* for the first use on a page. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | Couchbase Cluster Connection Protocol (CCCP) | Write out for the first use on a page. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
+| Couchbase Columnar | Write as *Capella Columnar Services* for the first use on a page. Use just *Columnar* for any subsequent uses. Refer to specific instances of Columnar as <<cluster,clusters>>, as opposed to the Couchbase Capella operational database. 
 | (the) Couchbase Data Platform | Write as data platform if not preceded by *Couchbase*. Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | Couchbase Eventing Service | When referring to Couchbase Services, use title case. 
 | Couchbase Functions | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
@@ -369,6 +370,7 @@ a|
 | on-premises | Use on premises as the noun. Use on-premises as the adjective.
 | on-site/off-site | Add a hyphen.
 | open source | Don't add a hyphen.
+| operational database | Use when referring to a Couchbase Capella database, as opposed to a Capella Columnar cluster.
 | opt-out | Add the hyphen. 
 | Oxford comma | See xref:commas.adoc[].
 | `optimisticReplicationThreshold` | Use camelcase as set in the code. 

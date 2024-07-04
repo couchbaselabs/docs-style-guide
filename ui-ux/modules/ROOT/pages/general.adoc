@@ -92,6 +92,8 @@ Start sentences with verbs, or directly address the user to avoid passive voice.
 
 |===
 
+Try to write in imperatives - give the user instructions, do not just explain features. 
+
 === Tips for Active Voice
 
 Here are some tips to help you with active voice: 
