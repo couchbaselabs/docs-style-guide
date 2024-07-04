@@ -1,0 +1,10 @@
+= Numbers 
+
+Contrary to the https://developers.google.com/style/numbers[Google Style Guide^], we have decided to write out all numbers in the Couchbase Documentation. 
+
+Always use the numeral, no matter the size of the number. 
+
+For example: 
+
+* `1 or more`
+* `2-day total`

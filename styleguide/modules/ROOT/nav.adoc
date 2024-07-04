@@ -22,6 +22,7 @@
 ** xref:images-diagrams.adoc[]
 *** xref:alt-text.adoc[]
 ** xref:links.adoc[]
+** xref:numbers.adoc[]
 ** xref:ordered-list.adoc[]
 ** xref:unordered-list.adoc[]
 ** xref:sidebars.adoc[]
