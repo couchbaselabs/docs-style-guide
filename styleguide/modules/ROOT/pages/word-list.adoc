@@ -35,6 +35,9 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | afterwards | Use *afterwards*, not *afterward*.
 | [[allowlist]]allowlist / denylist | Write out allowlist and <<denylist,denylist>> as one word. Don't add a hyphen.
 | Amazon Cloud | Follow the official capitalization as set by Amazon. For more information, see xref:capitalization.adoc[].
+| Amazon Managed Streaming for Apache Kafka (Amazon MSK) | Write out in full, capitalizing all nouns, for the first use on a page. Use Amazon MSK for short on subsequent uses.
+| Amazon MSK Kafka pipeline | Do not expand MSK when referring to a specific pipeline. Capitalize as shown. Do not capitalize "pipeline."
+| Amazon S3 | Make sure to capitalize Amazon and the S in "S3."
 | [[amber]]amber | If you need to refer to traffic lights or a health warning color, use amber, not <<yellow,yellow>>.
 | Analytics Service | When referring to Couchbase Services, use title case. 
 | APAC | Write as a proper acronym. For more information, see xref:capitalization.adoc[].
@@ -47,6 +50,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | automatic schema discovery | Don't add a hyphen. Don't capitalize. 
 | auto-sharding | Add the hyphen.
 | Availability Zone | Capitalize Availability and Zone. 
+| AWS Identity and Access Management (IAM) | Do not write as just IAM when referring to Amazon Web Services Identity and Access Management. Write as AWS IAM after the first expanded use on a page. It is okay to use AWS Identity and Access Management (IAM) for the first use. 
 |===
 
 [#b]
@@ -91,11 +95,14 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | checkpoint | Write as one word. Don't add a hyphen.
 | cloud | Write in lowercase unless as part of a product name. 
 | cloud native | Use cloud native as the noun. Use cloud-native as the adjective.
-| [[cluster]]cluster | If referring to Couchbase Server or Couchbase Capella operational databases, use <<database,database>>, instead. Use cluster whenever you're referring to Couchbase Columnar instances. 
+| [[cluster]]cluster | If referring to Couchbase Server or Couchbase Capella operational databases, use <<database,database>>, instead. Use cluster whenever you're referring to an instance of Couchbase Columnar. 
 | Cluster Manager | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | codebase | Write as one word. Don't add a hyphen.
+| collection | Do not capitalize. Do not capitalize even when referring to a remote, external, or standalone collection. 
 | command line | Use command line as the noun. Use command-line as the adjective.
 | config(s) | Don't use. Use configuration as the noun. Use configure as the verb.
+| Confluent Cloud | Capitalize as a proper noun. 
+| Confluent Cloud Kafka pipeline | Capitalize Confluent, Cloud, and Kafka as proper nouns. Do not capitalize "pipeline."
 | `ConfigProviderBase` | Follow the capitalization and spelling set in the code. 
 | Couchbase | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | Couchbase Autonomous Operator (CAO) | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
@@ -121,7 +128,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 |===
 | Term | Notes
 
-| [[database]]database | Preferred term. Don't use <<cluster,cluster>> unless necessary.
+| [[database]]database | Preferred term for Capella operational. Don't use <<cluster,cluster>> unless necessary. Do not capitalize when referring to a database in Capella Columnar.
 | Database Change Protocol (DCP) | Write out for the first use on a page. 
 | data center | Write as two words. Don't add a hyphen.
 | datacenter replication | Write as two words. Don't add a hyphen.
@@ -131,9 +138,11 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | data manipulation language (DML) | Don't write out for the first use on a page.
 | data modeling | Write as two words. Don't add a hyphen.
 | DataOps | Capitalize the D and O.
+| data provider | Do not use.
 | dataset | Write as one word. Don't add a hyphen.
 | datasheet | Write as one word. Don't add a hyphen. 
 | [[data]]Data Service | When referring to Couchbase Services, use title case. 
+| data source | Do not capitalize. Do not use "data provider."
 | data store | Write as two words. Don't add a hyphen.
 | data structure | Write as two words. Don't add a hyphen.
 | decrypter | Use the American English spelling rule and use an "e."
@@ -176,7 +185,8 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 a| 
 * Use *eviction* to refer to removing a record entirely from any system or cache. Items are evicted from ephemeral buckets when RAM is full. 
 * Use *ejection* to refer to removing a record from one layer, but still keeping it in a system. Items are ejected from Couchstore or Magma buckets when they are removed from RAM, but still stored on disk. 
-* Use *expiration* to refer to a record being deleted after a specific time period. Items are expired when their time to live (TTL) is greater than 0, and that time has passed. 
+* Use *expiration* to refer to a record being deleted after a specific time period. Items are expired when their time to live (TTL) is greater than 0, and that time has passed.
+| external collection | Do not capitalize. 
 | extract, transform, load (ETL) operations | Write out for the first use on a page. 
 |===
 
@@ -254,6 +264,7 @@ a|
 | `initargs` | Write out in all lowercase as in the code. 
 | in-memory | Add the hyphen. 
 | install | Use install for the verb. Use installation for the noun.
+| instance | Do not use. See <<cluster,cluster>>. 
 | intra-cluster replication | Add the hyphen. 
 | Internet | Capitalize as a proper noun. 
 | Internet of Things (IoT) | Write out for the first use on a page. Make sure to use a lowercase "o."
@@ -298,6 +309,7 @@ a|
 | [[less]]less | Use less for items that are measured, can't be easily quantified or counted, or mass singular nouns. For example, less trouble, less time, less effort. For nouns that can be counted, use <<fewer,fewer>>.
 | libcouchbase (LCB) | Write out for first use on a page.
 | LDAP | Lightweight Directory Access Protocol. Don't write out for the first use on a page. 
+| link | Do not use "data link." Do not capitalize. 
 | livestream | Don't add a hyphen or space. 
 | log in | Use log in for the verb. Use log-in for the adjective. Use login for the noun.
 | low latency | Don't add a hyphen.
@@ -361,6 +373,7 @@ a|
 |===
 | Term | Notes
 
+| OAuth | Capitalize the "O" and the "A".
 | Objective-C | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
 | offline | Don't add a hyphen.
 | omnichannel | Don't add a hyphen.
@@ -389,6 +402,7 @@ For more information, see xref:pages.adoc[].
 | passlist | Don't use. See <<allowlist,allow list>>.
 | peer to peer | Use peer to peer as the noun. Use peer-to-peer as the adjective.
 | PDF | Follow the https://developers.google.com/style/filenames#file-type-names[Google Developer Style Guide]'s guidance on how to refer to file type names.
+| PLAIN authentication | Write "PLAIN" in all caps. Do not capitalize "authentication."
 | Pluggable Authentication Modules (PAM) | Write out for the first use on a page. 
 | plug in | Use plugin as the noun. Use plug-in as the adjective. Use plug in as the verb. 
 | preload | Don't add a hyphen. 
@@ -429,6 +443,7 @@ For more information, see xref:pages.adoc[].
 | rebalance | Write as all one word. Don't add a hyphen. 
 | [[refer]]refer to | Use <<see,see>>, instead.
 | reindexing | Write as all one word. Don't add a hyphen. 
+| remote collection | Do not capitalize. 
 | repo | Don't use. Write out the full word, repository.
 | retryable | Don't write as retriable.
 | risk-free | Add the hyphen. 
@@ -443,7 +458,9 @@ For more information, see xref:pages.adoc[].
 |===
 | Term | Notes
 
-| schema-less | Add the hyphen. Don't capitalize. You can also use *flexible schema*. 
+| schema-less | Add the hyphen. Don't capitalize. You can also use *flexible schema*.
+| scope | Do not capitalize. 
+| SCRAM-SHA-256 and SCRAM-SHA-512 | Make sure to add the hyphens between each word. Write in all caps. 
 | screenshot | Don't add a hyphen. 
 | SDK | Software Development Kit. Don't write out for the first use on a page. 
 | SDKs | Treat acronyms as regular words when making them plural. For more information, see the https://developers.google.com/style/abbreviations#making-abbreviations-plural[Google Developer Style Guide^].
@@ -461,6 +478,7 @@ Follow the official capitalization as set by Apache. For more information, see x
 The Couchbase query language. Pronounced as *sequel plus plus*. 
 
 Write in documentation as *a SQL++*. For more information, see xref:articles.adoc[].
+| standalone collection | Do not capitalize.
 | startup | Use startup as the noun. 
 | Structured Streaming | Write out as Structured Streaming API for the first use on a page. 
 | Storm | Don't specify as Apache Storm. Follow the official capitalization as set by Apache. For more information, see xref:capitalization.adoc[].
