@@ -2,6 +2,8 @@ and\/or
 back end
 (C\+\+)
 Couchbase managed cloud
+data link
+data provider
 mapreduce views
 map reduce views
 note that

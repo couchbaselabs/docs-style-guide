@@ -1,5 +1,8 @@
 \.NET
 Amazon cloud
+Amazon Managed Streaming for Apache Kafka 
+Amazon MSK
+Amazon S3
 Analytics Service
 APAC
 API
@@ -20,7 +23,9 @@ Capella
 Compare and Swap
 CentOS
 Cluster Manager
+Columnar
 ConfigProviderBase
+Confluent Cloud
 cloud\.couchbase
 Couchbase Autonomous Operator
 Couchbase Backup Manager
@@ -99,10 +104,12 @@ nginx
 NRU
 numReplicas
 nxdomain
+OAuth
 Objective-C
 Omnichannel
 optimisticReplicationThreshold
 PDF
+PLAIN authentication
 Pluggable Authentication Modules
 PAM
 query editor
@@ -123,6 +130,8 @@ Read Committed
 Role-Based Access Control
 RYOW
 RxJava
+SCRAM-SHA-256
+SCRAM-SHA-512
 SDK
 SDKs
 Search index
