@@ -23,7 +23,7 @@ Capella
 Compare and Swap
 CentOS
 Cluster Manager
-Columnar
+columnar
 ConfigProviderBase
 Confluent Cloud
 cloud\.couchbase
@@ -159,8 +159,9 @@ time to live
 [Tt]oolchain
 TTL
 Ubuntu
-[Uu]psert
+Ultra Disk
 UNNEST
+[Uu]psert
 vBucket
 vBucketMap
 vBuckets
