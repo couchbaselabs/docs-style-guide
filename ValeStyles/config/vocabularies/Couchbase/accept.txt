@@ -23,7 +23,7 @@ Capella
 Compare and Swap
 CentOS
 Cluster Manager
-columnar
+Columnar
 ConfigProviderBase
 Confluent Cloud
 cloud\.couchbase
