@@ -6,4 +6,4 @@ nonword: true
 scope: raw
 
 tokens: 
-  - \;
+  - (?<!^----\n.*)(?<!`)(?<!&vellip)(?<!&vellip;)(?<!&mdash)(?<!&mdash;)(;)(?!.*\n----$)(?!`)
