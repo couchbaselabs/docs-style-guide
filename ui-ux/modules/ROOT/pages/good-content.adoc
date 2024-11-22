@@ -21,7 +21,7 @@ We write content that's factually correct, always.
 We use the same word or words to mean the same thing.
 
 We follow industry standards and conventions, but also our own.
-(That's why we maintain a xref:styleguide:ROOT:wordlist.adoc[word list]). 
+(That's why we maintain a xref:styleguide:ROOT:word-list.adoc[word list]). 
 
 We adhere to our xref:voice.adoc[voice and tone standards].
 
