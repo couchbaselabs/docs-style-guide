@@ -39,6 +39,10 @@ If the user is making a change that they need to save or cancel, the confirmatio
 
 Ideally, try to make the xref:action-buttons.adoc[action button] match the title of the dialog or what the user is actually doing. 
 
+=== Close vs. Done
+
+include::partial$close-vs-done.adoc[]
+
 == Put Primary or Positive Actions on the Right
 
 The primary, positive, or confirming action for a decision dialog should be on the right. 

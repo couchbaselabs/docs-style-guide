@@ -24,3 +24,7 @@ Make sure to write in full sentences.
 Any lengthy explanations or context should stay in the larger UI or the documentation. 
 
 For more information about how to write an effective error message, see xref:error-messages.adoc[].
+
+== Close vs. Done
+
+include::partial$close-vs-done.adoc[]

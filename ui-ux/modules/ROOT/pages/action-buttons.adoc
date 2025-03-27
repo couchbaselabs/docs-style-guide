@@ -34,3 +34,7 @@ Try to stick to 3-5 words.
 
 Use title case for all button text. 
 Capitalize nouns and verbs, but not prepositions and conjunctions. 
+
+== Close vs. Done
+
+include::partial$close-vs-done.adoc[]

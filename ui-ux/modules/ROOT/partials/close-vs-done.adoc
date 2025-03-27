@@ -1,0 +1,3 @@
+Use *Done* when the user is finished with a process, and clicking *Done* will bring them back to another page. 
+
+Use *Close* when the user is just dismissing a dialog or a side sheet, but not leaving their current page or process. 
