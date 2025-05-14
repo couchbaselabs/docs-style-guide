@@ -22,7 +22,7 @@ swap:
   'tap (?:&|and) hold': touch & hold
   'un(?:check|select)': clear
   above: preceding|later
-  access: see|edit|find|use|view
+  '(?:to access|access the)': see|edit|find|use|view
   account name: username
   action bar: app bar
   admin: administrator
