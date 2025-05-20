@@ -7,3 +7,6 @@ A link is any clickable text that appears as part of plain text in the UI.
 For example, the following is a link: 
 
 image::link-example.png[,,align=center]
+
+Refer to the UI element without the word link, just like a xref:buttons.adoc[Button].
+For example, `Click Learn More` or `Click Edit on GitHub`.

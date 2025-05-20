@@ -8,6 +8,7 @@
 ** xref:articles.adoc[]
 ** xref:capitalization.adoc[]
 ** xref:contractions.adoc[]
+** xref:directional-language.adoc[]
 ** xref:less-fewer.adoc[]
 ** xref:only.adoc[]
 ** xref:there-is.adoc[]

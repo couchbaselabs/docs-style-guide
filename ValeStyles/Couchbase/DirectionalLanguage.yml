@@ -1,11 +1,12 @@
 extends: existence
 message: Avoid directional language like '%s'.
 level: warning 
+link: https://docs.couchbase.com/styleguide/directional-language.html
 
 tokens: 
   - left
   - right
-  - '(?<!(sign|set)\s)up(?!\sto)'
+  - '(?<!(sign|set|back)\s)up(?!\sto)'
   - down
   - below
   - above
