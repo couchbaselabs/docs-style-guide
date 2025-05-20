@@ -13,7 +13,8 @@ Start button text with an action verb that clearly describes what happens after 
 
 For example, the button to create a project could say *Create Project*. 
 
-NOTE: This is unnecessary if the action button is a navigation button. Name the page that the user navigates to, instead.
+NOTE: This is unnecessary if the action button is a navigation button.
+Name the page that the user navigates to, instead, or use navigation words like `Next` or `Back`.
 
 == Align the Button Text to the Surrounding Text
 
@@ -22,7 +23,7 @@ Make sure that the text you use on the button aligns to the surrounding text.
 For example, if the preceding text tells the user that they can delete their organization, the button should say *Delete Organization*, not *Remove Organization*. 
 
 If the user is making a change that they need to save or cancel, the confirmation button should be *Save*, not *Apply* or *Update*.
-But, try to make the action match the surrounding text.
+Try to make the action match the surrounding text.
 
 == Keep It Between 3-5 Words
 
