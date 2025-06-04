@@ -1,0 +1,6 @@
+extends: existence
+message: "Did you mean to add two spaces?"
+level: error
+nonword: true
+tokens:
+- ' {2,}'

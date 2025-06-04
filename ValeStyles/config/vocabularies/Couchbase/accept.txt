@@ -39,6 +39,7 @@ Couchbase
 Couchstore
 curl
 Database Change Protocol
+datacenter
 DataOps
 DCP
 DDL
