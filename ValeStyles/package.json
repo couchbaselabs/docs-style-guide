@@ -1,0 +1,25 @@
+{
+  "name": "valestyles",
+  "version": "1.0.0",
+  "description": "Vale styles for Couchbase",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "accept": "test/accept"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/couchbaselabs/docs-style-guide.git"
+  },
+  "author": "Couchbase",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/couchbaselabs/docs-style-guide/issues"
+  },
+  "homepage": "https://github.com/couchbaselabs/docs-style-guide#readme",
+  "devDependencies": {
+    "mocha": "^11.6.0"
+  }
+}
