@@ -1,6 +1,7 @@
 extends: existence
-message: "Did you mean to add two spaces?"
+message: "Did you mean to add extra spaces?"
 level: error
 nonword: true
+scope: raw
 raw:
-- ' {2,}'
+  - ' {2,}'
