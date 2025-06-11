@@ -1,9 +1,5 @@
 [
   {
-    "Action": {
-      "Name": "",
-      "Params": null
-    },
     "Check": "Couchbase.Headings",
     "Description": "",
     "Link": "",
@@ -12,10 +8,6 @@
     "Match": "This is a basic test"
   },
   {
-    "Action": {
-      "Name": "",
-      "Params": null
-    },
     "Check": "Couchbase.An",
     "Description": "",
     "Link": "https://docs.couchbase.com/styleguide/articles.html",
@@ -24,10 +16,6 @@
     "Match": "a aardvark"
   },
   {
-    "Action": {
-      "Name": "",
-      "Params": null
-    },
     "Check": "Couchbase.VentilatedProse",
     "Description": "",
     "Link": "",
@@ -36,10 +24,6 @@
     "Match": "k. H"
   },
   {
-    "Action": {
-      "Name": "",
-      "Params": null
-    },
     "Check": "Vale.Terms",
     "Description": "",
     "Link": "",
@@ -48,12 +32,6 @@
     "Match": "couchbase"
   },
   {
-    "Action": {
-      "Name": "replace",
-      "Params": [
-        "you're"
-      ]
-    },
     "Check": "Couchbase.Contractions",
     "Description": "",
     "Link": "https://docs.couchbase.com/styleguide/contractions.html",
@@ -62,10 +40,6 @@
     "Match": "You are"
   },
   {
-    "Action": {
-      "Name": "",
-      "Params": null
-    },
     "Check": "Google.Exclamation",
     "Description": "",
     "Link": "https://developers.google.com/style/exclamation-points",

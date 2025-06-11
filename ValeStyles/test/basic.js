@@ -30,6 +30,7 @@ describe('run vale against test files', function () {
       for (const item of actual) {
         delete item.Line
         delete item.Span
+        delete item.Action
       }
 
       fs.writeFileSync(`${file}.actual`, JSON.stringify(actual, null, 2), 'utf8')
