@@ -6,22 +6,22 @@
 
 [vale,Couchbase.An]
 --
-* This is a example of incorrect usage.
-* She wrote a email to the team.
-* He found a unusual error in the logs.
-* We need a update before release.
-* Please submit a application.
+This is a example of incorrect usage.
+She wrote a email to the team.
+He found a unusual error in the logs.
+We need a update before release.
+Please submit a application.
 --
 
 === Compliant examples
 
 [vale,Couchbase.An,ok]
 --
-* This is an example of correct usage.
-* She wrote an email to the team.
-* He found an unusual error in the logs.
-* We need an update before release.
-* Please submit an application.
+This is an example of correct usage.
+She wrote an email to the team.
+He found an unusual error in the logs.
+We need an update before release.
+Please submit an application.
 --
 
 == Couchbase.App
@@ -30,20 +30,375 @@
 
 [vale,Couchbase.App]
 --
-* Please open the app to continue.
-* The app crashed unexpectedly.
-* She downloaded the app from the store.
-* He deleted the app by mistake.
-* We updated the app yesterday.
+Please open the app to continue.
+The app crashed unexpectedly.
+She downloaded the app from the store.
+He deleted the app by mistake.
+We updated the app yesterday.
 --
 
 === Compliant examples
 
 [vale,Couchbase.App,ok]
 --
-* Please open the application to continue.
-* The application crashed unexpectedly.
-* She downloaded the application from the store.
-* He deleted the application by mistake.
-* We updated the application yesterday.
+Please open the application to continue.
+The application crashed unexpectedly.
+She downloaded the application from the store.
+He deleted the application by mistake.
+We updated the application yesterday.
+--
+
+== Couchbase.Bold
+
+=== Flagged examples
+
+[vale,Couchbase.Bold]
+--
+This is *bold* text using asterisks.
+Please click the *Save* button.
+Use *important* for emphasis.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Bold,ok]
+--
+This is normal text.
+Please click the btn:[Save] button.
+Use _important_ for emphasis.
+--
+
+== Couchbase.ButtonMacro
+
+=== Flagged examples
+
+[vale,Couchbase.ButtonMacro]
+--
+Click the btn:[Save] button to continue.
+Press the btn:[Cancel] button to exit.
+Select the btn:[Submit] button to proceed.
+--
+
+== Couchbase.Checkbox
+
+=== Flagged examples
+
+[vale,Couchbase.Checkbox]
+--
+Select the checkbox to agree.
+Tick the OK check box if you accept.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Checkbox,ok]
+--
+Select "OK" to accept.
+Check "I agree" to continue.
+--
+
+== Couchbase.CodeCallouts
+
+=== Flagged examples
+
+👎 NOT automatically tested yet.
+
+
+[source,java]
+--
+public class Example { // <1>
+--
+
+<1> This is a code callout example.
+
+=== Compliant examples
+
+👍 NOT automatically tested yet.
+
+[source,java]
+--
+public class Example {
+--
+
+== Couchbase.ComplexContractions
+
+=== Flagged examples
+
+[vale,Couchbase.ComplexContractions]
+--
+What'll become of the database?
+We must've missed the deadline.
+We would've liked to help you.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.ComplexContractions,ok]
+--
+You shouldn't use contractions in formal documentation... but we do.
+They can't access the database.
+We won't support this feature.
+--
+
+== Couchbase.Contractions
+
+=== Flagged examples
+
+[vale,Couchbase.Contractions]
+--
+It is important to follow the guidelines.
+How is this feature used?
+That is not supported.
+They are working on the fix.
+We are planning a release.
+What is the status?
+Where is the documentation?
+Who is responsible for this?
+You are required to sign in.
+You had better check the logs.
+You will need to update your client.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Contractions,ok]
+--
+It's important to follow the guidelines.
+How's this feature used?
+That's not supported.
+They're working on the fix.
+We're planning a release.
+What's the status?
+Where's the documentation?
+Who's responsible for this?
+You're required to sign in.
+You'd better check the logs.
+You'll need to update your client.
+--
+
+== Couchbase.CouchbaseAutoOp
+
+=== Flagged examples
+
+[vale,Couchbase.CouchbaseAutoOp]
+--
+* The Operator manages the cluster.
+* Upgrade the Operator to the latest version.
+* The Operator supports rolling upgrades. We call it the Couchbase Autonomous Operator.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.CouchbaseAutoOp,ok]
+--
+Couchbase Autonomous Operator does everything. For example, the Operator manages the cluster.
+--
+
+== Couchbase.CouchbaseServerComm
+
+=== Flagged examples
+
+[vale,Couchbase.CouchbaseServerComm]
+--
+You can download Community Edition from our website.
+The Community Edition is free to use.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.CouchbaseServerComm,ok]
+--
+You can download Couchbase Server Community Edition from our website.
+The Couchbase Server Community Edition is free to use.
+--
+
+== Couchbase.CouchbaseServerWebConsole
+
+=== Flagged examples
+
+[vale,Couchbase.CouchbaseServerWebConsole]
+--
+You can access the Web Console to manage your cluster.
+The Web Console provides a user-friendly interface.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.CouchbaseServerWebConsole,ok]
+--
+You can access the Couchbase Server Web Console to manage your cluster.
+The Couchbase Server Web Console provides a user-friendly interface.
+--
+
+== Couchbase.DatePicker
+
+=== Flagged examples
+
+[vale,Couchbase.DatePicker]
+--
+Select the Date Picker to choose a date.
+Click the *date picker* field.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.DatePicker,ok]
+--
+Select the date picker to choose a date.
+--
+
+== Couchbase.Dialogs
+
+=== Flagged examples
+
+[vale,Couchbase.Dialogs]
+--
+A Dialog will appear.
+Click the *dialog* to continue.
+The *dialog box* is displayed.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Dialogs,ok]
+--
+A dialog will appear.
+--
+
+== Couchbase.DirectionalLanguage
+
+=== Flagged examples
+
+[vale,Couchbase.DirectionalLanguage]
+--
+Click the button on the left.
+Scroll down to see more options.
+The settings are below the menu.
+Move up to the previous section.
+The icon is above the text.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.DirectionalLanguage,ok]
+--
+Click the first button.
+Scroll to see more options.
+The settings are under the menu.
+Return to the previous section.
+The icon is near the text.
+--
+
+== Couchbase.Dropdown
+
+=== Flagged examples
+
+[vale,Couchbase.Dropdown]
+--
+Select the drop-down to choose an option.
+Click the dropdown menu.
+Open the dropdowns list.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Dropdown,ok]
+--
+Choose the value from the list.
+--
+
+== Couchbase.FancyQuotes
+
+=== Flagged examples
+
+[vale,Couchbase.FancyQuotes]
+--
+He said, “This is a test.”
+She replied, ‘Indeed it is.’
+The document uses “smart quotes” throughout.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.FancyQuotes,ok]
+--
+He said, "This is a test."
+She replied, 'Indeed it is.'
+The document uses "straight quotes" throughout.
+--
+
+== Couchbase.HeadingFormatting
+
+=== Flagged examples
+
+[vale,Couchbase.HeadingFormatting]
+--
+= This is a *bold* heading.
+== This is an _italic_ heading.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.HeadingFormatting,ok]
+--
+= This heading has no formatting.
+--
+
+== Couchbase.Headings
+
+=== Flagged examples
+
+[vale,Couchbase.Headings]
+--
+= introduction
+== This does not use title case
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Headings,ok]
+--
+= Introduction
+== Heading With Title Case
+--
+
+== Couchbase.Italics
+
+=== Flagged examples
+
+[vale,Couchbase.Italics]
+--
+This is _italic_ text using underscores.
+Please click the _Save_ button.
+Use _important_ for emphasis.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Italics,ok]
+--
+This is normal text.
+Please click the btn:[Save] button.
+--
+
+== Couchbase.LessFewer
+
+=== Flagged examples
+
+[vale,Couchbase.LessFewer]
+--
+There are less errors in this version.
+We need less people on the project.
+She has less tasks to complete.
+The server has less connections now.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.LessFewer,ok]
+--
+There are fewer errors in this version.
+We need fewer people on the project.
+She has fewer tasks to complete.
+The server has fewer connections now.
 --

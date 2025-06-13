@@ -29,6 +29,7 @@ asciidoctor.Extensions.register(function () {
           [
             '--output', 'JSON',
             '--ext', '.adoc',
+            '--minAlertLevel', 'suggestion',
           ],
           { input: lines.join('\n') }
         )
@@ -37,10 +38,12 @@ asciidoctor.Extensions.register(function () {
         console.log("Failed to run vale", err)
       }
 
-      let checks = (
-        JSON.parse(vale.stdout)
+      let checks = JSON.parse(vale.stdout)
         ['stdin.adoc']
-        .filter(item => item.Check === check))
+        || []
+
+      checks = checks
+        .filter(item => item.Check === check)
 
       // return grouped by line number (now zero-indexed)
       checks = Object.groupBy(checks, item => parseInt(item.Line - 1))
@@ -70,16 +73,17 @@ function markupFlagged(content, flagged, compliant) {
   // we xor them (first coercing) to 
   // check that they match
   const ok = !!flagged ^ !!compliant
-  const icon = ok  ? '✅' : '❌'
+  let icon
 
   let html = content
   if (flagged) {
+    icon = ok  ? '👎' : '❌'
     let [from, to] = flagged.Span
     from-- // Vale Span is weird
 
     const [pre,marked,post] = [
       escape(content.slice(0, from)),
-      escape(content.slice(from, to)),
+      content.slice(from, to),
       escape(content.slice(to))
     ]
 
@@ -90,7 +94,10 @@ function markupFlagged(content, flagged, compliant) {
     )
     const message = escape(flagged.Message)
 
-    html = `${pre}<mark title="${message}">${marked}</mark>${post}`
+    html = `${pre}<mark title="${message}">${escape(marked)}</mark>${post}`
+  }
+  else {
+    icon = ok  ? '👍' : '❌'
   }
 
   html = html.replace(/^\*\s*/, '') // remove leading asterisk
@@ -114,7 +121,7 @@ describe(`Report Vale tests against specific styles file://${process.cwd()}/test
 
   for (const test of tests) {
     ok(`testing ${test.check} ${test.compliant ? '(compliant)' : '(flagged)'}`, function () {
-      assert.ok(test.ok, `Vale check ${test.check} failed: ${test.output.map(x => x.message).join(', ')}`) 
+      assert.ok(test.ok, `Vale check ${test.check} failed}`) 
     })
   }
 })
