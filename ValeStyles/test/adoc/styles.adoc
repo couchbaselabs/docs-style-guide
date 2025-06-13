@@ -1,5 +1,6 @@
 = Testing Couchbase vale styles
 
+
 == Couchbase.An
 
 === Flagged examples
@@ -23,6 +24,7 @@ He found an unusual error in the logs.
 We need an update before release.
 Please submit an application.
 --
+
 
 == Couchbase.App
 
@@ -48,6 +50,7 @@ He deleted the application by mistake.
 We updated the application yesterday.
 --
 
+
 == Couchbase.Bold
 
 === Flagged examples
@@ -68,6 +71,7 @@ Please click the btn:[Save] button.
 Use _important_ for emphasis.
 --
 
+
 == Couchbase.ButtonMacro
 
 === Flagged examples
@@ -78,6 +82,7 @@ Click the btn:[Save] button to continue.
 Press the btn:[Cancel] button to exit.
 Select the btn:[Submit] button to proceed.
 --
+
 
 == Couchbase.Checkbox
 
@@ -96,6 +101,7 @@ Tick the OK check box if you accept.
 Select "OK" to accept.
 Check "I agree" to continue.
 --
+
 
 == Couchbase.CodeCallouts
 
@@ -120,6 +126,7 @@ public class Example { // <1>
 public class Example {
 --
 
+
 == Couchbase.ComplexContractions
 
 === Flagged examples
@@ -139,6 +146,7 @@ You shouldn't use contractions in formal documentation... but we do.
 They can't access the database.
 We won't support this feature.
 --
+
 
 == Couchbase.Contractions
 
@@ -176,6 +184,7 @@ You'd better check the logs.
 You'll need to update your client.
 --
 
+
 == Couchbase.CouchbaseAutoOp
 
 === Flagged examples
@@ -212,6 +221,7 @@ You can download Couchbase Server Community Edition from our website.
 The Couchbase Server Community Edition is free to use.
 --
 
+
 == Couchbase.CouchbaseServerWebConsole
 
 === Flagged examples
@@ -230,6 +240,7 @@ You can access the Couchbase Server Web Console to manage your cluster.
 The Couchbase Server Web Console provides a user-friendly interface.
 --
 
+
 == Couchbase.DatePicker
 
 === Flagged examples
@@ -246,6 +257,7 @@ Click the *date picker* field.
 --
 Select the date picker to choose a date.
 --
+
 
 == Couchbase.Dialogs
 
@@ -264,6 +276,7 @@ The *dialog box* is displayed.
 --
 A dialog will appear.
 --
+
 
 == Couchbase.DirectionalLanguage
 
@@ -289,6 +302,7 @@ Return to the previous section.
 The icon is near the text.
 --
 
+
 == Couchbase.Dropdown
 
 === Flagged examples
@@ -306,6 +320,7 @@ Open the dropdowns list.
 --
 Choose the value from the list.
 --
+
 
 == Couchbase.FancyQuotes
 
@@ -327,6 +342,7 @@ She replied, 'Indeed it is.'
 The document uses "straight quotes" throughout.
 --
 
+
 == Couchbase.HeadingFormatting
 
 === Flagged examples
@@ -343,6 +359,7 @@ The document uses "straight quotes" throughout.
 --
 = This heading has no formatting.
 --
+
 
 == Couchbase.Headings
 
@@ -362,7 +379,10 @@ The document uses "straight quotes" throughout.
 == Heading With Title Case
 --
 
+
 == Couchbase.Italics
+
+NOTE: Don't understand why this test doesn't flag the following?
 
 === Flagged examples
 
@@ -378,8 +398,8 @@ Use _important_ for emphasis.
 [vale,Couchbase.Italics,ok]
 --
 This is normal text.
-Please click the btn:[Save] button.
 --
+
 
 == Couchbase.LessFewer
 
@@ -401,4 +421,464 @@ There are fewer errors in this version.
 We need fewer people on the project.
 She has fewer tasks to complete.
 The server has fewer connections now.
+--
+
+
+== Couchbase.Link
+
+WARNING: this test doesn't work properly yet.
+
+=== Flagged examples
+
+[vale,Couchbase.Link]
+--
+<<link,Click the Info link>> to learn more.
+Click <<link,the Info link>> to learn more.
+Click <<link,here>> for more information.
+For more information, see <<link,this link>>.
+Visit <<link,the following link>> for details.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Link,ok]
+--
+Learn more about <<link,this feature>>.
+For more information, see the <<link,documentation>>.
+Visit the <<link,documentation>> for details.
+--
+
+
+== Couchbase.Monospace
+
+=== Flagged examples
+
+NOTE: monospace text is permitted, of course, but this warning is to make sure it is used correctly, see https://docs.couchbase.com/styleguide/monospace-highlight.html
+
+[vale,Couchbase.Monospace]
+--
+This is `monospace` text.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Monospace,ok]
+--
+No monospace here.
+--
+
+
+== Couchbase.NegativeContractions
+
+=== Flagged examples
+
+[vale,Couchbase.NegativeContractions]
+--
+You can't access this feature.
+They don't have permission.
+We won't support this version.
+She isn't available right now.
+He hasn't finished the task.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.NegativeContractions,ok]
+--
+You cannot access this feature.
+They do not have permission.
+We will not support this version.
+She is not available right now.
+He has not finished the task.
+--
+
+
+== Couchbase.NoteThat
+
+=== Flagged examples
+
+[vale,Couchbase.NoteThat]
+--
+Note that you must restart the server.
+Note that this feature is experimental.
+Note that backups are not automatic.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.NoteThat,ok]
+--
+You must restart the server.
+This feature is experimental.
+NOTE: Backups are not automatic.
+--
+
+
+== Couchbase.Please
+
+=== Flagged examples
+
+[vale,Couchbase.Please]
+--
+Please refer to the documentation for more information.
+Please ensure you have saved your work.
+Please contact support if you need help.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Please,ok]
+--
+Refer to the documentation for more information.
+Ensure you have saved your work.
+Contact support if you need help.
+--
+
+
+== Couchbase.Quotations
+
+=== Flagged examples
+
+[vale,Couchbase.Quotations]
+--
+The term "bucket" refers to a data container.
+He clicked the "Save" button.
+Select the "Settings" option from the menu.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Quotations,ok]
+--
+The term ‘bucket’ refers to a data container.
+He clicked the btn:[Save] button.
+Select the _Settings_ option from the menu.
+--
+
+
+== Couchbase.ReadingLevel
+
+=== Flagged examples
+
+[vale,Couchbase.ReadingLevel]
+--
+Utilizing multifaceted methodologies, the system orchestrates a plethora of functionalities to facilitate seamless interoperability among disparate modules.”
+--
+
+=== Compliant examples
+
+[vale,Couchbase.ReadingLevel,ok]
+--
+The system uses many methods to help different modules work together.
+This change means we need to review how things work.
+--
+
+
+== Couchbase.RepeatedSpace
+
+=== Flagged examples
+
+[vale,Couchbase.RepeatedSpace]
+--
+There   are   multiple   spaces   here.
+Check  for  repeated  spaces.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.RepeatedSpace,ok]
+--
+This sentence has one space between words.
+Sentences with {attributes} should not be flagged.
+--
+
+
+== Couchbase.RepeatedWord
+
+=== Flagged examples
+
+[vale,Couchbase.RepeatedWord]
+--
+This is is a repeated word.
+Please please check the document.
+He said that that it was fine.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.RepeatedWord,ok]
+--
+This is a sentence without repeated words.
+Please check the document.
+He said that it was fine.
+--
+
+
+== Couchbase.RunOn
+
+=== Flagged examples
+
+[vale,Couchbase.RunOn]
+--
+This could be a run on sentence, because it has many commas, so confuses people, don't you think?
+--
+
+=== Compliant examples
+
+[vale,Couchbase.RunOn,ok]
+--
+Sentences with up to two commas are fine, but no more than that, I beg you.
+[cols="1,1,1,2,3"]
+--
+
+
+== Couchbase.See
+
+=== Flagged examples
+
+[vale,Couchbase.See]
+--
+Refer to http://foo.bar for more details.
+Refer to https://foo.bar for more details.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.See,ok]
+--
+See http://foo.bar for more details.
+See https://foo.bar for more details.
+--
+
+
+== Couchbase.Semi-Colons
+
+=== Flagged examples
+
+NOTE: Use semi-colons sparingly.
+
+[vale,Couchbase.Semi-Colons]
+--
+This is a sentence; and here is another clause.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Semi-Colons,ok]
+--
+This is a sentence, and here is another clause.
+--
+
+
+== Couchbase.SentenceLength
+
+=== Flagged examples
+
+[vale,Couchbase.SentenceLength]
+--
+This sentence is far too long because it contains many clauses, making it difficult for readers to follow the main point, and therefore it should be rewritten to improve clarity and readability.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.SentenceLength,ok]
+--
+This sentence is clear and concise.
+Rewrite long sentences to improve clarity.
+--
+
+
+== Couchbase.Sidebars
+
+=== Flagged examples
+
+[vale,Couchbase.Sidebars]
+--
+****
+[sidebar]
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Sidebars,ok]
+--
+This is a regular paragraph, not a sidebar.
+Use sidebars only when necessary and keep them concise.
+--
+
+
+== Couchbase.SQL (SQL++ really)
+
+=== Flagged examples
+
+[vale,Couchbase.SQL]
+--
+This is an SQL++ query.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.SQL,ok]
+--
+This is a SQL++ query.
+--
+
+
+== Couchbase.StackedHeadings
+
+INFO: You can't have two headings with no content in between.
+
+We can't currently test this using this test.
+
+
+== Couchbase.Terminology
+
+=== Flagged examples
+
+[vale,Couchbase.Terminology]
+--
+This project uses dotnet for development.
+Please add the adaptor to your system.
+We use the whitelist to control access.
+The code base is large.
+Refer to the data center documentation.
+She used the plugin for integration.
+The master node is down.
+He prefers to utilize this feature.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Terminology,ok]
+--
+This project uses .NET for development.
+Please add the adapter to your system.
+We use the Allowlist to control access.
+The codebase is large.
+Refer to the datacenter documentation.
+She used the plug-in for integration.
+The primary node is down.
+He prefers to use this feature.
+--
+
+
+== Couchbase.Textbox
+
+=== Flagged examples
+
+[vale,Couchbase.Textbox]
+--
+Enter your name in the textbox.
+Click the text box to start typing.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Textbox,ok]
+--
+Enter your name in the field.
+Click the box to start typing.
+--
+
+
+== Couchbase.ThereIs
+
+=== Flagged examples
+
+[vale,Couchbase.ThereIs]
+--
+There is a problem with the configuration.
+There is an error in the logs.
+There is a need for more testing.
+There is a button you can click.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.ThereIs,ok]
+--
+A problem exists with the configuration.
+An error appears in the logs.
+More testing is needed.
+You can click the button.
+--
+
+
+== Couchbase.UnexplainedAcronym
+
+Not sure how to test this one?
+
+=== Flagged examples
+
+[vale,Couchbase.UnexplainedAcronym]
+--
+The HFE is not responding.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.UnexplainedAcronym,ok]
+--
+The Hyperspace Frobnication Engine (HFE) is not responding.
+--
+
+
+== Couchbase.VentilatedProse
+
+=== Flagged examples
+
+[vale,Couchbase.VentilatedProse]
+--
+This paragraph contains multiple sentences without any line breaks. It makes the text harder to read and maintain, especially in documentation where each sentence should start on a new line.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.VentilatedProse,ok]
+--
+This sentence is on its own line.
+So is this one.
+Each sentence starts on a new line for clarity.
+--
+
+
+== Couchbase.Versions
+
+=== Flagged examples
+
+[vale,Couchbase.Versions]
+--
+Use version 6.0 or higher.
+Use version 6.0 or newer.
+Not available in version 5.0 or lower.
+Not available in version 5.0 or older.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Versions,ok]
+--
+Use version 6.0 or later.
+Not available in version 5.0 or earlier.
+--
+
+
+== Couchbase.Wordy
+
+=== Flagged examples
+
+[vale,Couchbase.Wordy]
+--
+Combating the issue requires a comprehensive understanding of the underlying architecture.
+We will streamline the process to enhance efficiency.
+It is ever thus.
+--
+
+=== Compliant examples
+
+[vale,Couchbase.Wordy,ok]
+--
+We need to understand the architecture to fix the issue.
+We will simplify the process to improve efficiency.
+It's always like this.
 --

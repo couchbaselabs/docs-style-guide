@@ -75,23 +75,34 @@ function markupFlagged(content, flagged, compliant) {
   const ok = !!flagged ^ !!compliant
   let icon
 
-  let html = content
+  let html = escape(content)
   if (flagged) {
     icon = ok  ? '👎' : '❌'
     let [from, to] = flagged.Span
     from-- // Vale Span is weird
 
-    const [pre,marked,post] = [
+    let [pre,marked,post] = [
       escape(content.slice(0, from)),
       content.slice(from, to),
       escape(content.slice(to))
     ]
-
-    assert.equal(
-      marked, 
-      flagged.Match, 
-      `Marked content error: ${marked} !== ${flagged.Match}`
-    )
+    if (from === 0 && to === 1) {
+      // if the flagged content is essentially zero-width,
+      // then we'll mark the whole content
+      [pre,marked,post] = [
+        '',
+        content,
+        ''
+      ]
+    }
+    else {
+      assert.equal(
+        marked.trim(), 
+        flagged.Match.trim(), 
+        `Marked content error: ${marked} !== ${flagged.Match}`
+      )
+    }
+  
     const message = escape(flagged.Message)
 
     html = `${pre}<mark title="${message}">${escape(marked)}</mark>${post}`
