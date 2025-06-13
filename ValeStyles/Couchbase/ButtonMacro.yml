@@ -3,6 +3,7 @@ message: Did you follow the guidelines for the button macro?
 link: https://docs.couchbase.com/styleguide/button-macro.html
 nonword: true
 level: suggestion
+scope: raw
 
 tokens: 
   - btn\:\[.+\]
