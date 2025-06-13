@@ -21,5 +21,9 @@
   "homepage": "https://github.com/couchbaselabs/docs-style-guide#readme",
   "devDependencies": {
     "mocha": "^11.6.0"
+  },
+  "dependencies": {
+    "asciidoctor": "^3.0.4",
+    "lodash": "^4.17.21"
   }
 }
