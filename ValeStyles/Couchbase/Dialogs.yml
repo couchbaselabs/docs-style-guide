@@ -2,9 +2,9 @@ extends: existence
 message: Don't bold or capitalize the word "dialog".
 link: https://docs.couchbase.com/styleguide/dialogs.html
 level: error 
-nonword: true
 scope: raw
+nonword: true
 
 tokens: 
-  - '\*.+[Dd]ialog\*'
-  - '\*.+\*\sDialog'
+  - '\*[^*]*[Dd]ialog[^*]*\*'
+  - '\bDialog\b'
