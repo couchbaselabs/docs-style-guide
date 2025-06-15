@@ -1,0 +1,8 @@
+flag:
+  - This is is a repeated word.
+  - Please please check the document.
+  - He said that that it was fine.
+compliant:
+  - This is a sentence without repeated words.
+  - Please check the document.
+  - He said that it was fine.

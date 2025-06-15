@@ -1,0 +1,10 @@
+flag:
+  - <<link,Click the Info link>> to learn more.
+  - Click <<link,the Info link>> to learn more.
+  - Click <<link,here>> for more information.
+  - For more information, see <<link,this link>>.
+  - Visit <<link,the following link>> for details.
+compliant:
+  - Learn more about <<link,this feature>>.
+  - For more information, see the <<link,documentation>>.
+  - Visit the <<link,documentation>> for details.

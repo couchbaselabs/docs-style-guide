@@ -1,0 +1,24 @@
+flag:
+  - It is important to follow the guidelines.
+  - How is this feature used?
+  - That is not supported.
+  - They are working on the fix.
+  - We are planning a release.
+  - What is the status?
+  - Where is the documentation?
+  - Who is responsible for this?
+  - You are required to sign in.
+  - You had better check the logs.
+  - You will need to update your client.
+compliant:
+  - It's important to follow the guidelines.
+  - How's this feature used?
+  - That's not supported.
+  - They're working on the fix.
+  - We're planning a release.
+  - What's the status?
+  - Where's the documentation?
+  - Who's responsible for this?
+  - You're required to sign in.
+  - You'd better check the logs.
+  - You'll need to update your client.

@@ -1,0 +1,6 @@
+flag:
+  - = introduction
+  - == This does not use title case
+compliant:
+  - = Introduction
+  - == Heading With Title Case

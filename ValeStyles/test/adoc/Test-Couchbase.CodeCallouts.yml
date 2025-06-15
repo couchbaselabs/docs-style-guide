@@ -1,0 +1,4 @@
+flag:
+  - public class Example { // <1>
+compliant:
+  - public class Example { // <1>
