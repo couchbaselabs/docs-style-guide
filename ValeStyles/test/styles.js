@@ -20,13 +20,16 @@ describe(`Report Vale tests against specific styles - output to file://${process
       const check = file.match(/Test-(.*)\.yml$/)?.[1]
       if (!check) { return [] }
 
-      const test = yaml.load(
+      let test = yaml.load(
         fs.readFileSync(`test/adoc/${file}`, 'utf8'))
 
+      let {flag, compliant, ...config} = test
       return [[
-        check, [
-          ...writeFixtures(check, test, 'flag', tmp),
-          ...writeFixtures(check, test, 'compliant', tmp)
+        check,
+        config,
+        [
+          ...writeFixtures(check, flag,      false, tmp),
+          ...writeFixtures(check, compliant, true,  tmp)
         ]
       ]]
     })
@@ -47,38 +50,37 @@ describe(`Report Vale tests against specific styles - output to file://${process
 
     let valeout = JSON.parse(vale.stdout)
 
-    for (const [check, fixtures] of tests) {
-      describe(`Check ${check}`, function () {
-        for (const fixture of fixtures) {
-          const matching = valeout[fixture.path]?.filter(
-            item => item.Check === check
-          )
-          if (fixture.type === 'flag') {
-            ok(`${check}`,
-              function () {
-                matching?.length > 0 ||
-                assert.fail(`Expected to flag ${check}:\n  ${fixture.content}`)
-              }
-            )
-          }
-          else {
-            ok(`${check} (compliant)`,
-              function () {
-                !matching?.length ||
-                assert.fail(
-                  `Expected compliant for ${check}:\n  ${fixture.content}\n  but found: ${JSON.stringify(matching, null, 2)}`)
-              }
-            )
-          }
-          console.log(fixture, matching)
+    const results = tests.map(
+      function([check, config, fixtures]) {
+        const checkresults = fixtures.map((fixture) => {
+          const matching =
+            valeout[fixture.path]?.filter(
+              item => item.Check === check) || []
+
+          const compliant = matching.length == 0
+
+          // xor the compliant flag with the matching results
+          // to determine if there is an error
+          const error = compliant != fixture.compliant
+
+          return {...fixture, matching, error}
+        })
+        return {
+          check,
+          config,
+          checkresults,
         }
-      })
-    }
+      }
+    )
+    console.dir(results, {depth: null})
+
   })
 })
 
-function writeFixtures(check, test, type, tmp) {
-  return (test[type] || []).entries().map(
+
+
+function writeFixtures(check, tests, compliant, tmp) {
+  return (tests || []).entries().map(
     function ([idx, fixture]) {
       let ext = 'txt'
       let content = fixture
@@ -86,18 +88,21 @@ function writeFixtures(check, test, type, tmp) {
         [ext, content] = Object.entries(fixture)[0]
       }
 
+      const type = compliant ? 'compliant' : 'flag'
+
       const path = `${tmp}/${check}-${type}-${idx}.${ext}`
 
       fs.writeFileSync(path, content, 'utf8')
 
-      return {
+      const ret = {
         check,
-        type,
+        compliant,
         idx,
         path,
         content,
-        path,
       }
+      console.log(ret)
+      return ret
     }
   ).toArray()
 }
@@ -113,8 +118,8 @@ checks = Object.groupBy(checks, item => parseInt(item.Line - 1))
 
       const output = lines.entries().map(([line, content]) => {
         return markupFlagged(
-          content, 
-          checks[line]?.[0], 
+          content,
+          checks[line]?.[0],
           compliant)
       }).toArray()
 
@@ -133,7 +138,7 @@ checks = Object.groupBy(checks, item => parseInt(item.Line - 1))
 
 function markupFlagged(content, flagged, compliant) {
   // flagged is a struct from Vale, compliant is boolish
-  // we xor them (first coercing) to 
+  // we xor them (first coercing) to
   // check that they match
   const ok = !!flagged ^ !!compliant
   let icon
@@ -160,12 +165,12 @@ function markupFlagged(content, flagged, compliant) {
     }
     else {
       assert.equal(
-        marked.trim(), 
-        flagged.Match.trim(), 
+        marked.trim(),
+        flagged.Match.trim(),
         `Marked content error: ${marked} !== ${flagged.Match}`
       )
     }
-  
+
     const message = escape(flagged.Message)
 
     html = `${pre}<mark title="${message}">${escape(marked)}</mark>${post}`
@@ -195,9 +200,40 @@ describe(`Report Vale tests against specific styles file://${process.cwd()}/test
 
   for (const test of tests) {
     ok(`testing ${test.check} ${test.compliant ? '(compliant)' : '(flagged)'}`, function () {
-      assert.ok(test.ok, `Vale check ${test.check} failed}`) 
+      assert.ok(test.ok, `Vale check ${test.check} failed}`)
     })
   }
 })
 
+*/
+
+/*
+      describe(`Check ${check}`, function () {
+        for (const fixture of fixtures) {
+          const matching =
+          )
+          if (fixture.compliant) {
+            ok(`${check} (compliant)`,
+              function () {
+                !matching?.length ||
+                assert.fail(
+                  `Expected compliant for ${check}:\n  ${fixture.content}\n  but found: ${JSON.stringify(matching, null, 2)}`)
+              }
+            )
+          }
+          else {
+            ok(`${check}`,
+              function () {
+                matching?.length > 0 ||
+                assert.fail(`Expected to flag ${check}:\n  ${fixture.content}`)
+              }
+            )
+          }
+          console.log(fixture, matching)
+        }
+      })
+
+    }
+  })
+})
 */
