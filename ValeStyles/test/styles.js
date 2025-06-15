@@ -96,7 +96,6 @@ describe(`Report Vale tests against specific styles - output to file://${process
               }
             )
           }
-          console.log(fixture, matching)
         }
       })
     }
@@ -127,7 +126,6 @@ function writeFixtures(check, tests, compliant, tmp) {
         path,
         content,
       }
-      console.log(ret)
       return ret
     }
   ).toArray()
