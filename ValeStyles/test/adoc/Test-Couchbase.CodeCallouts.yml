@@ -1,4 +1,17 @@
 flag:
-  - public class Example { // <1>
+  - adoc: |
+      [source,java
+      --
+      public class Example { // <1>
+        ...
+      }
+      --
+      <1> This is a code callout.
+      
 compliant:
-  - public class Example { // <1>
+  - adoc: |
+      [source,java]
+      --
+      public class Example {
+      --
+      First we declare the class `Example`.

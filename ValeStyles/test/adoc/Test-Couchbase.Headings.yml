@@ -1,6 +1,6 @@
 flag:
-  - = introduction
-  - == This does not use title case
+  - adoc: = introduction
+  - adoc: == This does not use title case
 compliant:
-  - = Introduction
-  - == Heading With Title Case
+  - adoc: = Introduction
+  - adoc: == Heading With Title Case

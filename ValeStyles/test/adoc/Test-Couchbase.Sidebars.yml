@@ -1,6 +1,9 @@
 flag:
-  - '****'
-  - '[sidebar]'
+  - adoc: |
+      ****
+      This is a sidebar.
+      ****
+  - adoc: '[sidebar]'
 compliant:
   - This is a regular paragraph, not a sidebar.
   - Use sidebars only when necessary and keep them concise.
