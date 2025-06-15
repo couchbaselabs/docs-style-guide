@@ -1,0 +1,6 @@
+flag:
+  - = Heading 1
+  - == Heading 2
+compliant:
+  - = Heading 1
+  - == Heading 2
