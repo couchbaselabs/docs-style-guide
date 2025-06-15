@@ -5,4 +5,4 @@ flag:
 compliant:
   - You must restart the server.
   - This feature is experimental.
-  - NOTE: Backups are not automatic.
+  - adoc: "NOTE: Backups are not automatic."

@@ -1,52 +1,115 @@
 // this test file is designed to be run with Mocha
 const assert = require('assert')
 const fs = require('fs')
+const os = require('os')
 const ok = specify
-const asciidoctor = require('asciidoctor')()
 const { spawnSync } = require('node:child_process')
 const { escape } = require('lodash')
+const { before, describe } = require('node:test')
+const yaml = require('js-yaml')
 
-let tests = []
-asciidoctor.Extensions.register(function () {
-  this.block(function () {
-    const self = this
-    self.named('vale')
-    self.onContext('open')
-    self.positionalAttributes(['check', 'compliant'])
-    self.process(function (parent, reader, {check, compliant}) {
-['compliant'] || false
-      if (!check) {
-        throw new Error('Vale check name is required')
+describe(`Report Vale tests against specific styles - output to file://${process.cwd()}/test/adoc/styles.html`, function () {
+
+  before(function () {
+
+    const tmp = fs.mkdtempSync(`${os.tmpdir()}/vale-test-`)
+
+    const files = fs.readdirSync('test/adoc')
+
+    const tests = files.flatMap(file => {
+      const check = file.match(/Test-(.*)\.yml$/)?.[1]
+      if (!check) { return [] }
+
+      const test = yaml.load(
+        fs.readFileSync(`test/adoc/${file}`, 'utf8'))
+
+      return [[
+        check, [
+          ...writeFixtures(check, test, 'flag', tmp),
+          ...writeFixtures(check, test, 'compliant', tmp)
+        ]
+      ]]
+    })
+
+    try {
+      vale = spawnSync(
+        'vale',
+        [
+          tmp,
+          '--output', 'JSON',
+          '--minAlertLevel', 'suggestion',
+        ],
+      )
+    }
+    catch (err) {
+      console.log("Failed to run vale", err)
+    }
+
+    let valeout = JSON.parse(vale.stdout)
+
+    for (const [check, fixtures] of tests) {
+      describe(`Check ${check}`, function () {
+        for (const fixture of fixtures) {
+          const matching = valeout[fixture.path]?.filter(
+            item => item.Check === check
+          )
+          if (fixture.type === 'flag') {
+            ok(`${check}`,
+              function () {
+                matching?.length > 0 ||
+                assert.fail(`Expected to flag ${check}:\n  ${fixture.content}`)
+              }
+            )
+          }
+          else {
+            ok(`${check} (compliant)`,
+              function () {
+                !matching?.length ||
+                assert.fail(
+                  `Expected compliant for ${check}:\n  ${fixture.content}\n  but found: ${JSON.stringify(matching, null, 2)}`)
+              }
+            )
+          }
+          console.log(fixture, matching)
+        }
+      })
+    }
+  })
+})
+
+function writeFixtures(check, test, type, tmp) {
+  return (test[type] || []).entries().map(
+    function ([idx, fixture]) {
+      let ext = 'txt'
+      let content = fixture
+      if (typeof fixture === 'object') {
+        [ext, content] = Object.entries(fixture)[0]
       }
-      console.log(`Running vale check: ${check}`)
 
-      let lines = reader.getLines()
+      const path = `${tmp}/${check}-${type}-${idx}.${ext}`
 
-      let vale
-      try {
-        vale = spawnSync(
-          'vale',
-          [
-            '--output', 'JSON',
-            '--ext', '.adoc',
-            '--minAlertLevel', 'suggestion',
-          ],
-          { input: lines.join('\n') }
-        )
+      fs.writeFileSync(path, content, 'utf8')
+
+      return {
+        check,
+        type,
+        idx,
+        path,
+        content,
+        path,
       }
-      catch (err) {
-        console.log("Failed to run vale", err)
-      }
+    }
+  ).toArray()
+}
 
-      let checks = JSON.parse(vale.stdout)
-        ['stdin.adoc']
-        || []
+/*
 
-      checks = checks
-        .filter(item => item.Check === check)
 
-      // return grouped by line number (now zero-indexed)
-      checks = Object.groupBy(checks, item => parseInt(item.Line - 1))
+checks = checks
+  .filter(item => item.Check === check)
+
+// return grouped by line number (now zero-indexed)
+checks = Object.groupBy(checks, item => parseInt(item.Line - 1))
 
       const output = lines.entries().map(([line, content]) => {
         return markupFlagged(
@@ -111,7 +174,7 @@ function markupFlagged(content, flagged, compliant) {
     icon = ok  ? '👍' : '❌'
   }
 
-  html = html.replace(/^\*\s*/, '') // remove leading asterisk
+  html = html.replace(/^\*\s*XXX/, '') // remove leading asterisk
   html = `<li>${icon} ${html}</li>`
 
   return {
@@ -137,4 +200,4 @@ describe(`Report Vale tests against specific styles file://${process.cwd()}/test
   }
 })
 
-
+*/
