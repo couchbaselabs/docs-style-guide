@@ -72,8 +72,34 @@ describe(`Report Vale tests against specific styles - output to file://${process
         }
       }
     )
-    console.dir(results, {depth: null})
 
+    for (const result of results) {
+      const {check, config, checkresults} = result
+
+      describe(`Check ${check}`, function () {
+        for (const fixture of checkresults) {
+          const {compliant, matching, path, content, error} = fixture
+          if (compliant) {
+            ok(`${check} (compliant)`,
+              function () {
+                !error ||
+                assert.fail(
+                  `Expected compliant for ${check}:\n  ${content}\n  but found: ${JSON.stringify(matching, null, 2)}\n  in file: ${path}`)
+              }
+            )
+          }
+          else {
+            ok(`${check}`,
+              function () {
+                !error ||
+                assert.fail(`Expected to flag ${check}:\n  ${content}\n  in file: ${path}`)
+              }
+            )
+          }
+          console.log(fixture, matching)
+        }
+      })
+    }
   })
 })
 
