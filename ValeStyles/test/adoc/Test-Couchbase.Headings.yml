@@ -3,4 +3,4 @@ flag:
   - adoc: == This does not use title case
 compliant:
   - adoc: = Introduction
-  - adoc: == Heading With Title Case
+  - adoc: == Heading in Title Case
