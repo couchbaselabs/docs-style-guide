@@ -1,0 +1,6 @@
+flag:
+  - You can access the Web Console to manage your cluster.
+  - The Web Console provides a user-friendly interface.
+compliant:
+  - You can access the Couchbase Server Web Console to manage your cluster.
+  - The Couchbase Server Web Console provides a user-friendly interface.

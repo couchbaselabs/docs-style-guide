@@ -1,0 +1,6 @@
+flag:
+  - Refer to http://foo.bar for more details.
+  - Refer to https://foo.bar for more details.
+compliant:
+  - See http://foo.bar for more details.
+  - See https://foo.bar for more details.

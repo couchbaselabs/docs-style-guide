@@ -1,0 +1,6 @@
+flag:
+  - There   are   multiple   spaces   here.
+  - Check  for  repeated  spaces.
+compliant:
+  - This sentence has one space between words.
+  - Sentences with {attributes} should not be flagged.
