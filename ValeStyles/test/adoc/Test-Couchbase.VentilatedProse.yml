@@ -1,6 +1,7 @@
 flag:
   - This paragraph contains multiple sentences without any line breaks. It makes the text harder to read and maintain, especially in documentation where each sentence should start on a new line.
 compliant:
-  - This sentence is on its own line.
-  - So is this one.
-  - Each sentence starts on a new line for clarity.
+  - |
+    This sentence is on its own line.
+    So is this one.
+    Each sentence starts on a new line for clarity.
