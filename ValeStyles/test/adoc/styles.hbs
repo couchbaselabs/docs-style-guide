@@ -11,9 +11,10 @@
         .fixture { border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 5px; }
         .compliant { background: #e8f5e9; }
         .flagged { background: #ffebee; }
-        .error { border-color: #e53935; }
-        pre { background: #f4f4f4; padding: 1em; border-radius: 3px; overflow-x: auto; }
-        .matching { color: #e53935; font-weight: bold; }
+        div.error { border-color: #e53935;
+                 border-width: 5px }
+        span.error { color: #e53935; font-weight: bold;}
+        pre { padding: 1em; border-radius: 3px; overflow-x: auto; }
         .meta { color: #888; font-size: 0.9em; }
     </style>
 </head>
@@ -25,18 +26,24 @@
     </div>
     {{#each results}}
         <div class="check">
-            <h2>Check: {{check}}</h2>
+            <h2>{{check}}</h2>
 
-            <h3>Fixtures</h3>
             {{#each checkresults}}
                 <div class="fixture {{#if compliant}}compliant{{else}}flagged{{/if}} {{#if error}}error{{/if}}">
                     <div>
                         <strong>{{#if compliant}}Compliant{{else}}Flagged{{/if}}</strong>
-                        {{#if error}}<span class="matching">❌ Error</span>{{/if}}
+                        {{#if error}}<span class="error">❌ Error</span>{{/if}}
                     </div>
                     <div>
                         <pre>{{{html}}}</pre>
                     </div>
+
+                    {{#with matching.[0]}}<div class="meta"> 
+                        ({{#with Link}}<a href="{{.}}">{{/with}}{{Severity}}{{#if Link}}</a>{{/if}})
+                        {{Message}}
+                        {{Description}}
+                    </div>{{/with}}
+
                 </div>
             {{/each}}
         </div>

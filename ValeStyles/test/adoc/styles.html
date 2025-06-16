@@ -11,9 +11,10 @@
         .fixture { border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 5px; }
         .compliant { background: #e8f5e9; }
         .flagged { background: #ffebee; }
-        .error { border-color: #e53935; }
-        pre { background: #f4f4f4; padding: 1em; border-radius: 3px; overflow-x: auto; }
-        .matching { color: #e53935; font-weight: bold; }
+        div.error { border-color: #e53935;
+                 border-width: 5px }
+        span.error { color: #e53935; font-weight: bold;}
+        pre { padding: 1em; border-radius: 3px; overflow-x: auto; }
         .meta { color: #888; font-size: 0.9em; }
     </style>
 </head>
@@ -24,9 +25,8 @@
         <div>Node.js version: 22.16.0</div>
     </div>
         <div class="check">
-            <h2>Check: Couchbase.An</h2>
+            <h2>Couchbase.An</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -35,6 +35,13 @@
                     <div>
                         <pre>This is <mark>a example</mark> of incorrect usage.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -44,6 +51,13 @@
                     <div>
                         <pre>She wrote <mark>a email</mark> to the team.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -53,6 +67,13 @@
                     <div>
                         <pre>He found <mark>a unusual</mark> error in the logs.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -62,6 +83,13 @@
                     <div>
                         <pre>We need <mark>a update</mark> before release.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -71,6 +99,13 @@
                     <div>
                         <pre>Please submit <mark>a application</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -80,6 +115,9 @@
                     <div>
                         <pre>This is an example of correct usage.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -89,6 +127,9 @@
                     <div>
                         <pre>She wrote an email to the team.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -98,6 +139,9 @@
                     <div>
                         <pre>He found an unusual error in the logs.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -107,6 +151,9 @@
                     <div>
                         <pre>We need an update before release.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -116,12 +163,14 @@
                     <div>
                         <pre>Please submit an application.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.App</h2>
+            <h2>Couchbase.App</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -130,6 +179,13 @@
                     <div>
                         <pre>Please open the <mark>app </mark>to continue.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -139,6 +195,13 @@
                     <div>
                         <pre>The <mark>app </mark>crashed unexpectedly.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -148,6 +211,13 @@
                     <div>
                         <pre>She downloaded the <mark>app </mark>from the store.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -157,6 +227,13 @@
                     <div>
                         <pre>He deleted the <mark>app </mark>by mistake.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -166,6 +243,13 @@
                     <div>
                         <pre>We updated the <mark>app </mark>yesterday.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -175,6 +259,9 @@
                     <div>
                         <pre>Please open the application to continue.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -184,6 +271,9 @@
                     <div>
                         <pre>The application crashed unexpectedly.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -193,6 +283,9 @@
                     <div>
                         <pre>She downloaded the application from the store.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -202,6 +295,9 @@
                     <div>
                         <pre>He deleted the application by mistake.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -211,12 +307,14 @@
                     <div>
                         <pre>We updated the application yesterday.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Bold</h2>
+            <h2>Couchbase.Bold</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -225,6 +323,13 @@
                     <div>
                         <pre>This is <mark>*bold*</mark> text using asterisks.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/bold.html">suggestion</a>)
+                        Did you follow the guidelines for bold font?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -234,6 +339,13 @@
                     <div>
                         <pre>Please click the <mark>*Save*</mark> button.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/bold.html">suggestion</a>)
+                        Did you follow the guidelines for bold font?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -243,6 +355,13 @@
                     <div>
                         <pre>Use <mark>*important*</mark> for emphasis.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/bold.html">suggestion</a>)
+                        Did you follow the guidelines for bold font?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -252,6 +371,9 @@
                     <div>
                         <pre>This is normal text.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -261,6 +383,9 @@
                     <div>
                         <pre>Please click the btn:[Save] button.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -270,12 +395,14 @@
                     <div>
                         <pre>Use _important_ for emphasis.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.ButtonMacro</h2>
+            <h2>Couchbase.ButtonMacro</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -284,6 +411,13 @@
                     <div>
                         <pre>Click the <mark>btn:[Save]</mark> button to continue.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">suggestion</a>)
+                        Did you follow the guidelines for the button macro?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -293,6 +427,13 @@
                     <div>
                         <pre>Press the <mark>btn:[Cancel]</mark> button to exit.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">suggestion</a>)
+                        Did you follow the guidelines for the button macro?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -302,12 +443,18 @@
                     <div>
                         <pre>Select the <mark>btn:[Submit]</mark> button to proceed.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">suggestion</a>)
+                        Did you follow the guidelines for the button macro?
+                        
+                    </div>
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Checkbox</h2>
+            <h2>Couchbase.Checkbox</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -316,6 +463,13 @@
                     <div>
                         <pre>Select the <mark>checkbox</mark> to agree.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;checkbox&#x27;. Just use the label from the UI. Add &#x27;click&#x27; or &#x27;clear&#x27; as needed.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -325,6 +479,13 @@
                     <div>
                         <pre>Tick the OK <mark>check box</mark> if you accept.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;check box&#x27;. Just use the label from the UI. Add &#x27;click&#x27; or &#x27;clear&#x27; as needed.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -334,6 +495,9 @@
                     <div>
                         <pre>Select &quot;OK&quot; to accept.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -343,12 +507,14 @@
                     <div>
                         <pre>Check &quot;I agree&quot; to continue.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.CodeCallouts</h2>
+            <h2>Couchbase.CodeCallouts</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -364,6 +530,13 @@ public class Example { // &lt;1&gt;
 <mark>&lt;1&gt;</mark> This is a code callout.
 </pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/examples.html#explaining-code-examples">error</a>)
+                        Don&#x27;t use code callouts. Break up your code samples or use code comments, instead.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -378,12 +551,14 @@ public class Example {
 First we declare the class `Example`.
 </pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.ComplexContractions</h2>
+            <h2>Couchbase.ComplexContractions</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -392,6 +567,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>What&#39;ll</mark> become of the database?</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Do not use complex contractions like &#x27;What&#x27;ll&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -401,6 +583,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>We <mark>must&#39;ve</mark> missed the deadline.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Do not use complex contractions like &#x27;must&#x27;ve&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -410,6 +599,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>We <mark>would&#39;ve</mark> liked to help you.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Do not use complex contractions like &#x27;would&#x27;ve&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -419,6 +615,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>You shouldn&#39;t use contractions in formal documentation... but we do.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -428,6 +627,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>They can&#39;t access the database.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -437,12 +639,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>We won&#39;t support this feature.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Contractions</h2>
+            <h2>Couchbase.Contractions</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -451,6 +655,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>It is</mark> important to follow the guidelines.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;it&#x27;s&#x27; instead of &#x27;It is&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -460,6 +671,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>How is</mark> this feature used?</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;how&#x27;s&#x27; instead of &#x27;How is&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -469,6 +687,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>That is</mark> not supported.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;that&#x27;s&#x27; instead of &#x27;That is&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -478,6 +703,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>They are</mark> working on the fix.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;they&#x27;re&#x27; instead of &#x27;They are&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -487,6 +719,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>We are</mark> planning a release.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;we&#x27;re&#x27; instead of &#x27;We are&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -496,6 +735,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>What is</mark> the status?</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;what&#x27;s&#x27; instead of &#x27;What is&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -505,6 +751,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Where is</mark> the documentation?</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;where&#x27;s&#x27; instead of &#x27;Where is&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -514,6 +767,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Who is</mark> responsible for this?</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;who&#x27;s&#x27; instead of &#x27;Who is&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -523,6 +783,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>You are</mark> required to sign in.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;you&#x27;re&#x27; instead of &#x27;You are&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -532,6 +799,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>You had</mark> better check the logs.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;you&#x27;d&#x27; instead of &#x27;You had&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -541,6 +815,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>You will</mark> need to update your client.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;you&#x27;ll&#x27; instead of &#x27;You will&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -550,6 +831,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>It&#39;s important to follow the guidelines.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -559,6 +843,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>How&#39;s this feature used?</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -568,6 +855,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>That&#39;s not supported.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -577,6 +867,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>They&#39;re working on the fix.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -586,6 +879,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>We&#39;re planning a release.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -595,6 +891,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>What&#39;s the status?</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -604,6 +903,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Where&#39;s the documentation?</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -613,6 +915,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Who&#39;s responsible for this?</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -622,6 +927,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>You&#39;re required to sign in.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -631,6 +939,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>You&#39;d better check the logs.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -640,12 +951,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>You&#39;ll need to update your client.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.CouchbaseAutoOp</h2>
+            <h2>Couchbase.CouchbaseAutoOp</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -654,6 +967,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The <mark>Operator</mark> manages the cluster.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Autonomous Operator) first.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -663,15 +983,25 @@ First we declare the class `Example`.
                     <div>
                         <pre>Upgrade the <mark>Operator</mark> to the latest version.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Autonomous Operator) first.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>The Operator supports rolling upgrades. We call it the Couchbase Autonomous Operator.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -681,12 +1011,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Couchbase Autonomous Operator does everything. For example, the Operator manages the cluster.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.CouchbaseServerComm</h2>
+            <h2>Couchbase.CouchbaseServerComm</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -695,6 +1027,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>You can download <mark>Community Edition</mark> from our website.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Server Community Edition) first.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -704,6 +1043,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The <mark>Community Edition</mark> is free to use.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Server Community Edition) first.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -713,6 +1059,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>You can download Couchbase Server Community Edition from our website.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -722,12 +1071,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>The Couchbase Server Community Edition is free to use.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.CouchbaseServerWebConsole</h2>
+            <h2>Couchbase.CouchbaseServerWebConsole</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -736,6 +1087,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>You can access the <mark>Web Console</mark> to manage your cluster.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Server Web Console) first.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -745,6 +1103,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The <mark>Web Console</mark> provides a user-friendly interface.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Server Web Console) first.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -754,6 +1119,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>You can access the Couchbase Server Web Console to manage your cluster.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -763,12 +1131,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>The Couchbase Server Web Console provides a user-friendly interface.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.DatePicker</h2>
+            <h2>Couchbase.DatePicker</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -777,6 +1147,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Select the <mark>Date Picker</mark> to choose a date.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t bold or capitalize &quot;date picker.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -786,6 +1163,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Click the <mark>*date picker*</mark> field.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t bold or capitalize &quot;date picker.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -795,6 +1179,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Select the date picker to choose a date.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -804,12 +1191,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Click the date picker field.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Dialogs</h2>
+            <h2>Couchbase.Dialogs</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -818,6 +1207,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>A <mark>Dialog</mark> will appear.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/dialogs.html">error</a>)
+                        Don&#x27;t bold or capitalize the word &quot;dialog&quot;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -827,6 +1223,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Click the <mark>*dialog*</mark> to continue.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/dialogs.html">error</a>)
+                        Don&#x27;t bold or capitalize the word &quot;dialog&quot;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -836,6 +1239,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The <mark>*dialog box*</mark> is displayed.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/dialogs.html">error</a>)
+                        Don&#x27;t bold or capitalize the word &quot;dialog&quot;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -845,6 +1255,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>A dialog will appear.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -854,6 +1267,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Click the dialog to continue.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -863,12 +1279,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>The dialog box is displayed.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.DirectionalLanguage</h2>
+            <h2>Couchbase.DirectionalLanguage</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -877,6 +1295,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Click the button on the <mark>left</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;left&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -886,6 +1311,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Scroll <mark>down</mark> to see more options.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;down&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -895,15 +1327,25 @@ First we declare the class `Example`.
                     <div>
                         <pre>The settings are <mark>below</mark> the menu.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;below&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Move up to the previous section.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -913,6 +1355,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The icon is <mark>above</mark> the text.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;above&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -922,6 +1371,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Click the first button.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -931,6 +1383,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Scroll to see more options.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -940,6 +1395,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>The settings are under the menu.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -949,6 +1407,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Return to the previous section.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -958,12 +1419,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>The icon is near the text.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Dropdown</h2>
+            <h2>Couchbase.Dropdown</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -972,6 +1435,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Select the <mark>drop-down</mark> to choose an option.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;dropdown&quot;, use &quot;list&quot;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -981,15 +1451,25 @@ First we declare the class `Example`.
                     <div>
                         <pre>Click the <mark>dropdown</mark> menu.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;dropdown&quot;, use &quot;list&quot;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Open the dropdowns list.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -999,12 +1479,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Choose the value from the list.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.FancyQuotes</h2>
+            <h2>Couchbase.FancyQuotes</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1013,6 +1495,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>He said, <mark>“</mark>This is a test.<mark>”</mark></pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Do not use &#x27;“&#x27;. Replace with regular quotes/apostrophes.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1022,6 +1511,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>She replied, <mark>‘</mark>Indeed it is.<mark>’</mark></pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Do not use &#x27;‘&#x27;. Replace with regular quotes/apostrophes.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1031,6 +1527,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The document uses <mark>“</mark>smart quotes<mark>”</mark> throughout.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Do not use &#x27;“&#x27;. Replace with regular quotes/apostrophes.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1040,6 +1543,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>He said, &quot;This is a test.&quot;</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1049,6 +1555,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>She replied, &#39;Indeed it is.&#39;</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1058,12 +1567,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>The document uses &quot;straight quotes&quot; throughout.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.HeadingFormatting</h2>
+            <h2>Couchbase.HeadingFormatting</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1072,6 +1583,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>= This is a *bold*</mark> heading.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t add formatting to headings.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1081,6 +1599,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>== This is an _italic_</mark> heading.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t add formatting to headings.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1090,12 +1615,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>= This heading has no formatting.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Headings</h2>
+            <h2>Couchbase.Headings</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1104,6 +1631,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>= <mark>introduction</mark></pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        &#x27;introduction&#x27; should use title-style capitalization.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1113,6 +1647,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>== <mark>This does not use title case</mark></pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        &#x27;This does not use title case&#x27; should use title-style capitalization.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1122,6 +1663,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>= Introduction</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1131,38 +1675,49 @@ First we declare the class `Example`.
                     <div>
                         <pre>== Heading in Title Case</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Italics</h2>
+            <h2>Couchbase.Italics</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>This is _italic_ text using underscores.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Please click the _Save_ button.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Use _important_ for emphasis.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1172,6 +1727,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is normal text.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1181,12 +1739,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Please click the btn:[Save] button.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.LessFewer</h2>
+            <h2>Couchbase.LessFewer</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1195,15 +1755,25 @@ First we declare the class `Example`.
                     <div>
                         <pre>There are <mark>less errors</mark> in this version.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>We need less people on the project.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1213,6 +1783,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>She has <mark>less tasks</mark> to complete.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1222,6 +1799,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The server has <mark>less connections</mark> now.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1231,6 +1815,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>There are fewer errors in this version.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1240,6 +1827,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>We need fewer people on the project.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1249,6 +1839,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>She has fewer tasks to complete.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1258,56 +1851,73 @@ First we declare the class `Example`.
                     <div>
                         <pre>The server has fewer connections now.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Link</h2>
+            <h2>Couchbase.Link</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>&lt;&lt;link,Click the Info link&gt;&gt; to learn more.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Click &lt;&lt;link,the Info link&gt;&gt; to learn more.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Click &lt;&lt;link,here&gt;&gt; for more information.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>For more information, see &lt;&lt;link,this link&gt;&gt;.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Visit &lt;&lt;link,the following link&gt;&gt; for details.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1317,6 +1927,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Learn more about &lt;&lt;link,this feature&gt;&gt;.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1326,6 +1939,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>For more information, see the &lt;&lt;link,documentation&gt;&gt;.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1335,12 +1951,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Visit the &lt;&lt;link,documentation&gt;&gt; for details.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Monospace</h2>
+            <h2>Couchbase.Monospace</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1349,6 +1967,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is <mark>`monospace`</mark> text.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/monospace-highlight.html">suggestion</a>)
+                        Did you follow the guidelines for monospace font?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1358,12 +1983,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>No monospace here.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.NegativeContractions</h2>
+            <h2>Couchbase.NegativeContractions</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1372,6 +1999,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>You <mark>can&#39;t</mark> access this feature.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;cannot&#x27; instead of &#x27;can&#x27;t&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1381,6 +2015,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>They <mark>don&#39;t</mark> have permission.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;do not&#x27; instead of &#x27;don&#x27;t&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1390,6 +2031,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>We <mark>won&#39;t</mark> support this version.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;will not&#x27; instead of &#x27;won&#x27;t&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1399,6 +2047,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>She <mark>isn&#39;t</mark> available right now.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;is not&#x27; instead of &#x27;isn&#x27;t&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1408,6 +2063,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>He <mark>hasn&#39;t</mark> finished the task.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;has not&#x27; instead of &#x27;hasn&#x27;t&#x27;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1417,6 +2079,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>You cannot access this feature.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1426,6 +2091,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>They do not have permission.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1435,6 +2103,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>We will not support this version.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1444,6 +2115,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>She is not available right now.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1453,12 +2127,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>He has not finished the task.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.NoteThat</h2>
+            <h2>Couchbase.NoteThat</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1467,6 +2143,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Note that</mark> you must restart the server.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;note that.&#x27; Convert to an actual NOTE, or don&#x27;t use it at all.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1476,6 +2159,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Note that</mark> this feature is experimental.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;note that.&#x27; Convert to an actual NOTE, or don&#x27;t use it at all.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1485,6 +2175,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Note that</mark> backups are not automatic.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;note that.&#x27; Convert to an actual NOTE, or don&#x27;t use it at all.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1494,6 +2191,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>You must restart the server.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1503,6 +2203,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>This feature is experimental.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1512,12 +2215,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>NOTE: Backups are not automatic.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Please</h2>
+            <h2>Couchbase.Please</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1526,6 +2231,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Please</mark> refer to the documentation for more information.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Avoid using &quot;Please&quot; as much as possible. Only use it when asking for something that inconveniences the user.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1535,6 +2247,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Please</mark> ensure you have saved your work.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Avoid using &quot;Please&quot; as much as possible. Only use it when asking for something that inconveniences the user.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1544,6 +2263,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Please</mark> contact support if you need help.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Avoid using &quot;Please&quot; as much as possible. Only use it when asking for something that inconveniences the user.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1553,6 +2279,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Refer to the documentation for more information.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1562,6 +2291,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Ensure you have saved your work.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1571,12 +2303,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Contact support if you need help.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Quotations</h2>
+            <h2>Couchbase.Quotations</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1585,6 +2319,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>The term <mark>&quot;bucket&quot;</mark> refers to a data container.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/quotation-marks.html">error</a>)
+                        Don&#x27;t use quotation marks to add emphasis.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1594,6 +2335,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>He clicked the <mark>&quot;Save&quot;</mark> button.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/quotation-marks.html">error</a>)
+                        Don&#x27;t use quotation marks to add emphasis.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1603,6 +2351,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Select the <mark>&quot;Settings&quot;</mark> option from the menu.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/quotation-marks.html">error</a>)
+                        Don&#x27;t use quotation marks to add emphasis.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1612,6 +2367,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>The term ‘bucket’ refers to a data container.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1621,6 +2379,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>He clicked the btn:[Save] button.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1630,20 +2391,25 @@ First we declare the class `Example`.
                     <div>
                         <pre>Select the _Settings_ option from the menu.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.ReadingLevel</h2>
+            <h2>Couchbase.ReadingLevel</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Utilizing multifaceted methodologies, the system orchestrates a plethora of functionalities to facilitate seamless interoperability among disparate modules.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1653,6 +2419,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>The system uses many methods to help different modules work together.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1662,12 +2431,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>This change means we need to review how things work.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.RepeatedSpace</h2>
+            <h2>Couchbase.RepeatedSpace</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1676,6 +2447,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>There   are<mark>   </mark>multiple<mark>   </mark>spaces<mark>   </mark>here.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Did you mean to add extra spaces?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1685,6 +2463,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>Check  for<mark>  </mark>repeated<mark>  </mark>spaces.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Did you mean to add extra spaces?
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1694,6 +2479,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>This sentence has one space between words.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1703,12 +2491,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Sentences with {attributes} should not be flagged.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.RepeatedWord</h2>
+            <h2>Couchbase.RepeatedWord</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1717,15 +2507,25 @@ First we declare the class `Example`.
                     <div>
                         <pre>This <mark>is is</mark> a repeated word.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        &#x27;is&#x27; is repeated!
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>Please please check the document.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1735,6 +2535,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>He said <mark>that that</mark> it was fine.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        &#x27;that&#x27; is repeated!
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1744,6 +2551,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is a sentence without repeated words.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1753,6 +2563,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>Please check the document.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1762,12 +2575,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>He said that it was fine.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.RunOn</h2>
+            <h2>Couchbase.RunOn</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1776,6 +2591,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>This could be a run on sentence<mark>,</mark> because it has many commas, so confuses people, don&#39;t you think?</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/commas.html">warning</a>)
+                        This might be a run-on sentence (more than 2 commas).
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1785,12 +2607,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Sentences with up to two commas are fine, but no more than that, I beg you.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.SQL</h2>
+            <h2>Couchbase.SQL</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1799,6 +2623,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is <mark>an SQL++ </mark>query.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &quot;a SQL++,&quot; not &quot;an SQL++&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1808,12 +2639,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is a SQL++ query.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.See</h2>
+            <h2>Couchbase.See</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1822,6 +2655,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Refer to http://foo.bar</mark> for more details.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://developers.google.com/style/link-text">warning</a>)
+                        Use &quot;see&quot; for links.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1831,6 +2671,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>Refer to https://foo.bar</mark> for more details.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://developers.google.com/style/link-text">warning</a>)
+                        Use &quot;see&quot; for links.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1840,6 +2687,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>See http://foo.bar for more details.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1849,12 +2699,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>See https://foo.bar for more details.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Semi-Colons</h2>
+            <h2>Couchbase.Semi-Colons</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1863,6 +2715,13 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is a sentence<mark>;</mark> and here is another clause.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/colons.html">warning</a>)
+                        Try to avoid using a semi-colon. Follow the style guide guidance.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1872,12 +2731,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is a sentence, and here is another clause.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.SentenceLength</h2>
+            <h2>Couchbase.SentenceLength</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1886,6 +2747,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>This</mark> sentence is far too long because it contains many clauses, making it difficult for readers to follow the main point, and therefore it should be rewritten to improve clarity and readability.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (suggestion)
+                        Try to keep sentences under 25 words.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1895,6 +2763,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>This sentence is clear and concise.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1904,12 +2775,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Rewrite long sentences to improve clarity.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Sidebars</h2>
+            <h2>Couchbase.Sidebars</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1921,6 +2794,13 @@ First we declare the class `Example`.
 <mark>****
 </mark></pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/sidebars.html">error</a>)
+                        Don&#x27;t use sidebars.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -1930,6 +2810,13 @@ First we declare the class `Example`.
                     <div>
                         <pre><mark>[sidebar]</mark></pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/sidebars.html">error</a>)
+                        Don&#x27;t use sidebars.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1939,6 +2826,9 @@ First we declare the class `Example`.
                     <div>
                         <pre>This is a regular paragraph, not a sidebar.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1948,12 +2838,14 @@ First we declare the class `Example`.
                     <div>
                         <pre>Use sidebars only when necessary and keep them concise.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.StackedHeadings</h2>
+            <h2>Couchbase.StackedHeadings</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1966,6 +2858,13 @@ First we declare the class `Example`.
 == Heading 2
 </pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        You can&#x27;t have two headings with no content in between.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -1981,12 +2880,14 @@ Some content before the second heading
 == Heading 2
 </pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Terminology</h2>
+            <h2>Couchbase.Terminology</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -1995,6 +2896,13 @@ Some content before the second heading
                     <div>
                         <pre>This project uses <mark>dotnet</mark> for development.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;.NET&#x27;, not &#x27;dotnet&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2004,6 +2912,13 @@ Some content before the second heading
                     <div>
                         <pre>Please add the <mark>adaptor</mark> to your system.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;adapter&#x27;, not &#x27;adaptor&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2013,6 +2928,13 @@ Some content before the second heading
                     <div>
                         <pre>We use the <mark>whitelist</mark> to control access.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;Allowlist&#x27;, not &#x27;whitelist&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2022,6 +2944,13 @@ Some content before the second heading
                     <div>
                         <pre>The <mark>code base</mark> is large.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;codebase&#x27;, not &#x27;code base&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2031,6 +2960,13 @@ Some content before the second heading
                     <div>
                         <pre>Refer to the <mark>data center</mark> documentation.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;datacenter&#x27;, not &#x27;data center&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2040,6 +2976,13 @@ Some content before the second heading
                     <div>
                         <pre>She used the <mark>plugin</mark> for integration.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;plug-in&#x27;, not &#x27;plugin&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2049,6 +2992,13 @@ Some content before the second heading
                     <div>
                         <pre>The <mark>master</mark> node is down.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;primary&#x27;, not &#x27;master&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2058,6 +3008,13 @@ Some content before the second heading
                     <div>
                         <pre>He prefers to <mark>utilize</mark> this feature.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;use|using&#x27;, not &#x27;utilize&#x27;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2067,6 +3024,9 @@ Some content before the second heading
                     <div>
                         <pre>This project uses .NET for development.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2076,6 +3036,9 @@ Some content before the second heading
                     <div>
                         <pre>Please add the adapter to your system.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2085,6 +3048,9 @@ Some content before the second heading
                     <div>
                         <pre>We use the Allowlist to control access.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2094,6 +3060,9 @@ Some content before the second heading
                     <div>
                         <pre>The codebase is large.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2103,6 +3072,9 @@ Some content before the second heading
                     <div>
                         <pre>Refer to the datacenter documentation.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2112,6 +3084,9 @@ Some content before the second heading
                     <div>
                         <pre>She used the plug-in for integration.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2121,6 +3096,9 @@ Some content before the second heading
                     <div>
                         <pre>The primary node is down.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2130,12 +3108,14 @@ Some content before the second heading
                     <div>
                         <pre>He prefers to use this feature.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Textbox</h2>
+            <h2>Couchbase.Textbox</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -2144,6 +3124,13 @@ Some content before the second heading
                     <div>
                         <pre>Enter your name in the <mark>textbox</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;textbox&quot;, use &quot;field&quot;. If the user can make a selection in the field, use &quot;box&quot;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2153,6 +3140,13 @@ Some content before the second heading
                     <div>
                         <pre>Click the <mark>text box</mark> to start typing.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;textbox&quot;, use &quot;field&quot;. If the user can make a selection in the field, use &quot;box&quot;.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2162,6 +3156,9 @@ Some content before the second heading
                     <div>
                         <pre>Enter your name in the field.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2171,12 +3168,14 @@ Some content before the second heading
                     <div>
                         <pre>Click the box to start typing.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.ThereIs</h2>
+            <h2>Couchbase.ThereIs</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -2185,6 +3184,13 @@ Some content before the second heading
                     <div>
                         <pre><mark>There is</mark> a problem with the configuration.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2194,6 +3200,13 @@ Some content before the second heading
                     <div>
                         <pre><mark>There is</mark> an error in the logs.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2203,6 +3216,13 @@ Some content before the second heading
                     <div>
                         <pre><mark>There is</mark> a need for more testing.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2212,6 +3232,13 @@ Some content before the second heading
                     <div>
                         <pre><mark>There is</mark> a button you can click.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2221,6 +3248,9 @@ Some content before the second heading
                     <div>
                         <pre>A problem exists with the configuration.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2230,6 +3260,9 @@ Some content before the second heading
                     <div>
                         <pre>An error appears in the logs.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2239,6 +3272,9 @@ Some content before the second heading
                     <div>
                         <pre>More testing is needed.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2248,20 +3284,25 @@ Some content before the second heading
                     <div>
                         <pre>You can click the button.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.UnexplainedAcronym</h2>
+            <h2>Couchbase.UnexplainedAcronym</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="matching">❌ Error</span>
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
                         <pre>The HFE is not responding.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2271,12 +3312,14 @@ Some content before the second heading
                     <div>
                         <pre>The Hyperspace Frobnication Engine (HFE) is not responding.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.VentilatedProse</h2>
+            <h2>Couchbase.VentilatedProse</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -2285,6 +3328,13 @@ Some content before the second heading
                     <div>
                         <pre>This paragraph contains multiple sentences without any line break<mark>s. I</mark>t makes the text harder to read and maintain, especially in documentation where each sentence should start on a new line.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use ventilated prose. Start every sentence on a new line.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2297,12 +3347,14 @@ So is this one.
 Each sentence starts on a new line for clarity.
 </pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Versions</h2>
+            <h2>Couchbase.Versions</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -2311,6 +3363,13 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>Use version 6.0 or <mark>higher</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;later&#x27;, not &#x27;higher&#x27;, when talking about versions.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2320,6 +3379,13 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>Use version 6.0 or <mark>newer</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;later&#x27;, not &#x27;newer&#x27;, when talking about versions.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2329,6 +3395,13 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>Not available in version 5.0 or <mark>lower</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;earlier&#x27;, not &#x27;lower&#x27;, when talking about versions.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2338,6 +3411,13 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>Not available in version 5.0 or <mark>older</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;earlier&#x27;, not &#x27;older&#x27;, when talking about versions.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2347,6 +3427,9 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>Use version 6.0 or later.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2356,12 +3439,14 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>Not available in version 5.0 or earlier.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
         <div class="check">
-            <h2>Check: Couchbase.Wordy</h2>
+            <h2>Couchbase.Wordy</h2>
 
-            <h3>Fixtures</h3>
                 <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
@@ -2370,6 +3455,13 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre><mark>Combating</mark> the issue requires a comprehensive understanding of the underlying architecture.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use plain language. &#x27;Combating&#x27; is too wordy.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2379,6 +3471,13 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>We will <mark>streamline</mark> the process to enhance efficiency.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use plain language. &#x27;streamline&#x27; is too wordy.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture flagged ">
                     <div>
@@ -2388,6 +3487,13 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>It is ever <mark>thus</mark>.</pre>
                     </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use plain language. &#x27;thus&#x27; is too wordy.
+                        
+                    </div>
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2397,6 +3503,9 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>We need to understand the architecture to fix the issue.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2406,6 +3515,9 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>We will simplify the process to improve efficiency.</pre>
                     </div>
+
+                    
+
                 </div>
                 <div class="fixture compliant ">
                     <div>
@@ -2415,6 +3527,9 @@ Each sentence starts on a new line for clarity.
                     <div>
                         <pre>It&#39;s always like this.</pre>
                     </div>
+
+                    
+
                 </div>
         </div>
 </body>
