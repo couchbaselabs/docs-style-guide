@@ -4,4 +4,4 @@ level: error
 link: https://docs.couchbase.com/styleguide/ui-links.html
 
 tokens: 
-  - '[Cc]lick the .+ link .+'
+  - '(?i)\bclick the(?: \w+)* link\b'

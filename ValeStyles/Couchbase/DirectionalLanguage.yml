@@ -6,6 +6,7 @@ link: https://docs.couchbase.com/styleguide/directional-language.html
 tokens: 
   - left
   - right
+  - (?<=\bmove\s+)\bup\b
   - '(?<!(sign|set|back)\s)up(?!\sto)'
   - down
   - below

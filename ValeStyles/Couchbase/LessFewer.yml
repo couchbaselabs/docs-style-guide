@@ -4,3 +4,4 @@ message: Did you mean less or should this be fewer?
 link: https://docs.couchbase.com/styleguide/less-fewer.html
 tokens:
   - '[Ll]ess \b[a-zA-Z]+s\b'
+  - '[Ll]ess \bpeople\b'
