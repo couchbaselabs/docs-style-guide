@@ -64,15 +64,15 @@ function _highlight(lines, checks, highlights) {
         }
 
         highlights.push({
-            text: text.slice(start, end),
+            text: text.slice(start, end + 1),
             highlighted: true
         })
         if (end < text.length) {
             // If there is text after the highlighted span, 
             // return it to the `rest` array for further processing
             rest.unshift([
-                [line, col + end],
-                text.slice(end)
+                [line, col + end + 1],
+                text.slice(end + 1)
             ])
         }
 

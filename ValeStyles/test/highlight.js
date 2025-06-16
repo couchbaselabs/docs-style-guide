@@ -9,19 +9,19 @@ And some that aren't.`
 const checks = [
     {
         Line: 1,
+        Span: [11,14]
+    },
+    {
+        Line: 2,
         Span: [11,15]
     },
     {
         Line: 2,
-        Span: [11,16]
-    },
-    {
-        Line: 2,
-        Span: [22,28]
+        Span: [22,27]
     },
     {
         Line: 3,
-        Span: [5,9]
+        Span: [5,8]
     }
 ]
 it(`should highlight words correctly`, function () {

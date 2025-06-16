@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vale Style Test Results</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em auto; 
+        max-width: 800px;}
+        h1, h2, h3 { color: #2c3e50; }
+        .check { margin-bottom: 2em; }
+        .fixture { border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 5px; }
+        .compliant { background: #e8f5e9; }
+        .flagged { background: #ffebee; }
+        .error { border-color: #e53935; }
+        pre { background: #f4f4f4; padding: 1em; border-radius: 3px; overflow-x: auto; }
+        .matching { color: #e53935; font-weight: bold; }
+        .meta { color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Vale Style Test Results</h1>
+    <div class="meta">
+        <div>OS: {{os}}</div>
+        <div>Node.js version: {{version}}</div>
+    </div>
+    {{#each results}}
+        <div class="check">
+            <h2>Check: {{check}}</h2>
+
+            <h3>Fixtures</h3>
+            {{#each checkresults}}
+                <div class="fixture {{#if compliant}}compliant{{else}}flagged{{/if}} {{#if error}}error{{/if}}">
+                    <div>
+                        <strong>{{#if compliant}}Compliant{{else}}Flagged{{/if}}</strong>
+                        {{#if error}}<span class="matching">❌ Error</span>{{/if}}
+                    </div>
+                    <div>
+                        <pre>{{{html}}}</pre>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{/each}}
+</body>
+</html>

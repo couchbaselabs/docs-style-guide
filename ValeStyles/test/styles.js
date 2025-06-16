@@ -7,6 +7,8 @@ const { spawnSync } = require('node:child_process')
 const { escape } = require('lodash')
 const { before, describe } = require('node:test')
 const yaml = require('js-yaml')
+const handlebars = require('handlebars')
+const { highlight } = require('./lib/highlight.js')
 
 describe(`Report Vale tests against specific styles - output to file://${process.cwd()}/test/adoc/styles.html`, function () {
 
@@ -59,11 +61,13 @@ describe(`Report Vale tests against specific styles - output to file://${process
 
           const compliant = matching.length == 0
 
+          const html = highlight(fixture.content, matching)
+
           // xor the compliant flag with the matching results
           // to determine if there is an error
           const error = compliant != fixture.compliant
 
-          return {...fixture, matching, error}
+          return {...fixture, matching, error, html}
         })
         return {
           check,
@@ -72,6 +76,18 @@ describe(`Report Vale tests against specific styles - output to file://${process
         }
       }
     )
+
+    const template = handlebars.compile(
+      fs.readFileSync('test/adoc/styles.hbs', 'utf8'))
+    const html = template({
+      results,
+      cwd: process.cwd(),
+      os: os.platform(),
+      version: process.versions.node,
+    })
+    fs.writeFileSync(
+     'test/adoc/styles.html', html, 'utf8')
+
 
     for (const result of results) {
       const {check, config, checkresults} = result
