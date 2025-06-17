@@ -1433,20 +1433,16 @@ First we declare the class `Example`.
         <div class="check">
             <h2>Couchbase.Dropdown</h2>
 
-                <div class="fixture flagged ">
+                <div class="fixture flagged error">
                     <div>
                         <strong>Flagged</strong>
-                        
+                        <span class="error">❌ Error</span>
                     </div>
                     <div>
-                        <pre>Select the <mark>drop-down</mark> to choose an option.</pre>
+                        <pre>Select the drop-down to choose an option.</pre>
                     </div>
 
-                    <div class="meta"> 
-                        (error)
-                        Don&#x27;t use &quot;dropdown&quot;, use &quot;list&quot;.
-                        
-                    </div>
+                    
 
                 </div>
                 <div class="fixture flagged ">
@@ -1465,16 +1461,20 @@ First we declare the class `Example`.
                     </div>
 
                 </div>
-                <div class="fixture flagged error">
+                <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="error">❌ Error</span>
+                        
                     </div>
                     <div>
-                        <pre>Open the dropdowns list.</pre>
+                        <pre>Open the <mark>dropdowns</mark> list.</pre>
                     </div>
 
-                    
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;dropdown&quot;, use &quot;list&quot;.
+                        
+                    </div>
 
                 </div>
                 <div class="fixture compliant ">
@@ -1769,16 +1769,20 @@ First we declare the class `Example`.
                     </div>
 
                 </div>
-                <div class="fixture flagged error">
+                <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="error">❌ Error</span>
+                        
                     </div>
                     <div>
-                        <pre>We need less people on the project.</pre>
+                        <pre>We need <mark>less people</mark> on the project.</pre>
                     </div>
 
-                    
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
 
                 </div>
                 <div class="fixture flagged ">
@@ -1865,16 +1869,20 @@ First we declare the class `Example`.
         <div class="check">
             <h2>Couchbase.Link</h2>
 
-                <div class="fixture flagged error">
+                <div class="fixture flagged ">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="error">❌ Error</span>
+                        
                     </div>
                     <div>
-                        <pre>&lt;&lt;link,Click the Info link&gt;&gt; to learn more.</pre>
+                        <pre>&lt;&lt;link,<mark>Click the Info link</mark>&gt;&gt; to learn more.</pre>
                     </div>
 
-                    
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/ui-links.html">error</a>)
+                        Don&#x27;t describe a UI element as a &quot;link.&quot;
+                        
+                    </div>
 
                 </div>
                 <div class="fixture flagged error">
@@ -2496,90 +2504,6 @@ First we declare the class `Example`.
                     </div>
                     <div>
                         <pre>Sentences with {attributes} should not be flagged.</pre>
-                    </div>
-
-                    
-
-                </div>
-        </div>
-        <div class="check">
-            <h2>Couchbase.RepeatedWord</h2>
-
-                <div class="fixture flagged ">
-                    <div>
-                        <strong>Flagged</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>This <mark>is is</mark> a repeated word.</pre>
-                    </div>
-
-                    <div class="meta"> 
-                        (error)
-                        &#x27;is&#x27; is repeated!
-                        
-                    </div>
-
-                </div>
-                <div class="fixture flagged error">
-                    <div>
-                        <strong>Flagged</strong>
-                        <span class="error">❌ Error</span>
-                    </div>
-                    <div>
-                        <pre>Please please check the document.</pre>
-                    </div>
-
-                    
-
-                </div>
-                <div class="fixture flagged ">
-                    <div>
-                        <strong>Flagged</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>He said <mark>that that</mark> it was fine.</pre>
-                    </div>
-
-                    <div class="meta"> 
-                        (error)
-                        &#x27;that&#x27; is repeated!
-                        
-                    </div>
-
-                </div>
-                <div class="fixture compliant ">
-                    <div>
-                        <strong>Compliant</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>This is a sentence without repeated words.</pre>
-                    </div>
-
-                    
-
-                </div>
-                <div class="fixture compliant ">
-                    <div>
-                        <strong>Compliant</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>Please check the document.</pre>
-                    </div>
-
-                    
-
-                </div>
-                <div class="fixture compliant ">
-                    <div>
-                        <strong>Compliant</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>He said that it was fine.</pre>
                     </div>
 
                     
