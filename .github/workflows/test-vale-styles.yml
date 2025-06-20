@@ -1,0 +1,23 @@
+name: Vale npm tests
+
+on:
+  pull_request:
+    paths: 
+      - ValeStyles/**
+
+jobs:
+  npm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: npm test
+        working-directory: ./ValeStyles
+        run: |
+          npm ci
+          npm test
