@@ -24,6 +24,13 @@ jobs:
         with:
           node-version: 22
 
+      - name: diagnose Vale
+        run: |
+          vale -v
+          vale ls-dirs
+          vale ls-config
+          vale ls-vars
+
       - name: npm test
         working-directory: ./ValeStyles
         run: |
