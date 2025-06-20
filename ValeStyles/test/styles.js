@@ -56,7 +56,7 @@ describe(`Report Vale tests against specific styles - output to file://${process
 
     const diag = spawnSync(
         'vale',  ['ls-config'])
-    console.log(diag.stdout)
+    console.log(diag.stdout.toString())
 
 
     const results = tests.map(
