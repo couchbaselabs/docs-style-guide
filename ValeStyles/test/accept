@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -exu -o pipefail
+
+for actual in test/fixtures/*.actual
+do
+  cp $actual ${actual%.actual}.expected
+done

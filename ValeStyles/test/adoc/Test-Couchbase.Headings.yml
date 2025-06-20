@@ -1,0 +1,6 @@
+flag:
+  - adoc: = introduction
+  - adoc: == This does not use title case
+compliant:
+  - adoc: = Introduction
+  - adoc: == Heading in Title Case

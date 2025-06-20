@@ -1,8 +1,9 @@
 extends: existence
 message: Don't use italics. Find another way to add emphasis.
-level: error
 link: https://docs.couchbase.com/styleguide/italic.html
-nonword: true
 scope: raw
+nonword: true
+level: error
+
 tokens:
-  - '_\b.+\b_'
+  - '(?<!`)\b_\w.*?_\b(?!`)'

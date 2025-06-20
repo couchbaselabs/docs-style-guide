@@ -1,0 +1,50 @@
+[
+  {
+    "Check": "Couchbase.Headings",
+    "Description": "",
+    "Link": "",
+    "Message": "'This is a basic test' should use title-style capitalization.",
+    "Severity": "warning",
+    "Match": "This is a basic test"
+  },
+  {
+    "Check": "Couchbase.An",
+    "Description": "",
+    "Link": "https://docs.couchbase.com/styleguide/articles.html",
+    "Message": "Use \"an,\" not \"a.\"",
+    "Severity": "error",
+    "Match": "a aardvark"
+  },
+  {
+    "Check": "Couchbase.VentilatedProse",
+    "Description": "",
+    "Link": "",
+    "Message": "Use ventilated prose. Start every sentence on a new line.",
+    "Severity": "warning",
+    "Match": "k. H"
+  },
+  {
+    "Check": "Vale.Terms",
+    "Description": "",
+    "Link": "",
+    "Message": "Use 'Couchbase' instead of 'couchbase'.",
+    "Severity": "error",
+    "Match": "couchbase"
+  },
+  {
+    "Check": "Couchbase.Contractions",
+    "Description": "",
+    "Link": "https://docs.couchbase.com/styleguide/contractions.html",
+    "Message": "Use 'you're' instead of 'You are'.",
+    "Severity": "error",
+    "Match": "You are"
+  },
+  {
+    "Check": "Google.Exclamation",
+    "Description": "",
+    "Link": "https://developers.google.com/style/exclamation-points",
+    "Message": "Don't use exclamation points in text.",
+    "Severity": "error",
+    "Match": "s!"
+  }
+]
