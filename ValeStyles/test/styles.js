@@ -51,7 +51,13 @@ describe(`Report Vale tests against specific styles - output to file://${process
     }
 
     let valeout = JSON.parse(vale.stdout)
-    console.log(valeout, tmp, fs.readdirSync(tmp))
+    console.log(valeout, tmp, fs.readdirSync(tmp),
+      fs.readFileSync(`${tmp}/Couchbase.An-compliant-0.txt`, 'utf8'))
+
+    const diag = spawnSync(
+        'vale',  ['ls-config'])
+    console.log(diag.stdout)
+
 
     const results = tests.map(
       function([check, config, fixtures]) {
