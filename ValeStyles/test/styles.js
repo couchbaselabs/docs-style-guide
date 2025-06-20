@@ -51,7 +51,7 @@ describe(`Report Vale tests against specific styles - output to file://${process
     }
 
     let valeout = JSON.parse(vale.stdout)
-    console.log(valeout, tmp)
+    console.log(valeout, tmp, fs.readdirSync(tmp))
 
     const results = tests.map(
       function([check, config, fixtures]) {
