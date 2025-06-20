@@ -6,4 +6,4 @@ nonword: true
 level: error
 
 tokens:
-  - '_\b.+\b_'
+  - '(?<!`)\b_\w.*?_\b(?!`)'
