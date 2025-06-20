@@ -25,6 +25,7 @@ jobs:
           node-version: 22
 
       - name: diagnose Vale
+        working-directory: ./ValeStyles
         run: |
           vale -v
           vale ls-dirs
