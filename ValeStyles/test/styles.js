@@ -67,7 +67,7 @@ describe(`Report Vale tests against specific styles - output to file://${process
           // to determine if there is an error
           const error = compliant != fixture.compliant
 
-          return {...fixture, matching, error, html}
+          return {...config, ...fixture, matching, error, html}
         })
         return {
           check,
@@ -93,8 +93,14 @@ describe(`Report Vale tests against specific styles - output to file://${process
       const {check, config, checkresults} = result
 
       describe(`Check ${check}`, function () {
+
+        if (config.todo) {
+          this.skip(`TODO: ${todo}`)
+        }
+
         for (const fixture of checkresults) {
           const {compliant, matching, path, content, error} = fixture
+          
           if (compliant) {
             ok(`${check} (compliant)`,
               function () {

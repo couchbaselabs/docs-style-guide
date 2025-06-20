@@ -9,6 +9,7 @@
         h1, h2, h3 { color: #2c3e50; }
         .check { margin-bottom: 2em; }
         .fixture { border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 5px; }
+        .todo { background: #fff3e0; border: 1px solid #ff9800; padding: 1em; border-radius: 5px; }
         .compliant { background: #e8f5e9; }
         .flagged { background: #ffebee; }
         div.error { border-color: #e53935;
@@ -34,8 +35,12 @@
         <div class="check">
             <h2>{{check}}</h2>
 
+            {{#with config.todo}}
+                <div class="todo">
+                    <blockquote><b>TODO:</b> {{.}}</blockquote>
+            {{/with}}
             {{#each checkresults}}
-                <div class="fixture {{#if compliant}}compliant{{else}}flagged{{/if}} {{#if error}}error{{/if}}">
+                <div class="fixture {{#if compliant}}compliant{{else}}flagged{{/if}} {{#if error}}error{{/if}} {{#if todo}}todo{{/if}}">
                     <div>
                         <strong>{{#if compliant}}Compliant{{else}}Flagged{{/if}}</strong>
                         {{#if error}}<span class="error">❌ Error</span>{{/if}}
@@ -52,6 +57,7 @@
 
                 </div>
             {{/each}}
+            {{#if config.todo}}</div>{{/if}}
         </div>
     {{/each}}
 </body>
