@@ -20,4 +20,6 @@ jobs:
         working-directory: ./ValeStyles
         run: |
           npm ci
+          pwd
+          ls
           npm test
