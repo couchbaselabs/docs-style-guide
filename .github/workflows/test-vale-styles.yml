@@ -9,6 +9,14 @@ jobs:
   npm-test:
     runs-on: ubuntu-latest
     steps:
+      - name: install asciidoctor
+        run: |
+          sudo apt-get install -y asciidoctor
+
+      - name: install vale
+        run: |
+          sudo snap install vale
+
       - name: checkout repo
         uses: actions/checkout@v4
 
