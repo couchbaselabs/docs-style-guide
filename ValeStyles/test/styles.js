@@ -36,6 +36,10 @@ describe(`Report Vale tests against specific styles - output to file://${process
       ]]
     })
 
+    vv = spawnSync(
+        'vale', [ '-v' ])
+    console.log(`Vale version: ${vv.stdout.toString()}`)  
+
     try {
       vale = spawnSync(
         'vale',
