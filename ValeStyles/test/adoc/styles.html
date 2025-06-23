@@ -3216,21 +3216,23 @@ Some content before the second heading
         <div class="check">
             <h2>Couchbase.UnexplainedAcronym</h2>
 
-                <div class="todo">
-                    <blockquote><b>TODO:</b> We don&#x27;t understand how the Vale conditional test works.</blockquote>
-                <div class="fixture flagged error todo">
+                <div class="fixture flagged  ">
                     <div>
                         <strong>Flagged</strong>
-                        <span class="error">❌ Error</span>
+                        
                     </div>
                     <div>
-                        <pre>The HFE is not responding.</pre>
+                        <pre>The <mark>HFE</mark> is not responding.</pre>
                     </div>
 
-                    
+                    <div class="meta"> 
+                        (<a href="https://developers.google.com/style/abbreviations">error</a>)
+                        &#x27;HFE&#x27; hasn&#x27;t been defined. Spell it out if it&#x27;s unfamiliar to the audience.
+                        
+                    </div>
 
                 </div>
-                <div class="fixture compliant  todo">
+                <div class="fixture compliant  ">
                     <div>
                         <strong>Compliant</strong>
                         
@@ -3242,7 +3244,21 @@ Some content before the second heading
                     
 
                 </div>
-            </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Let us look at the Hyperspace Frobnication Engine (HFE).
+The HFE is responsible for frobnicating the unobtanium in the engine.
+</pre>
+                    </div>
+
+                    
+
+                </div>
+            
         </div>
         <div class="check">
             <h2>Couchbase.VentilatedProse</h2>
