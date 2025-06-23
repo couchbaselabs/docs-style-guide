@@ -55,7 +55,7 @@ describe(`Report Vale tests against specific styles - output to file://${process
     }
 
     let valeout = JSON.parse(vale.stdout)
-    console.log(vale.stderr.toString())
+    console.log(vale.stderr.toString(), vale.stdout.toString())
     console.log(valeout, tmp, fs.readdirSync(tmp),
       fs.readFileSync(`${tmp}/Couchbase.An-compliant-0.txt`, 'utf8'))
 
