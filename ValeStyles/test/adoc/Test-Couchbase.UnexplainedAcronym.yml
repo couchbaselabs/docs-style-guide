@@ -1,5 +1,7 @@
-todo: We don't understand how the Vale conditional test works.
 flag:
   - The HFE is not responding.
 compliant:
   - The Hyperspace Frobnication Engine (HFE) is not responding.
+  - |
+    Let us look at the Hyperspace Frobnication Engine (HFE).
+    The HFE is responsible for frobnicating the unobtanium in the engine.
