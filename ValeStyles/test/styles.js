@@ -46,6 +46,7 @@ describe(`Report Vale tests against specific styles - output to file://${process
         [
           tmp,
           '--config', `${process.cwd()}/.vale.ini`,
+          '--no-global',
           '--output', 'JSON',
           '--minAlertLevel', 'suggestion',
         ],
