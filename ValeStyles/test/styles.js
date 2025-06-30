@@ -14,7 +14,8 @@ describe(`Report Vale tests against specific styles - output to file://${process
 
   before(function () {
 
-    const tmp = fs.mkdtempSync(`${os.tmpdir()}/vale-test-`)
+    const tmp = process.env['RUNNER_TEMP'] ||
+      fs.mkdtempSync(`${os.tmpdir()}/vale-test-`)
 
     const files = fs.readdirSync('test/adoc')
 
