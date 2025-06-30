@@ -37,3 +37,10 @@ jobs:
         run: |
           npm ci
           npm test
+
+      - name: Upload Vale HTML test
+        uses: actions/upload-artifact@v4
+        with:
+          name: Vale HTML test results
+          path: ValeStyles/test/adoc/styles.html
+          if-no-files-found: error
