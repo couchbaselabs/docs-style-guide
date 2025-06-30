@@ -14,6 +14,10 @@ describe(`Report Vale tests against specific styles - output to file://${process
 
   before(function () {
 
+    // On a Github hosted runner, the `mkdtempSync` directory is, bizarrely,
+    // created, writeable, and even readable, but somehow things Still Do
+    // Not Work. So we use the `RUNNER_TEMP` environment variable, which is
+    // Github's own temp directory, automatically created and managed for us.
     const tmp = process.env['RUNNER_TEMP'] ||
       fs.mkdtempSync(`${os.tmpdir()}/vale-test-`)
 
@@ -41,15 +45,11 @@ describe(`Report Vale tests against specific styles - output to file://${process
         'vale', [ '-v' ])
     console.log(`Vale version: ${vv.stdout.toString()}`)  
 
-    process.env['VALE_STYLES_PATH'] = process.cwd()
-
     try {
       vale = spawnSync(
         'vale',
         [
-          `${tmp}/Couchbase.An-flag-0.txt`,
-          '--config', `${process.cwd()}/.vale.ini`,
-          '--no-global',
+          tmp,
           '--output', 'JSON',
           '--minAlertLevel', 'suggestion',
         ],
