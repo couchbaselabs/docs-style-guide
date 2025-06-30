@@ -40,7 +40,7 @@ describe(`Report Vale tests against specific styles - output to file://${process
         'vale', [ '-v' ])
     console.log(`Vale version: ${vv.stdout.toString()}`)  
 
-    os.env.VALE_STYLES_PATH = process.cwd()
+    process.env['VALE_STYLES_PATH'] = process.cwd()
 
     try {
       vale = spawnSync(
