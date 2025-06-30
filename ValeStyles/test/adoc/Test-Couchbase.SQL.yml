@@ -1,0 +1,4 @@
+flag:
+  - This is an SQL++ query.
+compliant:
+  - This is a SQL++ query.

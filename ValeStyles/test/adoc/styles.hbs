@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vale Style Test Results</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em auto; 
+        max-width: 800px;}
+        h1, h2, h3 { color: #2c3e50; }
+        .check { margin-bottom: 2em; }
+        .fixture { border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 5px; }
+        .todo { background: #fff3e0; border: 1px solid #ff9800; padding: 1em; border-radius: 5px; }
+        .compliant { background: #e8f5e9; }
+        .flagged { background: #ffebee; }
+        div.error { border-color: #e53935;
+                 border-width: 5px }
+        span.error { color: #e53935; font-weight: bold;}
+        pre { 
+            background-color: cornsilk;
+            padding: 1em; 
+            margin: 1em;
+            border-radius: 6px; 
+            overflow-x: auto; }
+        .meta { color: #888; font-size: 0.9em; }
+        mark { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Vale Style Test Results</h1>
+    <div class="meta">
+        <div>OS: {{os}}</div>
+        <div>Node.js version: {{version}}</div>
+    </div>
+    {{#each results}}
+        <div class="check">
+            <h2>{{check}}</h2>
+
+            {{#with config.todo}}
+                <div class="todo">
+                    <blockquote><b>TODO:</b> {{.}}</blockquote>
+            {{/with}}
+            {{#each checkresults}}
+                <div class="fixture {{#if compliant}}compliant{{else}}flagged{{/if}} {{#if error}}error{{/if}} {{#if todo}}todo{{/if}}">
+                    <div>
+                        <strong>{{#if compliant}}Compliant{{else}}Flagged{{/if}}</strong>
+                        {{#if error}}<span class="error">❌ Error</span>{{/if}}
+                    </div>
+                    <div>
+                        <pre>{{{html}}}</pre>
+                    </div>
+
+                    {{#with matching.[0]}}<div class="meta"> 
+                        ({{#with Link}}<a href="{{.}}">{{/with}}{{Severity}}{{#if Link}}</a>{{/if}})
+                        {{Message}}
+                        {{Description}}
+                    </div>{{/with}}
+
+                </div>
+            {{/each}}
+            {{#if config.todo}}</div>{{/if}}
+        </div>
+    {{/each}}
+</body>
+</html>

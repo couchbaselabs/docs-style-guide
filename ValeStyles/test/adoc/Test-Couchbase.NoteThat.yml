@@ -1,0 +1,8 @@
+flag:
+  - Note that you must restart the server.
+  - Note that this feature is experimental.
+  - Note that backups are not automatic.
+compliant:
+  - You must restart the server.
+  - This feature is experimental.
+  - adoc: "NOTE: Backups are not automatic."
