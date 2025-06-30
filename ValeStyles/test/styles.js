@@ -46,7 +46,7 @@ describe(`Report Vale tests against specific styles - output to file://${process
       vale = spawnSync(
         'vale',
         [
-          `${tmp}/`,
+          `${tmp}/Couchbase.An-flag-0.txt`,
           '--config', `${process.cwd()}/.vale.ini`,
           '--no-global',
           '--output', 'JSON',
