@@ -14,10 +14,12 @@ describe(`Report Vale tests against specific styles - output to file://${process
 
   before(function () {
 
-    // On a Github hosted runner, the `mkdtempSync` directory is, bizarrely,
-    // created, writeable, and even readable, but somehow things Still Do
-    // Not Work. So we use the `RUNNER_TEMP` environment variable, which is
-    // Github's own temp directory, automatically created and managed for us.
+    // On a Github hosted runner, we can't use the OS created temp
+    // directory, because we installed Vale as a Snap package.
+    // Snap packages are not allowed to read the OS temp directory.
+    // 
+    // Handily, Github Actions provides a temp directory
+    // by default, so we can use that.
     const tmp = process.env['RUNNER_TEMP'] ||
       fs.mkdtempSync(`${os.tmpdir()}/vale-test-`)
 
@@ -60,15 +62,6 @@ describe(`Report Vale tests against specific styles - output to file://${process
     }
 
     let valeout = JSON.parse(vale.stdout)
-    console.log("DIAG", vale.stderr.toString(), vale.stdout.toString())
-    console.log(valeout, tmp, fs.readdirSync(tmp),
-      fs.readFileSync(`${tmp}/Couchbase.An-compliant-0.txt`, 'utf8'))
-
-    const diag = spawnSync(
-        'vale',  ['ls-config'])
-    console.log("DIAG", diag.stdout.toString())
-
-    console.log("PWD", process.cwd())
 
     const results = tests.map(
       function([check, config, fixtures]) {
