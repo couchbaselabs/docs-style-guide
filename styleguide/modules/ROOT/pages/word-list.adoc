@@ -95,6 +95,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | checkpoint | Write as one word. Don't add a hyphen.
 | cloud | Write in lowercase unless as part of a product name. 
 | cloud native | Use cloud native as the noun. Use cloud-native as the adjective.
+| cloud service provider (CSP) | Write in all lowercase. Make sure to include the acronym in brackets. Use the acronym for subsequent uses on a page. 
 | [[cluster]]cluster | Preferred term, if referring to Couchbase Server or Couchbase Capella operational or Columnar. We no longer use <<database,database>>.
 | Cluster Manager | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | codebase | Write as one word. Don't add a hyphen.

@@ -27,6 +27,7 @@ Columnar
 ConfigProviderBase
 Confluent Cloud
 cloud\.couchbase
+[Cc]loud service provider
 Couchbase Autonomous Operator
 Couchbase Backup Manager
 Couchbase Cluster Connection Protocol

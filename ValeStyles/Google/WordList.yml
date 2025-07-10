@@ -8,7 +8,7 @@ action:
 swap:
   '(?:API Console|dev|developer) key': API key
   '(?:cell ?phone|smart ?phone)': phone|mobile phone
-  'Cloud (?!Snapshot|Snapshots|Provider)': Google Cloud Platform|GCP
+  'Cloud (?!Snapshot|Snapshots|service)': Google Cloud Platform|GCP
   '(?:dev|developer|APIs) console': API console
   '(?:e-mail|Email|E-mail)': email
   '(?:file ?path|path ?name)': path
