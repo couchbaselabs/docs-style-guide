@@ -102,6 +102,7 @@ swap:
   '(?:touch-point|touch point)': touchpoint
   toward : towards
   '(?:utilize|utilizing)': use|using
+  '(?:Vector Search index|Vector Search indexes)': FTS Vector Index
   wish: want
   '(?:white paper|white-paper)': whitepaper
   yellow: amber
