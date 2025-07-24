@@ -1,8 +1,10 @@
 extends: substitution
-message: Use '%s', not '%s', when talking about versions.
+message: Use 'later' or 'earlier', when talking about versions.
 level: warning
 ignorecase: true
 
 swap: 
-  '(?:newer|higher)': later
-  '(?:older|lower)': earlier
+  'version (\d+(?:\.\d+){1,3}) (?:or newer|or higher)': later
+  '(?:newer|higher) versions?': later version
+  'version (\d+(?:\.\d+){1,3}) (?:or older|or lower)': earlier
+  '(?:older|lower) versions?': earlier version

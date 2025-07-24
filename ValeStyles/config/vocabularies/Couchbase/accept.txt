@@ -1,4 +1,5 @@
 \.NET
+[Aa]gentic
 Amazon cloud
 Amazon Managed Streaming for Apache Kafka 
 Amazon MSK
@@ -6,6 +7,7 @@ Amazon S3
 Analytics Service
 APAC
 API
+APIs
 App Services
 ASCII
 automatic schema discovery
@@ -90,6 +92,7 @@ Last Write Wins
 LWW
 LCB
 LDAP
+LLM
 MapReduce
 massively parallel processing
 MPP
