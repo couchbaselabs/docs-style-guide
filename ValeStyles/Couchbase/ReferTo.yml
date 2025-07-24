@@ -1,0 +1,8 @@
+extends: existence
+message: Introduce links with 'For more information, see {link}'.
+level: error
+# link: TBD
+
+tokens: 
+  - 'Refer to'
+  - 'For more details'
