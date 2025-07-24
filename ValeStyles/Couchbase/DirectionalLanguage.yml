@@ -8,7 +8,7 @@ tokens:
   - right
   - (?<=\bmove\s+)\bup\b
   - '(?<!(sign|set|back|signing|setting|backing)\s)up(?!\sto)'
-  - down
+  - '(?<!(shut)\s)down'
   - below
   - above
 # exceptions:
