@@ -7,7 +7,7 @@ tokens:
   - left
   - right
   - (?<=\bmove\s+)\bup\b
-  - '(?<!(sign|set|back)\s)up(?!\sto)'
+  - '(?<!(sign|set|back|signing|setting|backing)\s)up(?!\sto)'
   - down
   - below
   - above
