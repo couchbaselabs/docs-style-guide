@@ -1,0 +1,8 @@
+extends: existence
+message: When comparing or describing a value, use 'greater' or 'less'.
+level: warning
+link: https://docs.couchbase.com/styleguide/values.html
+
+tokens:
+  - '\b(?:above|below|higher|lower)\b\s+\d+(?:\.\d+)?'
+  - '\b(?:above|below|higher|lower)\b(?:\s+the|\s+than)?(?:\s+\w+){0,5}?\s+(?:limit|threshold|maximum|minimum|cap|ceiling|floor|boundary|cutoff)\b'
