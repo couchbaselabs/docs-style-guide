@@ -1,10 +1,11 @@
 = Numbers 
 
-Contrary to the https://developers.google.com/style/numbers[Google Style Guide^], we have decided to write out all numbers in the Couchbase Documentation. 
+Contrary to the https://developers.google.com/style/numbers[Google Style Guide^], Couchbase style writes all numbers, regardless of size, as numerals instead of words.
 
-Always use the numeral, no matter the size of the number. 
+Always use the numeral, no matter the size of the number.
 
 For example: 
 
 * `1 or more`
 * `2-day total`
+* `3-node cluster`

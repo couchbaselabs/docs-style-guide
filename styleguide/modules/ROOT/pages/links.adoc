@@ -1,8 +1,14 @@
 = Links
 
-Follow the https://developers.google.com/style/link-text[Google Developer Style Guide^]'s guidance on how to write link text. In general, make it clear where a user ends up after they click a link. 
+Follow the https://developers.google.com/style/link-text[Google Developer Style Guide^]'s guidance on how to write link text.
+In general, make it clear where a user ends up after they click a link.
 
-NOTE: This doesn't mean to just use the URL as the displayed link text. Try to write effective and useful link text for all links.
+NOTE: This does not mean to just use the URL as the displayed link text.
+Try to write effective and useful link text for all links.
+
+Introduce all links with `For more information, see {link}.`
+Do not use `Refer to`, `For more details`, or other constructions.
+If you need to use another construction, try to have a good justification for that specific use case, and still try to keep the `For x, see y` construction.
 
 Keep the following formatting and conventions in mind for <<internal>> and <<external>> in the Couchbase Documentation. 
 

@@ -1,0 +1,26 @@
+extends: existence
+message: Write all numbers as numerals.
+level: error
+link: https://docs.couchbase.com/styleguide/numbers.html
+
+tokens:
+  - one
+  - two
+  - three
+  - four
+  - five
+  - six
+  - seven
+  - eight
+  - nine
+  - ten
+  - eleven
+  - twelve
+  - thirteen
+  - fourteen
+  - fifteen
+  - sixteen
+  - seventeen
+  - eighteen
+  - nineteen
+  - twenty

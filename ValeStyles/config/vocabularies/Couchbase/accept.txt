@@ -40,6 +40,8 @@ Couchbase Monitoring and Observability Stack
 Couchbase Server
 Couchbase
 Couchstore
+CPU
+CPUs
 curl
 Database Change Protocol
 datacenter
@@ -84,6 +86,8 @@ Java
 JavaScript
 JIRA
 JSON
+JVM
+JVMs
 Kafka
 [Kk]eyspace
 Kroki
@@ -129,6 +133,7 @@ rack awareness
 RA
 RBAC
 Read Committed
+[Rr]ebalance
 [Rr]ebase
 [Rr]epositories
 [Rr]etryable
@@ -173,6 +178,7 @@ vBuckets
 VBucketServerMap
 Views Service
 [Vv]irtualization
+[Vv]irtualized
 vmstat
 VMware
 Vue

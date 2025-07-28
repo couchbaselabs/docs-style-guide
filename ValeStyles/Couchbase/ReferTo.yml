@@ -1,7 +1,7 @@
 extends: existence
 message: Introduce links with 'For more information, see {link}'.
 level: error
-# link: TBD
+link: https://docs.couchbase.com/styleguide/links.html
 
 tokens: 
   - 'Refer to'

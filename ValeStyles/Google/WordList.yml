@@ -21,8 +21,8 @@ swap:
   'Google (?:I\-O|IO)': Google I/O
   'tap (?:&|and) hold': touch & hold
   'un(?:check|select)': clear
-  above: preceding|later
-  '(?:to access|access the)': see|edit|find|use|view
+  #above: preceding|later
+  '(?:to access|access the)': see|edit|find|open|use|view
   account name: username
   action bar: app bar
   admin: administrator

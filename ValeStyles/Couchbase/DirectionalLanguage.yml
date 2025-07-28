@@ -6,11 +6,11 @@ link: https://docs.couchbase.com/styleguide/directional-language.html
 tokens: 
   - left
   - right
-  - (?<=\bmove\s+)\bup\b
+  - '(?<=\bmove\s+)\bup\b'
   - '(?<!(sign|set|back|signing|setting|backing)\s)up(?!\sto)'
   - '(?<!(shut)\s)down'
-  - below
-  - above
+  - '\b(?:above|below|over) the\b'
+  - 'is (?:above|below|over)\b'
 # exceptions:
 #   - '(?<=set\s)up'
 #   - 'up(?=\sto)'
