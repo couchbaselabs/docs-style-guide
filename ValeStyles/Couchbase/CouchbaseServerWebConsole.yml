@@ -1,7 +1,9 @@
-extends: conditional
-message: Use the full product name (Couchbase Server Web Console) first.
-level: error
-scope: text
-ignorecase: false
-first: \b(Web Console)\b
-second: (Couchbase Server )(Web Console)
+#extends: conditional
+#message: Use the full product name (Couchbase Server Web Console) first.
+#level: error
+#scope: text
+#ignorecase: false
+#first: \b(Web Console)\b
+#second: (Couchbase Server )(Web Console)
+
+# Commenting out - need to revisit post Enterprise Analytics GA because of the new Web Console

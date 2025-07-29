@@ -121,6 +121,9 @@ PDF
 PLAIN authentication
 Pluggable Authentication Modules
 PAM
+[Pp]rovisioned
+[Pp]rovisioning
+[Pp]rovisions
 query editor
 query executor
 query monitoring
@@ -134,8 +137,14 @@ RA
 RBAC
 Read Committed
 [Rr]ebalance
+[Rr]ebalancing
+[Rr]ebalances
 [Rr]ebase
 [Rr]epositories
+[Rr]eprovision
+[Rr]eprovisioned
+[Rr]eprovisioning
+[Rr]eprovisions
 [Rr]etryable
 Role-Based Access Control
 RYOW
@@ -171,6 +180,9 @@ TTL
 Ubuntu
 Ultra Disk
 UNNEST
+[Uu]nprovision
+[Uu]nprovisioned
+[Uu]nprovisioning
 [Uu]psert
 vBucket
 vBucketMap

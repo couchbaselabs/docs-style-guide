@@ -1,5 +1,5 @@
 extends: occurrence
-message: This might be a run-on sentence (more than 2 commas).
+message: This might be a run-on sentence (more than 2 commas). Would a bulleted list work better?
 link: https://docs.couchbase.com/styleguide/commas.html
 level: warning
 scope: sentence
