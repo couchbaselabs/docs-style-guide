@@ -5,3 +5,4 @@ link: https://docs.couchbase.com/styleguide/writing-procedures.html#procedure
 
 tokens: 
   - '(?i)\bThe\s(?:\*(?:\w+(?:\s+\w+){0,4})\*|\w+(?:\s+\w+){0,4})\s+(dialog|window|pane|screen|panel|popup|modal|view|section|page)\s+(opens|appears)\b'
+  - '(?i)\b(?:Your|The) (?:\w+(?: \w+){0,4}) (?:appears|opens)\b'
