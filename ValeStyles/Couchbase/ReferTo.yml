@@ -4,5 +4,5 @@ level: error
 link: https://docs.couchbase.com/styleguide/links.html
 
 tokens: 
-  - 'Refer to'
+  - '[Rr]efer to'
   - 'For more details'
