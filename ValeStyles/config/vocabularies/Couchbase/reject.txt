@@ -1,6 +1,8 @@
+Analytics Service
 and\/or
 back end
 (C\+\+)
+Columnar
 Couchbase managed cloud
 data link
 data provider
