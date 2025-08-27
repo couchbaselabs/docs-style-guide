@@ -4,4 +4,4 @@ level: error
 nonword: true
 scope: raw
 raw:
-  - ' {2,}'
+  - '\w {2,}\w'
