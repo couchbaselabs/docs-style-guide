@@ -2,6 +2,8 @@ extends: existence
 message: When comparing or describing a value, use 'greater' or 'less'.
 level: warning
 link: https://docs.couchbase.com/styleguide/values.html
+scope:
+  - raw # nothing is flagged if this is set to 'text'???
 
 tokens:
   - '\b(?:above|below|higher|lower)\b\s+\d+(?:\.\d+)?'

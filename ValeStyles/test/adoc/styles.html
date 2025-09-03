@@ -1,0 +1,3746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vale Style Test Results</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em auto; 
+        max-width: 800px;}
+        h1, h2, h3 { color: #2c3e50; }
+        .check { margin-bottom: 2em; }
+        .fixture { border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 5px; }
+        .todo { background: #fff3e0; border: 1px solid #ff9800; padding: 1em; border-radius: 5px; }
+        .compliant { background: #e8f5e9; }
+        .flagged { background: #ffebee; }
+        div.error { border-color: #e53935;
+                 border-width: 5px }
+        span.error { color: #e53935; font-weight: bold;}
+        pre { 
+            background-color: cornsilk;
+            padding: 1em; 
+            margin: 1em;
+            border-radius: 6px; 
+            overflow-x: auto; }
+        .meta { color: #888; font-size: 0.9em; }
+        mark { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Vale Style Test Results</h1>
+    <div class="meta">
+        <div>OS: darwin</div>
+        <div>Node.js version: 22.16.0</div>
+    </div>
+        <div class="check">
+            <h2>Couchbase.An</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is <mark>a example</mark> of incorrect usage.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She wrote <mark>a email</mark> to the team.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He found <mark>a unusual</mark> error in the logs.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We need <mark>a update</mark> before release.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please submit <mark>a application</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/articles.html">error</a>)
+                        Use &quot;an,&quot; not &quot;a.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is an example of correct usage.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She wrote an email to the team.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He found an unusual error in the logs.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We need an update before release.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please submit an application.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.App</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please open the <mark>app </mark>to continue.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The <mark>app </mark>crashed unexpectedly.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She downloaded the <mark>app </mark>from the store.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He deleted the <mark>app </mark>by mistake.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We updated the <mark>app </mark>yesterday.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use application, not app, unless you&#x27;re working on Mobile documentation.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please open the application to continue.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The application crashed unexpectedly.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She downloaded the application from the store.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He deleted the application by mistake.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We updated the application yesterday.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Bold</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is <mark>*bold*</mark> text using asterisks.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/bold.html">suggestion</a>)
+                        Did you follow the guidelines for bold font?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please click the <mark>*Save*</mark> button.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/bold.html">suggestion</a>)
+                        Did you follow the guidelines for bold font?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Use <mark>*important*</mark> for emphasis.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/bold.html">suggestion</a>)
+                        Did you follow the guidelines for bold font?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is normal text.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please click the btn:[Save] button.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Use _important_ for emphasis.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Button</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the cancel button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the *cancel* button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the Stay Alert button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the *Stay Alert* button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>click btn:[Cancel]</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.ButtonMacro</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the <mark>btn:[Save]</mark> button to continue.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">suggestion</a>)
+                        Did you follow the guidelines for the button macro?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Press the <mark>btn:[Cancel]</mark> button to exit.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">suggestion</a>)
+                        Did you follow the guidelines for the button macro?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select the <mark>btn:[Submit]</mark> button to proceed.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">suggestion</a>)
+                        Did you follow the guidelines for the button macro?
+                        
+                    </div>
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Checkbox</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select the <mark>checkbox</mark> to agree.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;checkbox&#x27;. Just use the label from the UI. Add &#x27;click&#x27; or &#x27;clear&#x27; as needed.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Tick the OK <mark>check box</mark> if you accept.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;check box&#x27;. Just use the label from the UI. Add &#x27;click&#x27; or &#x27;clear&#x27; as needed.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select &quot;OK&quot; to accept.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Check &quot;I agree&quot; to continue.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.CodeCallouts</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>[source,java
+--
+public class Example { // &lt;1&gt;
+  ...
+}
+--
+<mark>&lt;1&gt;</mark> This is a code callout.
+</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/examples.html#explaining-code-examples">error</a>)
+                        Don&#x27;t use code callouts. Break up your code samples or use code comments, instead.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>[source,java]
+--
+public class Example {
+--
+First we declare the class `Example`.
+</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.ComplexContractions</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>What&#39;ll</mark> become of the database?</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Do not use complex contractions like &#x27;What&#x27;ll&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We <mark>must&#39;ve</mark> missed the deadline.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Do not use complex contractions like &#x27;must&#x27;ve&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We <mark>would&#39;ve</mark> liked to help you.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Do not use complex contractions like &#x27;would&#x27;ve&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You shouldn&#39;t use contractions in formal documentation... but we do.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>They can&#39;t access the database.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We won&#39;t support this feature.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Contractions</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>It is</mark> important to follow the guidelines.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;it&#x27;s&#x27; instead of &#x27;It is&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>How is</mark> this feature used?</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;how&#x27;s&#x27; instead of &#x27;How is&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>That is</mark> not supported.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;that&#x27;s&#x27; instead of &#x27;That is&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>They are</mark> working on the fix.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;they&#x27;re&#x27; instead of &#x27;They are&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>We are</mark> planning a release.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;we&#x27;re&#x27; instead of &#x27;We are&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>What is</mark> the status?</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;what&#x27;s&#x27; instead of &#x27;What is&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Where is</mark> the documentation?</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;where&#x27;s&#x27; instead of &#x27;Where is&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Who is</mark> responsible for this?</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;who&#x27;s&#x27; instead of &#x27;Who is&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>You are</mark> required to sign in.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;you&#x27;re&#x27; instead of &#x27;You are&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>You had</mark> better check the logs.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;you&#x27;d&#x27; instead of &#x27;You had&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>You will</mark> need to update your client.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/contractions.html">error</a>)
+                        Use &#x27;you&#x27;ll&#x27; instead of &#x27;You will&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>It&#39;s important to follow the guidelines.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>How&#39;s this feature used?</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>That&#39;s not supported.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>They&#39;re working on the fix.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We&#39;re planning a release.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>What&#39;s the status?</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Where&#39;s the documentation?</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Who&#39;s responsible for this?</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You&#39;re required to sign in.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You&#39;d better check the logs.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You&#39;ll need to update your client.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.CouchbaseAutoOp</h2>
+
+                <div class="todo">
+                    <blockquote><b>TODO:</b> We don&#x27;t understand how the Vale conditional test works.</blockquote>
+                <div class="fixture flagged  todo">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The <mark>Operator</mark> manages the cluster.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Autonomous Operator) first.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  todo">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Upgrade the <mark>Operator</mark> to the latest version.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Autonomous Operator) first.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged error todo">
+                    <div>
+                        <strong>Flagged</strong>
+                        <span class="error">❌ Error</span>
+                    </div>
+                    <div>
+                        <pre>The Operator supports rolling upgrades. We call it the Couchbase Autonomous Operator.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  todo">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Couchbase Autonomous Operator does everything. For example, the Operator manages the cluster.</pre>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="check">
+            <h2>Couchbase.CouchbaseServerComm</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You can download <mark>Community Edition</mark> from our website.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Server Community Edition) first.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The <mark>Community Edition</mark> is free to use.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use the full product name (Couchbase Server Community Edition) first.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You can download Couchbase Server Community Edition from our website.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The Couchbase Server Community Edition is free to use.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.DatePicker</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select the <mark>Date Picker</mark> to choose a date.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t bold or capitalize &quot;date picker.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the <mark>*date picker*</mark> field.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t bold or capitalize &quot;date picker.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select the date picker to choose a date.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the date picker field.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.DialogOpens</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>The *Add Page* dialog opens</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/writing-procedures.html#procedure">error</a>)
+                        Do not add empty phrases like &quot;The *Add Page* dialog opens&quot;. Delete this sentence from your docs.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Suddenly <mark>the Shopkeeper appears</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/writing-procedures.html#procedure">error</a>)
+                        Do not add empty phrases like &quot;The *Add Page* dialog opens&quot;. Delete this sentence from your docs.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Open the *Add Page* dialog.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Dialogs</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>A <mark>Dialog</mark> will appear.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/dialogs.html">error</a>)
+                        Don&#x27;t bold or capitalize the word &quot;dialog&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the <mark>*dialog*</mark> to continue.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/dialogs.html">error</a>)
+                        Don&#x27;t bold or capitalize the word &quot;dialog&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The <mark>*dialog box*</mark> is displayed.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/dialogs.html">error</a>)
+                        Don&#x27;t bold or capitalize the word &quot;dialog&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>A dialog will appear.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the dialog to continue.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The dialog box is displayed.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.DirectionalLanguage</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the button on the <mark>left</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;left&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Scroll <mark>down</mark> to see more options.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;down&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The settings are <mark>below the</mark> menu.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;below the&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Move <mark>up</mark> to the previous section.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;up&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The icon <mark>is above</mark> the text.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
+                        Avoid directional language like &#x27;is above&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the first button.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Scroll to see more options.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The settings are under the menu.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Return to the previous section.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The icon is near the text.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Dropdown</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select the <mark>drop-down</mark> to choose an option.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;dropdown&quot;, use &quot;list&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the <mark>dropdown</mark> menu.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;dropdown&quot;, use &quot;list&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Open the <mark>dropdowns</mark> list.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;dropdown&quot;, use &quot;list&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Choose the value from the list.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.FancyQuotes</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He said, <mark>“</mark>This is a test.<mark>”</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Do not use &#x27;“&#x27;. Replace with regular quotes/apostrophes.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She replied, <mark>‘</mark>Indeed it is.<mark>’</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Do not use &#x27;‘&#x27;. Replace with regular quotes/apostrophes.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The document uses <mark>“</mark>smart quotes<mark>”</mark> throughout.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Do not use &#x27;“&#x27;. Replace with regular quotes/apostrophes.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He said, &quot;This is a test.&quot;</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She replied, &#39;Indeed it is.&#39;</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The document uses &quot;straight quotes&quot; throughout.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.HeadingFormatting</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>= This is a *bold*</mark> heading.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t add formatting to headings.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>== This is an _italic_</mark> heading.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t add formatting to headings.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>= This heading has no formatting.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Headings</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>= <mark>introduction</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        &#x27;introduction&#x27; should use title-style capitalization.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>== <mark>This does not use title case</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        &#x27;This does not use title case&#x27; should use title-style capitalization.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>= Introduction</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>== Heading in Title Case</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Italics</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is _<mark>italic_ </mark>text using underscores.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/italic.html">error</a>)
+                        Don&#x27;t use italics. Find another way to add emphasis.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please click the _<mark>Save_ </mark>button.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/italic.html">error</a>)
+                        Don&#x27;t use italics. Find another way to add emphasis.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Use _<mark>important_ </mark>for emphasis.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/italic.html">error</a>)
+                        Don&#x27;t use italics. Find another way to add emphasis.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is normal text.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please click the btn:[Save] button.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.LessFewer</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>There are <mark>less errors</mark> in this version.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We need <mark>less people</mark> on the project.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She has <mark>less tasks</mark> to complete.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The server has <mark>less connections</mark> now.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/less-fewer.html">warning</a>)
+                        Did you mean less or should this be fewer?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>There are fewer errors in this version.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We need fewer people on the project.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She has fewer tasks to complete.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The server has fewer connections now.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Link</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Click the link</mark> to continue.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/ui-links.html">error</a>)
+                        Don&#x27;t describe a UI element as a &quot;link.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click &quot;continue&quot;.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Monospace</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is <mark>`monospace`</mark> text.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/monospace-highlight.html">suggestion</a>)
+                        Did you follow the guidelines for monospace font?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>No monospace here.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.NegativeContractions</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You <mark>can&#39;t</mark> access this feature.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;cannot&#x27; instead of &#x27;can&#x27;t&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>They <mark>don&#39;t</mark> have permission.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;do not&#x27; instead of &#x27;don&#x27;t&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We <mark>won&#39;t</mark> support this version.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;will not&#x27; instead of &#x27;won&#x27;t&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She <mark>isn&#39;t</mark> available right now.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;is not&#x27; instead of &#x27;isn&#x27;t&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He <mark>hasn&#39;t</mark> finished the task.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &#x27;has not&#x27; instead of &#x27;hasn&#x27;t&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You cannot access this feature.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>They do not have permission.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We will not support this version.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She is not available right now.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He has not finished the task.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.NoteThat</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Note that</mark> you must restart the server.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;note that.&#x27; Convert to an actual NOTE, or don&#x27;t use it at all.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Note that</mark> this feature is experimental.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;note that.&#x27; Convert to an actual NOTE, or don&#x27;t use it at all.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Note that</mark> backups are not automatic.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &#x27;note that.&#x27; Convert to an actual NOTE, or don&#x27;t use it at all.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You must restart the server.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This feature is experimental.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>NOTE: Backups are not automatic.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Numbers</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>one</mark> fish</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/numbers.html">error</a>)
+                        Write all numbers as numerals.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>two</mark> fish</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/numbers.html">error</a>)
+                        Write all numbers as numerals.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>red fish</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>blue fish</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>1 fish</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>2 fish</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Please</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Please</mark> refer to the documentation for more information.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Avoid using &quot;Please&quot; as much as possible. Only use it when asking for something that inconveniences the user.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Please</mark> ensure you have saved your work.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Avoid using &quot;Please&quot; as much as possible. Only use it when asking for something that inconveniences the user.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Please</mark> contact support if you need help.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Avoid using &quot;Please&quot; as much as possible. Only use it when asking for something that inconveniences the user.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Refer to the documentation for more information.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Ensure you have saved your work.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Contact support if you need help.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Quotations</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The term <mark>&quot;bucket&quot;</mark> refers to a data container.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/quotation-marks.html">error</a>)
+                        Don&#x27;t use quotation marks to add emphasis.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He clicked the <mark>&quot;Save&quot;</mark> button.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/quotation-marks.html">error</a>)
+                        Don&#x27;t use quotation marks to add emphasis.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select the <mark>&quot;Settings&quot;</mark> option from the menu.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/quotation-marks.html">error</a>)
+                        Don&#x27;t use quotation marks to add emphasis.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The term ‘bucket’ refers to a data container.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He clicked the btn:[Save] button.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Select the _Settings_ option from the menu.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.ReadingLevel</h2>
+
+                <div class="todo">
+                    <blockquote><b>TODO:</b> This needs some work.</blockquote>
+                <div class="fixture flagged error todo">
+                    <div>
+                        <strong>Flagged</strong>
+                        <span class="error">❌ Error</span>
+                    </div>
+                    <div>
+                        <pre>Utilizing multifaceted methodologies, the system orchestrates a plethora of
+functionalities to facilitate seamless interoperability among disparate
+modules.
+</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  todo">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The system uses many methods to help different modules work together.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  todo">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This change means we need to review how things work.</pre>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="check">
+            <h2>Couchbase.ReferTo</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>For more details</mark>, see &lt;&lt;xref&gt;&gt;</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/links.html">error</a>)
+                        Introduce links with &#x27;For more information, see {link}&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Refer to</mark> &lt;&lt;xref&gt;&gt;</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/links.html">error</a>)
+                        Introduce links with &#x27;For more information, see {link}&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>For more information, see &lt;&lt;xref&gt;&gt;</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.RepeatedSpace</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Ther<mark>e   a</mark>r<mark>e   m</mark>ultipl<mark>e   s</mark>pace<mark>s   h</mark>ere.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Did you mean to add extra spaces?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Chec<mark>k  f</mark>or a single repeated space.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Did you mean to add extra spaces?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This sentence has one space between words.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Sentences with {attributes} should not be flagged.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.RunOn</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This could be a run on sentence<mark>,</mark> because it has many commas, so confuses people, don&#39;t you think?</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/commas.html">warning</a>)
+                        This might be a run-on sentence (more than 2 commas). Would a bulleted list work better?
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Sentences with up to two commas are fine, but no more than that, I beg you.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.SQL</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is <mark>an SQL++ </mark>query.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use &quot;a SQL++,&quot; not &quot;an SQL++&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is a SQL++ query.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.See</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Refer to http://foo.bar</mark> for more details.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://developers.google.com/style/link-text">warning</a>)
+                        Use &quot;see&quot; for links.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Refer to https://foo.bar</mark> for more details.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://developers.google.com/style/link-text">warning</a>)
+                        Use &quot;see&quot; for links.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>See http://foo.bar for more details.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>See https://foo.bar for more details.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Semi-Colons</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is a sentence<mark>;</mark> and here is another clause.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/colons.html">warning</a>)
+                        Try to avoid using a semi-colon. Follow the style guide guidance.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is a sentence, and here is another clause.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.SentenceLength</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>This</mark> sentence is far too long because it contains many clauses, making it difficult for readers to follow the main point, and therefore it should be rewritten to improve clarity and readability.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (suggestion)
+                        Try to keep sentences under 25 words.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This sentence is clear and concise.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Rewrite long sentences to improve clarity.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Sidebars</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>****
+</mark>This is a sidebar.
+<mark>****
+</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/sidebars.html">error</a>)
+                        Don&#x27;t use sidebars.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>[sidebar]</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/sidebars.html">error</a>)
+                        Don&#x27;t use sidebars.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This is a regular paragraph, not a sidebar.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Use sidebars only when necessary and keep them concise.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.StackedHeadings</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>
+<mark>= Heading 1
+</mark>
+== Heading 2
+</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        You can&#x27;t have two headings with no content in between.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>
+= Heading 1
+
+Some content before the second heading
+
+== Heading 2
+</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Terminology</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This project uses <mark>dotnet</mark> for development.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;.NET&#x27;, not &#x27;dotnet&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please add the <mark>adaptor</mark> to your system.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;adapter&#x27;, not &#x27;adaptor&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We use the <mark>whitelist</mark> to control access.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;Allowlist&#x27;, not &#x27;whitelist&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The <mark>code base</mark> is large.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;codebase&#x27;, not &#x27;code base&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Refer to the <mark>data center</mark> documentation.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;datacenter&#x27;, not &#x27;data center&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She used the <mark>plugin</mark> for integration.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;plug-in&#x27;, not &#x27;plugin&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The <mark>master</mark> node is down.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;primary&#x27;, not &#x27;master&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He prefers to <mark>utilize</mark> this feature.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/word-list.html">warning</a>)
+                        Use &#x27;use|using&#x27;, not &#x27;utilize&#x27;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This project uses .NET for development.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Please add the adapter to your system.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We use the Allowlist to control access.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The codebase is large.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Refer to the datacenter documentation.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>She used the plug-in for integration.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The primary node is down.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>He prefers to use this feature.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Textbox</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Enter your name in the <mark>textbox</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;textbox&quot;, use &quot;field&quot;. If the user can make a selection in the field, use &quot;box&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the <mark>text box</mark> to start typing.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t use &quot;textbox&quot;, use &quot;field&quot;. If the user can make a selection in the field, use &quot;box&quot;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Enter your name in the field.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Click the box to start typing.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.ThereIs</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>There is</mark> a problem with the configuration.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>There is</mark> an error in the logs.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>There is</mark> a need for more testing.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>There is</mark> a button you can click.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Don&#x27;t start a sentence with &quot;there&quot; + a form of &quot;to be.&quot;
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>A problem exists with the configuration.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>An error appears in the logs.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>More testing is needed.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>You can click the button.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.UnexplainedAcronym</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The <mark>HFE</mark> is not responding.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://developers.google.com/style/abbreviations">error</a>)
+                        &#x27;HFE&#x27; hasn&#x27;t been defined. Spell it out if it&#x27;s unfamiliar to the audience.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>The Hyperspace Frobnication Engine (HFE) is not responding.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Let us look at the Hyperspace Frobnication Engine (HFE).
+The HFE is responsible for frobnicating the unobtanium in the engine.
+</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Values</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>above 1000</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/values.html">warning</a>)
+                        When comparing or describing a value, use &#x27;greater&#x27; or &#x27;less&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>higher than the blood sugar limit</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/values.html">warning</a>)
+                        When comparing or describing a value, use &#x27;greater&#x27; or &#x27;less&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>greater than 1000</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>less than the limit</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.VentilatedProse</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This paragraph contains multiple sentences without any line break<mark>s. I</mark>t makes the text harder to read and maintain, especially in documentation where each sentence should start on a new line.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use ventilated prose. Start every sentence on a new line.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>This sentence is on its own line.
+So is this one.
+Each sentence starts on a new line for clarity.
+</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Versions</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Use <mark>version 6.0 or higher</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Use <mark>version 6.0 or newer</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Not available in <mark>version 5.0 or lower</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Not available in <mark>version 5.0 or older</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (warning)
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Use version 6.0 or later.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Not available in version 5.0 or earlier.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.Wordy</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Combating</mark> the issue requires a comprehensive understanding of the underlying architecture.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use plain language. &#x27;Combating&#x27; is too wordy.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We will <mark>streamline</mark> the process to enhance efficiency.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use plain language. &#x27;streamline&#x27; is too wordy.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>It is ever <mark>thus</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (error)
+                        Use plain language. &#x27;thus&#x27; is too wordy.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We need to understand the architecture to fix the issue.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>We will simplify the process to improve efficiency.</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>It&#39;s always like this.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+</body>
+</html>

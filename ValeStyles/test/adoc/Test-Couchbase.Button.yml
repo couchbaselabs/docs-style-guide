@@ -1,0 +1,7 @@
+flag:
+  - click the cancel button
+  - click the *cancel* button
+  - click the Stay Alert button
+  - click the *Stay Alert* button 
+compliant:
+  - click btn:[Cancel]

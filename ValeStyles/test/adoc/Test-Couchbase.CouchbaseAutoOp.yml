@@ -1,0 +1,7 @@
+todo: We don't understand how the Vale conditional test works.
+flag:
+  - The Operator manages the cluster.
+  - Upgrade the Operator to the latest version.
+  - The Operator supports rolling upgrades. We call it the Couchbase Autonomous Operator.
+compliant:
+  - Couchbase Autonomous Operator does everything. For example, the Operator manages the cluster.
