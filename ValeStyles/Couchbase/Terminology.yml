@@ -10,6 +10,7 @@ swap:
   adaptor: adapter 
   ad-hoc: adhoc|ad hoc
   afterward: afterwards
+  Analytics Service: Capella Analytics|Enterprise Analytics
   (?:automatic-schema discovery|automatic-schema-discovery)': automatic schema discovery
   '(?:auto sharding|autosharding)': auto-sharding
   availability-zone: Availability Zone
@@ -17,6 +18,7 @@ swap:
   cheatsheet: cheat sheet
   check point: checkpoint
   '(?:code base|code-base)': codebase
+  '(?:Columnar|Capella Columnar)': Capella Analytics
   '(?:compare-and-swap|compare-and swap|compare and-swap)': Compare and Swap
   '(?:cross-datacenter replication|cross data center replication|cross-datacenter-replication)': cross datacenter replication
   '(?:data center|data-center)': datacenter
