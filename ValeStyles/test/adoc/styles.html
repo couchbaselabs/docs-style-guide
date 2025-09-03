@@ -411,6 +411,87 @@
             
         </div>
         <div class="check">
+            <h2>Couchbase.Button</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the cancel button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the *cancel* button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the Stay Alert button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>click the *Stay Alert* button</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/button-macro.html">error</a>)
+                        Do not refer to a UI element with the word &#x27;button&#x27;, as in &#x27;Click the Edit button&#x27;. Make sure to use the button macro (btn:[]).
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>click btn:[Cancel]</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
             <h2>Couchbase.ButtonMacro</h2>
 
                 <div class="fixture flagged  ">
@@ -1096,67 +1177,6 @@ First we declare the class `Example`.
             
         </div>
         <div class="check">
-            <h2>Couchbase.CouchbaseServerWebConsole</h2>
-
-                <div class="fixture flagged  ">
-                    <div>
-                        <strong>Flagged</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>You can access the <mark>Web Console</mark> to manage your cluster.</pre>
-                    </div>
-
-                    <div class="meta"> 
-                        (error)
-                        Use the full product name (Couchbase Server Web Console) first.
-                        
-                    </div>
-
-                </div>
-                <div class="fixture flagged  ">
-                    <div>
-                        <strong>Flagged</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>The <mark>Web Console</mark> provides a user-friendly interface.</pre>
-                    </div>
-
-                    <div class="meta"> 
-                        (error)
-                        Use the full product name (Couchbase Server Web Console) first.
-                        
-                    </div>
-
-                </div>
-                <div class="fixture compliant  ">
-                    <div>
-                        <strong>Compliant</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>You can access the Couchbase Server Web Console to manage your cluster.</pre>
-                    </div>
-
-                    
-
-                </div>
-                <div class="fixture compliant  ">
-                    <div>
-                        <strong>Compliant</strong>
-                        
-                    </div>
-                    <div>
-                        <pre>The Couchbase Server Web Console provides a user-friendly interface.</pre>
-                    </div>
-
-                    
-
-                </div>
-            
-        </div>
-        <div class="check">
             <h2>Couchbase.DatePicker</h2>
 
                 <div class="fixture flagged  ">
@@ -1210,6 +1230,55 @@ First we declare the class `Example`.
                     </div>
                     <div>
                         <pre>Click the date picker field.</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
+            <h2>Couchbase.DialogOpens</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>The *Add Page* dialog opens</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/writing-procedures.html#procedure">error</a>)
+                        Do not add empty phrases like &quot;The *Add Page* dialog opens&quot;. Delete this sentence from your docs.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Suddenly <mark>the Shopkeeper appears</mark>.</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/writing-procedures.html#procedure">error</a>)
+                        Do not add empty phrases like &quot;The *Add Page* dialog opens&quot;. Delete this sentence from your docs.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>Open the *Add Page* dialog.</pre>
                     </div>
 
                     
@@ -1347,12 +1416,12 @@ First we declare the class `Example`.
                         
                     </div>
                     <div>
-                        <pre>The settings are <mark>below</mark> the menu.</pre>
+                        <pre>The settings are <mark>below the</mark> menu.</pre>
                     </div>
 
                     <div class="meta"> 
                         (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
-                        Avoid directional language like &#x27;below&#x27;.
+                        Avoid directional language like &#x27;below the&#x27;.
                         
                     </div>
 
@@ -1379,12 +1448,12 @@ First we declare the class `Example`.
                         
                     </div>
                     <div>
-                        <pre>The icon is <mark>above</mark> the text.</pre>
+                        <pre>The icon <mark>is above</mark> the text.</pre>
                     </div>
 
                     <div class="meta"> 
                         (<a href="https://docs.couchbase.com/styleguide/directional-language.html">warning</a>)
-                        Avoid directional language like &#x27;above&#x27;.
+                        Avoid directional language like &#x27;is above&#x27;.
                         
                     </div>
 
@@ -2210,6 +2279,91 @@ First we declare the class `Example`.
             
         </div>
         <div class="check">
+            <h2>Couchbase.Numbers</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>one</mark> fish</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/numbers.html">error</a>)
+                        Write all numbers as numerals.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>two</mark> fish</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/numbers.html">error</a>)
+                        Write all numbers as numerals.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>red fish</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>blue fish</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>1 fish</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>2 fish</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
             <h2>Couchbase.Please</h2>
 
                 <div class="fixture flagged  ">
@@ -2434,6 +2588,55 @@ modules.
             </div>
         </div>
         <div class="check">
+            <h2>Couchbase.ReferTo</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>For more details</mark>, see &lt;&lt;xref&gt;&gt;</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/links.html">error</a>)
+                        Introduce links with &#x27;For more information, see {link}&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>Refer to</mark> &lt;&lt;xref&gt;&gt;</pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/links.html">error</a>)
+                        Introduce links with &#x27;For more information, see {link}&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>For more information, see &lt;&lt;xref&gt;&gt;</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
             <h2>Couchbase.RepeatedSpace</h2>
 
                 <div class="fixture flagged  ">
@@ -2442,7 +2645,7 @@ modules.
                         
                     </div>
                     <div>
-                        <pre>There   are<mark>   </mark>multiple<mark>   </mark>spaces<mark>   </mark>here.</pre>
+                        <pre>Ther<mark>e   a</mark>r<mark>e   m</mark>ultipl<mark>e   s</mark>pace<mark>s   h</mark>ere.</pre>
                     </div>
 
                     <div class="meta"> 
@@ -2458,7 +2661,7 @@ modules.
                         
                     </div>
                     <div>
-                        <pre>Check<mark>  </mark>for a single repeated space.</pre>
+                        <pre>Chec<mark>k  f</mark>or a single repeated space.</pre>
                     </div>
 
                     <div class="meta"> 
@@ -2508,7 +2711,7 @@ modules.
 
                     <div class="meta"> 
                         (<a href="https://docs.couchbase.com/styleguide/commas.html">warning</a>)
-                        This might be a run-on sentence (more than 2 commas).
+                        This might be a run-on sentence (more than 2 commas). Would a bulleted list work better?
                         
                     </div>
 
@@ -3261,6 +3464,67 @@ The HFE is responsible for frobnicating the unobtanium in the engine.
             
         </div>
         <div class="check">
+            <h2>Couchbase.Values</h2>
+
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>above 1000</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/values.html">warning</a>)
+                        When comparing or describing a value, use &#x27;greater&#x27; or &#x27;less&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture flagged  ">
+                    <div>
+                        <strong>Flagged</strong>
+                        
+                    </div>
+                    <div>
+                        <pre><mark>higher than the blood sugar limit</mark></pre>
+                    </div>
+
+                    <div class="meta"> 
+                        (<a href="https://docs.couchbase.com/styleguide/values.html">warning</a>)
+                        When comparing or describing a value, use &#x27;greater&#x27; or &#x27;less&#x27;.
+                        
+                    </div>
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>greater than 1000</pre>
+                    </div>
+
+                    
+
+                </div>
+                <div class="fixture compliant  ">
+                    <div>
+                        <strong>Compliant</strong>
+                        
+                    </div>
+                    <div>
+                        <pre>less than the limit</pre>
+                    </div>
+
+                    
+
+                </div>
+            
+        </div>
+        <div class="check">
             <h2>Couchbase.VentilatedProse</h2>
 
                 <div class="fixture flagged  ">
@@ -3305,12 +3569,12 @@ Each sentence starts on a new line for clarity.
                         
                     </div>
                     <div>
-                        <pre>Use version 6.0 or <mark>higher</mark>.</pre>
+                        <pre>Use <mark>version 6.0 or higher</mark>.</pre>
                     </div>
 
                     <div class="meta"> 
                         (warning)
-                        Use &#x27;later&#x27;, not &#x27;higher&#x27;, when talking about versions.
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
                         
                     </div>
 
@@ -3321,12 +3585,12 @@ Each sentence starts on a new line for clarity.
                         
                     </div>
                     <div>
-                        <pre>Use version 6.0 or <mark>newer</mark>.</pre>
+                        <pre>Use <mark>version 6.0 or newer</mark>.</pre>
                     </div>
 
                     <div class="meta"> 
                         (warning)
-                        Use &#x27;later&#x27;, not &#x27;newer&#x27;, when talking about versions.
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
                         
                     </div>
 
@@ -3337,12 +3601,12 @@ Each sentence starts on a new line for clarity.
                         
                     </div>
                     <div>
-                        <pre>Not available in version 5.0 or <mark>lower</mark>.</pre>
+                        <pre>Not available in <mark>version 5.0 or lower</mark>.</pre>
                     </div>
 
                     <div class="meta"> 
                         (warning)
-                        Use &#x27;earlier&#x27;, not &#x27;lower&#x27;, when talking about versions.
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
                         
                     </div>
 
@@ -3353,12 +3617,12 @@ Each sentence starts on a new line for clarity.
                         
                     </div>
                     <div>
-                        <pre>Not available in version 5.0 or <mark>older</mark>.</pre>
+                        <pre>Not available in <mark>version 5.0 or older</mark>.</pre>
                     </div>
 
                     <div class="meta"> 
                         (warning)
-                        Use &#x27;earlier&#x27;, not &#x27;older&#x27;, when talking about versions.
+                        Use &#x27;later&#x27; or &#x27;earlier&#x27;, when talking about versions.
                         
                     </div>
 

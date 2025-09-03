@@ -1,0 +1,5 @@
+flag:
+  - The *Add Page* dialog opens.
+  - Suddenly the Shopkeeper appears.
+compliant:
+  - Open the *Add Page* dialog.
