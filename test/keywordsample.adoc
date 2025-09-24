@@ -7,7 +7,7 @@
 [abstract]
 {description}
 
-== What Should I Expect?
+== What to Expect?
 
 Of the 5 tested words:
 - agentic: should be fine
