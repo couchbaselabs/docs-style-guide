@@ -1,0 +1,17 @@
+= Keywords Sample
+
+:page-topic-type: concept
+:description: A little test doc to check if keywords flag properly
+:keywords: agentic, ai, AI, kittens, deployment
+
+[abstract]
+{description}
+
+== What Should I Expect?
+
+Of the 5 tested words:
+- agentic: should be fine
+- ai: should be fine
+- AI might flag because it's caps
+- kittens should flag
+- deploy should flag

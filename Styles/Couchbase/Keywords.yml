@@ -1,0 +1,17 @@
+extends: existence
+message: "Keyword '%s' is not in the approved keyword list."
+level: error
+scope: raw
+ignorecase: false
+nonword: true
+
+tokens:
+  - '(?<=:keywords:\s|,\s?)[^,\n]+'
+
+exceptions:
+  - agentic
+  - ai
+  - rag
+  - architecture
+  - cli
+  - deployment
