@@ -1,12 +1,12 @@
 flag:
-  - Please open the app to continue.
+  - Open the app to continue.
   - The app crashed unexpectedly.
-  - She downloaded the app from the store.
+  - She downloaded the app from the webpage.
   - He deleted the app by mistake.
-  - We updated the app yesterday.
+  - You can update the app manually or automatically.
 compliant:
-  - Please open the application to continue.
+  - Open the application to continue.
   - The application crashed unexpectedly.
-  - She downloaded the application from the store.
+  - She downloaded the application from the webpage.
   - He deleted the application by mistake.
-  - We updated the application yesterday.
+  - You can update the application manually or automatically.

@@ -1,8 +1,8 @@
 flag:
   - This is *bold* text using asterisks.
-  - Please click the *Save* button.
+  - Click the *Save* button.
   - Use *important* for emphasis.
 compliant:
   - This is normal text.
-  - Please click the btn:[Save] button.
-  - Use _important_ for emphasis.
+  - Click btn:[Save].
+  - Use `important` for emphasis.

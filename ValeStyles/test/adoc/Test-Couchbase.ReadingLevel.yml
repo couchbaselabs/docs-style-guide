@@ -6,4 +6,4 @@ flag:
     modules.
 compliant:
   - The system uses many methods to help different modules work together.
-  - This change means we need to review how things work.
+  - This change means you need to review how things work.

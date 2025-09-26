@@ -1,8 +1,7 @@
 flag:
-  - A Dialog will appear.
-  - Click the *dialog* to continue.
-  - The *dialog box* is displayed.
+  - Use the Dialog.
+  - Click *OK* in the *dialog* to continue.
+  - Capella displays the *dialog box*.
 compliant:
-  - A dialog will appear.
-  - Click the dialog to continue.
-  - The dialog box is displayed.
+  - In the confirmation dialog, click *OK* to continue.
+  - Capella displays a confirmation dialog.

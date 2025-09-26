@@ -3,6 +3,8 @@ flag:
   - She replied, ‘Indeed it is.’
   - The document uses “smart quotes” throughout.
 compliant:
-  - He said, "This is a test."
-  - She replied, 'Indeed it is.'
-  - The document uses "straight quotes" throughout.
+  - adoc: |
+          [source,json]
+          --
+            "key": "value"
+          --

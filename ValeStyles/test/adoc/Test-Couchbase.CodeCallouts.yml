@@ -10,8 +10,11 @@ flag:
       
 compliant:
   - adoc: |
+      First, declare the `Example` class: 
+      
       [source,java]
       --
       public class Example {
+        ...
+      }
       --
-      First we declare the class `Example`.

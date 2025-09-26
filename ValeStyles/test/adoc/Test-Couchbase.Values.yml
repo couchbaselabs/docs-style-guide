@@ -1,6 +1,6 @@
 flag:
   - above 1000
-  - higher than the blood sugar limit
+  - lower than the limit
 compliant:
   - greater than 1000
   - less than the limit

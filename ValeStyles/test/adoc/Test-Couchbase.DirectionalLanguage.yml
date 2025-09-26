@@ -5,8 +5,8 @@ flag:
   - Move up to the previous section.
   - The icon is above the text.
 compliant:
-  - Click the first button.
+  - Click btn:[Next].
   - Scroll to see more options.
-  - The settings are under the menu.
+  - To view more options, open the menu.
   - Return to the previous section.
-  - The icon is near the text.
+  - Locate the *X* icon.

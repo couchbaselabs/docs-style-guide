@@ -1,6 +1,6 @@
 flag:
-  - Select the Date Picker to choose a date.
+  - Select the Date Picker.
   - Click the *date picker* field.
 compliant:
-  - Select the date picker to choose a date.
-  - Click the date picker field.
+  - Select the date picker.
+  - To choose a date range, click the date picker.

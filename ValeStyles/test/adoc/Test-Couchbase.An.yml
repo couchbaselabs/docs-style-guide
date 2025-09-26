@@ -2,11 +2,11 @@ flag:
   - This is a example of incorrect usage.
   - She wrote a email to the team.
   - He found a unusual error in the logs.
-  - We need a update before release.
-  - Please submit a application.
+  - The system needs a update before release.
+  - Submit a application.
 compliant:
   - This is an example of correct usage.
   - She wrote an email to the team.
   - He found an unusual error in the logs.
-  - We need an update before release.
-  - Please submit an application.
+  - The system needs an update before release.
+  - Submit an application.

@@ -6,4 +6,4 @@ flag:
   - adoc: '[sidebar]'
 compliant:
   - This is a regular paragraph, not a sidebar.
-  - Use sidebars only when necessary and keep them concise.
+  - Do not use the sidebar formatting. Use admonitions, instead.
