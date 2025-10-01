@@ -7,7 +7,7 @@ nonword: true
 action:
   name: replace
 swap:
-  '(?i)\b(?:e\s*\.?\s*g\s*\.?)': for example
-  '(?i)\b(?:i\s*\.?\s*e\s*\.?)': specifically
-  '(?i)\b(?:etc\.?|et\s*c\s*\.?)': and so on
+  '(?i)\be*\.?g\.?\b': for example
+  '(?i)\bi\.?e\.?\b': specifically
+  '(?i)\betc\.?|etc\.?|e\.t\.c\b': and so on
   '(?i)\bet\s*cetera\b': and so on
