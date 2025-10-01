@@ -1,0 +1,13 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: https://docs.couchbase.com/styleguide/latin-abbreviations.html
+ignorecase: true
+level: error
+nonword: true
+action:
+  name: replace
+swap:
+  '(?i)\b(?:e\s*\.?\s*g\s*\.?)': for example
+  '(?i)\b(?:i\s*\.?\s*e\s*\.?)': specifically
+  '(?i)\b(?:etc\.?|et\s*c\s*\.?)': and so on
+  '(?i)\bet\s*cetera\b': and so on

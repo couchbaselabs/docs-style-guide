@@ -32,12 +32,12 @@ swap:
   '(?:de-select|unselect|un-select)': clear
   '(?:de-selected|unselected|un-selected)': cleared
   '(?:different to|different than)': different from
-  '(?:eg|e\.g)': for example
+  #'(?:eg|e\.g)': for example
   encryptor: encrypter
   end user experience: end-user experience
   ensure: make sure|verify
   '(?:e-payment)': ePayment
-  etc: and so on
+  #etc: and so on
   file name: filename
   file system: filesystem
   '(?:fine grained|finegrained)': fine-grained
