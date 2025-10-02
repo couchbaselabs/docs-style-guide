@@ -4,10 +4,18 @@ link: https://docs.couchbase.com/styleguide/latin-abbreviations.html
 ignorecase: true
 level: error
 nonword: true
+scope: raw # required to parse the `. ` alternatives
 action:
   name: replace
 swap:
-  '(?i)\be*\.?g\.?\b': for example
-  '(?i)\bi\.?e\.?\b': specifically
-  '(?i)\betc\.?|etc\.?|e\.t\.c\b': and so on
-  '(?i)\bet\s*cetera\b': and so on
+  # e.g.
+  '(?i)\b(eg|e\.g)\b': for example
+  '(?i)\be\. g\b': for example
+
+  # i.e.
+  '(?i)\b(ie|i\.e)\b': specifically
+  '(?i)\bi\. e\b': specifically
+
+  # etc.
+  '(?i)\b(etc|e\.t\.c)\b': and so on
+  '(?i)\bet ?cetera\b': and so on
