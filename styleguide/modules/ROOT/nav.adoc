@@ -10,6 +10,7 @@
 ** xref:contractions.adoc[]
 ** xref:values.adoc[]
 ** xref:directional-language.adoc[]
+** xref:latin-abbreviations.adoc[]
 ** xref:less-fewer.adoc[]
 ** xref:only.adoc[]
 ** xref:there-is.adoc[]
