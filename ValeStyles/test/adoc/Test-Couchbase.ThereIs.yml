@@ -1,0 +1,10 @@
+flag:
+  - There is a problem with the configuration.
+  - There is an error in the logs.
+  - There is a need for more testing.
+  - There is a button you can click.
+compliant:
+  - A problem exists with the configuration.
+  - An error appears in the logs.
+  - More testing is needed.
+  - You can click the button.

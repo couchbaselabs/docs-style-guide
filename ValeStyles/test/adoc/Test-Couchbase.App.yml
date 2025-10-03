@@ -1,0 +1,12 @@
+flag:
+  - Open the app to continue.
+  - The app crashed unexpectedly.
+  - She downloaded the app from the webpage.
+  - He deleted the app by mistake.
+  - You can update the app manually or automatically.
+compliant:
+  - Open the application to continue.
+  - The application crashed unexpectedly.
+  - She downloaded the application from the webpage.
+  - He deleted the application by mistake.
+  - You can update the application manually or automatically.

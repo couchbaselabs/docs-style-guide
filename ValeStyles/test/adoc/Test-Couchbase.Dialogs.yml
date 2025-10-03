@@ -1,0 +1,7 @@
+flag:
+  - Use the Dialog.
+  - Click *OK* in the *dialog* to continue.
+  - Capella displays the *dialog box*.
+compliant:
+  - In the confirmation dialog, click *OK* to continue.
+  - Capella displays a confirmation dialog.

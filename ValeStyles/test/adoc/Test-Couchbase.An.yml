@@ -1,0 +1,12 @@
+flag:
+  - This is a example of incorrect usage.
+  - She wrote a email to the team.
+  - He found a unusual error in the logs.
+  - The system needs a update before release.
+  - Submit a application.
+compliant:
+  - This is an example of correct usage.
+  - She wrote an email to the team.
+  - He found an unusual error in the logs.
+  - The system needs an update before release.
+  - Submit an application.

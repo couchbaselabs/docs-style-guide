@@ -1,0 +1,8 @@
+flag:
+  - This is *bold* text using asterisks.
+  - Click the *Save* button.
+  - Use *important* for emphasis.
+compliant:
+  - This is normal text.
+  - Click btn:[Save].
+  - Use `important` for emphasis.

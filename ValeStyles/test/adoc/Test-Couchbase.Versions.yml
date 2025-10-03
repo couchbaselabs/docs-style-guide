@@ -1,0 +1,8 @@
+flag:
+  - Use version 6.0 or higher.
+  - Use version 6.0 or newer.
+  - Not available in version 5.0 or lower.
+  - Not available in version 5.0 or older.
+compliant:
+  - Use version 6.0 or later.
+  - Not available in version 5.0 or earlier.

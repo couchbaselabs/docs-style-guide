@@ -1,0 +1,7 @@
+flag:
+  - This is _italic_ text using underscores.
+  - Please click the _Save_ button.
+  - Use _important_ for emphasis.
+compliant:
+  - This is normal text.
+  - Click btn:[Save].

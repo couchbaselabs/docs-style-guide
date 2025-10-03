@@ -1,0 +1,18 @@
+flag:
+  - This project uses dotnet for development.
+  - Add the adaptor to your system.
+  - Couchbase uses the whitelist to control access.
+  - The code base is large.
+  - See the data center documentation.
+  - She used the plugin for integration.
+  - The master node is down.
+  - He prefers to utilize this feature.
+compliant:
+  - This project uses .NET for development.
+  - Add the adapter to your system.
+  - Couchbase uses the Allowlist to control access.
+  - The codebase is large.
+  - See the datacenter documentation.
+  - She used the plug-in for integration.
+  - The primary node is down.
+  - He prefers to use this feature.

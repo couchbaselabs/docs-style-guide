@@ -1,0 +1,6 @@
+flag:
+  - The *Add Page* dialog opens.
+  - Suddenly the Shopkeeper appears.
+  - Click *Add Page*. The *Add Page* dialog appears.
+compliant:
+  - Click *Add Page*. Then, in the *Page Name* field, enter a page name.

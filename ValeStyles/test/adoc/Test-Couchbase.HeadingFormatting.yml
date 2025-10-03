@@ -1,0 +1,5 @@
+flag:
+  - = *Bolded* Heading
+  - == *Italicized* Heading
+compliant:
+  - = Non-Formatted Heading

@@ -1,0 +1,15 @@
+flag:
+  - adoc: |
+  
+      = Heading 1
+      
+      == Heading 2
+
+compliant:
+  - adoc: |
+
+      = Heading 1
+      
+      Some content before the second heading
+      
+      == Heading 2

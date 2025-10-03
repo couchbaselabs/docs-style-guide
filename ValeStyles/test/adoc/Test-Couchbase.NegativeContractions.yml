@@ -1,0 +1,12 @@
+flag:
+  - You can't access this feature.
+  - They don't have permission.
+  - Couchbase won't support this version.
+  - She isn't available right now.
+  - He hasn't finished the task.
+compliant:
+  - You cannot access this feature.
+  - They do not have permission.
+  - Couchbase will not support this version.
+  - She is not available right now.
+  - He has not finished the task.

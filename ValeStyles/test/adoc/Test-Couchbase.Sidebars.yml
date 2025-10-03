@@ -1,0 +1,9 @@
+flag:
+  - adoc: |
+      ****
+      This is a sidebar.
+      ****
+  - adoc: '[sidebar]'
+compliant:
+  - This is a regular paragraph, not a sidebar.
+  - Do not use the sidebar formatting. Use admonitions, instead.

@@ -1,0 +1,8 @@
+flag:
+  - What'll become of the database?
+  - You must've missed the deadline.
+  - They would've liked to help you.
+compliant:
+  - You shouldn't click btn:[Cancel].
+  - The service displays a warning if it can't failover.
+  - Couchbase won't develop this anymore.

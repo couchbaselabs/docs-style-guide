@@ -1,0 +1,4 @@
+flag:
+  - This is `monospace` text.
+compliant:
+  - No monospace here.
