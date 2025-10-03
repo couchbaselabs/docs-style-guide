@@ -1,0 +1,11 @@
+flag:
+  - Pick a colour, e.g. red.
+  - Pick a colour, eg red.
+  - Couchbase is a NoSQL database, i.e. it supports both SQL and other query styles.
+  - Red, blue, etc.
+  - Red, blue, e.t.c.
+  - Red, blue, et cetera
+compliant:
+  - Pick a colour, for example red.
+  - As a NoSQL database, Couchbase supports both SQL and other query styles.
+  - Red, blue, and so on.
