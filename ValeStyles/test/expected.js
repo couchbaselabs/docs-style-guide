@@ -14,7 +14,7 @@ describe('run vale against test files', function () {
       'vale',
       [
         '--output', 'JSON',
-        'test/fixtures/'
+        'test/fixtures/*.adoc'
       ]
     )
   }
