@@ -1,0 +1,4 @@
+engine: dasel
+scopes:
+  - expr: description
+    type: md

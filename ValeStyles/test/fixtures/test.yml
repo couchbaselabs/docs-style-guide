@@ -1,0 +1,7 @@
+type: test
+content:
+  foo: 1
+  bar: 2
+description: |
+  First sentence. Second sentence.
+  Test couchbase.

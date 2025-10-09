@@ -1,0 +1,4 @@
+engine: dasel
+scopes:
+  - expr: properties.all().property(description?)
+    type: md
