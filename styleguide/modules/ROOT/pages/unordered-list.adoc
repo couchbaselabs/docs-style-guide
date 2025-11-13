@@ -24,3 +24,26 @@ Use an asterix (`*`) to render an item as an unordered list item.
 The number of asterixes sets the depth of the list item. 
 
 For more information about how to format an unordered list in Antora, see xref:home:contribute:basics.adoc#unordered-lists[Unordered Lists] in the Contributing to the Documentation guide.
+
+== Punctuation in Unordered Lists
+
+When writing an unordered list, add ending punctuation to each line item when: 
+
+* Each item in your list is a complete sentence. 
+* Each item in your list is a phrase of more than 3 words. 
+
+For example, if your list items are only 1-3 words long, or simple noun phrases, you do not need to add ending punctuation: 
+
+----
+* Availability Zones
+* Database Option
+* Database Support Plan
+----
+
+When list items are more complex, add ending punctuation: 
+
+----
+* Enable Multiple Availability Zones for your cluster.
+* Choose a cluster Support Plan that supports Multiple Availability Zones.
+* Choose a database option with multiple nodes, either Multi-Node or Custom. 
+----
