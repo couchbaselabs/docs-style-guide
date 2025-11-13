@@ -18,6 +18,7 @@ bootstrap
 CAS
 [Cc]allout
 [Cc]allouts
+Capella Analytics
 cbbackupmgr
 cbcollect
 cbtransfer
@@ -25,7 +26,6 @@ Capella
 Compare and Swap
 CentOS
 Cluster Manager
-Columnar
 ConfigProviderBase
 Confluent Cloud
 cloud\.couchbase
@@ -58,6 +58,7 @@ Dockerfile
 Elasticsearch
 EMEA
 Engagement Database
+Enterprise Analytics
 ETL
 Event-Condition-Action model
 FAQ
