@@ -44,7 +44,7 @@
 ** xref:dashes.adoc[]
 ** xref:quotation-marks.adoc[]
 ** xref:slashes.adoc[]
-* Formatting and Describing UI Elements
+* UI Elements and UI Interactions
 ** xref:buttons.adoc[]
 ** xref:dialogs.adoc[]
 ** xref:data-insights-area.adoc[]
@@ -52,6 +52,7 @@
 ** xref:ui-links.adoc[]
 ** xref:menus.adoc[]
 ** xref:more-options.adoc[]
+** xref:mouse-over.adoc[]
 ** xref:options.adoc[]
 ** xref:pages.adoc[]
 ** xref:tabs.adoc[]

@@ -1,0 +1,15 @@
+= Mouse Over/Hover
+
+When telling a user to put their cursor over a UI element, do not use: 
+
+* Mouse over
+* Hover over
+* Hover 
+
+Use `point to` and name the UI element. 
+
+For example: 
+
+---
+Point to the collection you created and click btn:[+].
+---
