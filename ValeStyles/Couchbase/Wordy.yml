@@ -22,7 +22,7 @@ tokens:
   - innovative
   - \bleverag(e|ing)\b
   - overarching
-  - \bprogress(|ing)\b
+  - \bprogressing\b
   - \bpromot(e|ing)\b
   - robust
   - \bsimpl(e|y)\b

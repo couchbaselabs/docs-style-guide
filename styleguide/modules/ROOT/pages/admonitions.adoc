@@ -8,7 +8,7 @@ Antora has 5 admonition types:
 . <<cautions,Caution>>
 . <<importants,Important>> 
 
-Do not use more than two admonitions back-to-back on a page, and do not overuse them. 
+Do not use more than 2 admonitions back-to-back on a page, and do not overuse them. 
 
 Remember: if everything is important, nothing is. 
 
@@ -38,7 +38,7 @@ Use a tip when you:
 
 * Want to tell the user about a shortcut or faster way of accomplishing a task. 
 * Want to tell the user about something optional. 
-* Want to let the user know something that's useful, but isn't considered that important. 
+* Want to let the user know something that's useful, but is not considered that important. 
 
 You should also use a tip to let a user know when they can also accomplish a task from the API as well as the UI.
 Make sure to provide a link to the API documentation as well as the specific method, call, or class the user should use. 
@@ -66,7 +66,8 @@ Use a warning when you:
 
 For example:
 
-WARNING: Dropping a bucket is an irreversible action. You canot recover the data from a dropped bucket. 
+WARNING: Dropping a bucket is an irreversible action.
+You cannot recover the data from a dropped bucket. 
 
 WARNING: A deleted repository and its back-up data cannot be recovered.
 
@@ -80,7 +81,8 @@ Use a caution when you:
 
 For example:
 
-CAUTION: *Memcached* buckets are deprecated. Use a *Couchbase* or *Ephemeral* bucket, instead.
+CAUTION: *Memcached* buckets are deprecated.
+Use a *Couchbase* or *Ephemeral* bucket, instead.
 
 CAUTION: You must modify the default number of replicas for a bucket. 
 Otherwise, all key-value writes with durability enabled will fail. 
