@@ -1,18 +1,22 @@
 = Keywords Sample
 
 :page-topic-type: concept
+:page-topic-type: this should flag!
 :description: A little test doc to check if keywords flag properly
-:keywords: agentic, ai, AI, kittens, deployment, deploy
+:keywords: bob, agentic, ai, AI, kittens, deployment, deploy
 
 [abstract]
 {description}
 
 == What to Expect?
 
-Of the 5 tested words:
+Of the tested words:
+- bob: should flag
 - agentic: should be fine
 - ai: should be fine
 - AI should flag because it's caps
 - kittens should flag
 - deployment should be fine
 - deploy should flag
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

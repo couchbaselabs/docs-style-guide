@@ -1,0 +1,15 @@
+extends: existence
+message: "Topic type must be concept, guide or reference."
+link: https://diataxis.fr/
+level: error
+scope: raw
+ignorecase: false
+
+tokens:
+  - '(?<=^:page-topic-type:\s)(.+)'
+
+exceptions:
+  - concept
+  - tutorial
+  - reference
+  - explanation

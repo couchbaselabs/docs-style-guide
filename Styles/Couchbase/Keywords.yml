@@ -1,12 +1,19 @@
 extends: existence
 message: "Keyword '%s' is not in the approved keyword list."
 level: error
+link: TBD
 scope: raw
 ignorecase: false
-nonword: true
 
+# Kinda brutal matching for n keywords after :keywords:
 tokens:
-  - '(?<=:keywords:\s|,\s?)[^,\n]+'
+  - '(?<=:keywords:\s)\w+'
+  - '(?<=:keywords:[^,\n]*,\s)\w+'
+  - '(?<=:keywords:[^,\n]*,[^,\n]*,\s)\w+'
+  - '(?<=:keywords:[^,\n]*,[^,\n]*,[^,\n]*,\s)\w+'
+  - '(?<=:keywords:[^,\n]*,[^,\n]*,[^,\n]*,[^,\n]*,\s)\w+'
+  - '(?<=:keywords:[^,\n]*,[^,\n]*,[^,\n]*,[^,\n]*,[^,\n]*,\s)\w+'
+  - '(?<=:keywords:[^,\n]*,[^,\n]*,[^,\n]*,[^,\n]*,[^,\n]*,[^,\n]*,\s)\w+'
 
 exceptions:
   - agentic
