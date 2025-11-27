@@ -1,0 +1,49 @@
+= Tabbed Content
+:tabs:
+
+Use tabbed content in a xref:writing-procedures.adoc[procedure] when you need to present 2 distinct, branched paths to a user.
+
+For example: 
+
+[{tabs}]
+====
+AWS::
++
+--
+If your cluster is on AWS, do this:
+
+...
+--
+
+GCP::
++
+--
+If your cluster is on GCP, do this:
+
+...
+--
+
+Azure::
++
+--
+If your cluster is on Azure, do this:
+
+...
+--
+====
+
+Use tabbed content when: 
+
+* You need to present instructions that are different across cloud service providers or another choice the user has to make for their specific environment.
+* You need to present code samples in different languages that accomplish the same task or functionality. 
+* You need to present prerequisites that are different based on cloud service providers or another choice the user has to make for their specific environment.
+
+Do not use tabbed content when: 
+
+* The user must follow all instructions across the tabs set.
+For example, do not use tabs for *Inbound* and *Outbound* if a user needs to configure both outbound and inbound rules to accomplish the end result.
+* The content on each tab cannot stand alone without relying on content on other tabs in the set.
+
+Users should be able to use tabs to hide content that they do not need for their specific situation, and only view the content that they do need. 
+
+For more information about how to add tabbed content to your documentation, see xref:home:contribute:tabs.adoc[].
