@@ -30,6 +30,7 @@
 ** xref:unordered-list.adoc[]
 ** xref:sidebars.adoc[]
 ** xref:tables.adoc[]
+** xref:tabbed-content.adoc[]
 ** Using Inline Formatting
 *** xref:bold.adoc[]
 *** xref:button-macro.adoc[]

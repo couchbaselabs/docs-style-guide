@@ -32,6 +32,8 @@ NOTE: There will always be something the user can do.
 
 Add links where appropriate, following the appropriate xref:links.adoc[link formatting guidance].
 
+TIP: If prerequisites change based on the user's choice of environment, consider if xref:tabs-set.adoc[] would help present the information.
+
 [#procedure]
 === Procedure
 
@@ -49,7 +51,9 @@ This could be the start of the step, or the start of the procedure itself, with 
 * Use xref:monospace-highlight.adoc[monospace font] for all code outside of code blocks, SQL++ commands, function names, file paths, filenames, and text the user must input.
 * Use xref:bold.adoc[] for single menu items, tab names, and dialog names.
 
-Steps in a *Procedure* section shouldn't: 
+TIP: If steps in a procedure change based on the user's choice of environment, consider if xref:tabs-set.adoc[] would help present the information.
+
+Steps in a *Procedure* section should not: 
 
 * List the result of an action, if the result is obvious.
 For example, the *Create Project* window appears after you click *Create Project*. 
@@ -70,5 +74,5 @@ The *Next Steps* section is where additional procedures in a series or links to 
 
 Always add links to a *Next Steps* section. 
 
-Don't call the section *See Also*, *Additional Resources*, or similar. 
+Do not call the section *See Also*, *Additional Resources*, or similar. 
 There's always some action the user can take after they complete a procedure. 
