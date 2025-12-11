@@ -1,4 +1,7 @@
 override:
+  asciidoc:
+    attributes:
+      page-jira-epic: DOC-13781
   ui:
     bundle:
-      url: https://github.com/couchbase/docs-ui/releases/download/DOC-13715-marker.io-trial-3/ui-bundle.zip
+      url: https://github.com/couchbase/docs-ui/releases/download/DOC-13715-marker.io-trial-6/ui-bundle.zip
