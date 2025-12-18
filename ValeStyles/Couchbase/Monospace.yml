@@ -5,4 +5,4 @@ level: suggestion
 scope: raw
 nonword: true
 tokens: 
-  - '\x60\b.+\b\x60'
+  - '\x60\b[^\x60]+\b\x60'

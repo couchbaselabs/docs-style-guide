@@ -63,6 +63,8 @@ ETL
 Event-Condition-Action model
 FAQ
 FaaS
+failover
+failovers
 Forestdb
 FQDN
 Full-Text Search
@@ -76,6 +78,7 @@ gzip
 HTML
 HTAP
 HOAP
+Hyperscale
 IaaS
 IndexScan
 initargs
@@ -125,6 +128,7 @@ PAM
 [Pp]rovisioned
 [Pp]rovisioning
 [Pp]rovisions
+quantize
 query editor
 query executor
 query monitoring

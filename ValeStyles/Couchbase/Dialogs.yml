@@ -1,10 +1,18 @@
 extends: existence
-message: Don't bold or capitalize the word "dialog".
+message: Don't bold the word "dialog".
 link: https://docs.couchbase.com/styleguide/dialogs.html
-level: error 
-scope: raw
-nonword: true
+level: error
 
-tokens: 
-  - '\*[^*]*[Dd]ialog[^*]*\*'
-  - '\bDialog\b'
+# We must match the raw markup so we can see the asterisks
+scope: raw
+
+# Case-insensitive on purpose: Dialog / dialog / DIALOG
+ignorecase: true
+
+tokens:
+  # Matches *dialog*, *Dialog*, or dialog appearing anywhere inside bold text. Do not allow to go beyond line boundaries 
+  # and the opening asterisk cannot be followed by a  space.
+  - '(?<!\S)\*(?=\S)(?:[^*\n]*\bdialog\b[^*\n]*)(?<=\S)\*'
+
+
+
