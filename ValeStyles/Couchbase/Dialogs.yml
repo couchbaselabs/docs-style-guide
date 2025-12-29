@@ -3,6 +3,7 @@ message: Don't bold or capitalize the word "dialog".
 link: https://docs.couchbase.com/styleguide/dialogs.html
 level: error
 scope: raw
+nonword: true
 tokens:
-  - '(?<!\S)\*(?=\S)(?:[^*\n]*\bdialog\b[^*\n]*)(?<=\S)\*'
+  - '\*(?=\S)[^*]*[Dd]ialog[^*]*(?<=\S)\*'
   - '\bDialog\b'

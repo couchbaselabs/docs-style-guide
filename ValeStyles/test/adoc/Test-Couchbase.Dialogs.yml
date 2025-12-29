@@ -5,3 +5,4 @@ flag:
 compliant:
   - In the confirmation dialog, click *OK* to continue.
   - Capella displays a confirmation dialog.
+  - 'In the *Edit Bucket Settings* dialog, click *Show advanced bucket settings*.' 
