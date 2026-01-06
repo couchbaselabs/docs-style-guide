@@ -63,8 +63,8 @@ ETL
 Event-Condition-Action model
 FAQ
 FaaS
-failover
-failovers
+[Ff]ailover
+[Ff]ailovers
 Forestdb
 FQDN
 Full-Text Search
