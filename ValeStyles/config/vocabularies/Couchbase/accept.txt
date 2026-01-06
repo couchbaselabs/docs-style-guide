@@ -128,7 +128,7 @@ PAM
 [Pp]rovisioned
 [Pp]rovisioning
 [Pp]rovisions
-quantize
+[Qq]uantiz[e|ation|ing]
 query editor
 query executor
 query monitoring
