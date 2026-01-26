@@ -6,4 +6,4 @@ nonword: true
 level: suggestion
 
 tokens: 
-  - '\*\b.+\b\*'
+  - '\*\b[^*]+\b\*'
