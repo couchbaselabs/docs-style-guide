@@ -2,8 +2,12 @@
 
 A procedure can be: 
 
-A how-to guide :: How-to guides explain to the user how to accomplish a goal without a specific, defined end result. The specifics of the end result will vary depending on the individual user's goal. For example, a how-to guide could explain how to create a database by explaining the different options and customizations the user can make. 
-A tutorial :: Tutorials explain to the user how to accomplish a goal that has a defined end result. All users that follow the tutorial will have the same result. For example, a tutorial could explain how to create a specific kind of database that would support a specific use case for the user. 
+A how-to guide :: How-to guides explain to the user how to accomplish a goal without a specific, defined end result.
+The specifics of the end result will vary depending on the individual user's goal.
+For example, a how-to guide could explain how to create a database by explaining the different options and customizations the user can make. 
+A tutorial :: Tutorials explain to the user how to accomplish a goal that has a defined end result.
+All users that follow the tutorial will have the same result.
+For example, a tutorial could explain how to create a specific kind of database that would support a specific use case for the user. 
 
 == Description Attribute
 
@@ -43,7 +47,7 @@ It contains an xref:ordered-list.adoc[ordered list] of steps the user must take 
 
 Steps in a *Procedure* section should: 
 
-* List only one action per step, with the exception of using an xref:menu-ui-macro.adoc[] for menu navigation steps.
+* List only 1 action per step, with the exception of using an xref:menu-ui-macro.adoc[] for menu navigation steps.
 * Start with the location where the following action or actions need to occur.
 This could be the start of the step, or the start of the procedure itself, with menu navigation.
 * Use xref:button-macro.adoc[button macros] for all xref:buttons.adoc[].

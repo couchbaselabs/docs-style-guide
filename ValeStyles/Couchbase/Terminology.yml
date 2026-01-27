@@ -43,6 +43,7 @@ swap:
   file name: filename
   file system: filesystem
   '(?:fine grained|finegrained)': fine-grained
+  Forest DB: ForestDB
   '(?:freeform|free form)': free-form
   '(?:fulltext|full text)': full-text
   '(?:geodistributed|geo distributed)': geo-distributed

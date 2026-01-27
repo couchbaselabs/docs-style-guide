@@ -1,7 +1,7 @@
 = Contractions 
 
-Contractions are combinations of at least two words. 
-A contraction is made by omitting one or more letters from one word and adding it to the end of another word. 
+Contractions are combinations of at least 2 words. 
+A contraction is made by omitting 1 or more letters from 1 word and adding it to the end of another word. 
 
 Many contractions combine a verb and a pronoun. 
 
@@ -15,7 +15,7 @@ For example, do not shorten `could not` to `couldn't`.
 
 == Do Not Use Informal Contractions
 
-Do not use informal contractions like "wanna" or "gonna".
+Do not use informal contractions like `wanna` or `gonna`.
 
 == Do Not Use Complex Contractions 
 

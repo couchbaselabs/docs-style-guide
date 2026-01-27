@@ -19,7 +19,8 @@ When you need to describe a menu in the UI:
 +
 For example, the *Data Tools* menu.
 
-* Refer to the menu item by its name only. Don't add "menu item."
+* Refer to the menu item by its name only.
+Do not add "menu item."
 +
 For example, *Query*.
 

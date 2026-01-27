@@ -15,10 +15,10 @@ If you need to add links to your brief explanation, put them outside of the `:de
 
 A concept should: 
 
-* Explain all technical concepts or jargon, or link to other explanations if there isn't space.
+* Explain all technical concepts or jargon, or link to other explanations if there is no space.
 * Use headings to break up and highlight important information to the user, to aid scanning and findability. 
 * Link to related procedures or reference material. 
-* Explain only one focused topic.
+* Explain only 1 focused topic.
 * Have paragraphs of 5 sentences or less. 
 
 == Required Sections

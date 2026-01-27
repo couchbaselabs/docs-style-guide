@@ -1,6 +1,6 @@
 = Unordered Lists
 
-Use an unordered or bulleted list when you have a collection of three or more things and the order of the items does not matter. 
+Use an unordered or bulleted list when you have a collection of 3 or more things and the order of the items does not matter. 
 These items could be nouns, phrases, or topics. 
 
 For example: 
@@ -10,7 +10,7 @@ For example:
 ** This is a sub-item 
 ****
 
-If you only have two items in your list, it's okay to just write it out in a sentence. 
+If you only have 2 items in your list, it's okay to just write it out in a sentence. 
 
 Use an unordered list when:
 

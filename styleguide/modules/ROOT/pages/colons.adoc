@@ -10,7 +10,8 @@ Use a colon to introduce an ordered or unordered list.
 
 == Semi-Colons
 
-Try to avoid using a semi-colon. In most cases, a period and a pair of shorter sentences is fine. 
+Try to avoid using a semi-colon.
+In most cases, a period and a pair of shorter sentences is fine. 
 
 If you're using a semi-colon to separate complex items in a list, just change the list to an ordered or unordered list. 
 

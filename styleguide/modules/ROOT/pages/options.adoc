@@ -1,7 +1,7 @@
 = Options
 
 An option is a selectable UI element. 
-It represents a choice the user has to make between two or more distinct options. 
+It represents a choice the user has to make between 2 or more distinct options. 
 
 An option can display in the UI as: 
 
@@ -26,7 +26,7 @@ You can also link to documentation that describes the different options, rather 
 For example, "Select a *Plan* option."
 
 * When you need to tell the user to select a specific option, use the name of the specific option. 
-Don't use the word "option."
+Do not use the word "option."
 +
 For example, "Under *Plan*, select *Basic*."
 

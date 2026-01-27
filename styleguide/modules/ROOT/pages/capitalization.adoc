@@ -21,4 +21,4 @@ Do not use all-uppercase letters except for official names, abbreviations, or re
 
 Do not use camel case, unless the name or code you're referencing uses it. 
 
-For capitalization rules for specific terms, refer to the xref:word-list.adoc[].
+For capitalization rules for specific terms, see the xref:word-list.adoc[].

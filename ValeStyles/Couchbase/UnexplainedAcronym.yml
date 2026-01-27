@@ -16,6 +16,7 @@ exceptions:
   - ASCII
   - ASP
   - ANY
+  - AWS
   - CALL
   - CASE
   - CAST
