@@ -5,7 +5,8 @@ It appears in a horizontal sequence of other tabs.
 
 Tabs never appear vertically. 
 
-A tab changes the information that's displayed the UI. This could be for the whole application, or for a specific section. 
+A tab changes the information that's displayed the UI.
+This could be for the whole application, or for a specific section. 
 
 The UI highlights the currently selected tab for the user. 
 
@@ -29,4 +30,5 @@ For example, the *Data Tools* tab.
 
 * If you need to tell the user to select a xref:menus.adoc[Menu item] after they select a tab, use the xref:menu-ui-macro.adoc[], instead.
 
-NOTE: A user selects a tab to open a page in the UI. For more information, see xref:pages.adoc[].
+NOTE: A user selects a tab to open a page in the UI.
+For more information, see xref:pages.adoc[].

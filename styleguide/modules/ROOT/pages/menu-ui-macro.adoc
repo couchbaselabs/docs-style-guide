@@ -30,4 +30,4 @@ image::menu-nav-examples-2.png[]
 image::menu-nav-examples-3.png[]
 ====
 
-For more information on how to use the Menu UI Macro to format your documentation, see xref:home:contribute:basics.adoc#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.
+For more information about how to use the Menu UI Macro to format your documentation, see xref:home:contribute:basics.adoc#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.

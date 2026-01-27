@@ -28,7 +28,7 @@ Concept:: Avoid screenshots in concept topics.
 Use Kroki diagrams to explain concepts. 
 Use your best judgment as far as if a screenshot provides the best user experience.
 +
-If the concept topic is a basic, introductory guide to the UI, then consider adding one screenshot to show the UI, when a textual explanation would be too long or insufficient.
+If the concept topic is a basic, introductory guide to the UI, then consider adding 1 screenshot to show the UI, when a textual explanation would be too long or insufficient.
 
 How-tos and Tutorials:: Do not add a screenshot for every step in a task. 
 You do not need to add a screenshot to show the result of an action, unless it's unexpected, unusual, or hard to explain through text. 

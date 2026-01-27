@@ -2,7 +2,7 @@
 
 If you need to link to a specific place in a page, whether from another page or on the same page, use an anchor link. 
 
-NOTE: Don't rely on Antora's automatically generated anchor links. 
+NOTE: Do not rely on Antora's automatically generated anchor links. 
 If you need to use an anchor link, create your own. 
 This prevents broken links if header content changes. 
 
@@ -13,7 +13,7 @@ Aim for no more than 3-5 words maximum.
 * Make sure that your anchor links are unique across the page. 
 * Use all lowercase letters. 
 * Separate words with dashes. 
-* Don't add punctuation. 
+* Do not add punctuation. 
 
 For example, an anchor link for the heading *Generate API Keys* could be `[#generate-api-keys]`.
 

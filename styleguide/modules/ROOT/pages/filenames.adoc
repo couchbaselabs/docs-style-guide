@@ -1,6 +1,6 @@
 = Filenames
 
-When naming a new file, use dashes to separate words. 
+When naming a new file, use dashes to separate words (`-`). 
 
 Use lowercase letters for all characters in a filename. 
 Make sure that at least the first character in a filename is in lowercase. 
@@ -19,7 +19,8 @@ For example:
 * `creating-buckets.adoc`
 * `run-N1QL-queries.adoc`
 
-CAUTION: Don't retroactively change filenames for published topics. This causes tooling issues and means that we have to create and maintain more redirects.
+CAUTION: Do not retroactively change filenames for published topics.
+This causes tooling issues and means that we have to create and maintain more redirects.
 
 == Image Files
 

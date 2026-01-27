@@ -1,6 +1,6 @@
 = More Options Menu
 
-A *More Options* menu is represented by three vertical ellipses in the UI (&vellip;).
+A *More Options* menu is represented by 3 vertical ellipses in the UI (&vellip;).
 
 When you need to describe a *More Options* menu in the UI: 
 

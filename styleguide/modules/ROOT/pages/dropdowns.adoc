@@ -1,6 +1,6 @@
 = Dropdowns/Lists
 
-A dropdown is a UI element that presents a list of options to a user, and lets them select one or more options. 
+A dropdown is a UI element that presents a list of options to a user, and lets them select 1 or more options. 
 
 It usually appears as a box with a defined border and an expanding arrow in the UI: 
 

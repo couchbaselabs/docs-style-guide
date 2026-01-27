@@ -3,6 +3,7 @@ and\/or
 back end
 (C\+\+)
 Columnar
+config
 Couchbase managed cloud
 data link
 data provider

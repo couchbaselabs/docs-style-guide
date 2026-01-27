@@ -5,7 +5,7 @@ A dialog is any distinct floating window that displays inside the main applicati
 A dialog might grey out or dim the rest of the application when it appears.
 
 You can dismiss a dialog or complete its associated action to close it. 
-You can't do anything else in the application until you close the dialog. 
+You cannot do anything else in the application until you close the dialog. 
 
 For example, for the *Create a new project* dialog, you must dismiss the dialog or enter a project name and select *[Create Project]*:
 
@@ -17,7 +17,9 @@ When you need to describe a dialog in the UI:
 +
 For example, the *Create a new project* dialog.
 
-* Use the title of the dialog as it appears in the UI, where possible. This includes matching capitalization.
+* Use the title of the dialog as it appears in the UI, where possible.
+This includes matching capitalization.
 
-* Bold the dialog name. Don't bold the word "dialog." 
+* Bold the dialog name.
+Do not bold the word "dialog." 
 

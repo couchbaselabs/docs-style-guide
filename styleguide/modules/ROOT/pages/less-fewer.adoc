@@ -11,7 +11,7 @@ Use *less* for quantities that are measured rather than counted:
 * Less time
 * Less effort
 
-You can't count effort or time (without using units like minutes or hours), so use *less*. 
+You cannot count effort or time (without using units like minutes or hours), so use *less*. 
 
 However, there are exceptions: 
 

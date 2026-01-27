@@ -9,12 +9,12 @@ image::toggle-example.png["The Capella UI, specifically the Query Workbench. The
 
 When you need to describe a toggle in the UI: 
 
-* Refer to the toggle by its name, followed by the word "toggle."
+* Refer to the toggle by its name, followed by the word `toggle.`
 +
 For example, the *Transaction* toggle.
 
 * Bold the toggle name. 
 
-* Tell the user to "turn on" or "turn off" the toggle. 
+* Tell the user to `turn on` or `turn off` the toggle. 
 +
 For example, turn on the *Transaction* toggle.

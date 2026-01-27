@@ -7,10 +7,10 @@ When adding a code example:
 Do:: 
 +
 * Make it relevant and applicable to your explanation. 
-* Make sure it is a working code sample that the user could use in their own projects. 
+* Make sure it's a working code sample that the user could use in their own projects. 
 * Put the code example in its own separate file.
 * Use the correct format for xref:placeholders.adoc[].
-Don't::
+Do Not::
 + 
 * Include cultural references. 
 * Write the code sample directly inside the .adoc file. 
@@ -19,10 +19,10 @@ Don't::
 
 Use the following guidelines for adding an example into your documentation: 
 
-* Don't use directional language to describe where in the text your example is, like "above" or "below." 
-Use "preceding," "previous," or "following."
+* Do not use directional language to describe where in the text your example is, like `above` or `below`.
+Use `preceding,` `previous,` or `following.`
 
-* Similar to xref:links.adoc[links], use "see."
+* Similar to xref:links.adoc[links], use `see.`
 
 * Use a colon at the end of the phrase you use to introduce your example. 
 

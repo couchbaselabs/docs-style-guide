@@ -46,8 +46,10 @@ curl
 Database Change Protocol
 datacenter
 DataOps
+datasheet
 DCP
 DDL
+[Dd]ecrypter
 [Dd]eduplicate
 DevOps
 [Dd]igitization
@@ -57,8 +59,10 @@ Dockerfiles
 Dockerfile
 Elasticsearch
 EMEA
+[Ee]ncrypter
 Engagement Database
 Enterprise Analytics
+ePayment
 ETL
 Event-Condition-Action model
 FAQ
@@ -97,6 +101,7 @@ Kafka
 Kroki
 KV Service
 Last Write Wins
+libcouchbase
 LWW
 LCB
 LDAP
