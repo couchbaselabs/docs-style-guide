@@ -7,6 +7,7 @@ config
 Couchbase managed cloud
 data link
 data provider
+Forest DB
 mapreduce views
 map reduce views
 note that

@@ -10,6 +10,7 @@ API
 APIs
 App Services
 ASCII
+Atlassian
 automatic schema discovery
 auto-sharding
 Availability Zone
@@ -69,7 +70,7 @@ FAQ
 FaaS
 [Ff]ailover
 [Ff]ailovers
-Forestdb
+ForestDB
 FQDN
 Full-Text Search
 FTS
@@ -77,11 +78,13 @@ Geofencing
 GitHub
 Global Secondary Indexes
 Google Cloud Platform
+GUID
 guid
 gzip
 HTML
 HTAP
 HOAP
+[Hh]ostname
 Hyperscale
 IaaS
 IndexScan
@@ -101,17 +104,21 @@ Kafka
 Kroki
 KV Service
 Last Write Wins
-libcouchbase
 LWW
 LCB
+libcouchbase
 LDAP
+[Ll]ivestream
 LLM
 MapReduce
 massively parallel processing
 MPP
 Memcached bucket
 Memcached
+[Nn]ameserver
+[Nn]ameservers
 [Nn]amespace
+[Nn]amespaces
 Node\.js
 npm
 nvm
@@ -128,8 +135,10 @@ Omnichannel
 optimisticReplicationThreshold
 PDF
 PLAIN authentication
+[Pp]luggable
 Pluggable Authentication Modules
 PAM
+[Pp]reload
 [Pp]rovisioned
 [Pp]rovisioning
 [Pp]rovisions
@@ -150,6 +159,7 @@ Read Committed
 [Rr]ebalancing
 [Rr]ebalances
 [Rr]ebase
+[Rr]eindex[ing]
 [Rr]epositories
 [Rr]eprovision
 [Rr]eprovisioned
@@ -169,11 +179,13 @@ Search quer[y|ies]
 Search Service
 Service Group
 Service Groups
-SGCollect
+sgcollect
 Spark Datasets
 [Ss]tartup
 Structured Streaming
 Sub-Document
+[Ss]ubquery
+[Ss]ubqueries
 sudo
 [Ss]wappiness
 TAP
@@ -197,13 +209,14 @@ UNNEST
 vBucket
 vBucketMap
 vBuckets
-VBucketServerMap
+vBucketServerMap
 Views Service
 [Vv]irtualization
 [Vv]irtualized
 vmstat
 VMware
 Vue
+[Ww]hitepaper
 X\.509
 XDCR
 XML
