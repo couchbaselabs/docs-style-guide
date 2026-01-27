@@ -45,7 +45,7 @@ CPU
 CPUs
 curl
 Database Change Protocol
-datacenter
+[Dd]atacenter
 DataOps
 [Dd]atasheet
 DCP
