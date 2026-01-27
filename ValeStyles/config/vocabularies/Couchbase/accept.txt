@@ -47,7 +47,7 @@ curl
 Database Change Protocol
 datacenter
 DataOps
-datasheet
+[Dd]atasheet
 DCP
 DDL
 [Dd]ecrypter
