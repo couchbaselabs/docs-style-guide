@@ -75,6 +75,10 @@ attribute-missing = drop
 
 [*.{adoc}]
 BasedOnStyles = Vale, write-good, proselint, Couchbase, Google
+
+[*.{yml,yaml}]
+View = OpenAPI
+BasedOnStyles = Vale, write-good, proselint, Couchbase, Google
 ```
 
 5. Inside the quotation marks for the `StylesPath`, enter the location on your computer of the `ValeStyles` folder in this repository. 
