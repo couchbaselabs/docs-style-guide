@@ -1,4 +1,13 @@
 engine: dasel
 scopes:
-  - expr: properties.all().property(description?)
+  - expr: 'search(has("title")).map(title)'
+    name: title
+    type: md
+
+  - expr: 'search(has("description")).map(description)'
+    name: description
+    type: md
+
+  - expr: 'search(has("summary")).map(summary)'
+    name: summary
     type: md
