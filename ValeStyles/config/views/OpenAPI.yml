@@ -1,4 +1,13 @@
 engine: dasel
 scopes:
-  - expr: properties.all().property(description?)
+  - expr: '..title'
+    name: title
+    type: md
+
+  - expr: '..description'
+    name: description
+    type: md
+
+  - expr: '..summary'
+    name: summary
     type: md
