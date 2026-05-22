@@ -1,0 +1,36 @@
+= Icons
+
+The Couchbase documentation uses https://fontawesome.com/v4/icons/[Font Awesome V4^] icons rendered with the Antora `icon:[]` macro.
+
+To render an icon, use `icon:` followed by the Font Awesome icon name and empty square brackets:
+
+----
+icon:fontawesome-icon[]
+----
+
+When you need to describe a clickable icon in the UI:
+
+* If the icon has a text label, refer to it by its label, followed by the icon in parentheses.
+For example:
++
+----
+Click *Copy* (icon:copy[]).
+----
++
+This renders as: Click *Copy* (icon:copy[]).
+
+* If the icon has no text label, refer to it by the icon alone.
+For example:
++
+----
+Click icon:copy[].
+----
++
+This renders as: Click icon:copy[].
+
+== Finding Icon Names
+
+To find the correct icon name, search the https://fontawesome.com/v4/icons/[Font Awesome V4 icon library^].
+Use the name as listed, with hyphens, to the `icon:[]` macro.
+
+For example, the *trash* icon uses `icon:trash[]` and the *download* icon uses `icon:download[]`.
