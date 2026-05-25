@@ -1,0 +1,43 @@
+= Icons
+
+The Couchbase documentation uses Font Awesome V4 icons.
+To find the correct icon name, search the https://fontawesome.com/v4/icons/[Font Awesome V4 icon library^].
+
+To render an icon, use the Antora `icon:` macro followed by the Font Awesome icon name and square brackets:
+
+----
+icon:fontawesome-icon[]
+----
+
+If the Font Awesome icon has hyphens, write it as listed.
+For example, the circle with a plus sign icon icon:plus-circle[] is written as:
+
+----
+icon:plus-circle[]
+----
+
+TIP: To fix your icon's width and keep text aligned in vertical lists, writer `fw` in the square brackets.
+
+To describe a clickable icon in the UI:
+
+* If the icon has a text label, refer to it by its label, followed by the icon in parentheses.
+For example:
++
+----
+Click *Copy* (icon:copy[]).
+----
++
+This renders as: 
++
+Click *Copy* (icon:copy[]).
+
+* If the icon has no text label, refer to it by the icon alone.
+For example:
++
+----
+Click icon:copy[].
+----
++
+This renders as: 
++
+Click icon:copy[].

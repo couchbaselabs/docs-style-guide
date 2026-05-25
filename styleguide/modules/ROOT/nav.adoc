@@ -50,6 +50,7 @@
 ** xref:dialogs.adoc[]
 ** xref:data-insights-area.adoc[]
 ** xref:dropdowns.adoc[]
+** xref:icons.adoc[]
 ** xref:ui-links.adoc[]
 ** xref:menus.adoc[]
 ** xref:more-options.adoc[]
