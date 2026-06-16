@@ -4,10 +4,16 @@ A button is:
 
 * Any clickable element that opens a dialog or pane. 
 * Any clickable element that causes an action to happen. 
-* Any clickable element that contains an icon. 
+* Any clickable element that contains an <<icons,icon>>. 
 
 image::buttons-examples.png[]
 
 A button might or might not have a defined border and color.
 
 For information about how to write about buttons in the UI, see xref:button-macro.adoc[].
+
+[#icons]
+== Icons
+
+The Couchbase documentation uses https://fontawesome.com/v4/icons/[Font Awesome V4 icons^].
+For more information about how to write about icons in the UI, see xref:button-macro.adoc#icon-macro[Icon Macro].

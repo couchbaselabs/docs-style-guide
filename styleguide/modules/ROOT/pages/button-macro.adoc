@@ -27,3 +27,21 @@ For example, *Submit*.
 If a clickable element changes the screen or navigates the user away from their current location in the UI, use the xref:menu-ui-macro.adoc[Menu UI Macro], instead.
 
 For more information about how to use the Button Macro to format your documentation, see xref:home:contribute:basics.adoc#ui-macros[Button, Keyboard, and Menu UI Macros] in the Contributing to the Documentation guide.
+
+== Icon Macro
+
+The Couchbase documentation uses Font Awesome V4 icons.
+To find the correct icon name, search the https://fontawesome.com/v4/icons/[Font Awesome V4 icon library^].
+
+To render an icon, use the Antora `icon:` macro followed by the Font Awesome icon name and square brackets `\icon:fontawesome-icon[]`. If the Font Awesome icon name has hyphens, write it as listed.
+For example, the circle with a plus sign icon icon:plus-circle[] is written as `\icon:plus-circle[]`.
+
+TIP: To fix your icon's width and keep text aligned in vertical lists, writer `fw` in the square brackets.
+
+When you need describe a clickable icon in the UI:
+
+* If the icon has a text label, refer to it by its label, followed by the icon in parentheses.
+For example, `\Click *Copy* (icon:copy[])` renders as Click *Copy* (icon:copy[]).
+
+* If the icon has no text label, refer to it by the icon alone.
+For example, `\Click icon:copy[]` renders as Click icon:copy[].
