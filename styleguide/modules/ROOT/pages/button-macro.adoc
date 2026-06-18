@@ -32,6 +32,8 @@ For more information about how to use the Button Macro to format your documentat
 == Icon Macro
 
 Use the Antora `icon:[]` Macro for icons that the user clicks in the UI.
+Icons are buttons that do not have an obvious text label - the button name or text label might only appear when you hover over the icon.
+
 The Couchbase documentation uses Font Awesome V4 icons.
 To find the correct icon name, search the https://fontawesome.com/v4/icons/[Font Awesome V4 icon library^] and write it as listed.
 
